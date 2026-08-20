@@ -44,6 +44,11 @@ preference_memory: UserPreferenceMemory = st.session_state["_preference_memory"]
 
 # --- persistent notices -------------------------------------------------
 
+st.error(
+    "**Research prototype—not medical advice. Evidence and outputs require "
+    "clinician/human review.**"
+)
+
 st.warning(
     "**Informational prototype only** -- not a medical device, not a substitute for "
     "professional medical advice, diagnosis, or treatment. All evidence in this tool is "
@@ -215,5 +220,6 @@ elif submitted:
 
 st.markdown("---")
 st.caption(
-    "Informational prototype only. Evidence pending human review. Not for clinical use."
+    "Research prototype—not medical advice. Evidence and outputs require "
+    "clinician/human review. Not for clinical use."
 )

@@ -56,3 +56,6 @@ knowledge/ibd-research-review/previews*/
 knowledge/ibd-research-review/processing/
 knowledge/ibd-research-review/.venv/
 knowledge/ibd-research-review/node_modules/
+
+# Local staging/scratch artifacts from prior migration work — not part of the repo
+_to_delete/
