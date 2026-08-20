@@ -1,0 +1,20 @@
+{
+  "maxSearchQueries": 40,
+  "maxCandidatesPerTopic": 8,
+  "maxTotalCandidates": 80,
+  "maxSelectedSources": 25,
+  "maxGuidelines": 8,
+  "maxExpertSources": 4,
+  "maxPdfSizeMb": 25,
+  "maxSourceCharacters": 250000,
+  "targetChunkTokens": 600,
+  "maxChunkTokens": 900,
+  "overlapTokens": 100,
+  "maxChunksPerSource": 60,
+  "maxClaimsPerSource": 8,
+  "maxTotalCandidateClaims": 100,
+  "maxConcurrentNetworkRequests": 3,
+  "maxRetries": 2,
+  "requestTimeoutSeconds": 30
+}
+

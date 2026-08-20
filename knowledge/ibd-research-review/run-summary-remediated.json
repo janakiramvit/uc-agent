@@ -1,0 +1,77 @@
+{
+  "run_status": "completed_pending_second_independent_qa_and_human_approval",
+  "generated_at": "2026-07-30T15:02:34.644285+00:00",
+  "working_directory": "/Users/janakirampulipati/ibd-research-review",
+  "excluded_repository_touched": false,
+  "application_architecture_work_performed": false,
+  "paid_model_calls": false,
+  "paywall_bypass": false,
+  "backup_directory": "/Users/janakirampulipati/ibd-research-review/backups/2026-07-30T075404-0700-remediation",
+  "outputs": {
+    "workbook": "/Users/janakirampulipati/ibd-research-review/ibd-evidence-review-remediated.xlsx",
+    "source_verification_report": "/Users/janakirampulipati/ibd-research-review/source-verification-report-remediated.md",
+    "completion_report": "/Users/janakirampulipati/ibd-research-review/completion-report-remediated.md",
+    "remediation_data": "/Users/janakirampulipati/ibd-research-review/processing/remediation/remediation-data.json",
+    "workbook_verification": "/Users/janakirampulipati/ibd-research-review/logs/remediation/workbook-verification.json"
+  },
+  "source_counts": {
+    "original_selected": 25,
+    "active_after_remediation": 25,
+    "superseded_retained_for_audit": 1,
+    "new_replacement_sources": 1,
+    "workbook_source_rows_including_superseded": 26,
+    "incorrect_mappings_corrected": 11,
+    "effective_abstract_only": 4,
+    "unresolved_access_issues": 4
+  },
+  "claim_accounting": {
+    "retained_unchanged": 2,
+    "retained_revised": 53,
+    "removed": 37,
+    "replaced_by_new": 2,
+    "still_needs_evidence": 1,
+    "total": 95,
+    "active_claim_rows_including_replacements": 58
+  },
+  "gap_resolution": {
+    "resolved_for_mvp": 1,
+    "partially_resolved_with_answer_limit": 4,
+    "unresolved_feature_must_be_excluded": 1
+  },
+  "search_limits": {
+    "more_evidence_claims_max_searches_per_claim": 2,
+    "mvp_gap_max_searches_per_gap": 3,
+    "mvp_gap_max_candidates_per_gap": 4,
+    "mvp_gap_max_selected_per_gap": 2,
+    "claim_and_gap_logs_separate": true
+  },
+  "workbook": {
+    "sheet_count": 8,
+    "sheet_names": [
+      "Sources",
+      "Claims",
+      "Source Mapping Audit",
+      "Removed and Replaced Claims",
+      "Superseded Sources",
+      "Evidence Gap Resolution",
+      "Verification and Access Issues",
+      "Remediation Summary"
+    ],
+    "formula_error_matches": 0,
+    "visual_previews_verified": 8
+  },
+  "tests": {
+    "command": "PYTHONPATH=. .venv/bin/pytest -q",
+    "passed": 53,
+    "failed": 0
+  },
+  "human_review": {
+    "source_decision_fields_blank": true,
+    "source_note_fields_blank": true,
+    "claim_decision_fields_blank": true,
+    "claim_edited_text_fields_blank": true,
+    "reviewer_note_fields_blank": true,
+    "approval_granted": false
+  },
+  "hard_stop": "Await second independent QA and human approval."
+}

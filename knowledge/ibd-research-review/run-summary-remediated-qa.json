@@ -1,0 +1,69 @@
+{
+  "runType": "second_independent_remediated_evidence_qa",
+  "completedAt": "2026-07-30",
+  "qaRoot": "/Users/janakirampulipati/ibd-research-review",
+  "overallStatus": "NOT_READY_FOR_HUMAN_APPROVAL",
+  "humanApprovalsGranted": 0,
+  "counts": {
+    "activeSources": 25,
+    "sourceRowsIncludingSuperseded": 26,
+    "incorrectMappingsReverified": 11,
+    "originalClaimsReconciled": 95,
+    "activeClaims": 58,
+    "claimPass": 50,
+    "claimFail": 7,
+    "claimStillNeedsEvidence": 1,
+    "materialFindings": 2,
+    "affectedActiveClaims": 7,
+    "mvpGaps": 6,
+    "formulaErrors": 0,
+    "renderedSheetsInspected": 8
+  },
+  "claimAccounting": {
+    "retainedUnchanged": 2,
+    "retainedRevised": 53,
+    "removed": 37,
+    "replacedByNew": 2,
+    "stillNeedsEvidence": 1,
+    "total": 95
+  },
+  "mvpGapAccounting": {
+    "resolvedForMvp": 1,
+    "partiallyResolvedWithAnswerLimit": 4,
+    "unresolvedFeatureMustBeExcluded": 1
+  },
+  "materialFindings": [
+    {
+      "findingId": "F-001",
+      "scope": [
+        "CLM-081",
+        "CLM-082",
+        "CLM-083",
+        "CLM-084",
+        "CLM-085",
+        "CLM-086"
+      ],
+      "finding": "Authentic ECCO excerpts have false exact locators pointing to the Abstract; the packaged SRC-021 and SRC-022 HTML captures are zero bytes.",
+      "requiredAction": "Use the numbered section, statement, or practice-point locations and preserve a usable authoritative verification trail."
+    },
+    {
+      "findingId": "F-002",
+      "scope": [
+        "CLM-097"
+      ],
+      "finding": "The displayed ESPEN excerpt supports only one of three substantive clauses in the active claim.",
+      "requiredAction": "Narrow the claim or add exact excerpts and locators for the subgroup exclusion-diet and long-term-data clauses."
+    }
+  ],
+  "explicitUnresolvedClaim": "CLM-092",
+  "outputs": [
+    "/Users/janakirampulipati/ibd-research-review/ibd-evidence-review-remediated-qa.xlsx",
+    "/Users/janakirampulipati/ibd-research-review/source-verification-report-remediated-qa.md",
+    "/Users/janakirampulipati/ibd-research-review/completion-report-remediated-qa.md",
+    "/Users/janakirampulipati/ibd-research-review/run-summary-remediated-qa.json"
+  ],
+  "isolation": {
+    "forbiddenRepositoryInspected": false,
+    "forbiddenRepositoryModified": false
+  }
+}

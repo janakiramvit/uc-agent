@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+*_credentials*
+*token*.json
+
+# Session/runtime state (never committed — privacy-sensitive by design)
+memory_store/
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+*.db-journal
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Local artifacts / logs
+logs/
+*.log
+.streamlit/secrets.toml
+
+# Node (if any tooling pulls it in)
+node_modules/
+
+# Backups and intermediate authoring artifacts (knowledge/ working history, not the reviewed package)
+knowledge/ibd-research-review/backups/
+knowledge/ibd-research-review/checkpoints-remediation/
+knowledge/ibd-research-review/logs/
+knowledge/ibd-research-review/previews*/
+knowledge/ibd-research-review/processing/
+knowledge/ibd-research-review/.venv/
+knowledge/ibd-research-review/node_modules/

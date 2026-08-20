@@ -1,0 +1,808 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article id="jgh312817" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">JGH Open</journal-id><journal-id journal-id-type="iso-abbrev">JGH Open</journal-id><journal-id journal-id-type="pmc-domain-id">3550</journal-id><journal-id journal-id-type="pmc-domain">jghopen</journal-id><journal-id journal-id-type="nlm-id">101730833</journal-id><journal-id journal-id-type="publisher-id">JGH3</journal-id><journal-title-group><journal-title>JGH Open: An Open Access Journal of Gastroenterology and Hepatology</journal-title></journal-title-group><issn pub-type="epub">2397-9070</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC9667405</article-id><article-id pub-id-type="pmcid-ver">PMC9667405.1</article-id><article-id pub-id-type="pmcaid">9667405</article-id><article-id pub-id-type="pmcaiid">9667405</article-id><article-id pub-id-type="pmid">36406652</article-id><article-id pub-id-type="doi">10.1002/jgh3.12817</article-id><article-id pub-id-type="publisher-id">JGH312817</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Review Articles</subject></subj-group></article-categories><title-group><article-title>Systematic review and meta‐analysis of sleep quality in inactive inflammatory bowel disease</article-title><alt-title alt-title-type="right-running-head">Meta‐analysis of sleep in inactive inflammatory bowel disease</alt-title><alt-title alt-title-type="left-running-head">A Barnes <italic toggle="yes">et al.</italic>
+</alt-title></title-group><contrib-group><contrib id="jgh312817-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Barnes</surname><given-names initials="A">Alex</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-1457-6636</contrib-id><xref rid="jgh312817-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jgh312817-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><address><email>alex.z.barnes@gmail.com</email></address></contrib><contrib id="jgh312817-cr-0002" contrib-type="author"><name name-style="western"><surname>Mountifield</surname><given-names initials="R">Réme</given-names></name><xref rid="jgh312817-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jgh312817-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jgh312817-cr-0003" contrib-type="author"><name name-style="western"><surname>Baker</surname><given-names initials="J">Justin</given-names></name><xref rid="jgh312817-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jgh312817-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jgh312817-cr-0004" contrib-type="author"><name name-style="western"><surname>Spizzo</surname><given-names initials="P">Paul</given-names></name><xref rid="jgh312817-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jgh312817-cr-0005" contrib-type="author"><name name-style="western"><surname>Bampton</surname><given-names initials="P">Peter</given-names></name><xref rid="jgh312817-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jgh312817-cr-0006" contrib-type="author"><name name-style="western"><surname>Mukherjee</surname><given-names initials="S">Sutapa</given-names></name><xref rid="jgh312817-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="jgh312817-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib></contrib-group><aff id="jgh312817-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Gastroenterology</named-content>
+<institution>Southern Adelaide Local Health Network (SALHN) Flinders Medical Centre</institution>
+<city>Bedford Park</city>
+<named-content content-type="country-part">South Australia</named-content>
+<country country="AU">Australia</country>
+</aff><aff id="jgh312817-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Adelaide Institute for Sleep Health, Flinders Health and Medical Research Institute, College of Medicine and Public Health</named-content>
+<institution>Flinders University</institution>
+<city>Bedford Park</city>
+<named-content content-type="country-part">South Australia</named-content>
+<country country="AU">Australia</country>
+</aff><aff id="jgh312817-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Respiratory and Sleep Medicine</named-content>
+<institution>Southern Adelaide Local Health Network (SALHN) Flinders Medical Centre</institution>
+<city>Bedford Park</city>
+<named-content content-type="country-part">South Australia</named-content>
+<country country="AU">Australia</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence</bold>
+<break/>
+Dr Alex Barnes, Flinders Medical Centre, Flinders Drive, Bedford Park, SA 5042, Australia. Email: <email>alex.z.barnes@gmail.com</email>
+<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>29</day><month>9</month><year>2022</year></pub-date><pub-date pub-type="collection"><month>11</month><year>2022</year></pub-date><volume>6</volume><issue seq="30">11</issue><issue-id pub-id-type="pmc-issue-id">421668</issue-id><issue-id pub-id-type="doi">10.1002/jgh3.v6.11</issue-id><fpage>738</fpage><lpage>744</lpage><history><date date-type="rev-recd"><day>03</day><month>8</month><year>2022</year></date><date date-type="received"><day>23</day><month>6</month><year>2022</year></date><date date-type="accepted"><day>04</day><month>9</month><year>2022</year></date></history><pub-history><event event-type="pmc-release"><date><day>29</day><month>09</month><year>2022</year></date></event><event event-type="pmc-live"><date><day>17</day><month>11</month><year>2022</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2023-05-26 21:25:09.747"><day>26</day><month>05</month><year>2023</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2022 The Authors. JGH Open published by Journal of Gastroenterology and Hepatology Foundation and John Wiley &amp; Sons Australia, Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbynclicense">https://creativecommons.org/licenses/by-nc/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc/4.0/">http://creativecommons.org/licenses/by-nc/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited and is not used for commercial purposes.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="JGH3-6-738.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:JGH3-6-738.pdf"/><abstract><title>Abstract</title><p>Poor sleep in people with inflammatory bowel disease (IBD) has been demonstrated to be prevalent and has been associated with disease activity. This meta‐analysis aimed to assess the prevalence of poor sleep in inactive IBD and in controls by considering cohort and cross‐sectional studies. Electronic databases were searched for publications from inception to 1 November 2021. Poor sleep and IBD activity were defined according to self‐reported subjective sleep measures. A random effects model was used to determine the standardized mean difference between poor sleep in inactive IBD and healthy controls. Publication bias was assessed by funnel plot and Egger's test. Five hundred and nineteen studies were screened with 9 studies included in the meta‐analysis incorporating a total of 729 people with IBD and 508 controls. A random effects model showed a standardized mean difference with poor sleep being more frequent in those with inactive IBD than controls with moderate effect size (Hedge's g 0.41, CI [0.22–0.59]) and no significant heterogeneity. There was no publication bias evident. Poor sleep is more common in individuals with inactive IBD than healthy controls. Further studies should consider potential mechanisms to explain this result, including the role of subclinical inflammation and psychosocial factors that may influence sleep quality in people with IBD.</p></abstract><abstract abstract-type="graphical"><p>This meta‐analysis assessed the prevalence of poor sleep in inactive inflammatory bowel disease and in controls. Poor sleep was found to be more frequent in people with inactive inflammatory bowel disease than controls with moderate effect size. Further studies should consider potential mechanisms to explain this result including the role of subclinical inflammation and psychosocial factors that may influence sleep quality in people with inflammatory bowel disease.<boxed-text position="anchor" content-type="graphic" id="jgh312817-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="JGH3-6-738-g003.jpg"/></boxed-text>
+</p></abstract><counts><fig-count count="3"/><table-count count="1"/><page-count count="7"/><word-count count="5027"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>November 2022</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.2.1 mode:remove_FC converted:16.11.2022</meta-value></custom-meta></custom-meta-group></article-meta><notes><fn-group id="jgh312817-ntgp-0001"><fn id="jgh312817-note-0001"><p>
+<bold>Declaration of conflict of interest</bold>: Include speakers fees, and Ad Boards from: Abbott, AbbVie, Allergan, Anatara, AstraZeneca, Bayer, BMS 2020, Celegene, Celltrion, Falk, Ferring, Gilead, Hospira, Immuninc, ImmunsanT, Janssen, MSD, Nestle, Novartis, Progenity, Pfizer, Sandoz, Shire, Takeda, Vifor, RAH research Fund, The Hospital Research Fund 2020‐2022, The Helmsley Trust 2020‐2023.</p></fn><fn id="jgh312817-note-0002"><p>
+<bold>Author contributions</bold>: Alex Barnes responsible for study concept and design, data acquisition, analysis and data interpretation, drafting of manuscript, critical revision of the manuscript. Réme Mountifield responsible for study conception and critical revision of the manuscript. Justin Baker responsible for data acquisition. Paul Spizzo responsible for data acquisition, critical revision of the manuscript. Peter Bampton responsible for critical revision of the manuscript. Sutapa Mukherjee responsible for study concept and design, critical revision of the manuscript.</p></fn><fn id="jgh312817-note-0003"><p>
+<bold>Financial support</bold>: No funding was received for this work.</p></fn></fn-group></notes></front><body id="jgh312817-body-0001"><sec id="jgh312817-sec-0001"><title>Introduction</title><p>Inflammatory bowel disease (IBD) is a chronic immune‐mediated disorder that involves a complex interplay of genetic and environmental factors.<xref rid="jgh312817-bib-0001" ref-type="bibr">
+<sup>1</sup>
+</xref> Epidemiological studies have shown increasing incidence of IBD over the past several decades<xref rid="jgh312817-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref> with strong associations with environmental factors.<xref rid="jgh312817-bib-0003" ref-type="bibr">
+<sup>3</sup>
+</xref> The etiology and exacerbating factors are largely unknown; however, there are known associations with active smoking, urban living, appendectomy, and low vitamin D levels. IBD can be associated with debilitating extraintestinal manifestations including joint, eye, and skin manifestations.<xref rid="jgh312817-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref> Sleep is likely to be deleteriously affected by the symptoms of active IBD but has also been examined as a potential extraintestinal manifestation of IBD, and as an exacerbating or etiological factor in IBD.</p><p>There has been increasing interest in the relationship between sleep and IBD in recent times.<xref rid="jgh312817-bib-0005" ref-type="bibr">
+<sup>5</sup>
+</xref> Firstly, sleep has a major role in as an important patient‐reported outcome with its relationship to quality of life and health‐related outcomes such as cardiovascular diease.<xref rid="jgh312817-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref> Secondly, impaired sleep quality has been shown to be associated with IBD activity<xref rid="jgh312817-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref> with worse sleep quality in those with active rather than inactive IBD. One may see this as being related to IBD symptoms and in particular nocturnal symptoms; however, sleep disturbance may also be an indicator of subclinical inflammation, with studies suggesting that endoscopic activity and histological activity in the setting of clinical remission had high rates of poor sleep.<xref rid="jgh312817-bib-0008" ref-type="bibr">
+<sup>8</sup>
+</xref>, <xref rid="jgh312817-bib-0009" ref-type="bibr">
+<sup>9</sup>
+</xref> Sleep quality in IBD has also been associated with psychosocial factors such as depression<xref rid="jgh312817-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>, <xref rid="jgh312817-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="jgh312817-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref>, <xref rid="jgh312817-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref>, <xref rid="jgh312817-bib-0014" ref-type="bibr">
+<sup>14</sup>
+</xref>, <xref rid="jgh312817-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref>, <xref rid="jgh312817-bib-0016" ref-type="bibr">
+<sup>16</sup>
+</xref>, <xref rid="jgh312817-bib-0017" ref-type="bibr">
+<sup>17</sup>
+</xref> and reduced physical activity.<xref rid="jgh312817-bib-0018" ref-type="bibr">
+<sup>18</sup>
+</xref>, <xref rid="jgh312817-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>
+</p><p>Two meta‐analyses have explored the relationship between IBD activity and sleep quality, with poor sleep being more common in those with IBD compared with controls, and more common in those with active IBD than inactive IBD.<xref rid="jgh312817-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref>, <xref rid="jgh312817-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref> These results could be attributed to the symptoms associated with active IBD. The cause of poor sleep in a clinically inactive IBD population is less clear and may relate to subclinical inflammation or mental health co‐morbidities among other possibilities. The previous meta‐analyses have not considered the difference between sleep quality in clinically inactive IBD and controls.</p><p>In this study, we aimed to extend their work by considering the relationship between sleep in clinically inactive IBD and controls and would aim to show that poor sleep is more frequent in those with clinically inactive IBD. Establishing this would support the introduction of sleep quality as an important patient‐reported outcome that exists beyond achieving clinical remission. It would also encourage improving sleep quality through known traditional sleep‐targeted interventions and investigations rather than focusing only on achieving clinical remission. If we accept that poor sleep in clinically inactive IBD may be due in part to subclinical inflammation, then it may be possible to use sleep quality as a way to monitor IBD and further reinforces the principle of achieving endoscopic rather than symptomatic remission.<xref rid="jgh312817-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+</p></sec><sec sec-type="methods" id="jgh312817-sec-0002"><title>Methods</title><p>This systematic review and meta‐analysis were performed according to the preferred reporting item for systematic reviews and meta‐analyses (PRISMA) guidelines.</p><sec id="jgh312817-sec-0003"><title>
+Search strategy
+</title><p>PubMed, MEDLINE, and PsycINFO were searched from inception to November 2021, including articles published in the English language using the following search string: (sleep OR circadian OR insomnia OR apnoea) AND ([inflammatory bowel disease] OR [Crohn's disease] OR [ulcerative colitis] OR [IBD OR Crohn's OR colitis]).</p></sec><sec id="jgh312817-sec-0004"><title>
+Eligibility criteria
+</title><p>Studies were included if they met the following criteria: (i) Cross‐sectional, observational, case control, cohort, or randomized controlled trial available; (ii) included a distinct population of people with IBD (age ≥18 years old) with a definition of inactive disease by subjective measures such as Crohn's disease activity index<xref rid="jgh312817-bib-0022" ref-type="bibr">
+<sup>22</sup>
+</xref> (CDAI), or Harvey‐Bradshaw index<xref rid="jgh312817-bib-0023" ref-type="bibr">
+<sup>23</sup>
+</xref> (HBI), or the partial Mayo score (PMS), or objective measures such as endoscopy; (iii) included a control population of suitably matched controls; and (iv) Sleep quality assessment using a validated subjective patient‐reported measures of sleep questionnaire. Unfortunately, there were insufficient number of studies incorporating objective measures of sleep quality or objective measures of IBD activity.</p><p>Exclusion criteria included: (i) Study population that included a pediatric or adolescent population; (ii) case report or review.</p></sec><sec id="jgh312817-sec-0005"><title>
+Study selection
+</title><p>The first author (AB) performed the literature review and two other authors (PS and JB) independently screened full texts against eligibility criteria, with disagreement resolved by discussion with involvement of another author (RM) when required.</p></sec><sec id="jgh312817-sec-0006"><title>
+Data collection
+</title><p>Data collection was performed by AB. A predefined spreadsheet was used for data collection.</p></sec><sec id="jgh312817-sec-0007"><title>
+Study quality assessment
+</title><p>Risk of bias in individual studies was assessed according to study design. Cross‐sectional or observational studies were assessed according to modified Newcastle–Ottawa scale. Cohort or case control studies were assessed according to Newcastle–Ottawa scale.</p></sec><sec id="jgh312817-sec-0008"><title>
+Statistical analysis
+</title><p>Statistical analysis was performed using Stata SE 16 (StataCorp, College Station, TX, USA). Heterogeneity among studies was assessed using the <italic toggle="yes">I</italic>
+<sup>2</sup> statistic with <italic toggle="yes">I</italic>
+<sup>2</sup> &gt; 50% considered to indicate substantial heterogeneity. A random effects model was used. A forest plot was performed to estimate individual and pooled effect sizes with associated 95% CI. Hedge's g was used to describe effect size with a Hedge's g of 0.20, 0.50, and 0.80 to interpret effect sizes as small, medium, or large.<xref rid="jgh312817-bib-0024" ref-type="bibr">
+<sup>24</sup>
+</xref> Publication bias was assessed using funnel plots with significant visual asymmetry used to indicate publication bias. The Trimfill method was used as required. Egger's test with P values less than 0.05 were considered to indicate significant publication bias. Subgroup analysis was performed to investigate heterogeneity.</p></sec></sec><sec sec-type="results" id="jgh312817-sec-0009"><title>Results</title><p>Twenty‐one studies were initially identified for inclusion. Nine studies were included in the meta‐analysis incorporating 729 people with IBD and 508 controls (see Fig. <xref rid="jgh312817-fig-0001" ref-type="fig">1</xref>, and Table <xref rid="jgh312817-tbl-0001" ref-type="table">1</xref>). Publication date ranged from 2006 to 2020. Study quality scoring can be seen in Table <xref rid="jgh312817-supitem-0001" ref-type="supplementary-material">S1</xref>, Supporting information. IBD study population size ranged from 16 to 110, with median age ranging from 32 to 44 years, and female predominance from 38 to 70%.</p><fig position="float" fig-type="Figure" id="jgh312817-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>PRISMA flowchart—Selection of studies and results of literature search for review and meta‐analysis.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="JGH3-6-738-g002.jpg"/></fig><table-wrap position="float" id="jgh312817-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Summary of studies included in meta‐analysis of sleep quality in inflammatory bowel disease and controls</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="left" valign="bottom" rowspan="1" colspan="1">Year</th><th align="left" valign="bottom" rowspan="1" colspan="1">Country</th><th align="left" valign="bottom" rowspan="1" colspan="1">Sample size</th><th align="left" valign="bottom" rowspan="1" colspan="1">Age (mean)</th><th align="left" valign="bottom" rowspan="1" colspan="1">Female (%)</th><th align="left" valign="bottom" rowspan="1" colspan="1">Definition of inactive IBD</th><th align="left" valign="bottom" rowspan="1" colspan="1">Definition of poor sleep</th><th align="left" valign="bottom" rowspan="1" colspan="1">Type of controls</th><th align="left" valign="bottom" rowspan="1" colspan="1">Study summary</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Ballou <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2018</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 44 Controls 41</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>IBD 44</p>
+<p>Controls 42</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>IBD 70%</p>
+<p>Controls 56%</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>HBI ≤4</p>
+<p>PMS ≤1</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Friends and family of study participants who do not have gastrointestinal diseases.</td><td align="left" valign="top" rowspan="1" colspan="1">Tertiary gastrointestinal center patients have poorer sleep than controls</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Bucci <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0029" ref-type="bibr">
+<sup>29</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2018</td><td align="left" valign="top" rowspan="1" colspan="1">Italy</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>CD 28</p>
+<p>UC 19 Controls 47</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>CD 38</p>
+<p>UC 40 Controls 34</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Stable therapy for 6 months physician assessment</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Volunteers with no gastroenterological disease, no infectious, immune‐mediated, or autoimmune diseases</td><td align="left" valign="top" rowspan="1" colspan="1">Bruxism and enamel wear should be evaluated in people with Crohn's disease</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gîlc‐Blanariu <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">Romania</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 110 Controls 66</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 42 Controls 44</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>IBD 47%</p>
+<p>Controls 60%</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>HBI ≤4</p>
+<p>PMS ≤1</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Healthy volunteers with no digestive complaints and a normal colonoscopy</td><td align="left" valign="top" rowspan="1" colspan="1">Sleep impairment is common in those with IBD and associated with psychological distress</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gingold‐Belfer <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2014</td><td align="left" valign="top" rowspan="1" colspan="1">Israel</td><td align="left" valign="top" rowspan="1" colspan="1">CD 71 Controls 66</td><td align="left" valign="top" rowspan="1" colspan="1">CD 40 Controls 42</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>CD 38%</p>
+<p>Controls 54%</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">CDAI &lt;150</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Healthy volunteers accompanying a relative having a screening colonoscopy</td><td align="left" valign="top" rowspan="1" colspan="1">Poor sleep is associated with active Crohn's disease but not inactive disease</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Iskander <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">CD 61 Controls 60</td><td align="left" valign="top" rowspan="1" colspan="1">CD 32 Controls 31.5</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">HBI ≤4</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Health volunteers through university program to support research</td><td align="left" valign="top" rowspan="1" colspan="1">Crohn's disease report poorer sleep than controls but no difference is seen based on objective measures</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Keskin <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0027" ref-type="bibr">
+<sup>27</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">Turkey</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>CD 41</p>
+<p>UC 49 Controls 44</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>CD 33</p>
+<p>UC 40 Controls 40</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>CD 56</p>
+<p>UC 55</p>
+<p>Controls 70</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Physician assessment</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Age‐matched individuals without any chronic disease</td><td align="left" valign="top" rowspan="1" colspan="1">IBD is a risk factor for sleep disturbance and eveningness is more common in IBD than controls</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Keefer <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2006</td><td align="left" valign="top" rowspan="1" colspan="1">USA</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 120 Controls 120</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 36 Controls 36</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>IBD 49</p>
+<p>Controls 45</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">CDAI &lt;150 UCAI &lt;3</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Healthy volunteers from university gastroenterology practice</td><td align="left" valign="top" rowspan="1" colspan="1">Sleep influences quality of life in those with IBD and controls</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sochal <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">Poland</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 133 Controls 57</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 37 Controls 38</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>IBD 55</p>
+<p>Controls 58</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>HBI ≤4</p>
+<p>PMS ≤2</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Healthy volunteers via snowball sampling matched by age, sex, and BMI</td><td align="left" valign="top" rowspan="1" colspan="1">Sleep impairment is common in IBD and associated with mood disturbance</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Zhang <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0031" ref-type="bibr">
+<sup>31</sup>
+</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">China</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 16 Controls 7</td><td align="left" valign="top" rowspan="1" colspan="1">IBD 41 Controls 34</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>IBD 56%</p>
+<p>Controls 43%</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>HBI ≤4</p>
+<p>PMS ≤1</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PSQI &gt;5</td><td align="left" valign="top" rowspan="1" colspan="1">Healthy volunteers from online recruitment</td><td align="left" valign="top" rowspan="1" colspan="1">Sleep in people with IBD was worse than the control group, and even worse in the IBD‐PA group</td></tr></tbody></table><table-wrap-foot id="jgh312817-ntgp-0002"><fn id="jgh312817-note-0004"><p>CD, Crohn's disease; CDAI, Crohn's disease activity index; HBI, Harvey‐Bradshaw index; IBD, inflammatory bowel disease; IBD‐PA, inflammatory bowel disease with active peripheral arthropathy; PMS, partial Mayo score; PSQI, Pittsburgh Sleep Quality index; UC, ulcerative colitis; UCDAI, ulcerative colitis disease activity index.</p></fn></table-wrap-foot></table-wrap><p>IBD disease activity was defined by clinical remission utilizing subjective IBD activity scores such as the CDAI, with similar cutoff values used across studies to define remission. A single study used physician assessment of disease activity and one study required stable therapy for 6 months in addition to physician assessment. Sleep quality was assessed using the Pittsburgh Sleep Quality index<xref rid="jgh312817-bib-0025" ref-type="bibr">
+<sup>25</sup>
+</xref> (PSQI) in all studies. The PSQI produces a global sleep score along with six sub‐scores to assess sleep latency, sleep duration, sleep disturbance, subjective sleep quality, sleep medications, and daytime sleepiness. All studies used the same definition of poor sleep quality (PSQI global score &gt;5). Studies were designed to consider other factors that may influence sleep quality alongside IBD activity. This includes psychological distress,<xref rid="jgh312817-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref> mood disturbance<xref rid="jgh312817-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref> or depression,<xref rid="jgh312817-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref> and the presence of extra‐articular manifestations.</p><p>Control groups consisted of relatives or friends of study participants, gastrointestinal clinic patients with normal endoscopic investigations, or volunteers identified via online or university recruitment without gastrointestinal disease. All studies required controls having no gastrointestinal disease with some requiring no autoimmune disease. Age matching was performed in one study,<xref rid="jgh312817-bib-0027" ref-type="bibr">
+<sup>27</sup>
+</xref> and one study utilized age, sex, and body mass index matching.<xref rid="jgh312817-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref> No other matching was undertaken.</p><p>Ballou <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref> assessed subjective sleep quality in a population of gastroenterology clinic patients that included people with IBD in clinical remission with sleep quality worse than controls, however did find that people with irritable bowel syndrome had worse sleep than those with IBD. Bucci <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0029" ref-type="bibr">
+<sup>29</sup>
+</xref> similarly found worse sleep in those with clinically inactive IBD than controls while investigating the prevalence and associations of bruxism in this population. However, Gingold‐Belfer <italic toggle="yes">et al</italic>.,<xref rid="jgh312817-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref> considering only those with Crohn's disease, found that IBD activity was associated with poor sleep but observed no difference in those with inactive Crohn's disease and controls.</p><p>Gîlc‐Blanariu <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref> considered other factors that may influence sleep in people with IBD and found that psychological distress and extraintestinal manifestations were associated with poor sleep. Sochal <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref> similarly investigated factors influencing sleep quality in IBD and found that mood levels were related to sleep quality and interestingly that pain scores were not related. This perhaps somewhat explains the poor sleep experienced by people with clinically inactive IBD.</p><p>Iskandar <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref> used wrist‐based actigraphy to provide an objective measurement of sleep quality, finding no difference between people with Crohn's disease and controls, suggesting that it was only the perception of sleep quality that was worse in Crohn's disease than controls. Zhang <italic toggle="yes">et al</italic>.<xref rid="jgh312817-bib-0031" ref-type="bibr">
+<sup>31</sup>
+</xref> using polysomnography to measure objective sleep quality found significantly worse sleep in those with IBD and controls irrespective of IBD activity. The differences here in the study outcome can be explained by the short comings of actigraphy in assessing sleep quality compared with polysomnography,<xref rid="jgh312817-bib-0032" ref-type="bibr">
+<sup>32</sup>
+</xref> which is considered the gold standard of assessing sleep. One further study,<xref rid="jgh312817-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref> also using polysomnography, was able to show worse objective sleep quality in those with IBD than controls despite a small study size. Due to the small number of studies (<italic toggle="yes">n</italic> = 3) incorporating objective sleep quality further analysis was not undertaken.</p><p>A meta‐analysis was performed incorporating nine studies that utilized subjective measures of sleep quality and subjective measures of IBD activity. Effect sizes were calculated using the standardized mean difference calculated (pooled Hedge's g of 0.81 CI [0.24–1.37]), indicating moderate effect size of increased likelihood of poor sleep in those with inactive IBD compared with controls (see forest plot in Fig. <xref rid="jgh312817-fig-0002" ref-type="fig">2</xref>). Heterogeneity was significant with <italic toggle="yes">I</italic>
+<sup>2</sup> 92.3%. Outliers were removed<xref rid="jgh312817-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref>, <xref rid="jgh312817-bib-0031" ref-type="bibr">
+<sup>31</sup>
+</xref> with moderate effect size again shown (Hedge's g 0.41, CI [0.22–0.59]), and with no significant heterogeneity (<italic toggle="yes">I</italic>
+<sup>2</sup> 0%) (see forest plot in Fig. <xref rid="jgh312817-supitem-0001" ref-type="supplementary-material">S1</xref>, Supporting information). Funnel plot was symmetric (Fig. <xref rid="jgh312817-supitem-0001" ref-type="supplementary-material">S2</xref>, Supporting information) and Egger's test was negative (<italic toggle="yes">P</italic> = 0.37).</p><fig position="float" fig-type="Figure" id="jgh312817-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Forest plot of poor sleep in those with clinically inactive inflammatory bowel disease and controls. Standardized mean difference is used as effect size. Outliers included.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="JGH3-6-738-g001.jpg"/></fig><p>Subgroup analysis was performed for definition of inactive IBD (HBI ≤4 and PMS ≤2, opposed to other definitions, <italic toggle="yes">P</italic> = 0.20) and was not significant, along with gender (female gender in over half of population, <italic toggle="yes">P</italic> = 0.15) and was not significant. Subgroup analysis was also performed for subtype of IBD (Crohn's disease over half of population, <italic toggle="yes">P</italic> = 0.14) and was not significant. There were insufficient studies to investigate further with meta regression.</p></sec><sec sec-type="discussion" id="jgh312817-sec-0010"><title>Discussion</title><p>Herein we have shown that clinically inactive IBD patients demonstrate poorer subjective sleep quality than controls. This represents an important result in pursing the etiology of poor sleep quality in people with IBD. There has been the presumption that nocturnal GI symptoms were the primary driver of poor sleep quality in this population. Although such symptoms are likely to impair sleep quality, inactive IBD may also impact sleep through a variety of mechanisms.</p><p>These mechanisms could include subclinically active IBD. Two studies, one utilizing endoscopic<xref rid="jgh312817-bib-0008" ref-type="bibr">
+<sup>8</sup>
+</xref> and the other histologic<xref rid="jgh312817-bib-0009" ref-type="bibr">
+<sup>9</sup>
+</xref> measures, showed that subclinically active IBD is associated with poor sleep compared with IBD in remission. It may be that there are specific sleep abnormalities that are associated with subclinically active IBD. There were insufficient studies incorporating objective measures of IBD activity or objective measures of sleep to pursue this further.</p><p>There is a complex relationship between the immune system and sleep, which leads to the possibility that IBD‐related inflammation may lead to poor sleep irrespective of the symptoms experienced. Sleep deprivation has been shown to lead to a rise in pro‐inflammatory cytokines such as IL‐1β, IL‐6, and TNFα<xref rid="jgh312817-bib-0034" ref-type="bibr">
+<sup>34</sup>
+</xref> that have also been implicated in the pathogenesis of IBD. Furthermore, abnormalities in circadian rhythm associated clock genes<xref rid="jgh312817-bib-0035" ref-type="bibr">
+<sup>35</sup>
+</xref> and sleeping duration<xref rid="jgh312817-bib-0036" ref-type="bibr">
+<sup>36</sup>
+</xref> have been associated with the development of IBD and ulcerative colitis, respectively. The relationship between sleep and IBD has consequently been said to be bidirectional, with the prospect of feedback between each leading to deterioration of both.</p><p>Irritable bowel syndrome frequently coexists with IBD and has also been associated with poor sleep compared with healthy controls,<xref rid="jgh312817-bib-0037" ref-type="bibr">
+<sup>37</sup>
+</xref> despite there being little evidence of systemic inflammation in IBS. Consideration therefore needs to be given to the possibility that persistent GI symptoms irrespective of disease activity, such as the so‐called post‐inflammatory syndrome or irritable bowel syndrome, contribute to poor sleep in those with IBD. This is supported by Zargar <italic toggle="yes">et al</italic>.,<xref rid="jgh312817-bib-0038" ref-type="bibr">
+<sup>38</sup>
+</xref> showing that those with IBD in remission who met diagnostic criteria for IBS had poorer sleep than those not meeting criteria.</p><p>Other contributors to poor sleep in inactive IBD may include differences in levels of physical activity or age, both known to be associated with poor sleep.<xref rid="jgh312817-bib-0039" ref-type="bibr">
+<sup>39</sup>
+</xref> Mental health conditions such as anxiety and depression are prevalent in IBD and have been demonstrated to influence sleep.<xref rid="jgh312817-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>, <xref rid="jgh312817-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="jgh312817-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref>, <xref rid="jgh312817-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref>, <xref rid="jgh312817-bib-0014" ref-type="bibr">
+<sup>14</sup>
+</xref>, <xref rid="jgh312817-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref>, <xref rid="jgh312817-bib-0016" ref-type="bibr">
+<sup>16</sup>
+</xref>, <xref rid="jgh312817-bib-0017" ref-type="bibr">
+<sup>17</sup>
+</xref> It has also been hypothesized that this poor sleep may represent “learned insomnia” from previous active IBD and may respond well to targeted insomnia treatment such as specific cognitive behavioral therapy, with a recent feasibility study showing encouraging results.<xref rid="jgh312817-bib-0040" ref-type="bibr">
+<sup>40</sup>
+</xref>
+</p><p>Limitations of this analysis include lack of matching, which was performed in two studies only. Other factors known to impact sleep and are known to be prevalent in IBD, such as depression and anxiety, could have been considered for matching. Geographic origin of study and publication date were diverse. Unfortunately, there were insufficient studies to consider objective measures of sleep quality such as polysomnography or actigraphy. This should be pursued in future work.</p><p>Further research is required to investigate whether sleep abnormalities are associated with subclinical disease activity, defined by histological or endoscopic activity, or whether other non‐inflammation‐related factors such as psychological symptoms account for this impairment of sleep in those with inactive disease.</p><p>Sleep assessment may become an important PRO and allow early identification of IBD activity before the onset of clinical symptoms. After further defining key contributors to this problem, further research should focus on sleep‐specific interventions in people with IBD and the impact these interventions may have on both disease activity and quality of life and in people living with IBD.</p></sec><sec sec-type="conclusions" id="jgh312817-sec-0011"><title>Conclusion</title><p>This meta‐analysis has shown that poor sleep assessed by subjective measures is more frequent in those with clinically inactive IBD than controls with moderate effect size. This suggests that sleep quality in people with IBD is not only due to IBD‐related symptoms and encourages investigation of those with poor sleep quality and consideration of sleep‐targeted interventions. Of much interest is the limited data that suggest that subclinical IBD‐related inflammation may be responsible for poor sleep.<xref rid="jgh312817-bib-0008" ref-type="bibr">
+<sup>8</sup>
+</xref>, <xref rid="jgh312817-bib-0009" ref-type="bibr">
+<sup>9</sup>
+</xref> Consequently, poor sleep in the absence of IBD‐related symptoms could prompt consideration of objective IBD assessment. Further research should consider what sleep interventions may be most efficacious and well tolerated in an IBD population.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="jgh312817-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Figure S1.</bold> Forest plot of poor sleep in those with clinically inactive inflammatory bowel disease and controls. Standardized mean difference used as effect size. Outliers excluded.</p><p>
+<bold>Figure S2.</bold> Funnel plot of meta‐analysis of poor sleep in those with clinically inactive inflammatory bowel disease and controls. Standardized mean difference used as effect size.</p><p>
+<bold>Table S1.</bold> Study quality scored according to the Newcastle‐Ottawa scale with sub‐scores and associated study quality detailed.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="JGH3-6-738-s001.docx" position="float" orientation="portrait"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><sec sec-type="data-availability" id="jgh312817-sec-0013"><title>Data availability statement</title><p>The data underlying this article are available in the Harvard Dataverse Digital Repository at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://doi.org/10.7910/DVN/ZNF52C" ext-link-type="uri" specific-use="dataset is-supplemented-by">https://doi.org/10.7910/DVN/ZNF52C</ext-link>.</p></sec><ref-list id="jgh312817-bibl-0001" content-type="cited-references"><title>References</title><ref id="jgh312817-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="jgh312817-cit-0001">
+<string-name name-style="western">
+<surname>Ananthakrishnan</surname>
+<given-names>AN</given-names>
+</string-name>. <article-title>Environmental risk factors for inflammatory bowel diseases: a review</article-title>. <source>Dig. Dis. Sci.</source>
+<year>2015</year>; <volume>60</volume>: <fpage>290</fpage>–<lpage>8</lpage>.<pub-id pub-id-type="pmid">25204669</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10620-014-3350-9</pub-id><pub-id pub-id-type="pmcid">PMC4304948</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="jgh312817-cit-0002">
+<string-name name-style="western">
+<surname>Molodecky</surname>
+<given-names>NA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Soon</surname>
+<given-names>IS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rabi</surname>
+<given-names>DM</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Increasing incidence and prevalence of the inflammatory bowel diseases with time, based on systematic review</article-title>. <source>Gastroenterology</source>. <year>2012</year>; <volume>142</volume>: <fpage>46</fpage>–<lpage>54</lpage>.<pub-id pub-id-type="pmid">22001864</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1053/j.gastro.2011.10.001</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="jgh312817-cit-0003">
+<string-name name-style="western">
+<surname>Piovani</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Danese</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Peyrin‐Biroulet</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nikolopoulos</surname>
+<given-names>GK</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lytras</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bonovas</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Environmental risk factors for inflammatory bowel diseases: an umbrella review of meta‐analyses</article-title>. <source>Gastroenterology</source>. <year>2019</year>; <volume>157</volume>: <fpage>647</fpage>–<lpage>59</lpage>.<pub-id pub-id-type="pmid">31014995</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1053/j.gastro.2019.04.016</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="jgh312817-cit-0004">
+<string-name name-style="western">
+<surname>Vavricka</surname>
+<given-names>SR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schoepfer</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Scharl</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lakatos</surname>
+<given-names>PL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Navarini</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rogler</surname>
+<given-names>G</given-names>
+</string-name>. <article-title>Extraintestinal manifestations of inflammatory bowel disease</article-title>. <source>Inflamm. Bowel Dis.</source>
+<year>2015</year>; <volume>21</volume>: <fpage>1982</fpage>–<lpage>90</lpage>.<pub-id pub-id-type="pmid">26154136</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/MIB.0000000000000392</pub-id><pub-id pub-id-type="pmcid">PMC4511685</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="jgh312817-cit-0005">
+<string-name name-style="western">
+<surname>Swanson</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Burgess</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Keshavarzian</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>Sleep disturbances and inflammatory bowel disease: a potential trigger for disease flare?</article-title>
+<source>Expert Rev. Clin. Immunol.</source>
+<year>2011</year>; <volume>7</volume>: <fpage>29</fpage>–<lpage>36</lpage>.<pub-id pub-id-type="pmid">21162647</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1586/eci.10.83</pub-id><pub-id pub-id-type="pmcid">PMC3046047</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="jgh312817-cit-0006">
+<string-name name-style="western">
+<surname>Cappuccio</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>D'Elia</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Strazzullo</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Miller</surname>
+<given-names>MA</given-names>
+</string-name>. <article-title>Sleep duration and all‐cause mortality: a systematic review and meta‐analysis of prospective studies</article-title>. <source>Sleep</source>. <year>2010</year>; <volume>33</volume>: <fpage>585</fpage>–<lpage>92</lpage>.<pub-id pub-id-type="pmid">20469800</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/sleep/33.5.585</pub-id><pub-id pub-id-type="pmcid">PMC2864873</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="jgh312817-cit-0007">
+<string-name name-style="western">
+<surname>Ballesio</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zagaria</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Baccini</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Micheli</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Di Nardo</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lombardo</surname>
+<given-names>C</given-names>
+</string-name>. <article-title>A meta‐analysis on sleep quality in inflammatory bowel disease</article-title>. <source>Sleep Med. Rev.</source>
+<year>2021</year>; <volume>60</volume>: <fpage>301</fpage>–<lpage>8</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.smrv.2021.101518</pub-id><pub-id pub-id-type="pmid">34214847</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="jgh312817-cit-0008">
+<string-name name-style="western">
+<surname>Michalopoulos</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vrakas</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Makris</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tzathas</surname>
+<given-names>C</given-names>
+</string-name>. <article-title>Association of sleep quality and mucosal healing in patients with inflammatory bowel disease in clinical remission</article-title>. <source>Ann. Gastroenterol.</source>
+<year>2018</year>; <volume>31</volume>: <fpage>211</fpage>–<lpage>16</lpage>.<pub-id pub-id-type="pmid">29507468</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.20524/aog.2018.0227</pub-id><pub-id pub-id-type="pmcid">PMC5825951</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="jgh312817-cit-0009">
+<string-name name-style="western">
+<surname>Ali</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Madhoun</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Orr</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rubin</surname>
+<given-names>DT</given-names>
+</string-name>. <article-title>Assessment of the relationship between quality of sleep and disease activity in inflammatory bowel disease patients</article-title>. <source>Inflamm. Bowel Dis.</source>
+<year>2013</year>; <volume>19</volume>: <fpage>2440</fpage>–<lpage>3</lpage>.<pub-id pub-id-type="pmid">23945186</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/MIB.0b013e3182a0ea54</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="jgh312817-cit-0010">
+<string-name name-style="western">
+<surname>Sochal</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Małecka‐Panas</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gabryelska</surname>
+<given-names>A</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Determinants of sleep quality in inflammatory bowel diseases</article-title>. <source>J. Clin. Med.</source>
+<year>2020</year>; <volume>9</volume>: <fpage>2921</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/jcm9092921</pub-id><pub-id pub-id-type="pmcid">PMC7563861</pub-id><pub-id pub-id-type="pmid">32927760</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="jgh312817-cit-0011">
+<string-name name-style="western">
+<surname>Hood</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wilson</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gorenz</surname>
+<given-names>A</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Sleep quality in ulcerative colitis: associations with inflammation, psychological distress, and quality of life</article-title>. <source>Int. J. Behav. Med.</source>
+<year>2018</year>; <volume>25</volume>: <fpage>517</fpage>–<lpage>25</lpage>.<pub-id pub-id-type="pmid">30159665</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s12529-018-9745-9</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="jgh312817-cit-0012">
+<string-name name-style="western">
+<surname>Marinelli</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Savarino</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Marsilio</surname>
+<given-names>I</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Sleep disturbance in inflammatory bowel disease: prevalence and risk factors ‐ a cross‐sectional study</article-title>. <source>Sci. Rep.</source>
+<year>2020</year>; <volume>10</volume>: <elocation-id>507</elocation-id>.<pub-id pub-id-type="pmid">31949257</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-020-57460-6</pub-id><pub-id pub-id-type="pmcid">PMC6965196</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="jgh312817-cit-0013">
+<string-name name-style="western">
+<surname>Garcia Calvo</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Durà Gil</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Velayos Jimenez</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fernández Salazar</surname>
+<given-names>LI</given-names>
+</string-name>. <article-title>Prevalence and factors associated with poor sleep quality in inflammatory bowel disease outpatients</article-title>. <source>Rev Esp Enferm Dig</source>. <year>2020</year>; <volume>113</volume>: <fpage>512</fpage>–<lpage>18</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.17235/reed.2020.7202/2020</pub-id><pub-id pub-id-type="pmid">33233906</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="jgh312817-cit-0014">
+<string-name name-style="western">
+<surname>Stevens</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Borren</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Velonias</surname>
+<given-names>G</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Vedolizumab therapy is associated with an improvement in sleep quality and mood in inflammatory bowel diseases</article-title>. <source>Dig. Dis. Sci.</source>
+<year>2017</year>; <volume>62</volume>: <fpage>206</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10620-016-4356-2</pub-id><pub-id pub-id-type="pmcid">PMC5218976</pub-id><pub-id pub-id-type="pmid">27796768</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="jgh312817-cit-0015">
+<string-name name-style="western">
+<surname>Gîlc‐Blanariu</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ștefnescu</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Trifan</surname>
+<given-names>A</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Sleep impairment and psychological distress among patients with inflammatory bowel disease‐beyond the obvious</article-title>. <source>J. Clin. Med.</source>
+<year>2020</year>; <volume>9</volume>: <elocation-id>2304</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/jcm9072304</pub-id><pub-id pub-id-type="pmcid">PMC7408531</pub-id><pub-id pub-id-type="pmid">32698475</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="jgh312817-cit-0016">
+<string-name name-style="western">
+<surname>Wilson</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stevens</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Guo</surname>
+<given-names>A</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>High C‐reactive protein Is associated with poor sleep quality independent of nocturnal symptoms in patients with inflammatory bowel disease</article-title>. <source>Dig. Dis. Sci.</source>
+<year>2015</year>; <volume>60</volume>: <fpage>2136</fpage>–<lpage>43</lpage>.<pub-id pub-id-type="pmid">25701321</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10620-015-3580-5</pub-id><pub-id pub-id-type="pmcid">PMC4466073</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="jgh312817-cit-0017">
+<string-name name-style="western">
+<surname>Ananthakrishnan</surname>
+<given-names>AN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Long</surname>
+<given-names>MD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Martin</surname>
+<given-names>CF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sandler</surname>
+<given-names>RS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kappelman</surname>
+<given-names>MD</given-names>
+</string-name>. <article-title>Sleep disturbance and risk of active disease in patients with Crohn's disease and ulcerative colitis</article-title>. <source>Clin. Gastroenterol. Hepatol.</source>
+<year>2013</year>; <volume>11</volume>: <fpage>965</fpage>–<lpage>71</lpage>.<pub-id pub-id-type="pmid">23376797</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2013.01.021</pub-id><pub-id pub-id-type="pmcid">PMC3659204</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="jgh312817-cit-0018">
+<string-name name-style="western">
+<surname>Chrobak</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nowakowski</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zwolińska‐Wcisło</surname>
+<given-names>M</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Associations between chronotype, sleep disturbances and seasonality with fatigue and inflammatory bowel disease symptoms</article-title>. <source>Chronobiol. Int.</source>
+<year>2018</year>; <volume>35</volume>: <fpage>1142</fpage>–<lpage>52</lpage>.<pub-id pub-id-type="pmid">29737879</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/07420528.2018.1463236</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="jgh312817-cit-0019">
+<string-name name-style="western">
+<surname>van Langenberg</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Papandony</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gibson</surname>
+<given-names>P</given-names>
+</string-name>. <article-title>Sleep and physical activity measured by accelerometry in Crohn's disease</article-title>. <source>Aliment Pharmacol. Ther.</source>
+<year>2015</year>; <volume>41</volume>: <fpage>991</fpage>–<lpage>1004</lpage>.<pub-id pub-id-type="pmid">25783784</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/apt.13160</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="jgh312817-cit-0020">
+<string-name name-style="western">
+<surname>Hao</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Li</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wang</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Li</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hou</surname>
+<given-names>L</given-names>
+</string-name>. <article-title>Sleep quality and disease activity in patients with inflammatory bowel disease: a systematic review and meta‐analysis</article-title>. <source>Sleep Med.</source>
+<year>2020</year>; <volume>75</volume>: <fpage>301</fpage>–<lpage>8</lpage>.<pub-id pub-id-type="pmid">32947172</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.sleep.2020.08.032</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="jgh312817-cit-0021">
+<string-name name-style="western">
+<surname>Turner</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ricciuto</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lewis</surname>
+<given-names>A</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>STRIDE‐II: an update on the selecting therapeutic targets in inflammatory bowel disease (STRIDE) initiative of the International Organization for the Study of IBD (IOIBD): determining therapeutic goals for treat‐to‐target strategies in IBD</article-title>. <source>Gastroenterology</source>. <year>2021</year>; <volume>160</volume>: <fpage>1570</fpage>–<lpage>83</lpage>.<pub-id pub-id-type="pmid">33359090</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1053/j.gastro.2020.12.031</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="jgh312817-cit-0022">
+<string-name name-style="western">
+<surname>Best</surname>
+<given-names>WR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Becktel</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Singleton</surname>
+<given-names>JW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kern</surname>
+<given-names>F</given-names>
+<suffix>Jr</suffix>
+</string-name>. <article-title>Development of a Crohn's disease activity index. National Cooperative Crohn's Disease Study</article-title>. <source>Gastroenterology</source>. <year>1976</year>; <volume>70</volume>: <fpage>439</fpage>–<lpage>44</lpage>.<pub-id pub-id-type="pmid">1248701</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="jgh312817-cit-0023">
+<string-name name-style="western">
+<surname>Harvey</surname>
+<given-names>RF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bradshaw</surname>
+<given-names>JM</given-names>
+</string-name>. <article-title>A simple index of Crohn's‐disease activity</article-title>. <source>Lancet</source>. <year>1980</year>; <volume>8</volume>: <fpage>514</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0140-6736(80)92767-1</pub-id><pub-id pub-id-type="pmid">6102236</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0024"><label>24</label><mixed-citation publication-type="book" id="jgh312817-cit-0024">
+<string-name name-style="western">
+<surname>Cohen</surname>
+<given-names>J</given-names>
+</string-name>. <source>Statistical Power Analysis for the Behavioral Sciences Hillsdale</source>. <publisher-loc>Mahwah, NJ</publisher-loc>: <publisher-name>Lawrence Erlbaum Associates, Publishers</publisher-name>, <year>1988</year>.</mixed-citation></ref><ref id="jgh312817-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="jgh312817-cit-0025">
+<string-name name-style="western">
+<surname>Buysse</surname>
+<given-names>DJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Reynolds</surname>
+<given-names>CF</given-names>
+<suffix>3rd</suffix>
+</string-name>, <string-name name-style="western">
+<surname>Monk</surname>
+<given-names>TH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Berman</surname>
+<given-names>SR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kupfer</surname>
+<given-names>DJ</given-names>
+</string-name>. <article-title>The Pittsburgh Sleep Quality Index: a new instrument for psychiatric practice and research</article-title>. <source>Pyschiatry Res.</source>
+<year>1989</year>; <volume>28</volume>: <fpage>193</fpage>–<lpage>213</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0165-1781(89)90047-4</pub-id><pub-id pub-id-type="pmid">2748771</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="jgh312817-cit-0026">
+<string-name name-style="western">
+<surname>Iskandar</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Linan</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Patel</surname>
+<given-names>A</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Self‐reported sleep disturbance in Crohn's disease is not confirmed by objective sleep measures</article-title>. <source>Sci. Rep.</source>
+<year>2020</year>; <volume>10</volume>: <elocation-id>1980</elocation-id>.<pub-id pub-id-type="pmid">32029832</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-020-58807-9</pub-id><pub-id pub-id-type="pmcid">PMC7005285</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="jgh312817-cit-0027">
+<string-name name-style="western">
+<surname>Keskin</surname>
+<given-names>EB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sahbaz</surname>
+<given-names>C</given-names>
+</string-name>. <article-title>Chronotype and sleep quality in patients with inflammatory bowel disease</article-title>. <source>Med. Bull. Haseki</source>. <year>2020</year>; <volume>58</volume>: <fpage>72</fpage>–<lpage>7</lpage>.</mixed-citation></ref><ref id="jgh312817-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="jgh312817-cit-0028">
+<string-name name-style="western">
+<surname>Ballou</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Alhassan</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hon</surname>
+<given-names>E</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Sleep disturbances are commonly reported among patients presenting to a gastroenterology clinic</article-title>. <source>Dig. Dis. Sci.</source>
+<year>2018</year>; <volume>63</volume>: <fpage>2983</fpage>–<lpage>91</lpage>.<pub-id pub-id-type="pmid">30094624</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10620-018-5237-7</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="jgh312817-cit-0029">
+<string-name name-style="western">
+<surname>Bucci</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Amato</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zingone</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Caggiano</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Iovino</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ciacci</surname>
+<given-names>C</given-names>
+</string-name>. <article-title>Prevalence of sleep bruxism in IBD patients and its correlation to other dental disorders and quality of life</article-title>. <source>Gastroenterol. Res. Pract.</source>
+<year>2018</year>; <volume>2018</volume>: <fpage>1</fpage>–<lpage>5</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2018/7274318</pub-id><pub-id pub-id-type="pmcid">PMC5867589</pub-id><pub-id pub-id-type="pmid">29721012</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="jgh312817-cit-0030">
+<string-name name-style="western">
+<surname>Gingold‐Belfer</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Peled</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Levy</surname>
+<given-names>S</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Impaired sleep quality in Crohn's disease depends on disease activity</article-title>. <year>2014</year>; <volume>59</volume>: <fpage>146</fpage>–<lpage>51</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10620-013-2890-8</pub-id><pub-id pub-id-type="pmid">24114045</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="jgh312817-cit-0031">
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pi</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Xu</surname>
+<given-names>X</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Sleep characteristics and influencing factors of sleep quality in patients with inflammatory bowel disease‐peripheral arthritis</article-title>. <source>Front. Med.</source>
+<year>2019</year>; <volume>6</volume>: <elocation-id>190</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fmed.2019.00190</pub-id><pub-id pub-id-type="pmcid">PMC6956445</pub-id><pub-id pub-id-type="pmid">31970156</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="jgh312817-cit-0032">
+<string-name name-style="western">
+<surname>Sivertsen</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Omvik</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Havik</surname>
+<given-names>OE</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>A comparison of actigraphy and polysomnography in older adults treated for chronic primary insomnia</article-title>. <source>Sleep</source>. <year>2006</year>; <volume>29</volume>: <fpage>1353</fpage>–<lpage>8</lpage>.<pub-id pub-id-type="pmid">17068990</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/sleep/29.10.1353</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="jgh312817-cit-0033">
+<string-name name-style="western">
+<surname>Keefer</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stepanski</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ranjbaran</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Benson</surname>
+<given-names>LM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Keshavarzian</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>An initial report of sleep disturbance in inactive inflammatory bowel disease</article-title>. <source>J. Clin. Sleep Med.</source>
+<year>2006</year>; <volume>2</volume>: <fpage>409</fpage>–<lpage>16</lpage>.<pub-id pub-id-type="pmid">17557469</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="jgh312817-cit-0034">
+<string-name name-style="western">
+<surname>Arnardottir</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mackiewicz</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gislason</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Teff</surname>
+<given-names>KL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pack</surname>
+<given-names>AI</given-names>
+</string-name>. <article-title>Molecular signatures of obstructive sleep apnea in adults: a review and perspective</article-title>. <source>Sleep</source>. <year>2009</year>; <volume>32</volume>: <fpage>447</fpage>–<lpage>70</lpage>.<pub-id pub-id-type="pmid">19413140</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/sleep/32.4.447</pub-id><pub-id pub-id-type="pmcid">PMC2663860</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="jgh312817-cit-0035">
+<string-name name-style="western">
+<surname>Weintraub</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cohen</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chapnik</surname>
+<given-names>N</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Clock gene disruption is an initial manifestation of inflammatory bowel diseases</article-title>. <source>Clin. Gastroenterol. Hepatol.</source>
+<year>2020</year>; <volume>18</volume>: <fpage>115</fpage>–<lpage>22</lpage>.<pub-id pub-id-type="pmid">30981000</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2019.04.013</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="jgh312817-cit-0036">
+<string-name name-style="western">
+<surname>Ananthakrishnan</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Khalili</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Konijeti</surname>
+<given-names>G</given-names>
+</string-name>
+<italic toggle="yes">et al</italic>. <article-title>Sleep duration affects risk for ulcerative colitis: a prospective cohort study</article-title>. <source>Clin. Gastroenterol. Hepatol.</source>
+<year>2014</year>; <volume>12</volume>: <fpage>86</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2014.04.021</pub-id><pub-id pub-id-type="pmcid">PMC4209312</pub-id><pub-id pub-id-type="pmid">24780288</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="jgh312817-cit-0037">
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Duan</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Duan</surname>
+<given-names>L</given-names>
+</string-name>. <article-title>Prevalence of sleep disorder in irritable bowel syndrome: a systematic review with meta‐analysis</article-title>. <source>Saudi J. Gastroenterol.</source>
+<year>2018</year>; <volume>24</volume>: <fpage>141</fpage>–<lpage>50</lpage>.<pub-id pub-id-type="pmid">29652034</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/sjg.SJG_603_17</pub-id><pub-id pub-id-type="pmcid">PMC5985632</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="jgh312817-cit-0038">
+<string-name name-style="western">
+<surname>Zargar</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gooraji</surname>
+<given-names>SA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Keshavarzi</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Haji Aghamohammadi</surname>
+<given-names>AA</given-names>
+</string-name>. <article-title>Effect of irritable bowel syndrome on sleep quality and quality of life of inflammatory bowel disease in clinical remission</article-title>. <source>Int. J. Prev. Med.</source>
+<year>2019</year>; <volume>10</volume>: <elocation-id>10</elocation-id>.<pub-id pub-id-type="pmid">30774844</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/ijpvm.IJPVM_364_17</pub-id><pub-id pub-id-type="pmcid">PMC6360848</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="jgh312817-cit-0039">
+<string-name name-style="western">
+<surname>Ohayon</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Carskadon</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Guilleminault</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vitiello</surname>
+<given-names>MV</given-names>
+</string-name>. <article-title>Meta‐analysis of quantitative sleep parameters from childhood to old age in healthy individuals: developing normative sleep values across the human lifespan</article-title>. <source>Sleep</source>. <year>2004</year>; <volume>27</volume>: <fpage>1255</fpage>–<lpage>73</lpage>.<pub-id pub-id-type="pmid">15586779</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/sleep/27.7.1255</pub-id></mixed-citation></ref><ref id="jgh312817-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="jgh312817-cit-0040">
+<string-name name-style="western">
+<surname>Salwen‐Deremer</surname>
+<given-names>JK</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Smith</surname>
+<given-names>MT</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Aschbrenner</surname>
+<given-names>KA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Haskell</surname>
+<given-names>HG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Speed</surname>
+<given-names>BC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Siegel</surname>
+<given-names>CA</given-names>
+</string-name>. <article-title>A pilot feasibility trial of cognitive‐behavioural therapy for insomnia in people with inflammatory bowel disease</article-title>. <source>BMJ Open Gastroenterol.</source>
+<year>2021</year>; <volume>8</volume>: <elocation-id>e000805</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmjgast-2021-000805</pub-id><pub-id pub-id-type="pmcid">PMC8719151</pub-id><pub-id pub-id-type="pmid">34969664</pub-id></mixed-citation></ref></ref-list></back></article></pmc-articleset>

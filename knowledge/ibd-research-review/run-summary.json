@@ -1,0 +1,65 @@
+{
+  "executionDate": "2026-07-28T21:59:03.929049+00:00",
+  "searchesPerformed": 33,
+  "candidatesFound": 60,
+  "sourcesSelected": 25,
+  "sourceTypeBreakdown": {
+    "guideline": 5,
+    "review": 12,
+    "study": 5,
+    "expert": 3
+  },
+  "ulcerativeColitisSpecificSources": 12,
+  "crohnsSpecificSources": 18,
+  "sharedIBDSources": 21,
+  "fullTextAcquisitions": 11,
+  "abstractOnlyAcquisitions": 9,
+  "chunksGenerated": 142,
+  "claimsRetained": 95,
+  "claimsRejected": 0,
+  "duplicates": 0,
+  "conflicts": 80,
+  "coverageGaps": [
+    "post_surgery",
+    "stricture_or_obstruction_risk",
+    "adverse_effects",
+    "biomarkers",
+    "remission_maintenance",
+    "alcohol",
+    "physical_activity",
+    "post_surgery"
+  ],
+  "regionalApplicabilityGaps": 1,
+  "limitsReached": [
+    "maxSelectedSources"
+  ],
+  "estimatedApiUsage": {
+    "search_requests": 33,
+    "fetch_requests": 1,
+    "acquisition_requests": 11,
+    "official_web_requests": 3,
+    "paidModelCalls": 0,
+    "estimatedPubMedRecordsFetched": 60
+  },
+  "errors": [
+    {
+      "source": "European Crohn\u2019s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
+      "sourceType": "guideline",
+      "attemptedMethod": "Public webpage",
+      "failureStatus": "partial",
+      "failureReason": "request failed after retries: 403 Client Error: Forbidden for url: https://academic.oup.com/ecco-jcc/article/19/9/jjaf122/8198055",
+      "retryCount": 2,
+      "abstractOnlyUsed": "No"
+    },
+    {
+      "source": "ECCO Guidelines on Therapeutics in Crohn\u2019s Disease: Medical Treatment",
+      "sourceType": "guideline",
+      "attemptedMethod": "Public webpage",
+      "failureStatus": "partial",
+      "failureReason": "request failed after retries: 403 Client Error: Forbidden for url: https://academic.oup.com/ecco-jcc/article/18/10/1531/7693895",
+      "retryCount": 2,
+      "abstractOnlyUsed": "No"
+    }
+  ],
+  "reviewStatus": "pending_human_review"
+}

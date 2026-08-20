@@ -1,0 +1,76 @@
+{
+  "runType": "final_independent_targeted_remediation_qa",
+  "completedAt": "2026-07-30",
+  "qaRoot": "/Users/janakirampulipati/ibd-research-review",
+  "overallStatus": "NOT_READY_FOR_HUMAN_APPROVAL",
+  "humanApprovalsGranted": 0,
+  "counts": {
+    "supportedActiveClaims": 60,
+    "unresolvedActiveClaims": 1,
+    "totalActiveClaims": 61,
+    "cumulativeRemovedOriginalClaims": 37,
+    "originalClaimsReplaced": 2,
+    "newSplitClaimsCreated": 3,
+    "activeSources": 25,
+    "sourceRowsIncludingSuperseded": 26,
+    "authoritativePassagesTraceable": 61,
+    "preciseLocators": 61,
+    "readyTaggedClaimsWithMetadataDefects": 17,
+    "formulaErrors": 0,
+    "sourceWorkbookSheetsInspected": 8,
+    "qaWorkbookSheetsInspected": 8,
+    "testsPassed": 67,
+    "testsFailed": 0
+  },
+  "correctedClaimQA": {
+    "qaPass": 1,
+    "qaPassWithLimitation": 8,
+    "qaFail": 1,
+    "failedClaim": "CLM-083"
+  },
+  "clm092Classification": "correctly_excluded",
+  "workbookIntegrity": {
+    "sheetCount": 8,
+    "requiredSheetNamesPresent": true,
+    "filtersPresent": true,
+    "wrappedAndLegible": true,
+    "humanReviewFieldsBlank": true,
+    "hiddenApprovalDefaults": 0,
+    "frozenPaneDefinitions": 0,
+    "dataValidationDefinitions": 0,
+    "formulaErrorMatches": 0,
+    "brokenReferences": 0,
+    "activeClaimsUsingSupersededSource": 0
+  },
+  "materialFindings": [
+    {
+      "findingId": "F-001",
+      "scope": "17 ready-tagged active claims",
+      "finding": "Condition applicability, outcome type, or core metadata is inaccurate or missing.",
+      "requiredAction": "Correct the row-level metadata and populate all five missing metadata fields for CLM-096 through CLM-100."
+    },
+    {
+      "findingId": "F-002",
+      "scope": "CLM-083",
+      "finding": "A stricturing Crohn's disease claim is tagged for ulcerative colitis and general IBD and has inappropriate outcome/confidence framing.",
+      "requiredAction": "Restrict to Crohn's disease, use an obstruction-risk outcome, and align confidence and limitations with EL5 mechanism-based reasoning."
+    },
+    {
+      "findingId": "F-003",
+      "scope": "ibd-evidence-review-final-remediation.xlsx",
+      "finding": "No worksheet has a frozen pane and no decision field has dropdown validation.",
+      "requiredAction": "Freeze data-sheet header rows and add blank-default decision dropdowns."
+    }
+  ],
+  "repositoryIsolation": {
+    "forbiddenRepositoryAccessedByThisQa": false,
+    "forbiddenRepositoryModifiedByThisQa": false,
+    "historicalRemediationClaim": "Supported by remediation audit records; not independently inspected because repository access was prohibited."
+  },
+  "outputs": [
+    "/Users/janakirampulipati/ibd-research-review/ibd-evidence-review-final-remediation-qa.xlsx",
+    "/Users/janakirampulipati/ibd-research-review/source-verification-report-final-remediation-qa.md",
+    "/Users/janakirampulipati/ibd-research-review/completion-report-final-remediation-qa.md",
+    "/Users/janakirampulipati/ibd-research-review/run-summary-final-remediation-qa.json"
+  ]
+}

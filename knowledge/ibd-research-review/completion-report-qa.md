@@ -1,0 +1,21 @@
+# Evidence QA completion report
+
+- Backup directory: `/Users/janakirampulipati/ibd-research-review/backups/2026-07-29-evidence-qa`
+- QA workbook: `/Users/janakirampulipati/ibd-research-review/ibd-evidence-review-qa.xlsx`
+- Sources ready for review: 8
+- Sources needing verification: 17
+- Sources recommended for rejection: 0
+- Claims ready for review: 2
+- Claims with revised wording: 53
+- Claims needing more evidence: 3
+- Claims recommended for rejection: 37
+- True conflicts: 0
+- Non-comparable flags: 80
+- Abstract-only sources remaining: 3
+- Unresolved access issues: 4
+- MVP-blocking evidence gaps: 6
+- Original full-text mapping mismatches: 11
+- Tests: 35 passed
+- Formula-error scan: passed (0 matches)
+- Workbook visual validation: passed for all 8 required sheets
+- Review status: pending human review; no approvals populated

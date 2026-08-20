@@ -1,0 +1,25 @@
+{
+  "version": "prototype-v1",
+  "totalActiveClaimsReviewed": 61,
+  "claimsIncluded": 49,
+  "claimsIncludedWithLimitation": 7,
+  "claimsExcluded": 12,
+  "sourceCount": 20,
+  "clm083FinalScope": "crohns_disease / stricture_or_obstruction_risk",
+  "clm096Through100": "included_with_completed_metadata",
+  "clm092": "excluded_still_needs_evidence",
+  "coverage": {
+    "ulcerative_colitis": 5,
+    "crohns_disease": 20,
+    "ibd_general": 34,
+    "active_disease": 7,
+    "remission": 11,
+    "food": 2,
+    "nutrition": 4,
+    "lifestyle": 0,
+    "symptoms": 7,
+    "inflammation": 7,
+    "evidence_uncertainty": 1
+  },
+  "tests": "74 passed"
+}

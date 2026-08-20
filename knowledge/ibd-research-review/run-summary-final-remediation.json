@@ -1,0 +1,78 @@
+{
+  "runType": "targeted_final_evidence_remediation",
+  "completedAt": "2026-07-30",
+  "workingDirectory": "/Users/janakirampulipati/ibd-research-review",
+  "overallStatus": "READY_FOR_ONE_FINAL_INDEPENDENT_QA_NOT_APPROVED",
+  "scope": {
+    "targetedClaims": [
+      "CLM-081",
+      "CLM-082",
+      "CLM-083",
+      "CLM-084",
+      "CLM-085",
+      "CLM-086",
+      "CLM-097"
+    ],
+    "broadResearchPerformed": false,
+    "clm092ResearchedFurther": false,
+    "applicationRepositoryInspected": false,
+    "applicationRepositoryModified": false,
+    "productionOrArchitectureWorkPerformed": false
+  },
+  "results": {
+    "targetedClaimsRepaired": 7,
+    "targetedClaimsRemoved": 0,
+    "eccoLocatorsCorrected": 6,
+    "clm097FinalDisposition": "narrowed_to_one_atomic_assertion_and_split",
+    "newSplitClaimsCreated": 3,
+    "newSplitClaimIds": [
+      "CLM-098",
+      "CLM-099",
+      "CLM-100"
+    ],
+    "clm092Status": "still_needs_evidence",
+    "clm092ApprovedExportEligibility": "excluded_until_evidence_resolved_and_explicitly_approved",
+    "activeClaimsReadyForFinalIndependentQa": 60,
+    "activeClaimsNeedingMoreEvidence": 1,
+    "totalActiveClaims": 61,
+    "cumulativeOriginalClaimsRemoved": 37,
+    "activeSources": 25,
+    "sourceRowsIncludingSuperseded": 26,
+    "humanApprovalsGranted": 0
+  },
+  "workbook": {
+    "path": "/Users/janakirampulipati/ibd-research-review/ibd-evidence-review-final-remediation.xlsx",
+    "sheetCount": 8,
+    "sheetNames": [
+      "Sources",
+      "Claims",
+      "Locator Corrections",
+      "CLM-097 Remediation",
+      "Unresolved Claims",
+      "Removed or Replaced Claims",
+      "Validation Summary",
+      "Final Remediation Summary"
+    ],
+    "formulaErrorMatches": 0,
+    "renderedSheetsInspected": 8
+  },
+  "tests": {
+    "command": "PYTHONPATH=. .venv/bin/pytest -q",
+    "passed": 67,
+    "failed": 0
+  },
+  "humanReviewFields": {
+    "sourceDecisionFieldsBlank": true,
+    "sourceNoteFieldsBlank": true,
+    "claimDecisionFieldsBlank": true,
+    "claimEditedTextFieldsBlank": true,
+    "reviewerNoteFieldsBlank": true
+  },
+  "outputs": [
+    "/Users/janakirampulipati/ibd-research-review/ibd-evidence-review-final-remediation.xlsx",
+    "/Users/janakirampulipati/ibd-research-review/source-verification-report-final-remediation.md",
+    "/Users/janakirampulipati/ibd-research-review/completion-report-final-remediation.md",
+    "/Users/janakirampulipati/ibd-research-review/run-summary-final-remediation.json"
+  ],
+  "hardStop": "Await one final independent QA. Do not approve or import evidence."
+}

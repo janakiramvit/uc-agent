@@ -1,0 +1,19 @@
+[project]
+name = "ibd-evidence-review"
+version = "0.1.0"
+description = "Standalone, bounded IBD evidence research-review package"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic==2.11.7",
+  "requests==2.32.4",
+  "beautifulsoup4==4.13.4",
+  "pypdf==5.8.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

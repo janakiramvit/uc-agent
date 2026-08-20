@@ -1,0 +1,114 @@
+{
+  "version": "prototype-v1",
+  "excludedClaimIds": [
+    "CLM-018",
+    "CLM-019",
+    "CLM-025",
+    "CLM-026",
+    "CLM-030",
+    "CLM-033",
+    "CLM-048",
+    "CLM-071",
+    "CLM-082",
+    "CLM-084",
+    "CLM-086",
+    "CLM-092"
+  ],
+  "triage": [
+    {
+      "claimId": "CLM-018",
+      "result": "excluded_metadata_material",
+      "reason": "The abstract context and conclusion identify these comparisons as Crohn\u2019s disease evidence; UC/IBD-general tags are overbroad. Outcome is remission induction/maintenance, not nutritional status."
+    },
+    {
+      "claimId": "CLM-019",
+      "result": "excluded_metadata_material",
+      "reason": "The abstract conclusion identifies PEN relapse evidence as Crohn\u2019s disease evidence; UC/IBD-general tags are overbroad."
+    },
+    {
+      "claimId": "CLM-025",
+      "result": "excluded_metadata_material",
+      "reason": "The claim says both diseases, but the condition tags omit ulcerative colitis. Outcome is lactose maldigestion, not generic disease activity."
+    },
+    {
+      "claimId": "CLM-026",
+      "result": "excluded_metadata_material",
+      "reason": "Outcome is lactose maldigestion, not inflammation."
+    },
+    {
+      "claimId": "CLM-030",
+      "result": "excluded_metadata_material",
+      "reason": "Outcome is nutritional status/malnutrition, not inflammation."
+    },
+    {
+      "claimId": "CLM-033",
+      "result": "excluded_metadata_material",
+      "reason": "Outcome is sleep quality and its association with disease activity, not inflammation."
+    },
+    {
+      "claimId": "CLM-048",
+      "result": "excluded_metadata_material",
+      "reason": "The result is specifically clinical recurrence in Crohn\u2019s disease remission; UC/IBD-general tags are overbroad. Outcome is clinical recurrence/relapse in remission, not generic disease activity."
+    },
+    {
+      "claimId": "CLM-071",
+      "result": "excluded_metadata_material",
+      "reason": "The FACES result is specifically Crohn\u2019s disease in remission; the IBD-general tag is overbroad."
+    },
+    {
+      "claimId": "CLM-082",
+      "result": "excluded_metadata_material",
+      "reason": "Outcome is evidence quality and endpoint coverage, not general patient education."
+    },
+    {
+      "claimId": "CLM-083",
+      "result": "prototype_eligible_with_limitation",
+      "reason": "Scope corrected to stricturing Crohn\u2019s disease with obstructive symptoms; EL5 mechanism-based caveat retained."
+    },
+    {
+      "claimId": "CLM-084",
+      "result": "excluded_metadata_material",
+      "reason": "Outcome is inflammatory burden, not general patient education."
+    },
+    {
+      "claimId": "CLM-086",
+      "result": "excluded_metadata_material",
+      "reason": "Outcome is maintenance of remission, not general patient education."
+    },
+    {
+      "claimId": "CLM-092",
+      "result": "excluded_scope_or_safety_issue",
+      "reason": "Unresolved evidence; explicitly excluded and not researched in this run."
+    },
+    {
+      "claimId": "CLM-096",
+      "result": "prototype_eligible_with_limitation",
+      "reason": "Required safe prototype metadata completed from the existing authoritative source record."
+    },
+    {
+      "claimId": "CLM-097",
+      "result": "prototype_eligible_with_limitation",
+      "reason": "Required safe prototype metadata completed from the existing authoritative source record."
+    },
+    {
+      "claimId": "CLM-098",
+      "result": "prototype_eligible_with_limitation",
+      "reason": "Required safe prototype metadata completed from the existing authoritative source record."
+    },
+    {
+      "claimId": "CLM-099",
+      "result": "prototype_eligible_with_limitation",
+      "reason": "Required safe prototype metadata completed from the existing authoritative source record."
+    },
+    {
+      "claimId": "CLM-100",
+      "result": "prototype_eligible_with_limitation",
+      "reason": "Required safe prototype metadata completed from the existing authoritative source record."
+    }
+  ],
+  "clm092": {
+    "status": "still_needs_evidence",
+    "prototypeEligible": false,
+    "approvedExportEligible": false
+  }
+}
