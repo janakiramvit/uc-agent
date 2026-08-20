@@ -1,25 +1,41 @@
-"""Production agent graph (v2): the full stateful LangGraph pipeline
-requested for the Next.js/Vercel rebuild.
+"""Production agent graph (v2): the full stateful LangGraph pipeline --
+a genuine hybrid RAG agent, not a retrieval demo.
 
 Node sequence:
-  receive_query -> planner -> query_classifier -> evidence_retriever (BM25)
-  -> vector_retriever (embeddings, if configured) -> source_applicability_checker
-  -> conflict_detector -> gap_detector -> check_safety_boundaries
-  -> evidence_synthesizer (REAL LLM call) -> safety_critic -> citation_verifier
+  receive_query -> planner -> query_classifier
+  -> evidence_retriever (BM25, planner-routed: one query per identified
+     sub-topic when the planner decomposed a compound question)
+  -> vector_retriever (OpenAI-embeddings semantic retrieval, when configured)
+  -> fusion_reranker (Reciprocal Rank Fusion over the BM25 + vector rankings
+     -- this is the list everything downstream actually uses)
+  -> source_applicability_checker -> conflict_detector -> gap_detector
+  -> check_safety_boundaries -> evidence_synthesizer (REAL LLM call, grounded
+     in the fused/verified claims) -> safety_critic -> citation_verifier
   -> qa_agent -> attach_citations_final
   (with refuse / fallback_if_unsupported / llm_unavailable exit paths, and a
   bounded retry loop back to evidence_synthesizer on safety-critic or
   citation-verifier failure, identical in shape to the deterministic
   prototype's retry policy)
 
+The planner's output is not decorative: when it identifies more than one
+sub-topic in a compound question, evidence_retriever actually issues one
+BM25 call per sub-topic (real tool orchestration, not just a plan label).
+Vector retrieval is not decorative either: fusion_reranker's fused list
+-- not the raw BM25 list -- is what source_applicability_checker,
+conflict_detector, and the LLM synthesizer all consume; when
+OPENAI_API_KEY is unset, fusion honestly degrades to a pure BM25
+passthrough (``fusion_report.vector_used = False``), never a fabricated
+"vector contributed" claim.
+
 This module composes ONLY: it reuses the unmodified, already-tested nodes
 from ``agent_core.workflow`` / ``agent_core.subagents`` for everything
-that does not require a model call (retrieval, applicability filtering,
-gap detection, safety-boundary checks on the query, safety-critic review
-of the draft, citation verification, QA checks), and adds exactly four
-new nodes: planner, vector_retriever, conflict_detector, and an
-LLM-backed evidence_synthesizer that replaces the deterministic template
-synthesizer used by the prototype.
+that does not require a model call (applicability filtering, gap
+detection, safety-boundary checks on the query, safety-critic review of
+the draft, citation verification, QA checks), and adds new nodes:
+planner, a planner-routed BM25 retriever, vector_retriever,
+fusion_reranker, conflict_detector, and an LLM-backed evidence_synthesizer
+that replaces the deterministic template synthesizer used by the
+prototype.
 """
 
 from __future__ import annotations
@@ -30,6 +46,7 @@ from langgraph.graph import END, StateGraph
 
 from agent_core.conflict_detector import make_conflict_detector_node
 from agent_core.evidence_loader import EvidencePackage
+from agent_core.fusion import make_fusion_reranker_node
 from agent_core.llm_synthesizer import LLMNotConfiguredError, synthesize_with_llm
 from agent_core.planner import make_planner_node
 from agent_core.qa_checks import run_all_qa_checks
@@ -39,7 +56,6 @@ from agent_core.subagents import (
     MAX_SYNTHESIS_ATTEMPTS,
     make_check_safety_boundaries_node,
     make_citation_verifier_node,
-    make_evidence_retriever_node,
     make_gap_detector_node,
     make_qa_agent_node,
     make_query_classifier_node,
@@ -52,6 +68,58 @@ from agent_core.subagents import (
 )
 from agent_core.vector_retrieval import make_vector_retriever_node
 from agent_core.workflow import fallback_if_unsupported, make_receive_query
+
+
+def make_planned_evidence_retriever_node(retriever: UCEvidenceRetriever):
+    """BM25 retrieval that is actually routed by the planner's output: if
+    the planner decomposed the query into more than one identified
+    sub-topic (e.g. "fibre and alcohol"), this issues one retrieval call
+    per sub-topic and merges the results, instead of a single call that
+    would silently favor whichever sub-topic BM25 happens to rank first.
+    Falls back to a single whole-query call when there is zero or one
+    identified sub-topic -- the common case."""
+
+    def planned_evidence_retriever_node(state: dict) -> dict:
+        state.setdefault("visited_nodes", [])
+        state["visited_nodes"].append("evidence_retriever")
+
+        if state.get("known_unsupported"):
+            state["candidate_claims"] = []
+            state.setdefault("trace", [])
+            state["trace"].append({"node": "evidence_retriever", "output": {"skipped": "known_unsupported"}})
+            return state
+
+        query = state.get("query", "")
+        disease_filter = state.get("disease_filter", "ulcerative_colitis")
+        topics = (state.get("plan") or {}).get("identified_topics") or []
+
+        if len(topics) > 1:
+            merged: dict[str, RetrievedClaim] = {}
+            per_topic_counts = {}
+            for topic in topics:
+                results = retriever.retrieve(query=query, topic_filter=topic, disease_filter=disease_filter)
+                per_topic_counts[topic] = len(results)
+                for claim in results:
+                    merged.setdefault(claim.claim_id, claim)
+            candidate_claims = list(merged.values())
+            routing = {"mode": "per_subtopic", "topics": topics, "counts_by_topic": per_topic_counts}
+        else:
+            candidate_claims = retriever.retrieve(
+                query=query, topic_filter=state.get("classified_topic"), disease_filter=disease_filter
+            )
+            routing = {"mode": "single_query"}
+
+        state["candidate_claims"] = candidate_claims
+        state.setdefault("trace", [])
+        state["trace"].append(
+            {
+                "node": "evidence_retriever",
+                "output": {**routing, "candidate_claim_ids": [c.claim_id for c in candidate_claims]},
+            }
+        )
+        return state
+
+    return planned_evidence_retriever_node
 
 
 class GraphV2State(TypedDict, total=False):
@@ -69,6 +137,7 @@ class GraphV2State(TypedDict, total=False):
     verified_claims: list[RetrievedClaim]
     vector_retrieval_status: str
     vector_matches: list[dict[str, Any]]
+    fusion_report: dict[str, Any]
     conflict_report: dict[str, Any]
     gap_terms: list[str]
     is_evidence_gap: bool
@@ -238,8 +307,9 @@ def build_graph_v2(package: EvidencePackage, retriever: UCEvidenceRetriever):
     graph.add_node("receive_query", make_receive_query)
     graph.add_node("planner", make_planner_node(topic_vocabulary))
     graph.add_node("query_classifier", make_query_classifier_node(topic_vocabulary))
-    graph.add_node("evidence_retriever", make_evidence_retriever_node(retriever))
+    graph.add_node("evidence_retriever", make_planned_evidence_retriever_node(retriever))
     graph.add_node("vector_retriever", make_vector_retriever_node(package))
+    graph.add_node("fusion_reranker", make_fusion_reranker_node(package))
     graph.add_node("source_applicability_checker", make_source_applicability_checker_node(package))
     graph.add_node("conflict_detector", make_conflict_detector_node())
     graph.add_node("gap_detector", make_gap_detector_node(package))
@@ -258,7 +328,8 @@ def build_graph_v2(package: EvidencePackage, retriever: UCEvidenceRetriever):
     graph.add_edge("planner", "query_classifier")
     graph.add_edge("query_classifier", "evidence_retriever")
     graph.add_edge("evidence_retriever", "vector_retriever")
-    graph.add_edge("vector_retriever", "source_applicability_checker")
+    graph.add_edge("vector_retriever", "fusion_reranker")
+    graph.add_edge("fusion_reranker", "source_applicability_checker")
     graph.add_edge("source_applicability_checker", "conflict_detector")
     graph.add_edge("conflict_detector", "gap_detector")
     graph.add_conditional_edges(

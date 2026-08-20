@@ -71,6 +71,29 @@ class RetrievedClaim:
             score=score,
         )
 
+    @classmethod
+    def from_claim_dict(cls, claim: dict[str, Any], score: float = 0.0) -> "RetrievedClaim":
+        """Build directly from a raw evidence-package claim dict (as
+        opposed to a LangChain ``Document``) -- used by vector retrieval,
+        which matches against embeddings rather than BM25 documents."""
+        return cls(
+            claim_id=claim.get("claimId", ""),
+            source_title=claim.get("sourceTitle", ""),
+            source_url=claim.get("sourceUrl", ""),
+            claim_text=claim.get("claimText", ""),
+            supporting_excerpt=claim.get("supportingExcerpt", ""),
+            exact_locator=claim.get("exactLocator", ""),
+            evidence_level=claim.get("evidenceLevel", ""),
+            confidence=claim.get("confidence", ""),
+            limitations=claim.get("limitations", ""),
+            applicability_limitations=claim.get("applicabilityLimitations", ""),
+            topic=claim.get("topic", ""),
+            outcome_type=claim.get("outcomeType", ""),
+            condition_applicability=claim.get("conditionApplicability", ""),
+            disease_context=claim.get("diseaseContext", ""),
+            score=score,
+        )
+
 
 class UCEvidenceRetriever:
     """Wraps a LangChain BM25Retriever restricted to UC-eligible claims."""

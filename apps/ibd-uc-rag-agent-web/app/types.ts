@@ -38,6 +38,14 @@ export interface TraceEntry {
 
 export type ChatStatus = "answered" | "unsupported" | "refused" | "llm_unavailable" | "error";
 
+export interface FusionReport {
+  bm25_ids: string[];
+  vector_ids: string[];
+  fused_ids: string[];
+  vector_used: boolean;
+  method: string;
+}
+
 export interface ChatResponse {
   status: ChatStatus;
   answer: string;
@@ -46,6 +54,7 @@ export interface ChatResponse {
   plan: QueryPlan | null;
   conflictReport: ConflictReport | null;
   vectorRetrievalStatus: string | null;
+  fusionReport: FusionReport | null;
   llmProvider: string | null;
   llmModel: string | null;
   trace: TraceEntry[];

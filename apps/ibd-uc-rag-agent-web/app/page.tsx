@@ -11,6 +11,14 @@ const STATUS_STYLES: Record<string, string> = {
   error: "border-red-300 bg-red-50 text-red-900",
 };
 
+const SUGGESTED_QUESTIONS = [
+  "Is fibre good or bad for my ulcerative colitis?",
+  "How much fibre should I actually be eating with UC?",
+  "Should I eat fruit and vegetables if I have ulcerative colitis?",
+  "Is it safe to drink alcohol with ulcerative colitis?",
+  "What general diet advice is there for someone with IBD?",
+];
+
 export default function Home() {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,8 +26,9 @@ export default function Home() {
   const [error, setError] = useState<ChatErrorResponse | null>(null);
   const [showTrace, setShowTrace] = useState(false);
 
-  async function handleAsk() {
-    if (!query.trim()) return;
+  async function handleAsk(overrideQuery?: string) {
+    const q = overrideQuery ?? query;
+    if (!q.trim()) return;
     setLoading(true);
     setResult(null);
     setError(null);
@@ -27,7 +36,7 @@ export default function Home() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify({ query: q }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -42,12 +51,13 @@ export default function Home() {
     }
   }
 
+  function askSuggested(q: string) {
+    setQuery(q);
+    handleAsk(q);
+  }
+
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 px-4 py-10">
-      <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm font-medium text-red-900">
-        Research prototype—not medical advice. Evidence and outputs require clinician/human review.
-      </div>
-
       <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
         <strong>Informational prototype only</strong> — not a medical device, not a substitute for
         professional medical advice, diagnosis, or treatment. All evidence in this tool is{" "}
@@ -57,11 +67,7 @@ export default function Home() {
       </div>
 
       <header>
-        <h1 className="text-3xl font-semibold tracking-tight">IBD / UC Evidence Agent</h1>
-        <p className="mt-1 text-sm text-neutral-500">
-          Stateful LangGraph agent — planning, BM25 + vector retrieval, grounded LLM synthesis,
-          safety &amp; citation verification, QA pass.
-        </p>
+        <h1 className="text-3xl font-semibold tracking-tight">Ulcerative Colitis Evidence Agent</h1>
       </header>
 
       <div className="flex flex-col gap-2 sm:flex-row">
@@ -75,13 +81,31 @@ export default function Home() {
           }}
         />
         <button
-          onClick={handleAsk}
+          onClick={() => handleAsk()}
           disabled={loading || !query.trim()}
           className="rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
         >
           {loading ? "Asking…" : "Ask"}
         </button>
       </div>
+
+      <section aria-label="Suggested questions">
+        <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500">
+          Suggested questions
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {SUGGESTED_QUESTIONS.map((q) => (
+            <button
+              key={q}
+              onClick={() => askSuggested(q)}
+              disabled={loading}
+              className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:border-neutral-500 hover:bg-neutral-50 disabled:opacity-40"
+            >
+              {q}
+            </button>
+          ))}
+        </div>
+      </section>
 
       {error && (
         <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-900">
@@ -185,6 +209,14 @@ export default function Home() {
                 <div>
                   <strong>Vector retrieval status:</strong> {result.vectorRetrievalStatus ?? "—"}
                 </div>
+                {result.fusionReport && (
+                  <div>
+                    <strong>Fusion (RRF):</strong> vector used={String(result.fusionReport.vector_used)}; BM25=
+                    {result.fusionReport.bm25_ids.join(", ") || "(none)"}; vector=
+                    {result.fusionReport.vector_ids.join(", ") || "(none)"}; fused=
+                    {result.fusionReport.fused_ids.join(", ") || "(none)"}
+                  </div>
+                )}
                 {result.plan && (
                   <div>
                     <strong>Plan:</strong> topics={result.plan.identified_topics.join(", ") || "(none)"}; steps=
@@ -203,9 +235,17 @@ export default function Home() {
         </div>
       )}
 
-      <footer className="mt-auto border-t border-neutral-200 pt-4 text-xs text-neutral-500">
-        Research prototype—not medical advice. Evidence and outputs require clinician/human review.
-        Not for clinical use.
+      <footer className="mt-auto flex flex-col gap-2 border-t border-neutral-200 pt-4 text-xs text-neutral-500">
+        <p className="font-medium text-neutral-700">
+          Research prototype—not medical advice. Evidence and outputs require clinician/human review.
+          Not for clinical use.
+        </p>
+        <p>
+          Hybrid RAG agent — LangGraph planner and tool orchestration, BM25 keyword retrieval fused
+          with vector/embedding retrieval via reciprocal rank fusion, source/applicability validation,
+          conflict and evidence-gap detection, grounded LLM synthesis, citation and locator
+          verification, and a final safety/QA pass.
+        </p>
       </footer>
     </main>
   );

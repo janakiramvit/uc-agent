@@ -123,6 +123,7 @@ class handler(BaseHTTPRequestHandler):
             "plan": result.get("plan"),
             "conflictReport": result.get("conflict_report"),
             "vectorRetrievalStatus": result.get("vector_retrieval_status"),
+            "fusionReport": result.get("fusion_report"),
             "llmProvider": result.get("llm_provider"),
             "llmModel": result.get("llm_model"),
             "trace": result.get("trace", []),
