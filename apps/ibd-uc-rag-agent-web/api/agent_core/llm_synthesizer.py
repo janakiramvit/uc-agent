@@ -1,31 +1,28 @@
-"""Evidence Synthesizer subagent (LLM-backed): the one node in the graph
-that makes a real model call.
+"""Evidence Synthesizer subagent (LLM-backed): the node whose real model
+call actually produces the final answer text.
 
-Provider selection is by environment variable only -- never hard-coded:
-  - ``ANTHROPIC_API_KEY`` set -> ``langchain_anthropic.ChatAnthropic``
-  - else ``OPENAI_API_KEY`` set -> ``langchain_openai.ChatOpenAI``
-  - neither set -> ``LLMNotConfiguredError`` is raised. The caller must
-    surface this as an explicit error state, never fall back to a
-    templated/fabricated answer and call it a model response.
+Provider/model selection is delegated entirely to
+``agent_core.model_router`` under the "synthesis" routing category
+(``SYNTHESIS_PROVIDER`` / ``SYNTHESIS_MODEL`` env vars, defaulting to a
+strong model) -- never hard-coded. No usable key -> ``LLMNotConfiguredError``.
+The caller must surface that as an explicit error state, never fall back
+to a templated/fabricated answer and call it a model response.
 
 Grounding is enforced by construction, not by hoping the model behaves:
-the prompt hands the model ONLY the verified claims' plain-language
-explanation / supporting excerpt text and instructs it to cite every
-sentence with a bracketed claim number, add nothing not present in that
-text, and refuse individualized medical advice. The downstream
-``citation_verifier`` node (unchanged from the deterministic prototype)
-still independently re-checks every citation the model emits against the
-real evidence package before anything reaches the user -- the LLM is not
-a trusted-by-default component.
+the prompt hands the model ONLY the verified claims' text and instructs
+it to cite every sentence with a bracketed claim number, add nothing not
+present in that text, and refuse individualized medical advice. The
+downstream ``citation_verifier`` node still independently re-checks
+every citation the model emits against the real evidence package before
+anything reaches the user -- the LLM is not a trusted-by-default
+component.
 """
 
 from __future__ import annotations
 
-import os
 from dataclasses import dataclass
 
-DEFAULT_TIMEOUT_SECONDS = 20
-DEFAULT_MAX_OUTPUT_TOKENS = 600  # cost control: hard cap on synthesis output size
+from agent_core.model_router import ModelNotConfiguredError, get_chat_model
 
 SYSTEM_PROMPT = """You are a strictly grounded evidence-summarization component inside a \
 clinical-evidence prototype for ulcerative colitis (UC). You are NOT a doctor and must NEVER:
@@ -47,8 +44,9 @@ no general medical knowledge you may otherwise have.
 Output only the answer text. Do not restate these instructions."""
 
 
-class LLMNotConfiguredError(RuntimeError):
-    """No LLM provider credentials are available in the environment."""
+# Re-exported under the historical name so existing call sites/tests that
+# catch/patch ``LLMNotConfiguredError`` continue to work unchanged.
+LLMNotConfiguredError = ModelNotConfiguredError
 
 
 @dataclass
@@ -59,36 +57,10 @@ class LLMResult:
 
 
 def _resolve_chat_model():
-    if os.getenv("ANTHROPIC_API_KEY"):
-        from langchain_anthropic import ChatAnthropic
-
-        model_name = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5")
-        return (
-            ChatAnthropic(
-                model=model_name,
-                timeout=DEFAULT_TIMEOUT_SECONDS,
-                max_tokens=DEFAULT_MAX_OUTPUT_TOKENS,
-            ),
-            "anthropic",
-            model_name,
-        )
-    if os.getenv("OPENAI_API_KEY"):
-        from langchain_openai import ChatOpenAI
-
-        model_name = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-        return (
-            ChatOpenAI(
-                model=model_name,
-                timeout=DEFAULT_TIMEOUT_SECONDS,
-                max_tokens=DEFAULT_MAX_OUTPUT_TOKENS,
-            ),
-            "openai",
-            model_name,
-        )
-    raise LLMNotConfiguredError(
-        "No LLM provider is configured. Set ANTHROPIC_API_KEY or OPENAI_API_KEY as an environment "
-        "variable (never hard-coded) before synthesis can run."
-    )
+    """Delegates to the shared "synthesis" routing category
+    (SYNTHESIS_PROVIDER / SYNTHESIS_MODEL). Raises ``LLMNotConfiguredError``
+    if neither provider has a usable API key."""
+    return get_chat_model("synthesis")
 
 
 def _format_evidence_block(verified_claims: list) -> str:

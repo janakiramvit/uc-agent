@@ -1,70 +1,91 @@
-# IBD / UC Evidence Agent (Next.js + LangGraph)
+# IBD / UC Evidence Agent (Next.js + model-powered LangGraph)
 
 Research prototype—not medical advice. Evidence and outputs require clinician/human review.
 
-Production-grade rebuild of the original Streamlit prototype
-(`apps/ibd-uc-rag-prototype/`), following the architecture pattern of
-[`procurement-genai-case-study`](https://github.com/janakiramvit/procurement-genai-case-study):
-a Next.js (TypeScript, App Router) frontend calling a Python LangGraph
-agent deployed as a Vercel Python serverless function.
+A genuine model-powered RAG agent: nine LLM-powered LangGraph nodes
+(planner, query classifier, query reformulator, evidence analyst,
+conflict resolver, grounded synthesizer, citation reviewer, safety
+critic, QA evaluator) wrapped around deterministic, non-bypassable tools
+(BM25, vector retrieval, reciprocal-rank fusion, UC-applicability
+filtering, citation existence checks, hard safety rules, request/token
+limits). Deployed as a Next.js (TypeScript, App Router) frontend calling
+a Python LangGraph agent as a Vercel serverless function, following the
+[`procurement-genai-case-study`](https://github.com/janakiramvit/procurement-genai-case-study)
+reference architecture.
 
-## Architecture
-
-```
-app/                Next.js frontend (chat UI, citations, agent-trace panel)
-api/chat.py          Vercel Python serverless entrypoint (rate limiting,
-                      timeout handling, error handling)
-api/agent_core/       LangGraph agent (StateGraph), extended from the
-                      original prototype's tested nodes:
-  evidence_loader.py    load + index the evidence package (unchanged)
-  retrieval.py           BM25 retriever (unchanged)
-  vector_retrieval.py    NEW: OpenAI-embeddings vector retrieval
-  planner.py              NEW: query decomposition / planning
-  conflict_detector.py    NEW: cross-source conflict detection
-  safety_rules.py        query-level safety boundaries (unchanged)
-  llm_synthesizer.py      NEW: real LLM-backed grounded synthesis
-  subagents.py            safety critic, citation verifier, gap detector,
-                          QA agent (unchanged, reused as-is)
-  graph_v2.py              NEW: composes all of the above into one
-                          StateGraph
-  tools.py                6 read-only evidence tools (search/get-claim/
-                          get-source/list-topics/check-applicability/
-                          evidence-gaps) -- tool-augmented RAG layer
-  rate_limit.py           NEW: best-effort request rate limiting + cost caps
-api/data/                exact, unmodified copy of the reviewed evidence
-                      package (md5-identical to the Streamlit app's copy)
-tests/                new pytest suite: planning, tool invocation,
-                      unsupported-query handling, citation grounding,
-                      safety filters, conflict detection, rate limiting,
-                      and an HTTP-level test of api/chat.py itself
-```
-
-## Agent graph (graph_v2)
+## Full agent graph (`api/agent_core/graph_v2.py`)
 
 ```
-receive_query -> planner -> query_classifier -> evidence_retriever (BM25)
-  -> vector_retriever (embeddings, if OPENAI_API_KEY set)
-  -> source_applicability_checker -> conflict_detector -> gap_detector
-  -> check_safety_boundaries -> evidence_synthesizer (REAL LLM call)
-  -> safety_critic -> citation_verifier -> qa_agent -> attach_citations_final
+receive_query
+  -> check_safety_boundaries   [DETERMINISTIC, hard, non-bypassable -- runs
+                                 BEFORE any model call so a refused query
+                                 never spends a token]
+  -> planner                   [LLM: dynamic tool selection + sub-topic ID]
+  -> query_classifier          [LLM: intent -- informational only]
+  -> query_reformulator        [LLM: recall-widening only, never narrowing]
+  -> evidence_retriever         [DETERMINISTIC BM25, planner+reformulator-routed]
+  -> vector_retriever            [DETERMINISTIC embeddings retrieval, when configured]
+  -> fusion_reranker             [DETERMINISTIC reciprocal rank fusion:
+                                 BM25 + vector + planner tool-call results]
+  -> source_applicability_checker [DETERMINISTIC UC-eligibility / Crohn's-only
+                                 / excluded-claim filtering]
+  -> evidence_analyst           [LLM: summarizes verified claims only]
+  -> conflict_detector           [DETERMINISTIC structural signal]
+  -> conflict_resolver          [LLM: true-contradiction vs. which
+                                 dimension differs -- never drops a claim]
+  -> gap_detector                [DETERMINISTIC unsupported-topic routing]
+  -> evidence_synthesizer       [LLM: the ONLY node whose text becomes the
+                                 final answer; citations built independently]
+  -> safety_critic               [LLM AND deterministic regex -- combined
+                                 verdict, LLM can only be stricter]
+  -> citation_verifier           [DETERMINISTIC existence/integrity check]
+  -> citation_reviewer          [LLM: semantic-support check, additive]
+  -> qa_agent                   [LLM alongside deterministic QA checks]
+  -> attach_citations_final
 ```
 
-with bounded retry (1 retry, then hard refuse) on safety-critic or
-citation-verifier failure, exactly mirroring the original prototype's
-retry policy.
+Bounded retry: a safety-critic, citation-verifier, or citation-reviewer
+failure routes back to `evidence_synthesizer` once, then hard-refuses
+(`MAX_SYNTHESIS_ATTEMPTS = 2`).
 
-**Grounding is enforced by construction, not by trusting the model**:
-citations are built directly from the retrieved/verified evidence
-claims, never parsed out of the LLM's free text. The LLM can only
-contribute prose; the citation_verifier node independently re-checks
-every citation against the real evidence package regardless.
+**Fail-safe by construction, not by convention**: every LLM-powered node
+degrades to a deterministic fallback (documented per-node in its module
+docstring) on missing credentials, timeout, provider error, or
+schema-invalid output -- never by crashing, never by silently proceeding
+with unverified output, and never (for `evidence_synthesizer`
+specifically, since its output IS the answer) by fabricating a response.
 
-## Environment variables
+## Deterministic, non-bypassable tools
 
-See `.env.example`. Set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` to enable
-the real LLM synthesis step. With neither set, the pipeline still runs
-end-to-end and returns an explicit `"llm_unavailable"` status rather than
-a fabricated answer.
+| Tool | Module |
+|---|---|
+| BM25 keyword retrieval | `agent_core/retrieval.py` |
+| Vector/embedding retrieval | `agent_core/vector_retrieval.py` |
+| Reciprocal-rank fusion | `agent_core/fusion.py` |
+| UC-applicability / Crohn's-exclusion filtering | `agent_core/evidence_loader.py` (`is_uc_eligible`, `is_crohns_only`) |
+| Source/locator lookup | `agent_core/tools.py` |
+| Citation existence checks | `agent_core/subagents.py` (`citation_verifier_node`) |
+| Hard safety rules | `agent_core/safety_rules.py` (`check_safety_boundaries`) |
+| Request/token limits | `agent_core/rate_limit.py` |
+
+An LLM node can only ever **add** an opinion on top of what these have
+already decided -- see `tests/test_applicability_bypass_resistance.py`
+and `tests/test_llm_safety_critic.py` for the tests proving this holds
+even against a manipulated/hallucinating model output.
+
+## Model routing (env vars only, never hard-coded)
+
+| Category | Env vars | Used by | Default (if unset) |
+|---|---|---|---|
+| `planner` | `PLANNER_PROVIDER`, `PLANNER_MODEL` | planner, query classifier, query reformulator | anthropic / `claude-haiku-4-5` (cheap) |
+| `reasoning` | `REASONING_PROVIDER`, `REASONING_MODEL` | evidence analyst, conflict resolver | anthropic / `claude-sonnet-4-5` |
+| `synthesis` | `SYNTHESIS_PROVIDER`, `SYNTHESIS_MODEL` | grounded synthesizer | anthropic / `claude-sonnet-4-5` |
+| `critic` | `CRITIC_PROVIDER`, `CRITIC_MODEL` | citation reviewer, safety critic, QA evaluator | anthropic / `claude-sonnet-4-5` |
+
+See `.env.example`. Provider must be `openai` or `anthropic`; the
+matching `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` must be set for whichever
+provider a category resolves to. Vector retrieval separately always uses
+`OPENAI_API_KEY` (embeddings) regardless of the routing above.
 
 ## Running locally
 
@@ -78,21 +99,18 @@ pip install pytest
 pytest tests/ -v    # agent test suite
 ```
 
-The Python API function (`api/chat.py`) is designed to run under Vercel's
-Python runtime; `vercel dev` runs both the Next.js frontend and the
-Python function together locally.
-
 ## Known limitations
 
-- Vector retrieval and LLM synthesis both require a real provider API
-  key (`OPENAI_API_KEY` and/or `ANTHROPIC_API_KEY`) set as an environment
-  variable. Neither is hard-coded, and neither is faked when absent.
-- Rate limiting is a best-effort, in-memory, single-instance token
-  bucket -- Vercel serverless functions are not guaranteed to reuse the
-  same process across invocations, so this does not enforce a hard global
-  cap across all instances. A production deployment would back this with
-  a shared store (e.g. Upstash Redis).
+- Rate limiting is a best-effort, in-memory, single-instance token bucket
+  -- Vercel serverless functions aren't guaranteed to reuse the same
+  process across invocations, so it doesn't enforce a hard global cap
+  across all instances.
+- The per-request token budget (`agent_core/rate_limit.py`,
+  `DEFAULT_MAX_TOKENS_PER_REQUEST = 8000`) is estimated via a
+  chars-per-token heuristic, not exact provider tokenization.
 - The underlying evidence package (`api/data/ibd-prototype-evidence.json`)
-  is preserved exactly as-is from the Streamlit prototype and carries the
-  same QA status noted there: it is real, unpublished-for-clinical-use
-  evidence pending human review, not clinically approved.
+  is preserved exactly as-is and carries the same QA status noted
+  previously: real, unpublished-for-clinical-use evidence pending human
+  review, not clinically approved.
+- MCP HTTP integration is explicitly out of scope for this change (a
+  separate, later task).

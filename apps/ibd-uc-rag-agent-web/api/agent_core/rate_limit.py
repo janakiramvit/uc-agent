@@ -21,6 +21,15 @@ DEFAULT_MAX_REQUESTS_PER_WINDOW = 10
 DEFAULT_WINDOW_SECONDS = 60
 DEFAULT_MAX_QUERY_CHARS = 2000  # cost control: reject absurdly long inputs before they hit the LLM
 
+# Per-request token budget across ALL model-powered nodes combined (planner,
+# classifier, reformulator, evidence analyst, conflict resolver, synthesizer,
+# citation reviewer, safety critic, QA evaluator). Enforced in code BEFORE
+# each model call -- the model itself has no way to raise or bypass this
+# ceiling, so a single pathological/compound query cannot fan out into an
+# unbounded number of expensive calls.
+DEFAULT_MAX_TOKENS_PER_REQUEST = 8000
+_CHARS_PER_TOKEN_ESTIMATE = 4  # rough, provider-agnostic heuristic; deliberately conservative (over-, not under-, counts)
+
 
 @dataclass
 class _Bucket:
@@ -38,6 +47,37 @@ class RateLimitExceeded(RuntimeError):
 
 class QueryTooLong(RuntimeError):
     pass
+
+
+class TokenBudgetExceeded(RuntimeError):
+    pass
+
+
+def estimate_tokens(*texts: str) -> int:
+    total_chars = sum(len(t or "") for t in texts)
+    return max(1, total_chars // _CHARS_PER_TOKEN_ESTIMATE)
+
+
+def check_and_consume_token_budget(
+    state: dict,
+    estimated_tokens: int,
+    max_tokens: int = DEFAULT_MAX_TOKENS_PER_REQUEST,
+) -> bool:
+    """Deterministic, non-bypassable token budget for one request's
+    lifetime. Call this BEFORE every model-powered node's invocation;
+    returns False (and does NOT consume budget) if the call would exceed
+    the ceiling, so the node can degrade to its safe fallback instead of
+    ever reaching the model. State-scoped (per-request), not global --
+    resets naturally with each new request's initial state dict."""
+    used = state.get("_token_budget_used", 0)
+    if used + estimated_tokens > max_tokens:
+        return False
+    state["_token_budget_used"] = used + estimated_tokens
+    return True
+
+
+def remaining_token_budget(state: dict, max_tokens: int = DEFAULT_MAX_TOKENS_PER_REQUEST) -> int:
+    return max_tokens - state.get("_token_budget_used", 0)
 
 
 def check_rate_limit(

@@ -30,8 +30,10 @@ RRF_K = 60  # standard RRF damping constant
 class FusionReport:
     bm25_ids: list[str] = field(default_factory=list)
     vector_ids: list[str] = field(default_factory=list)
+    planner_ids: list[str] = field(default_factory=list)
     fused_ids: list[str] = field(default_factory=list)
     vector_used: bool = False
+    planner_used: bool = False
     method: str = "reciprocal_rank_fusion"
 
 
@@ -58,16 +60,21 @@ def fuse_candidates(
     bm25_claims: list[RetrievedClaim],
     vector_matches: list[dict],
     vector_used: bool,
+    planner_ids: list[str] | None = None,
 ) -> tuple[list[RetrievedClaim], FusionReport]:
-    """Fuse BM25-ranked claims with vector-ranked matches into one ranked
-    ``RetrievedClaim`` list, resolving any vector-only claim IDs (found by
-    embedding similarity but missed by BM25 keyword overlap) against the
-    package directly.
+    """Fuse BM25-ranked claims with vector-ranked matches (and, when the
+    LLM planner ran its own search_uc_claims tool calls, that ranked
+    signal too) into one ranked ``RetrievedClaim`` list. Any ID surfaced
+    only by vector or planner tool calls is resolved against the package
+    directly -- never fabricated, always a real evidence-package lookup.
     """
     bm25_ids = [c.claim_id for c in bm25_claims]
     vector_ids = [m["claimId"] for m in vector_matches] if vector_used else []
+    planner_ids = planner_ids or []
+    planner_used = bool(planner_ids)
 
-    fused_ids = reciprocal_rank_fusion([bm25_ids, vector_ids]) if vector_ids else list(bm25_ids)
+    ranked_lists = [ids for ids in (bm25_ids, vector_ids, planner_ids) if ids]
+    fused_ids = reciprocal_rank_fusion(ranked_lists) if len(ranked_lists) > 1 else list(bm25_ids or planner_ids)
 
     by_id: dict[str, RetrievedClaim] = {c.claim_id: c for c in bm25_claims}
     claims_by_id = {c["claimId"]: c for c in package.all_claims}
@@ -82,8 +89,10 @@ def fuse_candidates(
     report = FusionReport(
         bm25_ids=bm25_ids,
         vector_ids=vector_ids,
+        planner_ids=planner_ids,
         fused_ids=[c.claim_id for c in fused_claims],
         vector_used=vector_used,
+        planner_used=planner_used,
     )
     return fused_claims, report
 
@@ -94,18 +103,22 @@ def make_fusion_reranker_node(package: EvidencePackage):
         state["visited_nodes"].append("fusion_reranker")
 
         vector_used = state.get("vector_retrieval_status") == "ok"
+        planner_ids = (state.get("plan") or {}).get("planner_sourced_claim_ids") or []
         fused_claims, report = fuse_candidates(
             package,
             state.get("candidate_claims", []),
             state.get("vector_matches", []),
             vector_used,
+            planner_ids,
         )
         state["candidate_claims"] = fused_claims
         state["fusion_report"] = {
             "bm25_ids": report.bm25_ids,
             "vector_ids": report.vector_ids,
+            "planner_ids": report.planner_ids,
             "fused_ids": report.fused_ids,
             "vector_used": report.vector_used,
+            "planner_used": report.planner_used,
             "method": report.method,
         }
         state.setdefault("trace", [])

@@ -17,11 +17,23 @@ Engineering requirements implemented here:
 """
 
 import json
+import re
 import sys
 import traceback
 from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutureTimeoutError
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
+
+# Defense-in-depth only: agent_core code never places a raw key value into
+# any state field, trace entry, or exception message (see
+# tests/test_secrets_not_leaked.py). This redaction is a second layer in
+# case a future dependency's own exception text ever echoes back a
+# provider key it was given.
+_SECRET_LIKE_PATTERN = re.compile(r"\b(sk-[A-Za-z0-9_-]{10,}|sk-ant-[A-Za-z0-9_-]{10,}|sk-proj-[A-Za-z0-9_-]{10,})\b")
+
+
+def _redact(text: str) -> str:
+    return _SECRET_LIKE_PATTERN.sub("[REDACTED]", text or "")
 
 # Vercel's Python runtime does not add this file's own directory to
 # sys.path automatically, so the sibling `agent_core` package needs this
@@ -108,7 +120,10 @@ class handler(BaseHTTPRequestHandler):
         except QueryTooLong as exc:
             self._send_json(400, {"error": "query_too_long", "message": str(exc), "maxChars": DEFAULT_MAX_QUERY_CHARS})
         except Exception as exc:  # noqa: BLE001 - top-level handler must never crash without a response
-            self._send_json(500, {"error": "internal_error", "message": str(exc), "trace": traceback.format_exc()})
+            self._send_json(
+                500,
+                {"error": "internal_error", "message": str(exc), "trace": traceback.format_exc()},
+            )
 
     def do_GET(self):
         self._send_json(200, {"status": "ok"})
@@ -131,7 +146,10 @@ class handler(BaseHTTPRequestHandler):
         }
 
     def _send_json(self, status: int, obj: dict):
-        body = json.dumps(obj).encode("utf-8")
+        # Redact at the single point every response body passes through,
+        # not just the error path -- see the module-level comment on
+        # _SECRET_LIKE_PATTERN.
+        body = _redact(json.dumps(obj)).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
