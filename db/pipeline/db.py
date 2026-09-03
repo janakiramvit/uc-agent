@@ -44,9 +44,12 @@ def require_dev_target(settings: Settings) -> str:
       * DATABASE_URL present;
       * DB_ENVIRONMENT explicitly = 'development' (or 'dev') in db/.env - a deliberate
         operator affirmation, not an inference;
-      * PROD_HOST_DENYLIST non-empty (you must have declared what prod looks like);
-      * the DSN host is not in PROD_HOST_DENYLIST;
-      * neither host nor db name contains an obvious prod hint (prod/production/live).
+      * EXPECTED_DEV_HOST declared in db/.env and EXACTLY equal to the parsed DATABASE_URL
+        hostname - a positive allow-list check, not merely "not prod";
+      * neither host nor db name contains an obvious prod hint (prod/production/live);
+      * the DSN host is not in PROD_HOST_DENYLIST, when a real production host is known
+        and declared (this project has none today - do not invent a placeholder; leave
+        PROD_HOST_DENYLIST unset in that case).
     Returns a redacted identifier for logging.
     """
     if not settings.database_url:
@@ -58,21 +61,30 @@ def require_dev_target(settings: Settings) -> str:
             "DB_ENVIRONMENT is not 'development' in db/.env. Refusing to connect: the "
             "target cannot be positively identified as a development project."
         )
-    if not settings.prod_host_denylist:
-        raise RefusedProdError(
-            "PROD_HOST_DENYLIST is empty in db/.env. Declare your production host(s) "
-            "first so this tool can refuse them."
-        )
     host, dbname = _host_of(settings.database_url), _dbname_of(settings.database_url)
-    for needle in settings.prod_host_denylist:
-        if needle and needle.lower() in host:
-            raise RefusedProdError(
-                f"DSN host matches PROD_HOST_DENYLIST entry {needle!r}; refusing."
-            )
+    if not settings.expected_dev_host:
+        raise RefusedProdError(
+            "EXPECTED_DEV_HOST is not set in db/.env. Declare the exact development "
+            "hostname you expect so this tool can positively confirm the target, not "
+            "merely rule out production."
+        )
+    if host != settings.expected_dev_host:
+        raise RefusedProdError(
+            "Parsed DATABASE_URL host does not exactly match EXPECTED_DEV_HOST; refusing "
+            "(positive dev-target identification failed)."
+        )
     for hint in _PROD_HINTS:
         if hint in host or hint in dbname:
             raise RefusedProdError(
                 f"DSN host/db name contains {hint!r}; refusing (looks like production)."
+            )
+    # PROD_HOST_DENYLIST is optional: if no real production host exists yet, do not
+    # force a placeholder value in db/.env. When entries ARE declared, every one of
+    # them is enforced as a hard refusal.
+    for needle in settings.prod_host_denylist:
+        if needle and needle.lower() in host:
+            raise RefusedProdError(
+                f"DSN host matches PROD_HOST_DENYLIST entry {needle!r}; refusing."
             )
     return redact_dsn(settings.database_url)
 

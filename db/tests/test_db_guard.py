@@ -8,10 +8,12 @@ from pipeline.config import Settings
 from pipeline.db import NoDatabaseError, RefusedProdError, require_dev_target
 
 DEV = "postgresql://u:p@db.devproject123.supabase.co:5432/postgres"
+DEV_HOST = "db.devproject123.supabase.co"
 
 
 def _s(**kw):
     base = dict(database_url=DEV, db_environment="development",
+               expected_dev_host=DEV_HOST,
                prod_host_denylist=("db.prodproject.supabase.co", "production"))
     base.update(kw)
     return Settings(**base)
@@ -34,9 +36,22 @@ def test_refuses_without_explicit_dev_affirmation():
         require_dev_target(_s(db_environment="staging"))
 
 
-def test_refuses_with_empty_denylist():
+def test_allows_empty_denylist_when_no_real_prod_host_declared():
+    # PROD_HOST_DENYLIST is optional: do not force a placeholder when no real
+    # production database exists yet. Positive identification still comes from
+    # DB_ENVIRONMENT + EXPECTED_DEV_HOST + the prod-hint substring check.
+    ident = require_dev_target(_s(prod_host_denylist=()))
+    assert "devproject123" in ident
+
+
+def test_refuses_without_expected_dev_host():
     with pytest.raises(RefusedProdError):
-        require_dev_target(_s(prod_host_denylist=()))
+        require_dev_target(_s(expected_dev_host=""))
+
+
+def test_refuses_on_expected_dev_host_mismatch():
+    with pytest.raises(RefusedProdError):
+        require_dev_target(_s(expected_dev_host="db.someotherproject.supabase.co"))
 
 
 def test_refuses_denylisted_host():

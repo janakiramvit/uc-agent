@@ -103,6 +103,7 @@ class Settings:
     database_url: str | None = None
     prod_host_denylist: tuple[str, ...] = ()
     db_environment: str = ""           # must be "development" to connect
+    expected_dev_host: str = ""        # must exactly match the parsed DATABASE_URL host
     canonical_schema: str = "canonical"
     staging_schema: str = "staging"
     quarantine_schema: str = "quarantine"
@@ -136,6 +137,7 @@ def load_env(dotenv_path: Path | None = None) -> Settings:
         database_url=getenv("DATABASE_URL"),
         prod_host_denylist=denylist,
         db_environment=getenv("DB_ENVIRONMENT") or "",
+        expected_dev_host=(getenv("EXPECTED_DEV_HOST") or "").strip().lower(),
         canonical_schema=getenv("CANONICAL_SCHEMA") or "canonical",
         staging_schema=getenv("STAGING_SCHEMA") or "staging",
         quarantine_schema=getenv("QUARANTINE_SCHEMA") or "quarantine",
