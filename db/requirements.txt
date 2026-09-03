@@ -1,0 +1,6 @@
+# db/ pipeline — schema-compatibility gate & Supabase migration (Prompt v1.0.0)
+# Pinned; install into db/.venv only. Not shared with the app runtime.
+openpyxl==3.1.5
+psycopg[binary]==3.2.3
+python-dotenv==1.0.1
+pytest==8.4.1

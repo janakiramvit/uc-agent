@@ -1,8 +1,16 @@
 # CHECKPOINT — Schema-compatibility gate & greenfield Supabase migration
 
-**Resume file.** Read this first next session. Do **not** repeat completed planning or
+**Resume file.** Read this first next session. Do **not** repeat completed work or
 expand scope. Wait for the user's explicit "proceed" before running migrations, staging,
-Supabase changes, promotion, tests, Vercel, or any production action.
+Supabase changes, promotion, or any production action.
+
+> **Update 2026-09-03 (build session):** the entire `db/` package + the dormant app
+> backend are now BUILT and the offline pipeline (`infer → adapt → validate → reconcile`)
+> + pre-promotion tests (`29 passed, 30 skipped`) have run. `db/.venv` is created and deps
+> installed. Nothing touched a database. See `db/MIGRATION-REPORT-v1.0.0.md` for results
+> (incl. 9 material reconciliation findings awaiting a human decision). **Next real step:
+> put a dev Supabase `DATABASE_URL` + `PROD_HOST_DENYLIST` in `db/.env`, then
+> `python -m pipeline.ingest --step migrate`.**
 
 ---
 

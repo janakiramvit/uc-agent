@@ -1,0 +1,21 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Local virtualenv
+.venv/
+
+# Generated schema inference output (may echo workbook field values)
+schema/inferred/
+
+# Generated reports — contain workbook-derived evidence text and/or run detail.
+# Only the redacted SUMMARY.md is committable.
+reports/*
+!reports/.gitkeep
+!reports/SUMMARY.md
+
+# pytest / tooling
+.pytest_cache/
+__pycache__/
+*.pyc
