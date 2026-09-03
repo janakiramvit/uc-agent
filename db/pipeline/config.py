@@ -23,9 +23,10 @@ REPORTS_DIR = DB_DIR / "reports"
 MIGRATIONS_DIR = DB_DIR / "supabase" / "migrations"
 
 KNOWLEDGE_DIR = REPO_ROOT / "knowledge" / "ibd-research-review"
-# Byte-identical mirror kept outside the repo (see MIGRATION_REPORT.md). Used only
-# as a fallback if the in-repo copy is missing.
-EXTERNAL_MIRROR = Path("/Users/janakirampulipati/ibd-research-review")
+# Optional byte-identical mirror kept outside the repo (see MIGRATION_REPORT.md). Used
+# only as a fallback if the in-repo copy is missing. Set IBD_RESEARCH_REVIEW_MIRROR to
+# point at it; no machine-specific path is hard-coded here.
+EXTERNAL_MIRROR = Path(os.environ.get("IBD_RESEARCH_REVIEW_MIRROR", KNOWLEDGE_DIR))
 
 APP_DIR = REPO_ROOT / "apps" / "ibd-uc-rag-agent-web"
 APP_EVIDENCE_JSON = APP_DIR / "api" / "data" / "ibd-prototype-evidence.json"
@@ -101,6 +102,7 @@ PHASE_2_DIR = REPO_ROOT / "knowledge" / "uc-evidence-expansion"
 class Settings:
     database_url: str | None = None
     prod_host_denylist: tuple[str, ...] = ()
+    db_environment: str = ""           # must be "development" to connect
     canonical_schema: str = "canonical"
     staging_schema: str = "staging"
     quarantine_schema: str = "quarantine"
@@ -109,6 +111,10 @@ class Settings:
     @property
     def has_db(self) -> bool:
         return bool(self.database_url)
+
+    @property
+    def is_declared_development(self) -> bool:
+        return self.db_environment.strip().lower() in {"development", "dev"}
 
 
 def load_env(dotenv_path: Path | None = None) -> Settings:
@@ -129,6 +135,7 @@ def load_env(dotenv_path: Path | None = None) -> Settings:
     return Settings(
         database_url=getenv("DATABASE_URL"),
         prod_host_denylist=denylist,
+        db_environment=getenv("DB_ENVIRONMENT") or "",
         canonical_schema=getenv("CANONICAL_SCHEMA") or "canonical",
         staging_schema=getenv("STAGING_SCHEMA") or "staging",
         quarantine_schema=getenv("QUARANTINE_SCHEMA") or "quarantine",

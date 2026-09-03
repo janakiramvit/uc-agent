@@ -91,11 +91,20 @@ def cmd_reconcile(_args) -> int:
 
 
 def _need_db(settings) -> bool:
-    if settings.has_db:
-        return True
-    print("  DATABASE_URL not set - this step needs a dev Supabase connection in db/.env.")
-    print("  Nothing changed. (planning mode)")
-    return False
+    if not settings.has_db:
+        print("  DATABASE_URL not set - this step needs a dev Supabase connection in db/.env.")
+        print("  Nothing changed. (planning mode)")
+        return False
+    from pipeline.db import RefusedProdError, require_dev_target
+
+    try:
+        ident = require_dev_target(settings)
+    except RefusedProdError as exc:
+        print(f"  REFUSED: {exc}")
+        print("  Nothing changed.")
+        return False
+    print(f"  dev target confirmed: {ident}")
+    return True
 
 
 def cmd_migrate(_args) -> int:

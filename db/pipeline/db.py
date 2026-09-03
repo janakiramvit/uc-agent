@@ -15,11 +15,14 @@ from pipeline.config import MIGRATIONS_DIR, Settings, redact_dsn
 
 
 class RefusedProdError(RuntimeError):
-    """The DSN host looks like production - connection refused."""
+    """The target could not be positively identified as development - connection refused."""
 
 
 class NoDatabaseError(RuntimeError):
     """No DATABASE_URL configured."""
+
+
+_PROD_HINTS = ("prod", "production", "live")
 
 
 def _host_of(dsn: str) -> str:
@@ -28,26 +31,63 @@ def _host_of(dsn: str) -> str:
     return (urlsplit(dsn).hostname or "").lower()
 
 
-def guard_dsn(settings: Settings) -> None:
+def _dbname_of(dsn: str) -> str:
+    from urllib.parse import urlsplit
+
+    return (urlsplit(dsn).path or "").lstrip("/").lower()
+
+
+def require_dev_target(settings: Settings) -> str:
+    """Positively identify the target as development, or raise.
+
+    Requires ALL of:
+      * DATABASE_URL present;
+      * DB_ENVIRONMENT explicitly = 'development' (or 'dev') in db/.env - a deliberate
+        operator affirmation, not an inference;
+      * PROD_HOST_DENYLIST non-empty (you must have declared what prod looks like);
+      * the DSN host is not in PROD_HOST_DENYLIST;
+      * neither host nor db name contains an obvious prod hint (prod/production/live).
+    Returns a redacted identifier for logging.
+    """
     if not settings.database_url:
         raise NoDatabaseError(
             "DATABASE_URL is not set. Put a DEV Supabase connection string in db/.env."
         )
-    host = _host_of(settings.database_url)
+    if not settings.is_declared_development:
+        raise RefusedProdError(
+            "DB_ENVIRONMENT is not 'development' in db/.env. Refusing to connect: the "
+            "target cannot be positively identified as a development project."
+        )
+    if not settings.prod_host_denylist:
+        raise RefusedProdError(
+            "PROD_HOST_DENYLIST is empty in db/.env. Declare your production host(s) "
+            "first so this tool can refuse them."
+        )
+    host, dbname = _host_of(settings.database_url), _dbname_of(settings.database_url)
     for needle in settings.prod_host_denylist:
         if needle and needle.lower() in host:
             raise RefusedProdError(
-                f"DSN host {host!r} matches PROD_HOST_DENYLIST entry {needle!r}; refusing."
+                f"DSN host matches PROD_HOST_DENYLIST entry {needle!r}; refusing."
             )
+    for hint in _PROD_HINTS:
+        if hint in host or hint in dbname:
+            raise RefusedProdError(
+                f"DSN host/db name contains {hint!r}; refusing (looks like production)."
+            )
+    return redact_dsn(settings.database_url)
+
+
+# Back-compat alias.
+guard_dsn = require_dev_target
 
 
 def connect(settings: Settings):
-    """Return a psycopg connection (caller manages the transaction)."""
-    guard_dsn(settings)
+    """Return a psycopg connection (caller manages the transaction). Dev-target-gated."""
+    ident = require_dev_target(settings)
     import psycopg
 
     conn = psycopg.connect(settings.database_url, autocommit=False)
-    print(f"  connected: {redact_dsn(settings.database_url)}")
+    print(f"  connected (dev target confirmed): {ident}")
     return conn
 
 
