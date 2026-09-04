@@ -31,16 +31,20 @@ db/.venv/bin/python -m pipeline.ingest --step infer       # db/schema/inferred/*
 db/.venv/bin/python -m pipeline.ingest --step reconcile   # db/reports/SUMMARY.md (+ full report, gitignored)
 db/.venv/bin/python -m pytest db/tests -m "not post_promotion"
 
-# needs a DEV Supabase DATABASE_URL in db/.env:
+# needs a DEV Supabase DATABASE_URL + DB_ENVIRONMENT=development + EXPECTED_DEV_HOST in db/.env:
 db/.venv/bin/python -m pipeline.ingest --step migrate     # applies 0001–0005 (metadata-only seed)
-db/.venv/bin/python -m pipeline.ingest --step stage
-db/.venv/bin/python -m pipeline.ingest --step validate
-db/.venv/bin/python -m pipeline.ingest --step reconcile
+db/.venv/bin/python -m pipeline.ingest --step stage       # writes staging.* from the adapters
+db/.venv/bin/python -m pipeline.ingest --step validate    # crosswalk + quarantine; persists to staging
+db/.venv/bin/python -m pipeline.ingest --step reconcile   # persists to staging.reconciliation_result + quarantine.record
+db/.venv/bin/python -m pipeline.ingest --step status      # read-only: migrations/roles/RLS/views/metadata/staging/quarantine counts
 #  ── STOP. Review db/reports/SUMMARY.md + quarantine.record. Get explicit approval. ──
 db/.venv/bin/python -m pipeline.ingest --step promote --confirm-promote
 db/.venv/bin/python -m pipeline.ingest --step gate
 db/.venv/bin/python -m pytest db/tests                    # full suite incl. post_promotion
 ```
+
+`--step all` is an **offline preview only** (`infer → adapt → validate → reconcile` in
+memory) - it never writes to a database, even when one is configured.
 
 ## Safety boundaries (v1.0.0)
 
