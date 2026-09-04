@@ -10,3 +10,7 @@
 {"ts": "2026-09-02T13:18:50Z", "runId": "uc-exp-e648136e30e7", "event": "extraction_complete", "detail": "13 candidate claims (CLM-115..127), each verbatim-substring-verified against its source abstract. All lifecycleState=extracted / reviewStatus=pending_clinical_review."}
 {"ts": "2026-09-02T13:18:50Z", "runId": "uc-exp-e648136e30e7", "event": "outputs_written", "detail": "sources.json, candidate-claims.json, question-coverage-map.json, ingestion-manifest.json, licensing-access-register.json, checkpoint(+schema), reviewer-workbook.xlsx, EVIDENCE-GAPS.md, QA-REPORT.md, RUN-REPORT.md, STORAGE-RECOMMENDATION.md."}
 {"ts": "2026-09-02T13:18:50Z", "runId": "uc-exp-e648136e30e7", "event": "run_finished", "detail": "runStatus=partially_completed. Next op saved: topic T-UCX-03 (acute severe UC), search S-UCX-03-a, cursor 0, first IDs SRC-035 / CLM-128."}
+{"ts": "2026-09-04T22:39:53Z", "runId": "uc-exp-00f246ea42e7", "event": "run_started", "detail": "runner 1.0.0 / uc-daily-evidence-discovery-v1.0.0; state-root=uc-state; dry_run=False no_network=False"}
+{"ts": "2026-09-04T22:39:55Z", "runId": "uc-exp-00f246ea42e7", "event": "research_done", "detail": "queries=2 screened=25 accepted=0 claims=0 stop=consecutive_empty_searches"}
+{"ts": "2026-09-04T22:39:55Z", "runId": "uc-exp-00f246ea42e7", "event": "checkpoint_saved", "detail": "status=partial; accepted=0; claims=0; screened=25"}
+{"ts": "2026-09-04T22:39:55Z", "runId": "uc-exp-00f246ea42e7", "event": "artifact_written", "detail": "redacted artifact built under the main checkout"}
