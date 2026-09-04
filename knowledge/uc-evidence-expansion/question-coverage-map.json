@@ -1,0 +1,243 @@
+{
+  "schemaVersion": "uc-evidence-expansion-1.0.0",
+  "runId": "uc-exp-e648136e30e7",
+  "generatedAt": "2026-09-02T13:17:27Z",
+  "questionTreeSource": {
+    "file": "uc_39_question_tree.json",
+    "title": "Ulcerative-colitis public Reddit demand: validated 39-node question tree",
+    "createdAt": "2026-09-02",
+    "note": "Reddit question tree is evidence of PATIENT DEMAND ONLY. Reddit posts and personal experiences are not medical evidence and were not used as evidence sources."
+  },
+  "topicsSelectedThisRun": [
+    {
+      "topicId": "T-UCX-01",
+      "title": "UC disease-activity monitoring biomarkers (fecal calprotectin, CRP, ESR)",
+      "questionNodes": [
+        "L2-1.2",
+        "L3-1.2.1",
+        "L3-1.2.2"
+      ],
+      "rationale": "Highest concentration of 'none' coverage nodes in the demand tree sits under L2-1.2 monitoring; biomarker interpretation is a top Reddit demand (L1-1, priority 10) and is guideline-dense, so high-quality evidence can be found quickly."
+    },
+    {
+      "topicId": "T-UCX-02",
+      "title": "Treat-to-target and remission definitions (clinical vs endoscopic vs histologic; mucosal healing)",
+      "questionNodes": [
+        "L3-1.2.3",
+        "L2-1.2"
+      ],
+      "rationale": "L3-1.2.3 ('difference between symptom control and clinical/endoscopic/deeper remission') has 'none' coverage and a single authoritative consensus (STRIDE-II) answers it directly."
+    }
+  ],
+  "topicsDeferred": [
+    {
+      "topicId": "T-UCX-03",
+      "title": "Acute severe UC: red-flag symptoms and urgent/emergency assessment",
+      "questionNodes": [
+        "L3-1.1.2"
+      ],
+      "reason": "High clinical risk and 'none' coverage, but needs full-text guideline sections (Truelove-Witts criteria) that could not be safely retrieved within the run's time and query budget."
+    },
+    {
+      "topicId": "T-UCX-04",
+      "title": "Starting a UC medicine; side-effect/infection monitoring; assessing loss of response (incl. therapeutic drug monitoring)",
+      "questionNodes": [
+        "L2-2.1",
+        "L3-2.1.1",
+        "L3-2.1.2",
+        "L3-2.1.3"
+      ],
+      "reason": "Large topic; out of scope for a 2-topic increment."
+    },
+    {
+      "topicId": "T-UCX-05",
+      "title": "Biologics / small molecules / JAK inhibitors: comparative positioning and colectomy decisions",
+      "questionNodes": [
+        "L2-2.3",
+        "L3-2.3.1",
+        "L3-2.3.3"
+      ],
+      "reason": "Partly pre-staged (SRC-031/032 planned); needs reconciliation with prior planned run."
+    },
+    {
+      "topicId": "T-UCX-06",
+      "title": "Pregnancy, extraintestinal manifestations, and colorectal-cancer surveillance",
+      "questionNodes": [
+        "L3-3.3.1",
+        "L3-3.3.2",
+        "L3-3.3.3"
+      ],
+      "reason": "Distinct evidence bodies; deferred."
+    },
+    {
+      "topicId": "T-UCX-07",
+      "title": "Diet during active disease and remission (UC-specific)",
+      "questionNodes": [
+        "L3-2.2.1",
+        "L3-2.2.2"
+      ],
+      "reason": "Prior IBD package already has partial diet coverage; lower marginal value this run."
+    }
+  ],
+  "nextRecommendedTopic": {
+    "topicId": "T-UCX-03",
+    "title": "Acute severe ulcerative colitis: red-flag symptoms and urgent/emergency assessment thresholds",
+    "primaryQuestionNode": "L3-1.1.2",
+    "candidateSources": [
+      "ACG Clinical Guideline: Ulcerative Colitis in Adults 2019 (PMID 30840605) full-text ASUC section",
+      "AGA hospitalized/acute-severe-UC guidance",
+      "BSG IBD guideline 2019 acute severe colitis section"
+    ],
+    "rationale": "Only remaining 'none'-coverage node with High urgency_clinical_risk in branch L1-1."
+  },
+  "coverageByNode": [
+    {
+      "questionId": "L2-1.2",
+      "level": 2,
+      "normalizedQuestion": "How should I understand monitoring results and whether I am in remission?",
+      "priorEvidencePackageCoverage": "none",
+      "priorLikelyGap": "No UC-eligible biomarker, colonoscopy, mucosal-healing, or ultrasound claims.",
+      "newCandidateClaimIds": [
+        "CLM-115",
+        "CLM-120",
+        "CLM-121",
+        "CLM-122",
+        "CLM-124",
+        "CLM-127"
+      ],
+      "newClaimCount": 6,
+      "coverageChangeThisRun": "candidate_evidence_added_pending_clinical_review",
+      "residualGapAfterRun": "Monitoring intervals, intestinal-ultrasound role, and UC-specific ESR value remain uncovered.",
+      "humanReviewStatus": ""
+    },
+    {
+      "questionId": "L3-1.2.1",
+      "level": 3,
+      "normalizedQuestion": "What do fecal calprotectin, CRP, ESR, and other tests contribute to monitoring?",
+      "priorEvidencePackageCoverage": "none",
+      "priorLikelyGap": "Fecal calprotectin and CRP claims are Crohn’s-only; ESR is absent.",
+      "newCandidateClaimIds": [
+        "CLM-115",
+        "CLM-116",
+        "CLM-117",
+        "CLM-121",
+        "CLM-123"
+      ],
+      "newClaimCount": 5,
+      "coverageChangeThisRun": "candidate_evidence_added_pending_clinical_review",
+      "residualGapAfterRun": "Fecal calprotectin / CRP covered by candidate claims; ESR has no UC-specific candidate claim; no diagnostic-accuracy meta-analysis ingested yet.",
+      "humanReviewStatus": ""
+    },
+    {
+      "questionId": "L3-1.2.2",
+      "level": 3,
+      "normalizedQuestion": "Why might colonoscopy, biopsy, or imaging be recommended when symptoms or labs look reassuring?",
+      "priorEvidencePackageCoverage": "none",
+      "priorLikelyGap": "No UC-eligible evidence for colonoscopy, mucosal healing, or intestinal ultrasound.",
+      "newCandidateClaimIds": [
+        "CLM-118",
+        "CLM-119"
+      ],
+      "newClaimCount": 2,
+      "coverageChangeThisRun": "candidate_evidence_added_pending_clinical_review",
+      "residualGapAfterRun": "Colonoscopy/biopsy rationale only partially covered (discordance + mild-symptom scenarios); dedicated biopsy/surveillance evidence still needed.",
+      "humanReviewStatus": ""
+    },
+    {
+      "questionId": "L3-1.2.3",
+      "level": 3,
+      "normalizedQuestion": "What is the difference between symptom control and clinical, endoscopic, or deeper remission?",
+      "priorEvidencePackageCoverage": "none",
+      "priorLikelyGap": "The package lacks UC-specific treat-to-target and mucosal-healing claims.",
+      "newCandidateClaimIds": [
+        "CLM-116",
+        "CLM-124",
+        "CLM-125",
+        "CLM-126"
+      ],
+      "newClaimCount": 4,
+      "coverageChangeThisRun": "candidate_evidence_added_pending_clinical_review",
+      "residualGapAfterRun": "Clinical vs endoscopic vs histologic remission defined via candidate claims; mucosal-healing prognosis evidence still needed.",
+      "humanReviewStatus": ""
+    },
+    {
+      "questionId": "L2-1.1",
+      "level": 2,
+      "normalizedQuestion": "How can I recognize a possible flare and judge how urgently I need help?",
+      "priorEvidencePackageCoverage": "partial",
+      "priorLikelyGap": "No UC-specific evidence pathway integrates symptoms, alternative causes, and escalation thresholds.",
+      "newCandidateClaimIds": [
+        "CLM-117"
+      ],
+      "newClaimCount": 1,
+      "coverageChangeThisRun": "candidate_evidence_added_pending_clinical_review",
+      "residualGapAfterRun": "Only the concordant moderate/severe biomarker scenario touched; acute-severe-UC red flags (L3-1.1.2) not yet addressed.",
+      "humanReviewStatus": ""
+    },
+    {
+      "questionId": "L3-1.3.3",
+      "level": 3,
+      "normalizedQuestion": "What can I do when treatment, specialist appointments, tests, or medicines are delayed or unaffordable?",
+      "priorEvidencePackageCoverage": "none",
+      "priorLikelyGap": "No access, insurance, formulary, or affordability evidence is included.",
+      "newCandidateClaimIds": [
+        "CLM-127"
+      ],
+      "newClaimCount": 1,
+      "coverageChangeThisRun": "candidate_evidence_added_pending_clinical_review",
+      "residualGapAfterRun": "Only the STRIDE-II 'adapt to local resources' caveat; access/affordability evidence otherwise uncovered.",
+      "humanReviewStatus": ""
+    }
+  ],
+  "highPriorityGapsNotAddressed": [
+    {
+      "questionId": "L3-1.1.2",
+      "normalizedQuestion": "Which warning signs should prompt urgent or emergency assessment?",
+      "priorCoverage": "none",
+      "urgencyClinicalRisk": "High",
+      "status": "deferred_this_run"
+    },
+    {
+      "questionId": "L2-2.1",
+      "normalizedQuestion": "How can I understand a medicine, its expected course, and whether it is working safely?",
+      "priorCoverage": "none",
+      "urgencyClinicalRisk": "High",
+      "status": "deferred_this_run"
+    },
+    {
+      "questionId": "L3-2.1.3",
+      "normalizedQuestion": "How is inadequate response or loss of response assessed before changing treatment?",
+      "priorCoverage": "none",
+      "urgencyClinicalRisk": "High",
+      "status": "deferred_this_run"
+    },
+    {
+      "questionId": "L2-2.3",
+      "normalizedQuestion": "When are escalation, long-term medicines, or surgery discussed?",
+      "priorCoverage": "none",
+      "urgencyClinicalRisk": "High",
+      "status": "deferred_this_run"
+    },
+    {
+      "questionId": "L3-3.3.1",
+      "normalizedQuestion": "What should be discussed before or during pregnancy, fertility treatment, breastfeeding, or postpartum care?",
+      "priorCoverage": "none",
+      "urgencyClinicalRisk": "High",
+      "status": "deferred_this_run"
+    },
+    {
+      "questionId": "L3-3.3.2",
+      "normalizedQuestion": "Could joint, skin, eye, mouth, or liver symptoms be related to UC, and who should assess them?",
+      "priorCoverage": "none",
+      "urgencyClinicalRisk": "High",
+      "status": "deferred_this_run"
+    },
+    {
+      "questionId": "L3-3.3.3",
+      "normalizedQuestion": "What should I understand about colorectal-cancer surveillance, vaccines, and infection prevention over time?",
+      "priorCoverage": "none",
+      "urgencyClinicalRisk": "High",
+      "status": "deferred_this_run"
+    }
+  ]
+}

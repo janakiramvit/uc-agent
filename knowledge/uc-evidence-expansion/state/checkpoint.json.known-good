@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "uc-evidence-expansion-1.0.0",
+  "runId": "uc-exp-e648136e30e7",
+  "runStartTime": "2026-09-02T13:08:34Z",
+  "runFinishTime": "2026-09-02T13:18:50Z",
+  "lastCheckpointTime": "2026-09-02T13:18:50Z",
+  "runStatus": "partially_completed",
+  "currentTopicId": "T-UCX-02",
+  "currentSearchStrategyId": "S-UCX-02-a",
+  "currentSearchQuery": "STRIDE-II treat to target ulcerative colitis targets fecal calprotectin endoscopic remission",
+  "currentApiCursor": 0,
+  "lastProcessedRecord": "PMID:33359090 (STRIDE-II) — accepted as SRC-033",
+  "latestPublicationTimestampEncountered": "2023-03-01T00:00:00Z",
+  "completedSearches": [
+    {
+      "searchId": "S-UCX-01-a",
+      "service": "WebSearch",
+      "query": "AGA Clinical Practice Guidelines role of biomarkers management ulcerative colitis 2023 fecal calprotectin PubMed",
+      "resultsScreened": 6,
+      "eligibleNew": 1,
+      "executedAt": "2026-09-02T13:09:10Z"
+    },
+    {
+      "searchId": "S-UCX-02-a",
+      "service": "WebSearch",
+      "query": "STRIDE-II treat to target ulcerative colitis targets fecal calprotectin endoscopic remission Gastroenterology 2021",
+      "resultsScreened": 6,
+      "eligibleNew": 1,
+      "executedAt": "2026-09-02T13:09:20Z"
+    },
+    {
+      "searchId": "S-UCX-01-b",
+      "service": "EuropePMC/keyword",
+      "query": "ulcerative colitis fecal calprotectin endoscopic remission meta-analysis AND OPEN_ACCESS:y (sort CITED desc)",
+      "resultsScreened": 12,
+      "eligibleNew": 0,
+      "executedAt": "2026-09-02T13:11:00Z",
+      "note": "Relevance drift to microbiome topics; no eligible new monitoring source; not retried further."
+    },
+    {
+      "searchId": "S-UCX-01-c",
+      "service": "EuropePMC/id-lookup",
+      "query": "EXT_ID lookups: 33359090, 36822736, 30840605, 34635919, 31945371, 32044313",
+      "resultsScreened": 6,
+      "eligibleNew": 2,
+      "executedAt": "2026-09-02T13:11:30Z",
+      "note": "Direct identifier retrieval for candidate guideline citations (not keyword discovery)."
+    }
+  ],
+  "pendingSearches": [
+    {
+      "searchId": "S-UCX-03-a",
+      "topicId": "T-UCX-03",
+      "service": "EuropePMC + guideline publishers",
+      "query": "acute severe ulcerative colitis Truelove Witts criteria hospitalization urgent assessment",
+      "cursor": 0,
+      "purpose": "Cover L3-1.1.2 (warning signs -> urgent/emergency assessment), currently 'none' coverage, High clinical risk."
+    },
+    {
+      "searchId": "S-UCX-03-b",
+      "topicId": "T-UCX-03",
+      "service": "NCBI efetch",
+      "query": "full-text ASUC section of ACG UC guideline 2019 (PMID 30840605) / AGA hospitalized UC guidance",
+      "cursor": 0,
+      "purpose": "Extract red-flag / hospitalization-threshold statements with page/section locators."
+    }
+  ],
+  "processedSourceIdentifiers": {
+    "doi": [
+      "10.1053/j.gastro.2022.12.007",
+      "10.1053/j.gastro.2020.12.031",
+      "10.1053/j.gastro.2020.01.006",
+      "10.14309/ajg.0000000000000152",
+      "10.1093/ecco-jcc/jjab178"
+    ],
+    "pubmedId": [
+      "36822736",
+      "33359090",
+      "31945371",
+      "30840605",
+      "34635919",
+      "32044313"
+    ],
+    "canonicalUrl": [
+      "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "https://doi.org/10.1053/j.gastro.2020.01.006"
+    ],
+    "checksum": [
+      "2a81e10a87964174ee8bcd108b963e27306cf63c3e5964f2fda2ed8908e73da6",
+      "957e2ba933cc60ce315d748fc8720e9fab2c69ace5b3f10d3eafff3be752680d",
+      "612d592bc40bc295d2bb7c626c8136f166d3c5566b743cc1ee4d71aef25c02cb"
+    ],
+    "normalizedTitle": [
+      "aga clinical practice guideline on the role of biomarkers for the management of ulcerative colitis",
+      "stride-ii an update on the selecting therapeutic targets in inflammatory bowel disease stride initiative",
+      "aga clinical practice guidelines on the management of moderate to severe ulcerative colitis",
+      "acg clinical guideline ulcerative colitis in adults",
+      "ecco guidelines on therapeutics in ulcerative colitis medical treatment"
+    ]
+  },
+  "acceptedRecords": [
+    {
+      "sourceId": "SRC-028",
+      "pubmedId": "36822736",
+      "decision": "accepted",
+      "archivalStatus": "link_only",
+      "note": "Adopted planned canonical id (never materialized). Structured abstract retrieved; 7 claims extracted (CLM-115..121)."
+    },
+    {
+      "sourceId": "SRC-033",
+      "pubmedId": "33359090",
+      "decision": "accepted",
+      "archivalStatus": "link_only",
+      "note": "New id. Structured abstract retrieved; 6 claims extracted (CLM-122..127). IBD-general consensus."
+    },
+    {
+      "sourceId": "SRC-034",
+      "pubmedId": "31945371",
+      "decision": "accepted_eligible_not_extracted",
+      "archivalStatus": "link_only",
+      "note": "New id. No structured abstract; deferred to next run for full-text statement extraction. 0 claims."
+    }
+  ],
+  "rejectedRecords": [
+    {
+      "identifier": "PMID:30840605 (ACG Clinical Guideline: Ulcerative Colitis in Adults, 2019)",
+      "reason": "deferred_as_likely_superseded — a 2025 ACG UC guideline update is already pre-staged as planned SRC-027 in knowledge/ibd-research-review/scripts/extend_uc_evidence.py; adding the 2019 full guideline now risks a version conflict. Screened; not accepted this run. Retain for the T-UCX-03 acute-severe-UC pass where its ASUC section is needed."
+    },
+    {
+      "identifier": "PMID:34635919 (ECCO Guidelines on Therapeutics in UC: Medical Treatment, 2022)",
+      "reason": "no_abstract_in_retrieved_metadata and full text not accessed within run limits; European guideline needing regional qualification. Deferred, not rejected on merit."
+    },
+    {
+      "identifier": "PMID:32044313",
+      "reason": "not_relevant — identifier mis-resolved to an unrelated obstetrics article; discarded."
+    },
+    {
+      "identifier": "EuropePMC open-access calprotectin meta-analysis search (S-UCX-01-b)",
+      "reason": "no_eligible_new_source — results drifted to microbiome reviews; two consecutive low-yield discovery passes triggered the stop-early rule for this topic."
+    }
+  ],
+  "deferredRecords": [
+    {
+      "identifier": "SRC-034 / PMID:31945371",
+      "reason": "eligible; full-text recommendation extraction deferred to next run."
+    },
+    {
+      "identifier": "PMID:30840605",
+      "reason": "reserved for T-UCX-03 acute-severe-UC pass."
+    },
+    {
+      "identifier": "PMID:34635919",
+      "reason": "reserved for a European-guideline / regional-qualification pass."
+    }
+  ],
+  "failedItems": [
+    {
+      "item": "https://pubmed.ncbi.nlm.nih.gov/33359090/ via WebFetch",
+      "error": "cookie-consent wall returned instead of content",
+      "mitigation": "switched to Europe PMC REST + NCBI E-utilities public APIs",
+      "retries": 1
+    },
+    {
+      "item": "Europe PMC PMC/PMC7175923/fullTextXML",
+      "error": "empty body (full text not EPMC-hosted)",
+      "mitigation": "left SRC-034 as citation-only, deferred",
+      "retries": 1
+    }
+  ],
+  "retryCounts": {
+    "pubmed_webfetch": 1,
+    "europepmc_fulltextxml": 1,
+    "europepmc_search": 1
+  },
+  "counters": {
+    "elapsedResearchSeconds": 249.0,
+    "queriesConsumed": 5,
+    "recordsScreened": 30,
+    "sourcesAccepted": 3,
+    "pdfsDownloaded": 0,
+    "claimsExtracted": 13
+  },
+  "limits": {
+    "maxRuntimeSeconds": 600,
+    "maxSearchQueries": 10,
+    "maxRecordsScreened": 75,
+    "maxNewSources": 5,
+    "maxPdfsDownloaded": 3,
+    "maxCandidateClaims": 15,
+    "maxRetriesPerService": 2,
+    "referenceFollowingLevels": 1,
+    "stopAfterConsecutiveEmptySearches": 2
+  },
+  "stopReason": "Planned scope for this increment completed (2 topics, 3 sources, 13 verbatim-verified claims) well inside every limit; research clock ~4m9s of 10m used. Stopped deliberately rather than starting a third topic (acute severe UC) that needs full-text guideline sections and would not finish cleanly within the remaining budget.",
+  "nextRecommendedOperation": {
+    "description": "Start topic T-UCX-03 (acute severe ulcerative colitis red-flag / urgent-assessment thresholds, question node L3-1.1.2). Execute pending search S-UCX-03-a on Europe PMC from cursor 0, then S-UCX-03-b (NCBI efetch of ACG 2019 PMID 30840605 ASUC section and AGA hospitalized-UC guidance). Skip already-processed identifiers listed in processedSourceIdentifiers. Assign new IDs from SRC-035 and CLM-128 onward.",
+    "topicId": "T-UCX-03",
+    "searchId": "S-UCX-03-a",
+    "cursor": 0,
+    "firstNewSourceId": "SRC-035",
+    "firstNewClaimId": "CLM-128",
+    "doNot": [
+      "approve any source or claim",
+      "download a PDF whose redistribution licence is not established",
+      "promote anything to the production RAG/vector index",
+      "convert Crohn's-only or IBD-general findings to UC-specific claims"
+    ]
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "uc-evidence-expansion-1.0.0",
+  "runId": "uc-exp-e648136e30e7",
+  "generatedAt": "2026-09-02T13:17:27Z",
+  "idReservationNote": "SRC-001..SRC-032 and CLM-001..CLM-114 are reserved by prior packages (knowledge/ibd-research-review). New IDs this run: SRC-033, SRC-034, CLM-115..CLM-127. SRC-028 is an adopted canonical id (see source.idProvenance).",
+  "sourcesAcceptedThisRun": 3,
+  "sources": [
+    {
+      "sourceId": "SRC-028",
+      "idProvenance": "Canonical id reserved for this citation (PubMed 36822736) by an earlier, never-materialized planned extension (knowledge/ibd-research-review/scripts/extend_uc_evidence.py). Adopted here to preserve continuity; no id collision because that extension produced no persisted records.",
+      "fullCitation": "Singh S, Ananthakrishnan AN, Nguyen NH, Cohen BL, Velayos FS, Weiss JM, Sultan S, Siddique SM, Adler J, Chachu KA; AGA Clinical Guidelines Committee. AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis. Gastroenterology. 2023 Mar;164(3):344-372.",
+      "title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "authors": "Singh S, Ananthakrishnan AN, Nguyen NH, Cohen BL, Velayos FS, Weiss JM, Sultan S, Siddique SM, Adler J, Chachu KA; AGA Clinical Guidelines Committee",
+      "publishingOrganisation": "American Gastroenterological Association (AGA)",
+      "journalOrPublisher": "Gastroenterology (Elsevier / AGA Institute)",
+      "sourceType": "clinical practice guideline",
+      "studyDesign": "GRADE-based guideline; systematic evidence synthesis + Evidence-to-Decision framework; 7 conditional recommendations",
+      "publicationDate": "2023-03",
+      "latestUpdateDate": "2023-03",
+      "doi": "10.1053/j.gastro.2022.12.007",
+      "pubmedId": "36822736",
+      "otherIdentifiers": {
+        "pii": "S0016-5085(22)01391-9"
+      },
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "alternateUrl": "https://pubmed.ncbi.nlm.nih.gov/36822736/",
+      "accessDate": "2026-09-02",
+      "fullTextStatus": "abstract_only_retrieved",
+      "fullTextAvailability": "free_to_read_at_publisher_not_confirmed_open_licence",
+      "pdfAvailability": "publisher_pdf_reachable_via_unpaywall_licence_not_confirmed",
+      "archivedFileStatus": "not_archived",
+      "archivalStatus": "link_only",
+      "redistributionStatus": "not_permitted_assumed",
+      "licence": "Not stated in retrieved metadata (Europe PMC license field null; isOpenAccess=N). Treat as All Rights Reserved, AGA / Elsevier.",
+      "copyrightHolder": "American Gastroenterological Association / Elsevier Inc.",
+      "archivalPermission": "not_established",
+      "studyPopulation": "Adults with established ulcerative colitis, in symptomatic remission or with active symptoms",
+      "ucSpecificSampleSize": "Not applicable (guideline synthesising multiple studies); underlying diagnostic-accuracy evidence base not enumerated in retrieved abstract",
+      "interventionOrExposure": "Non-invasive biomarker-based monitoring (fecal calprotectin, fecal lactoferrin, serum CRP), alone or with symptoms",
+      "comparator": "Symptom-based monitoring; endoscopy-based monitoring",
+      "outcomes": "Detection of endoscopic/active inflammation; avoidance of routine endoscopy; treatment-decision guidance",
+      "followUpPeriod": "Not applicable (guideline)",
+      "regionalApplicability": {
+        "canada": "applicable_with_qualification",
+        "unitedStates": "directly_applicable",
+        "assessment": "US professional-society guideline. Concepts transfer to Canada, but fecal calprotectin assays are not interchangeable, cut-off calibration and lab availability/reimbursement differ, so thresholds need local validation."
+      },
+      "limitations": "All 7 recommendations are conditional (generally low / very-low certainty evidence). Retrieved as structured abstract only; full recommendation tables, thresholds rationale, and evidence profiles were not accessed. Biomarker thresholds are decision aids, not diagnostic cut-offs for an individual.",
+      "provenance": {
+        "retrievedVia": "Europe PMC REST core API (EXT_ID:36822736)",
+        "retrievalFile": "retrieval-cache/epmc-36822736.json",
+        "retrievedAt": "2026-09-02"
+      },
+      "deduplication": {
+        "status": "adopted_planned_id",
+        "matchedOn": [
+          "pubmedId",
+          "doi",
+          "normalizedTitle"
+        ],
+        "matchedAgainst": "planned SRC-028 in knowledge/ibd-research-review/scripts/extend_uc_evidence.py (never persisted)"
+      },
+      "lifecycleState": "extracted",
+      "humanReviewStatus": "",
+      "clinicalReviewStatus": "",
+      "reviewerNotes": ""
+    },
+    {
+      "sourceId": "SRC-033",
+      "idProvenance": "New id this run. Prior packages reserve SRC-001..SRC-032 (SRC-001..026 persisted; SRC-027..032 planned-only). Next free id = SRC-033.",
+      "fullCitation": "Turner D, Ricciuto A, Lewis A, D'Amico F, Dhaliwal J, Griffiths AM, Bettenworth D, Sandborn WJ, Sands BE, Reinisch W, Scholmerich J, Bemelman W, Danese S, Mary JY, Rubin D, Colombel JF, Peyrin-Biroulet L, Dotan I, Abreu MT, Dignass A; International Organization for the Study of IBD. STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD. Gastroenterology. 2021 Apr;160(5):1570-1583.",
+      "title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "authors": "Turner D, Ricciuto A, Lewis A, D'Amico F, Dhaliwal J, Griffiths AM, Bettenworth D, Sandborn WJ, Sands BE, Reinisch W, Scholmerich J, Bemelman W, Danese S, Mary JY, Rubin D, Colombel JF, Peyrin-Biroulet L, Dotan I, Abreu MT, Dignass A; IOIBD",
+      "publishingOrganisation": "International Organization for the Study of Inflammatory Bowel Diseases (IOIBD)",
+      "journalOrPublisher": "Gastroenterology (Elsevier / AGA Institute)",
+      "sourceType": "consensus statement / expert-consensus recommendations",
+      "studyDesign": "Systematic literature review (11,278 records screened, 435 included) + iterative Delphi consensus of 89 IOIBD members; consensus threshold >=75%; 15 recommendations drafted, 13 endorsed",
+      "publicationDate": "2021-04",
+      "latestUpdateDate": "2021-04",
+      "doi": "10.1053/j.gastro.2020.12.031",
+      "pubmedId": "33359090",
+      "otherIdentifiers": {
+        "pii": "S0016-5085(20)35572-4"
+      },
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "alternateUrl": "https://pubmed.ncbi.nlm.nih.gov/33359090/",
+      "accessDate": "2026-09-02",
+      "fullTextStatus": "abstract_only_retrieved",
+      "fullTextAvailability": "subscription_required_at_publisher",
+      "pdfAvailability": "no_free_pdf_listed_in_retrieved_metadata",
+      "archivedFileStatus": "not_archived",
+      "archivalStatus": "link_only",
+      "redistributionStatus": "not_permitted_assumed",
+      "licence": "Not stated in retrieved metadata (Europe PMC license field null; isOpenAccess=N). Treat as All Rights Reserved, IOIBD / Elsevier.",
+      "copyrightHolder": "AGA Institute / Elsevier Inc. (published on behalf of IOIBD)",
+      "archivalPermission": "not_established",
+      "studyPopulation": "Adults and children with inflammatory bowel disease (ulcerative colitis and Crohn's disease)",
+      "ucSpecificSampleSize": "Not applicable (consensus initiative). UC-specific element: histological healing addressed as a measure of remission depth, not a formal target.",
+      "interventionOrExposure": "Treat-to-target management strategy; defined short-term, intermediate and long-term treatment targets",
+      "comparator": "Symptom-only / non-target-based management (historical comparator, not formally tested here)",
+      "outcomes": "Consensus-defined therapeutic targets: clinical response/remission, CRP/ESR and fecal calprotectin normalisation, endoscopic healing, absence of disability, quality of life, normal growth in children",
+      "followUpPeriod": "Not applicable (consensus)",
+      "regionalApplicability": {
+        "canada": "applicable",
+        "unitedStates": "applicable",
+        "assessment": "International consensus (IOIBD); Canadian and US IBD experts among authors. The document explicitly states targets should be adapted to local resources, so implementation (test access, monitoring intervals) still needs regional tailoring."
+      },
+      "limitations": "Consensus-based; many targets rest on low-certainty evidence. IBD-general (UC + Crohn's) - not a UC-only document; UC-specific monitoring intervals and biomarker cut-offs are not defined in the retrieved abstract. Retrieved as structured abstract only.",
+      "provenance": {
+        "retrievedVia": "Europe PMC REST core API (EXT_ID:33359090)",
+        "retrievalFile": "retrieval-cache/epmc-33359090.json",
+        "retrievedAt": "2026-09-02"
+      },
+      "deduplication": {
+        "status": "new_unique",
+        "matchedOn": [],
+        "matchedAgainst": "sources.json (prior packages), reference workbook, knowledge/ibd-research-review pubmed-selected.xml (PMID 33359090 absent), extend_uc_evidence.py (absent)"
+      },
+      "lifecycleState": "extracted",
+      "humanReviewStatus": "",
+      "clinicalReviewStatus": "",
+      "reviewerNotes": ""
+    },
+    {
+      "sourceId": "SRC-034",
+      "idProvenance": "New id this run (SRC-034).",
+      "fullCitation": "Feuerstein JD, Isaacs KL, Schneider Y, Siddique SM, Falck-Ytter Y, Singh S; AGA Institute Clinical Guidelines Committee. AGA Clinical Practice Guidelines on the Management of Moderate to Severe Ulcerative Colitis. Gastroenterology. 2020 Apr;158(5):1450-1461.",
+      "title": "AGA Clinical Practice Guidelines on the Management of Moderate to Severe Ulcerative Colitis",
+      "authors": "Feuerstein JD, Isaacs KL, Schneider Y, Siddique SM, Falck-Ytter Y, Singh S; AGA Institute Clinical Guidelines Committee",
+      "publishingOrganisation": "American Gastroenterological Association (AGA)",
+      "journalOrPublisher": "Gastroenterology (Elsevier / AGA Institute)",
+      "sourceType": "clinical practice guideline",
+      "studyDesign": "GRADE-based guideline; recommendations on biologic and small-molecule therapy for moderate-to-severe UC",
+      "publicationDate": "2020-04",
+      "latestUpdateDate": "2020-04",
+      "doi": "10.1053/j.gastro.2020.01.006",
+      "pubmedId": "31945371",
+      "otherIdentifiers": {
+        "pmcid": "PMC7175923"
+      },
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2020.01.006",
+      "alternateUrl": "https://pubmed.ncbi.nlm.nih.gov/31945371/",
+      "accessDate": "2026-09-02",
+      "fullTextStatus": "citation_only",
+      "fullTextAvailability": "free_html_and_pdf_via_europe_pmc_licence_not_confirmed",
+      "pdfAvailability": "reachable_licence_not_confirmed",
+      "archivedFileStatus": "not_archived",
+      "archivalStatus": "link_only",
+      "redistributionStatus": "not_permitted_assumed",
+      "licence": "Not stated in retrieved metadata (Europe PMC isOpenAccess=N, license null).",
+      "copyrightHolder": "American Gastroenterological Association / Elsevier Inc.",
+      "archivalPermission": "not_established",
+      "studyPopulation": "Adults with moderate-to-severe ulcerative colitis",
+      "ucSpecificSampleSize": "Not applicable (guideline)",
+      "interventionOrExposure": "Biologics and small-molecule agents; positioning, escalation, and maintenance",
+      "comparator": "Placebo / alternative agents / step-up vs early advanced therapy",
+      "outcomes": "Induction and maintenance of remission; corticosteroid-free remission; safety",
+      "followUpPeriod": "Not applicable (guideline)",
+      "regionalApplicability": {
+        "canada": "applicable_with_qualification",
+        "unitedStates": "directly_applicable",
+        "assessment": "US guideline; drug approvals, sequencing and formulary access differ in Canada."
+      },
+      "limitations": "Accepted as eligible but NOT extracted in this run: no structured abstract is available and full-text recommendation statements were not retrieved within the run limits. Deferred to the next manual run for full-text statement extraction. Partly superseded by later ACG/AGA UC therapeutic guidance for specific drug positioning.",
+      "provenance": {
+        "retrievedVia": "Europe PMC REST core API + NCBI efetch (EXT_ID:31945371)",
+        "retrievalFile": "retrieval-cache/epmc-31945371.json",
+        "retrievedAt": "2026-09-02"
+      },
+      "deduplication": {
+        "status": "new_unique",
+        "matchedOn": [],
+        "matchedAgainst": "prior packages (PMID 31945371 absent from pubmed-selected.xml and extend_uc_evidence.py)"
+      },
+      "lifecycleState": "eligible",
+      "humanReviewStatus": "",
+      "clinicalReviewStatus": "",
+      "reviewerNotes": ""
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "uc-evidence-expansion-1.0.0",
+  "runId": "uc-exp-e648136e30e7",
+  "generatedAt": "2026-09-02T13:17:27Z",
+  "targetIndex": "NONE - staged package only. Nothing in this run was ingested into the production RAG / vector index.",
+  "productionPromotion": "blocked_by_design; new evidence may progress only through pending_clinical_review.",
+  "sourceFiles": [],
+  "linkOnlySources": [
+    {
+      "sourceId": "SRC-028",
+      "pubmedId": "36822736",
+      "doi": "10.1053/j.gastro.2022.12.007",
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "reason": "Licence for local archival / redistribution not established; retained as link_only metadata + abstract.",
+      "retrievalCacheFile": "retrieval-cache/epmc-36822736.json"
+    },
+    {
+      "sourceId": "SRC-033",
+      "pubmedId": "33359090",
+      "doi": "10.1053/j.gastro.2020.12.031",
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "reason": "Licence for local archival / redistribution not established; retained as link_only metadata + abstract.",
+      "retrievalCacheFile": "retrieval-cache/epmc-33359090.json"
+    },
+    {
+      "sourceId": "SRC-034",
+      "pubmedId": "31945371",
+      "doi": "10.1053/j.gastro.2020.01.006",
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2020.01.006",
+      "reason": "Licence for local archival / redistribution not established; retained as link_only metadata + abstract.",
+      "retrievalCacheFile": "retrieval-cache/epmc-31945371.json"
+    }
+  ],
+  "retrievalCache": [
+    {
+      "file": "retrieval-cache/epmc-30840605.json",
+      "sha256": "51dd62c1e528c8ff6ebbd05da38a5759f9a00962dc4bf4773d514fedcf4cc532",
+      "bytes": 7007,
+      "mimeType": "application/json",
+      "acquisitionUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search (Europe PMC REST) or https://eutils.ncbi.nlm.nih.gov",
+      "acquisitionDate": "2026-09-02",
+      "purpose": "bibliographic + abstract retrieval provenance; not a redistributable source document"
+    },
+    {
+      "file": "retrieval-cache/epmc-31945371.json",
+      "sha256": "612d592bc40bc295d2bb7c626c8136f166d3c5566b743cc1ee4d71aef25c02cb",
+      "bytes": 10196,
+      "mimeType": "application/json",
+      "acquisitionUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search (Europe PMC REST) or https://eutils.ncbi.nlm.nih.gov",
+      "acquisitionDate": "2026-09-02",
+      "purpose": "bibliographic + abstract retrieval provenance; not a redistributable source document"
+    },
+    {
+      "file": "retrieval-cache/epmc-32044313.json",
+      "sha256": "5f6ada75db5a13d99376788480cab4aba01c50073ea0047964fb29e87798a21c",
+      "bytes": 7814,
+      "mimeType": "application/json",
+      "acquisitionUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search (Europe PMC REST) or https://eutils.ncbi.nlm.nih.gov",
+      "acquisitionDate": "2026-09-02",
+      "purpose": "bibliographic + abstract retrieval provenance; not a redistributable source document"
+    },
+    {
+      "file": "retrieval-cache/epmc-33359090.json",
+      "sha256": "957e2ba933cc60ce315d748fc8720e9fab2c69ace5b3f10d3eafff3be752680d",
+      "bytes": 12262,
+      "mimeType": "application/json",
+      "acquisitionUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search (Europe PMC REST) or https://eutils.ncbi.nlm.nih.gov",
+      "acquisitionDate": "2026-09-02",
+      "purpose": "bibliographic + abstract retrieval provenance; not a redistributable source document"
+    },
+    {
+      "file": "retrieval-cache/epmc-34635919.json",
+      "sha256": "c51f68ebbaeacee5e0e939d83ff18a1e3fb959d05ff967ae49738ba703549837",
+      "bytes": 15792,
+      "mimeType": "application/json",
+      "acquisitionUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search (Europe PMC REST) or https://eutils.ncbi.nlm.nih.gov",
+      "acquisitionDate": "2026-09-02",
+      "purpose": "bibliographic + abstract retrieval provenance; not a redistributable source document"
+    },
+    {
+      "file": "retrieval-cache/epmc-36822736.json",
+      "sha256": "2a81e10a87964174ee8bcd108b963e27306cf63c3e5964f2fda2ed8908e73da6",
+      "bytes": 11233,
+      "mimeType": "application/json",
+      "acquisitionUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search (Europe PMC REST) or https://eutils.ncbi.nlm.nih.gov",
+      "acquisitionDate": "2026-09-02",
+      "purpose": "bibliographic + abstract retrieval provenance; not a redistributable source document"
+    },
+    {
+      "file": "retrieval-cache/s1.json",
+      "sha256": "8e4f0c609c258fcb138f27b9219c226e978ac10d58e6fe927832b45e021aefbd",
+      "bytes": 11293,
+      "mimeType": "application/json",
+      "acquisitionUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search (Europe PMC REST) or https://eutils.ncbi.nlm.nih.gov",
+      "acquisitionDate": "2026-09-02",
+      "purpose": "bibliographic + abstract retrieval provenance; not a redistributable source document"
+    }
+  ],
+  "candidateClaimsExtracted": [
+    "CLM-115",
+    "CLM-116",
+    "CLM-117",
+    "CLM-118",
+    "CLM-119",
+    "CLM-120",
+    "CLM-121",
+    "CLM-122",
+    "CLM-123",
+    "CLM-124",
+    "CLM-125",
+    "CLM-126",
+    "CLM-127"
+  ],
+  "notes": "source-files/ is intentionally empty this run (no archivable file). Provenance for the abstract text used in extraction is the retrieval cache above."
+}

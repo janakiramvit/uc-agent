@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "uc-evidence-expansion-1.0.0",
+  "runId": "uc-exp-e648136e30e7",
+  "generatedAt": "2026-09-02T13:17:27Z",
+  "policyNotes": [
+    "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
+    "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
+    "No PDF was downloaded or archived in this run; all sources are recorded as link_only with citation metadata + abstract only.",
+    "Abstracts and citation metadata were retrieved from Europe PMC / NCBI E-utilities public APIs, which permit retrieval of bibliographic data and abstracts."
+  ],
+  "entries": [
+    {
+      "sourceId": "SRC-028",
+      "title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "doi": "10.1053/j.gastro.2022.12.007",
+      "pubmedId": "36822736",
+      "copyrightHolder": "American Gastroenterological Association / Elsevier Inc.",
+      "statedLicence": "Not stated in retrieved metadata (Europe PMC license field null; isOpenAccess=N). Treat as All Rights Reserved, AGA / Elsevier.",
+      "fullTextAvailability": "free_to_read_at_publisher_not_confirmed_open_licence",
+      "pdfAvailability": "publisher_pdf_reachable_via_unpaywall_licence_not_confirmed",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "no_not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-09-02",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI",
+        "PubMed ID",
+        "canonical URL",
+        "access status",
+        "abstract text (SRC-028, SRC-033)"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-033",
+      "title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "doi": "10.1053/j.gastro.2020.12.031",
+      "pubmedId": "33359090",
+      "copyrightHolder": "AGA Institute / Elsevier Inc. (published on behalf of IOIBD)",
+      "statedLicence": "Not stated in retrieved metadata (Europe PMC license field null; isOpenAccess=N). Treat as All Rights Reserved, IOIBD / Elsevier.",
+      "fullTextAvailability": "subscription_required_at_publisher",
+      "pdfAvailability": "no_free_pdf_listed_in_retrieved_metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "no_not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-09-02",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI",
+        "PubMed ID",
+        "canonical URL",
+        "access status",
+        "abstract text (SRC-028, SRC-033)"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-034",
+      "title": "AGA Clinical Practice Guidelines on the Management of Moderate to Severe Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.1053/j.gastro.2020.01.006",
+      "doi": "10.1053/j.gastro.2020.01.006",
+      "pubmedId": "31945371",
+      "copyrightHolder": "American Gastroenterological Association / Elsevier Inc.",
+      "statedLicence": "Not stated in retrieved metadata (Europe PMC isOpenAccess=N, license null).",
+      "fullTextAvailability": "free_html_and_pdf_via_europe_pmc_licence_not_confirmed",
+      "pdfAvailability": "reachable_licence_not_confirmed",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "no_not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-09-02",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI",
+        "PubMed ID",
+        "canonical URL",
+        "access status",
+        "abstract text (SRC-028, SRC-033)"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    }
+  ]
+}
