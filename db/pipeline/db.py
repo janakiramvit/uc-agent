@@ -93,12 +93,28 @@ def require_dev_target(settings: Settings) -> str:
 guard_dsn = require_dev_target
 
 
+class ConnectionFailedError(RuntimeError):
+    """The DB driver refused/failed to connect. Message is sanitized - psycopg/libpq
+    error text often embeds the host, port, and username (never the password, but the
+    rest is enough to leak); none of that reaches the caller, logs, or reports."""
+
+
 def connect(settings: Settings):
-    """Return a psycopg connection (caller manages the transaction). Dev-target-gated."""
+    """Return a psycopg connection (caller manages the transaction). Dev-target-gated.
+
+    Connection errors are caught and re-raised with a sanitized message - never the
+    driver's own text, which can embed host/user.
+    """
     ident = require_dev_target(settings)
     import psycopg
 
-    conn = psycopg.connect(settings.database_url, autocommit=False)
+    try:
+        conn = psycopg.connect(settings.database_url, autocommit=False, connect_timeout=10)
+    except Exception as exc:  # noqa: BLE001 - deliberately broad; see docstring
+        raise ConnectionFailedError(
+            f"connection failed ({type(exc).__name__}); dev target was "
+            f"{ident} - no further detail is surfaced (may include host/user)."
+        ) from None
     print(f"  connected (dev target confirmed): {ident}")
     return conn
 

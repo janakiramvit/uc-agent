@@ -146,15 +146,22 @@ def load_env(dotenv_path: Path | None = None) -> Settings:
 
 
 def redact_dsn(dsn: str | None) -> str:
-    """Return a safe-to-log identifier for a connection string (host only, no creds)."""
+    """Return a safe-to-log identifier for a connection string.
+
+    Never includes the URL, username, password, or complete host - only a one-way,
+    non-reversible fingerprint of the host (for correlating log lines / confirming
+    "same target as last time"), plus the literal db name.
+    """
     if not dsn:
         return "<unset>"
     try:
+        import hashlib
         from urllib.parse import urlsplit
 
         parts = urlsplit(dsn)
-        host = parts.hostname or "?"
+        host = parts.hostname or ""
         db = (parts.path or "").lstrip("/") or "?"
-        return f"postgres://<redacted>@{host}/{db}"
+        fp = hashlib.sha256(host.encode()).hexdigest()[:8] if host else "????????"
+        return f"postgres://<redacted>@<host-fingerprint:{fp}>/{db}"
     except Exception:
         return "<unparseable-dsn>"
