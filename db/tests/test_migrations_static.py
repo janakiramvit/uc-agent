@@ -13,6 +13,7 @@ def test_every_migration_is_reversible():
     assert [m.filename for m in migs] == [
         "0001_canonical_schema.sql", "0002_staging.sql", "0003_canonical_views.sql",
         "0004_seed_metadata.sql", "0005_roles_and_rls.sql",
+        "0006_secure_schema_migration.sql",
     ]
     for m in migs:
         assert m.down_path is not None and m.down_path.is_file(), \

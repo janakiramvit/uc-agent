@@ -1,6 +1,6 @@
 # Reconciliation SUMMARY (redacted - safe to commit)
 
-_Generated 2026-09-04T19:21:25.308163+00:00 by `pipeline.reconcile`. Counts only; no evidence text, no connection strings._
+_Generated 2026-09-04T20:53:30.323050+00:00 by `pipeline.reconcile`. Counts only; no evidence text, no connection strings._
 
 ## Comparison A
 - prototype-v1 workbook  vs  ibd-prototype-evidence.json (same origin - full parity)
@@ -18,7 +18,7 @@ _Generated 2026-09-04T19:21:25.308163+00:00 by `pipeline.reconcile`. Counts only
 ## Comparison C
 - baseline-register  vs  prototype-v1  (shared IDs - both current)
 - rows: 510; json_only=60, match=422, mismatch=9, null_preserved=1, workbook_only=18
-- **material mismatches: 9**
+- **material mismatches: 4**
 - claim ID sets: both=49, {'baseline-register_only': 12}
 - source ID sets: both=20, {'baseline-register_only': 6}
 
@@ -28,7 +28,7 @@ _Generated 2026-09-04T19:21:25.308163+00:00 by `pipeline.reconcile`. Counts only
 |---|--:|--:|--:|--:|--:|--:|
 | __id_set__ | 0 | 0 | 0 | 23 | 39 | 0 |
 | applicability_limitations | 49 | 0 | 0 | 0 | 105 | 0 |
-| authoritative_url | 188 | 5 | 5 | 0 | 1 | 0 |
+| authoritative_url | 188 | 5 | 0 | 0 | 1 | 0 |
 | claim_text | 100 | 54 | 0 | 0 | 0 | 0 |
 | condition_applicability | 188 | 1 | 1 | 0 | 5 | 0 |
 | confidence | 49 | 0 | 0 | 0 | 56 | 0 |
@@ -47,24 +47,18 @@ _Generated 2026-09-04T19:21:25.308163+00:00 by `pipeline.reconcile`. Counts only
 | topic | 100 | 0 | 0 | 0 | 0 | 5 |
 
 ## Quarantine recommendations
-- total: 16 across 16 entities
-- `baseline-register`: 8
-- `prototype-v1`: 8
+- total: 6 across 6 entities
+- `baseline-register`: 3
+- `prototype-v1`: 3
 
 Entity refs with a material mismatch (IDs only, no values):
 - baseline-register:claim:CLM-081
 - baseline-register:claim:CLM-083
 - baseline-register:claim:CLM-085
-- baseline-register:claim:CLM-097
-- baseline-register:claim:CLM-098
-- baseline-register:claim:CLM-099
-- baseline-register:claim:CLM-100
-- baseline-register:source:SRC-026
 - prototype-v1:claim:CLM-081
 - prototype-v1:claim:CLM-083
 - prototype-v1:claim:CLM-085
-- prototype-v1:claim:CLM-097
-- prototype-v1:claim:CLM-098
-- prototype-v1:claim:CLM-099
-- prototype-v1:claim:CLM-100
-- prototype-v1:source:SRC-026
+
+## Classifications (IDs + category only, no values)
+- **expected_versioned_difference** (5): claim:CLM-097.authoritative_url, claim:CLM-098.authoritative_url, claim:CLM-099.authoritative_url, claim:CLM-100.authoritative_url, source:SRC-026.authoritative_url
+- **requires_clinical_applicability_review** (1): claim:CLM-083.condition_applicability

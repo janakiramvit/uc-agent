@@ -6,20 +6,31 @@ Three comparisons:
   B. baseline-register workbook  vs  candidate-claims.json    (pre-remediation reference:
        only IDs / citation URL / condition applicability / review status must be stable;
        claim text & strength fields are expected to differ - reported, not material)
-  C. baseline-register  vs  prototype-v1  for SHARED claim/source IDs  (both "current" ->
-       claim text, citation, locator, applicability, limitations must match)
+  C. baseline-register  vs  prototype-v1  for SHARED claim/source IDs  (both "current",
+       intentionally versioned datasets - not required to be byte-identical)
 
 Per (entity, field): match | mismatch | workbook_only | json_only | null_preserved.
 A **material** mismatch (IDs, claim text, citation, locator, applicability, limitations,
 licensing, review status - in a comparison where that field is in scope) produces a
-quarantine recommendation for the affected record(s). Nothing is normalized here.
+quarantine recommendation for the affected record(s).
+
+**Nothing is normalized and no original value is ever overwritten here.** A narrow,
+principled, fully-tested set of comparison-C classifiers (see `_classify_c_row`) may
+mark a mismatch `classification="expected_versioned_difference"` (drops `material` to
+False - both original values are still recorded verbatim in `left_value`/`right_value`
+and the row still reports `status="mismatch"`) or `classification=
+"requires_clinical_applicability_review"` (stays material - flags WHY, doesn't release
+it). Every classifier is a generic rule grounded in the datasets' own documented fields
+(e.g. "prototype's URL equals the register's own canonical_url"), never an entity-ID
+allowlist - so it only fires when the same provenance-backed condition holds, for any
+entity, present or future.
 """
 
 from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Callable
 
 from pipeline.validate import Outcome
 
@@ -61,6 +72,23 @@ def _norm_multi(v: Any) -> tuple[str, ...] | None:
     return toks or None
 
 
+# The ECCO-style locator label documented in the register's own "Precise locator" /
+# "Exact authoritative passage" columns (e.g. "Statement 1:", "Statement 21.1:",
+# "Practice Point 2B:"). Isolating ONLY this leading label is the sole normalization
+# rule 4 of the remediation checkpoint authorizes for excerpt comparison - nothing else
+# (no trailing evidence-grade/consensus annotations, no other wording) is stripped.
+_STATEMENT_LABEL_RE = re.compile(
+    r"^\s*(Statement|Practice\s+Point)\s+[0-9]+(?:\.[0-9]+)?[A-Za-z]?\s*[:.]\s*",
+    re.IGNORECASE,
+)
+
+
+def strip_statement_label(text: str | None) -> str | None:
+    if text is None:
+        return None
+    return _STATEMENT_LABEL_RE.sub("", text).strip()
+
+
 def compare_values(field_name: str, wb: Any, ref: Any) -> str:
     is_multi = field_name in MULTI_FIELDS
     a = _norm_multi(wb) if is_multi else _norm_scalar(wb)
@@ -86,6 +114,11 @@ class ReconRow:
     material: bool
     left_value: Any = None
     right_value: Any = None
+    # Set only by a classifier (see _classify_c_row). Both original values above are
+    # ALWAYS preserved untouched regardless of classification.
+    classification: str | None = None      # e.g. "expected_versioned_difference",
+    #                                         "requires_clinical_applicability_review"
+    detail: str | None = None              # human-readable reason for the classification
 
 
 @dataclass
@@ -142,7 +175,8 @@ def _compare_maps(result: ReconResult, *, comparison: str, left: str, right: str
                   entity_type: str, left_map: dict[str, dict], right_map: dict[str, dict],
                   fields_in_scope: set[str], material_scope: set[str],
                   quarantine_datasets: list[str], keep_values: bool,
-                  prefer_raw: bool = False) -> None:
+                  prefer_raw: bool = False,
+                  classify: Callable[[ReconRow], None] | None = None) -> None:
     left_ids, right_ids = set(left_map), set(right_map)
     result.id_stability.setdefault(f"{comparison}:{entity_type}", {
         "both": sorted(left_ids & right_ids),
@@ -158,7 +192,7 @@ def _compare_maps(result: ReconResult, *, comparison: str, left: str, right: str
 
     for ref in sorted(left_ids & right_ids):
         lrow, rrow = left_map[ref], right_map[ref]
-        per_ref_material: list[str] = []
+        per_ref_material: list[ReconRow] = []
         for fname in fields_in_scope:
             lv = _pick(lrow, fname, prefer_raw)
             rv = _pick(rrow, fname, prefer_raw)
@@ -166,19 +200,26 @@ def _compare_maps(result: ReconResult, *, comparison: str, left: str, right: str
                 continue
             status = compare_values(fname, lv, rv)
             material = fname in material_scope
-            result.rows.append(ReconRow(
+            row = ReconRow(
                 comparison, left, right, entity_type, ref, fname, status, material,
                 left_value=(lv if keep_values else None),
                 right_value=(rv if keep_values else None),
-            ))
-            if status == "mismatch" and material:
-                per_ref_material.append(fname)
+            )
+            if classify is not None:
+                classify(row)          # may flip row.material and set classification/detail
+            result.rows.append(row)
+            if row.status == "mismatch" and row.material:
+                per_ref_material.append(row)
         if per_ref_material:
             for ds in quarantine_datasets:
                 result.quarantine_recommendations.append(QuarantineRec(
                     dataset=ds, entity_type=entity_type, entity_ref=ref,
-                    reasons=[f"material reconciliation mismatch on {f} ({left} vs {right})"
-                             for f in per_ref_material],
+                    reasons=[
+                        (f"{r.classification}: {r.field} ({left} vs {right}) - {r.detail}"
+                         if r.classification else
+                         f"material reconciliation mismatch on {r.field} ({left} vs {right})")
+                        for r in per_ref_material
+                    ],
                 ))
 
 
@@ -217,8 +258,12 @@ def reconcile(datasets: dict[str, list[Outcome]], references: list, *,
             prefer_raw=True,
         )
 
-    # --- C: baseline-register vs prototype-v1 for SHARED ids ------------
+    # --- C: baseline-register vs prototype-v1 for SHARED ids (two intentionally
+    #        versioned datasets - NOT required to be byte-identical; see _classify_c_row) --
     if base and proto:
+        base_sources = _canon_by_ref(base, "source_raw")
+        base_claims = _canon_by_ref(base, "claim_raw")
+        classifier = _make_c_classifier(base_sources=base_sources, base_claims=base_claims)
         for et, tgt in (("claim", "claim_raw"), ("source", "source_raw")):
             _compare_maps(
                 res, comparison="C", left="baseline-register", right="prototype-v1",
@@ -234,8 +279,75 @@ def reconcile(datasets: dict[str, list[Outcome]], references: list, *,
                                 "limitations", "applicability_limitations"},
                 quarantine_datasets=["baseline-register", "prototype-v1"],
                 keep_values=keep_values,
+                classify=classifier,
             )
     return res
+
+
+def _make_c_classifier(*, base_sources: dict[str, dict], base_claims: dict[str, dict]
+                       ) -> Callable[[ReconRow], None]:
+    """Comparison-C classifiers. Each rule is generic (grounded in a documented field
+    already present in the data), never an entity-ID allowlist. Mutates `row` in place;
+    `left_value`/`right_value` (the original, untouched values) are never modified."""
+
+    def _register_canonical_url_for(row: ReconRow) -> str | None:
+        if row.entity_type == "source":
+            src = base_sources.get(row.entity_ref)
+        else:
+            claim = base_claims.get(row.entity_ref)
+            src = base_sources.get(claim.get("source_ref")) if claim else None
+        return (src or {}).get("canonical_url")
+
+    def classify(row: ReconRow) -> None:
+        if row.status != "mismatch":
+            return
+
+        if row.field == "authoritative_url":
+            reg_canonical_url = _register_canonical_url_for(row)
+            if (reg_canonical_url and _norm_scalar(reg_canonical_url) ==
+                    _norm_scalar(row.right_value)):
+                row.material = False
+                row.classification = "expected_versioned_difference"
+                row.detail = (
+                    "prototype-v1's authoritative_url equals baseline-register's own "
+                    "source.canonical_url for this source (an authoritative full-text "
+                    "URL vs the same source's documented canonical citation URL - both "
+                    "belong to the identical, documented source, neither is chosen over "
+                    "the other; each dataset's original URL is preserved as recorded)."
+                )
+            return
+
+        if row.field == "supporting_excerpt":
+            l_stripped = strip_statement_label(_norm_scalar(row.left_value))
+            r_stripped = strip_statement_label(_norm_scalar(row.right_value))
+            if l_stripped is not None and l_stripped == r_stripped:
+                row.material = False
+                row.classification = "expected_versioned_difference"
+                row.detail = (
+                    "identical substantive text once the documented leading "
+                    "'Statement N:' / 'Practice Point N:' locator label is isolated - "
+                    "both original excerpts are preserved byte-for-byte."
+                )
+            return
+
+        if row.field == "condition_applicability":
+            left_set = set(row.left_value or [])
+            right_set = set(row.right_value or [])
+            if right_set and left_set and right_set < left_set:
+                # material stays True: this is NOT released, only explained. The
+                # broader baseline-register scope needs a clinician's decision before
+                # it can promote with UC applicability; never inferred/upgraded here.
+                row.classification = "requires_clinical_applicability_review"
+                row.detail = (
+                    "baseline-register's condition_applicability "
+                    f"{sorted(left_set)!r} is a strict superset of prototype-v1's "
+                    f"narrower, corrected scope {sorted(right_set)!r} (see the "
+                    "prototype's own correction sheet). Kept quarantined for human "
+                    "clinical review - not auto-narrowed or auto-upgraded."
+                )
+            return
+
+    return classify
 
 
 # --------------------------------------------------------------------------- reports
@@ -278,13 +390,16 @@ def write_full_report(res: ReconResult, path) -> None:
         mm = [r for r in crows if r.status == "mismatch"]
         if mm:
             lines.append("")
-            lines.append("| entity | field | material | workbook/left | json/right |")
-            lines.append("|---|---|---|---|---|")
+            lines.append("| entity | field | material | classification | workbook/left | json/right |")
+            lines.append("|---|---|---|---|---|---|")
             for r in mm:
                 lv = str(r.left_value)[:140].replace("|", "\\|").replace("\n", " ")
                 rv = str(r.right_value)[:140].replace("|", "\\|").replace("\n", " ")
                 lines.append(f"| {r.entity_type} {r.entity_ref} | {r.field} | "
-                             f"{'YES' if r.material else 'no'} | {lv} | {rv} |")
+                             f"{'YES' if r.material else 'no'} | {r.classification or ''} "
+                             f"| {lv} | {rv} |")
+                if r.detail:
+                    lines.append(f"|  |  |  | _{r.detail}_ |  |  |")
         lines.append("")
     lines.append("## Quarantine recommendations (material mismatches)")
     lines.append("")
@@ -348,5 +463,17 @@ def write_summary(res: ReconResult, path) -> None:
                    for q in res.quarantine_recommendations})
     for r in refs:
         lines.append(f"- {r}")
+
+    classified = [r for r in res.rows if r.classification]
+    if classified:
+        lines.append("")
+        lines.append("## Classifications (IDs + category only, no values)")
+        for label in ("expected_versioned_difference", "requires_clinical_applicability_review"):
+            rows = sorted({(r.entity_type, r.entity_ref, r.field)
+                          for r in classified if r.classification == label})
+            if not rows:
+                continue
+            lines.append(f"- **{label}** ({len(rows)}): " +
+                         ", ".join(f"{et}:{ref}.{f}" for et, ref, f in rows))
     Path(path).write_text("\n".join(lines) + "\n")
 
