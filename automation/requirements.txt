@@ -1,0 +1,10 @@
+# automation/ — UC daily evidence-discovery runner (Prompt v1.0.0)
+# Pinned; install into automation/.venv only. Not shared with the app or db/ runtime.
+# EVERY third-party package imported anywhere under automation/ (runtime, tools/, tests/)
+# must appear here. An environment built from this file alone must run the YAML-validation
+# command and the entire test suite with nothing else installed.
+requests==2.32.3
+jsonschema==4.23.0
+openpyxl==3.1.5
+PyYAML==6.0.2
+pytest==8.4.1

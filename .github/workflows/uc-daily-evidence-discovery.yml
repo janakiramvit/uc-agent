@@ -1,0 +1,76 @@
+name: UC Daily Evidence Discovery
+
+# Deterministic, no-LLM discovery-and-staging increment for the UC evidence-expansion package.
+# Discovers public UC evidence, dedupes/normalizes it, extracts verbatim candidate excerpts,
+# advances a checkpoint atomically, and stages results ONLY on automation/uc-evidence-staging.
+# It never approves evidence, promotes to any index, touches Supabase/Vercel, or calls a paid
+# model/API. See automation/README.md for the full design.
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # push the automation/uc-evidence-staging branch
+  actions: read      # query run status to decide whether a stale run.lock may be reclaimed
+
+concurrency:
+  group: uc-daily-evidence-discovery
+  cancel-in-progress: false   # overlapping runs queue; never cancelled mid-run
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout main (trusted code)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.13"
+
+      - name: Install pinned dependencies
+        run: python -m pip install -r automation/requirements.txt
+
+      - name: Fetch and attach the staging state worktree
+        id: worktree
+        run: |
+          set -euo pipefail
+          git fetch origin \
+            "+refs/heads/automation/uc-evidence-staging:refs/remotes/origin/automation/uc-evidence-staging"
+          STATE_ROOT="${RUNNER_TEMP}/uc-state"
+          git worktree add --detach "${STATE_ROOT}" refs/remotes/origin/automation/uc-evidence-staging
+          echo "state_root=${STATE_ROOT}" >> "${GITHUB_OUTPUT}"
+
+      - name: Run the deterministic discovery runner (trusted code from main; state via --state-root)
+        working-directory: automation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python -m uc_evidence_discovery \
+            --state-root "${{ steps.worktree.outputs.state_root }}" \
+            --soft-deadline-seconds 450 \
+            --finalize-deadline-seconds 540
+
+      - name: Remove the state worktree (from the trusted main checkout, explicit target path)
+        if: always()
+        run: |
+          git worktree remove --force "${{ steps.worktree.outputs.state_root }}" || true
+          git worktree prune
+
+      - name: Upload redacted run artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: uc-evidence-discovery-redacted-${{ github.run_id }}
+          path: |
+            automation/artifact/redacted-run-*.json
+            automation/artifact/redacted-run-*.md
+          if-no-files-found: error
+          retention-days: 90
