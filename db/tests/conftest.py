@@ -48,11 +48,39 @@ def validated(adapted):
     }
 
 
+def _promotion_has_happened(settings) -> bool:
+    """True only if canonical.dataset actually has a promoted row. Deliberately
+    fail-closed: any error (no DB, migrations not applied yet, wrong creds, ...)
+    means "not promoted", not "assume yes". post_promotion tests include
+    test_rollback's down-migration drill, which is destructive to an in-progress
+    pre-promotion run - being staged/validated/reconciled is NOT "promoted"."""
+    if not settings.has_db:
+        return False
+    try:
+        from pipeline.db import connect
+
+        conn = connect(settings)
+        try:
+            (n,) = conn.execute(
+                "SELECT count(*) FROM canonical.dataset WHERE status = 'promoted'"
+            ).fetchone()
+            return n > 0
+        finally:
+            conn.rollback()
+            conn.close()
+    except Exception:
+        return False
+
+
 def pytest_collection_modifyitems(config, items):
     settings = load_env()
-    if settings.has_db:
+    if _promotion_has_happened(settings):
         return
-    skip = pytest.mark.skip(reason="post_promotion: needs a dev DATABASE_URL in db/.env")
+    skip = pytest.mark.skip(
+        reason="post_promotion: no canonical.dataset row has status='promoted' yet "
+               "(being staged/validated/reconciled is not 'promoted'); run explicitly "
+               "with -m post_promotion only after an approved --step promote."
+    )
     for item in items:
         if "post_promotion" in item.keywords:
             item.add_marker(skip)
