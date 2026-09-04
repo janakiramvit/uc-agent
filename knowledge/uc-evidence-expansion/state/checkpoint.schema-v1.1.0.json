@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ibd-project.local/schemas/uc-evidence-expansion/checkpoint.schema-v1.1.0.json",
+  "title": "UC evidence-expansion run checkpoint (v1.1.0 — backward-compatible superset of v1.0.0)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "runId",
+    "runStartTime",
+    "runFinishTime",
+    "lastCheckpointTime",
+    "runStatus",
+    "currentTopicId",
+    "currentSearchStrategyId",
+    "currentSearchQuery",
+    "currentApiCursor",
+    "lastProcessedRecord",
+    "latestPublicationTimestampEncountered",
+    "completedSearches",
+    "pendingSearches",
+    "processedSourceIdentifiers",
+    "acceptedRecords",
+    "rejectedRecords",
+    "deferredRecords",
+    "failedItems",
+    "retryCounts",
+    "counters",
+    "stopReason",
+    "nextRecommendedOperation"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "runId": { "type": "string", "pattern": "^uc-exp-[0-9a-f]{12}$" },
+    "runStartTime": { "type": "string", "format": "date-time" },
+    "runFinishTime": { "type": ["string", "null"], "format": "date-time" },
+    "lastCheckpointTime": { "type": "string", "format": "date-time" },
+    "runStatus": { "enum": ["running", "completed", "partially_completed", "failed"] },
+    "currentTopicId": { "type": ["string", "null"] },
+    "currentSearchStrategyId": { "type": ["string", "null"] },
+    "currentSearchQuery": { "type": ["string", "null"] },
+    "currentApiCursor": { "type": ["string", "integer", "null"] },
+    "lastProcessedRecord": { "type": ["string", "null"] },
+    "latestPublicationTimestampEncountered": { "type": ["string", "null"] },
+    "completedSearches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["searchId", "service", "query", "resultsScreened"],
+        "properties": {
+          "searchId": { "type": "string" },
+          "service": { "type": "string" },
+          "query": { "type": "string" },
+          "resultsScreened": { "type": "integer" },
+          "eligibleNew": { "type": "integer" },
+          "executedAt": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "pendingSearches": { "type": "array", "items": { "type": "object" } },
+    "processedSourceIdentifiers": {
+      "type": "object",
+      "required": ["doi", "pubmedId", "canonicalUrl", "checksum", "normalizedTitle"],
+      "properties": {
+        "doi": { "type": "array", "items": { "type": "string" } },
+        "pubmedId": { "type": "array", "items": { "type": "string" } },
+        "pmcid": { "type": "array", "items": { "type": "string" } },
+        "trialId": { "type": "array", "items": { "type": "string" } },
+        "canonicalUrl": { "type": "array", "items": { "type": "string" } },
+        "checksum": { "type": "array", "items": { "type": "string" } },
+        "normalizedTitle": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "acceptedRecords": { "type": "array", "items": { "type": "object" } },
+    "rejectedRecords": {
+      "type": "array",
+      "items": { "type": "object", "required": ["identifier", "reason"] }
+    },
+    "deferredRecords": { "type": "array", "items": { "type": "object" } },
+    "duplicateRecords": { "type": "array", "items": { "type": "object" } },
+    "failedItems": { "type": "array", "items": { "type": "object" } },
+    "retryCounts": { "type": "object" },
+    "counters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "elapsedResearchSeconds", "queriesConsumed", "recordsScreened",
+        "sourcesAccepted", "pdfsDownloaded", "claimsExtracted"
+      ],
+      "properties": {
+        "elapsedResearchSeconds": { "type": "number" },
+        "queriesConsumed": { "type": "integer" },
+        "recordsScreened": { "type": "integer" },
+        "sourcesAccepted": { "type": "integer" },
+        "pdfsDownloaded": { "type": "integer" },
+        "claimsExtracted": { "type": "integer" }
+      }
+    },
+    "limits": { "type": "object" },
+    "limitConsumption": { "type": "object" },
+    "stopReason": { "type": "string" },
+    "nextRecommendedOperation": {
+      "type": "object",
+      "required": ["description"],
+      "additionalProperties": true
+    },
+    "promptVersion": { "type": "string" },
+    "workflowRunUrl": { "type": "string" },
+    "triggeringCommit": { "type": "string" },
+    "sourceDataCutoff": { "type": ["string", "null"] },
+    "completedTopics": { "type": "array", "items": { "type": "string" } },
+    "pendingTopics": { "type": "array", "items": { "type": "string" } },
+    "lockInfo": { "type": "object" },
+    "schemaMigratedFrom": { "type": "string" },
+    "accessAndLicensingStatus": { "type": "string" },
+    "promptVsCheckpointDifference": { "type": ["object", "null"] }
+  }
+}

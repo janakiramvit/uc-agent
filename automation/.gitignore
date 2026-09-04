@@ -1,0 +1,14 @@
+# Local virtualenv
+.venv/
+
+# pytest / tooling
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# Redacted run artifacts are generated on the runner and uploaded via actions/upload-artifact;
+# they are never committed to any branch.
+artifact/
+
+# Any local state worktree a developer attaches for a dry run
+.state-*/
