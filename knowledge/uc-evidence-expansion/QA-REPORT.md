@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — QA Report
 
-**Run ID:** `uc-exp-00f246ea42e7` · **Generated:** 2026-09-04T22:39:55Z
+**Run ID:** `uc-exp-aba49128a130` · **Generated:** 2026-09-05T16:37:29Z
 
 > Automated QA only. Automated QA does NOT constitute clinical approval.
 

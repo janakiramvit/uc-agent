@@ -1,16 +1,16 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-00f246ea42e7",
+  "runId": "uc-exp-aba49128a130",
   "runStartTime": "2026-09-02T13:08:34Z",
-  "runFinishTime": "2026-09-04T22:39:55Z",
-  "lastCheckpointTime": "2026-09-04T22:39:55Z",
+  "runFinishTime": "2026-09-05T16:37:29Z",
+  "lastCheckpointTime": "2026-09-05T16:37:29Z",
   "runStatus": "partially_completed",
   "currentTopicId": "T-UCX-03",
   "currentSearchStrategyId": "S-UCX-03-a",
   "currentSearchQuery": "acute severe ulcerative colitis Truelove Witts criteria hospitalization urgent assessment",
-  "currentApiCursor": "AoJwgO7cmI8DKDUwOTE2NzEz",
+  "currentApiCursor": "AoJwwJW7luYCKDM5MDc0ODg5",
   "lastProcessedRecord": "25 screened this run",
-  "latestPublicationTimestampEncountered": "2026-06-01",
+  "latestPublicationTimestampEncountered": "2023-10-09",
   "completedSearches": [
     {
       "searchId": "S-UCX-01-a",
@@ -59,6 +59,13 @@
       "query": "full-text ASUC section of ACG UC guideline 2019 (PMID 30840605) / AGA hospitalized UC guidance",
       "resultsScreened": 0,
       "executedAt": "2026-09-04T22:39:55Z"
+    },
+    {
+      "searchId": "auto-28a130-0",
+      "service": "europepmc",
+      "query": "acute severe ulcerative colitis Truelove Witts criteria hospitalization urgent assessment",
+      "resultsScreened": 0,
+      "executedAt": "2026-09-05T16:37:29Z"
     }
   ],
   "pendingSearches": [
@@ -67,9 +74,9 @@
       "topicId": "T-UCX-03",
       "service": "EuropePMC + guideline publishers",
       "query": "acute severe ulcerative colitis Truelove Witts criteria hospitalization urgent assessment",
-      "cursor": "AoJwgO7cmI8DKDUwOTE2NzEz",
+      "cursor": "AoJwwJW7luYCKDM5MDc0ODg5",
       "purpose": "Cover L3-1.1.2 (warning signs -> urgent/emergency assessment), currently 'none' coverage, High clinical risk.",
-      "nextCursor": "AoJwgO7cmI8DKDUwOTE2NzEz"
+      "nextCursor": "AoJwwJW7luYCKDM5MDc0ODg5"
     }
   ],
   "processedSourceIdentifiers": {
@@ -154,6 +161,58 @@
     },
     {
       "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ibd_general;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ibd_general;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ibd_general;kw=",
       "reason": "not_relevant:no_priority_topic_keyword_match"
     },
     {
@@ -261,6 +320,54 @@
     {
       "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,acute severe",
       "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,biologic,vedolizumab",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ibd_general;kw=maintenance of remission",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,biologic,acute severe",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,infliximab,colectomy",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=hospitaliz,acute severe,hospitali",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,hospitaliz,biologic",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,truelove,witts",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,hospitalis,infliximab",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,colectomy,acute severe",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=biologic,ileal pouch,acute severe",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=unknown;kw=hospitaliz,infliximab,colectomy",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-UCX-03;applicability=ulcerative_colitis;kw=acute severe ulcerative colitis,hospitaliz,colectomy",
+      "reason": "missing_required_metadata:need_title+id+venue"
     }
   ],
   "failedItems": [
@@ -283,8 +390,8 @@
     "europepmc_search": 1
   },
   "counters": {
-    "elapsedResearchSeconds": 2.0,
-    "queriesConsumed": 2,
+    "elapsedResearchSeconds": 1.4,
+    "queriesConsumed": 1,
     "recordsScreened": 25,
     "sourcesAccepted": 0,
     "pdfsDownloaded": 0,
@@ -301,14 +408,14 @@
     "referenceFollowingLevels": 1,
     "stopAfterConsecutiveEmptySearches": 2
   },
-  "stopReason": "consecutive_empty_searches",
+  "stopReason": "no_research_executed",
   "nextRecommendedOperation": {
-    "description": "Continue topic T-UCX-03. Resume search S-UCX-03-a from cursor AoJwgO7cmI8DKDUwOTE2NzEz. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-036/CLM-129 onward.",
+    "description": "Continue topic T-UCX-03. Resume search S-UCX-03-a from cursor AoJwwJW7luYCKDM5MDc0ODg5. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-037/CLM-130 onward.",
     "topicId": "T-UCX-03",
     "searchId": "S-UCX-03-a",
-    "cursor": "AoJwgO7cmI8DKDUwOTE2NzEz",
-    "firstNewSourceId": "SRC-036",
-    "firstNewClaimId": "CLM-129",
+    "cursor": "AoJwwJW7luYCKDM5MDc0ODg5",
+    "firstNewSourceId": "SRC-037",
+    "firstNewClaimId": "CLM-130",
     "doNot": [
       "approve any source or claim",
       "download a PDF whose redistribution licence is not established",
@@ -319,17 +426,34 @@
   },
   "schemaMigratedFrom": "uc-evidence-expansion-1.0.0",
   "promptVersion": "uc-daily-evidence-discovery-v1.0.0",
-  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/33926438666",
+  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/33978438324",
   "triggeringCommit": "c97c387b6f03640e92c86aa4e5545ccda94977ca",
-  "sourceDataCutoff": "2026-06-01",
+  "sourceDataCutoff": "2023-10-09",
   "duplicateRecords": [],
   "limitConsumption": {
-    "queries": "2/10",
+    "queries": "1/10",
     "screened": "25/30",
     "accepted": "0/5",
     "claims": "0/20"
   },
   "accessAndLicensingStatus": "all sources link_only; no redistribution licence established; 0 files archived",
   "completedTopics": [],
-  "pendingTopics": []
+  "pendingTopics": [],
+  "promptVsCheckpointDifference": {
+    "promptExpected": {
+      "topicId": "T-UCX-03",
+      "searchId": "S-UCX-03-a",
+      "cursor": 0,
+      "firstNewSourceId": "SRC-035",
+      "firstNewClaimId": "CLM-128"
+    },
+    "checkpointHas": {
+      "topicId": "T-UCX-03",
+      "searchId": "S-UCX-03-a",
+      "cursor": "AoJwgO7cmI8DKDUwOTE2NzEz",
+      "firstNewSourceId": "SRC-036",
+      "firstNewClaimId": "CLM-129"
+    },
+    "resolution": "checkpoint is authoritative; prompt hints ignored"
+  }
 }

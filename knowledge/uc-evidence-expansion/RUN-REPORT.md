@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-00f246ea42e7` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/33926438666 · **Date:** 2026-09-04
+**Run ID:** `uc-exp-aba49128a130` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/33978438324 · **Date:** 2026-09-05
 **Run status:** `partial`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,8 +11,8 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 2.0s |
-| Discovery queries | 10 | 2 |
+| Internal research | 450s soft / 540s finalize | 1.4s |
+| Discovery queries | 10 | 1 |
 | Records screened | 30 | 25 |
 | New sources accepted | 5 | 0 |
 | Candidate excerpts | 20 | 0 |
@@ -23,9 +23,9 @@
 | Disposition | Count |
 |---|---|
 | accepted | 0 |
-| deferred | 20 |
+| deferred | 12 |
 | duplicate | 0 |
-| rejected | 5 |
+| rejected | 13 |
 
 ## QA
 
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Continue topic T-UCX-03. Resume search S-UCX-03-a from cursor AoJwgO7cmI8DKDUwOTE2NzEz. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-036/CLM-129 onward.",
+  "description": "Continue topic T-UCX-03. Resume search S-UCX-03-a from cursor AoJwwJW7luYCKDM5MDc0ODg5. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-037/CLM-130 onward.",
   "topicId": "T-UCX-03",
   "searchId": "S-UCX-03-a",
-  "cursor": "AoJwgO7cmI8DKDUwOTE2NzEz",
-  "firstNewSourceId": "SRC-036",
-  "firstNewClaimId": "CLM-129",
+  "cursor": "AoJwwJW7luYCKDM5MDc0ODg5",
+  "firstNewSourceId": "SRC-037",
+  "firstNewClaimId": "CLM-130",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",
