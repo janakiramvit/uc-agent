@@ -19,3 +19,8 @@
 {"ts": "2026-09-05T16:37:29Z", "runId": "uc-exp-aba49128a130", "event": "research_done", "detail": "queries=1 screened=25 accepted=0 claims=0 stop=no_research_executed"}
 {"ts": "2026-09-05T16:37:29Z", "runId": "uc-exp-aba49128a130", "event": "checkpoint_saved", "detail": "status=partial; accepted=0; claims=0; screened=25"}
 {"ts": "2026-09-05T16:37:29Z", "runId": "uc-exp-aba49128a130", "event": "artifact_written", "detail": "redacted artifact built under the main checkout"}
+{"ts": "2026-09-06T16:45:42Z", "runId": "uc-exp-07ff6e60c118", "event": "run_started", "detail": "runner 1.0.0 / uc-daily-evidence-discovery-v1.0.0; state-root=uc-state; dry_run=False no_network=False"}
+{"ts": "2026-09-06T16:45:42Z", "runId": "uc-exp-07ff6e60c118", "event": "prompt_vs_checkpoint", "detail": "checkpoint is authoritative; prompt resume hints ignored"}
+{"ts": "2026-09-06T16:45:44Z", "runId": "uc-exp-07ff6e60c118", "event": "research_done", "detail": "queries=1 screened=19 accepted=0 claims=0 stop=no_research_executed"}
+{"ts": "2026-09-06T16:45:44Z", "runId": "uc-exp-07ff6e60c118", "event": "checkpoint_saved", "detail": "status=partial; accepted=0; claims=0; screened=19"}
+{"ts": "2026-09-06T16:45:44Z", "runId": "uc-exp-07ff6e60c118", "event": "artifact_written", "detail": "redacted artifact built under the main checkout"}
