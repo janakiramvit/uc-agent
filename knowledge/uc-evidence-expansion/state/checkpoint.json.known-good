@@ -1,15 +1,15 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-07ff6e60c118",
+  "runId": "uc-exp-a224e903457a",
   "runStartTime": "2026-09-02T13:08:34Z",
-  "runFinishTime": "2026-09-06T16:45:44Z",
-  "lastCheckpointTime": "2026-09-06T16:45:44Z",
-  "runStatus": "partially_completed",
+  "runFinishTime": "2026-09-07T18:38:45Z",
+  "lastCheckpointTime": "2026-09-07T18:38:45Z",
+  "runStatus": "completed",
   "currentTopicId": "T-UCX-03",
-  "currentSearchStrategyId": "S-UCX-03-a",
-  "currentSearchQuery": "acute severe ulcerative colitis Truelove Witts criteria hospitalization urgent assessment",
-  "currentApiCursor": "AoJwgIzPyZMBKDI3ODg4Njk5",
-  "lastProcessedRecord": "19 screened this run",
+  "currentSearchStrategyId": null,
+  "currentSearchQuery": null,
+  "currentApiCursor": 0,
+  "lastProcessedRecord": "0 screened this run",
   "latestPublicationTimestampEncountered": "2017-10-06",
   "completedSearches": [
     {
@@ -73,19 +73,16 @@
       "query": "acute severe ulcerative colitis Truelove Witts criteria hospitalization urgent assessment",
       "resultsScreened": 0,
       "executedAt": "2026-09-06T16:45:44Z"
-    }
-  ],
-  "pendingSearches": [
+    },
     {
-      "searchId": "S-UCX-03-a",
-      "topicId": "T-UCX-03",
-      "service": "EuropePMC + guideline publishers",
+      "searchId": "auto-03457a-0",
+      "service": "europepmc",
       "query": "acute severe ulcerative colitis Truelove Witts criteria hospitalization urgent assessment",
-      "cursor": "AoJwgIzPyZMBKDI3ODg4Njk5",
-      "purpose": "Cover L3-1.1.2 (warning signs -> urgent/emergency assessment), currently 'none' coverage, High clinical risk.",
-      "nextCursor": "AoJwgIzPyZMBKDI3ODg4Njk5"
+      "resultsScreened": 0,
+      "executedAt": "2026-09-07T18:38:45Z"
     }
   ],
+  "pendingSearches": [],
   "processedSourceIdentifiers": {
     "doi": [
       "10.1053/j.gastro.2020.01.006",
@@ -473,9 +470,9 @@
     "europepmc_search": 1
   },
   "counters": {
-    "elapsedResearchSeconds": 1.5,
+    "elapsedResearchSeconds": 0.8,
     "queriesConsumed": 1,
-    "recordsScreened": 19,
+    "recordsScreened": 0,
     "sourcesAccepted": 0,
     "pdfsDownloaded": 0,
     "claimsExtracted": 0
@@ -493,12 +490,12 @@
   },
   "stopReason": "no_research_executed",
   "nextRecommendedOperation": {
-    "description": "Continue topic T-UCX-03. Resume search S-UCX-03-a from cursor AoJwgIzPyZMBKDI3ODg4Njk5. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-038/CLM-131 onward.",
+    "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-039/CLM-132 onward.",
     "topicId": "T-UCX-03",
-    "searchId": "S-UCX-03-a",
-    "cursor": "AoJwgIzPyZMBKDI3ODg4Njk5",
-    "firstNewSourceId": "SRC-038",
-    "firstNewClaimId": "CLM-131",
+    "searchId": null,
+    "cursor": 0,
+    "firstNewSourceId": "SRC-039",
+    "firstNewClaimId": "CLM-132",
     "doNot": [
       "approve any source or claim",
       "download a PDF whose redistribution licence is not established",
@@ -509,18 +506,20 @@
   },
   "schemaMigratedFrom": "uc-evidence-expansion-1.0.0",
   "promptVersion": "uc-daily-evidence-discovery-v1.0.0",
-  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/34046465669",
+  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/34152440649",
   "triggeringCommit": "c97c387b6f03640e92c86aa4e5545ccda94977ca",
-  "sourceDataCutoff": "2017-10-06",
+  "sourceDataCutoff": "2026-09-07T18:38:45Z",
   "duplicateRecords": [],
   "limitConsumption": {
     "queries": "1/10",
-    "screened": "19/30",
+    "screened": "0/30",
     "accepted": "0/5",
     "claims": "0/20"
   },
   "accessAndLicensingStatus": "all sources link_only; no redistribution licence established; 0 files archived",
-  "completedTopics": [],
+  "completedTopics": [
+    "T-UCX-03"
+  ],
   "pendingTopics": [],
   "promptVsCheckpointDifference": {
     "promptExpected": {
@@ -533,9 +532,9 @@
     "checkpointHas": {
       "topicId": "T-UCX-03",
       "searchId": "S-UCX-03-a",
-      "cursor": "AoJwwJW7luYCKDM5MDc0ODg5",
-      "firstNewSourceId": "SRC-037",
-      "firstNewClaimId": "CLM-130"
+      "cursor": "AoJwgIzPyZMBKDI3ODg4Njk5",
+      "firstNewSourceId": "SRC-038",
+      "firstNewClaimId": "CLM-131"
     },
     "resolution": "checkpoint is authoritative; prompt hints ignored"
   }
