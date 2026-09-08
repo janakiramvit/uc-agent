@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-a224e903457a` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/34152440649 · **Date:** 2026-09-07
+**Run ID:** `uc-exp-88d5ac145d88` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/34259310918 · **Date:** 2026-09-08
 **Run status:** `completed`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-039/CLM-132 onward.",
+  "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-040/CLM-133 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-039",
-  "firstNewClaimId": "CLM-132",
+  "firstNewSourceId": "SRC-040",
+  "firstNewClaimId": "CLM-133",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",
