@@ -1,6 +1,6 @@
 # UC Evidence Gaps (auto-maintained)
 
-_Last updated 2026-10-04 by run `uc-exp-3acca28e95e3`._
+_Last updated 2026-10-05 by run `uc-exp-68d95eccf624`._
 
 This file is regenerated each automated run. Gap analysis beyond keyword coverage
 `requires_human_review`. See `question-coverage-map.json` for the topic roadmap.
