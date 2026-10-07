@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-2abf6e84ea39` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/37518183818 · **Date:** 2026-10-06
+**Run ID:** `uc-exp-466f5c482216` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/37677135465 · **Date:** 2026-10-07
 **Run status:** `completed`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,7 +11,7 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 0.6s |
+| Internal research | 450s soft / 540s finalize | 0.7s |
 | Discovery queries | 10 | 1 |
 | Records screened | 30 | 0 |
 | New sources accepted | 5 | 0 |
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-068/CLM-161 onward.",
+  "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-069/CLM-162 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-068",
-  "firstNewClaimId": "CLM-161",
+  "firstNewSourceId": "SRC-069",
+  "firstNewClaimId": "CLM-162",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",
