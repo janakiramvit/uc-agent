@@ -1,9 +1,9 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-5055e9952a88",
+  "runId": "uc-exp-384f636a9ab2",
   "runStartTime": "2026-09-02T13:08:34Z",
-  "runFinishTime": "2026-10-12T21:59:52Z",
-  "lastCheckpointTime": "2026-10-12T21:59:52Z",
+  "runFinishTime": "2026-10-13T20:07:28Z",
+  "lastCheckpointTime": "2026-10-13T20:07:28Z",
   "runStatus": "completed",
   "currentTopicId": "T-UCX-03",
   "currentSearchStrategyId": null,
@@ -325,6 +325,13 @@
       "query": "ulcerative colitis AND (acute severe OR calprotectin OR treat to target) AND (guideline OR consensus OR randomized) AND (2021:2026[pub_year])",
       "resultsScreened": 0,
       "executedAt": "2026-10-12T21:59:52Z"
+    },
+    {
+      "searchId": "auto-6a9ab2-0",
+      "service": "europepmc",
+      "query": "ulcerative colitis AND (acute severe OR calprotectin OR treat to target) AND (guideline OR consensus OR randomized) AND (2021:2026[pub_year])",
+      "resultsScreened": 0,
+      "executedAt": "2026-10-13T20:07:28Z"
     }
   ],
   "pendingSearches": [],
@@ -715,7 +722,7 @@
     "europepmc_search": 1
   },
   "counters": {
-    "elapsedResearchSeconds": 0.7,
+    "elapsedResearchSeconds": 1.3,
     "queriesConsumed": 1,
     "recordsScreened": 0,
     "sourcesAccepted": 0,
@@ -735,12 +742,12 @@
   },
   "stopReason": "no_research_executed",
   "nextRecommendedOperation": {
-    "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-074/CLM-167 onward.",
+    "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-075/CLM-168 onward.",
     "topicId": "T-UCX-03",
     "searchId": null,
     "cursor": 0,
-    "firstNewSourceId": "SRC-074",
-    "firstNewClaimId": "CLM-167",
+    "firstNewSourceId": "SRC-075",
+    "firstNewClaimId": "CLM-168",
     "doNot": [
       "approve any source or claim",
       "download a PDF whose redistribution licence is not established",
@@ -751,9 +758,9 @@
   },
   "schemaMigratedFrom": "uc-evidence-expansion-1.0.0",
   "promptVersion": "uc-daily-evidence-discovery-v1.0.0",
-  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/38314029745",
+  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/38460285490",
   "triggeringCommit": "c97c387b6f03640e92c86aa4e5545ccda94977ca",
-  "sourceDataCutoff": "2026-10-12T21:59:52Z",
+  "sourceDataCutoff": "2026-10-13T20:07:28Z",
   "duplicateRecords": [],
   "limitConsumption": {
     "queries": "1/10",
@@ -778,8 +785,8 @@
       "topicId": "T-UCX-03",
       "searchId": null,
       "cursor": 0,
-      "firstNewSourceId": "SRC-073",
-      "firstNewClaimId": "CLM-166"
+      "firstNewSourceId": "SRC-074",
+      "firstNewClaimId": "CLM-167"
     },
     "resolution": "checkpoint is authoritative; prompt hints ignored"
   }
