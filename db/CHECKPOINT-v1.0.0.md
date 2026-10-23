@@ -4,6 +4,16 @@
 expand scope. Wait for the user's explicit "proceed" before running migrations, staging,
 Supabase changes, promotion, or any production action.
 
+> **Update 2026-10-23 (status refresh, reflects commit `4b14fb8` of 2026-09-04):** migrations
+> `0001`–`0006` are applied to the dev project; `stage → validate → reconcile` have run and
+> persisted. At `4b14fb8` reconciliation left 6 quarantine records (CLM-081/083/085 in both datasets); commit `d4a472b`
+> (per-dataset validity, QA overlay) reduces the recommendation to **1 record: baseline-register CLM-083**
+> (3, baseline-register only, if run without the QA overlay). **The dev DB's `quarantine.record` still holds
+> the older 6 until `--step reconcile` is re-run.**
+> `canonical` evidence tables are still **0 rows**; nothing is promoted. `pytest db/tests`
+> last recorded **50 passed, 35 skipped** (post_promotion gated). The sections below are the
+> original 2026-09-03 text; §7 is updated. `pytest` counts above predate `d4a472b`; offline reconcile-related tests: 31 passed.
+>
 > **Update 2026-09-03 (build session):** the entire `db/` package + the dormant app
 > backend are now BUILT and the offline pipeline (`infer → adapt → validate → reconcile`)
 > + pre-promotion tests (`29 passed, 30 skipped`) have run. `db/.venv` is created and deps
@@ -149,10 +159,10 @@ draft, before any DB connection.
 
 | Stage | Command (build session) | State |
 |---|---|---|
-| `migrate` | `python -m pipeline.ingest --step migrate` | **not run** — applies `0001`–`0005` to dev Supabase; seeds metadata only (`schema_version`, enums, `dataset` identity); evidence tables stay 0 rows |
-| `adapt` + `stage` | `--step adapt` / `--step stage` | **not run** — 3 workbook adapters + JSON reconcile → `staging.*` |
-| `validate` | `--step validate` | **not run** — per-row `validation_status`; quarantine candidates |
-| `reconcile` | `--step reconcile` | **not run** — `staging.reconciliation_result` + gitignored report + redacted `SUMMARY.md`; material mismatch ⇒ `quarantine.record` |
+| `migrate` | `python -m pipeline.ingest --step migrate` | **done (dev)** — `0001`–`0006` applied;  metadata only seeded (`schema_version`, enums, `dataset` identity); canonical evidence tables remain 0 rows |
+| `adapt` + `stage` | `--step adapt` / `--step stage` | **done (dev)** — 3 workbook adapters + JSON reconcile → `staging.*` |
+| `validate` | `--step validate` | **done (dev)** — per-row `validation_status`; persisted |
+| `reconcile` | `--step reconcile` | **done (dev)** — `staging.reconciliation_result` + report + redacted `SUMMARY.md`; **6 quarantine** — 6 recorded in dev (older logic); `d4a472b` code yields 1 (baseline-register CLM-083) once re-run |
 | **PROMOTE** | `--step promote --confirm-promote` | **not run — BLOCKED pending explicit user approval after review** |
 | `gate` | `--step gate` | **not run** — post-promotion |
 

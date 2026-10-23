@@ -32,7 +32,7 @@ db/.venv/bin/python -m pipeline.ingest --step reconcile   # db/reports/SUMMARY.m
 db/.venv/bin/python -m pytest db/tests -m "not post_promotion"
 
 # needs a DEV Supabase DATABASE_URL + DB_ENVIRONMENT=development + EXPECTED_DEV_HOST in db/.env:
-db/.venv/bin/python -m pipeline.ingest --step migrate     # applies 0001–0005 (metadata-only seed)
+db/.venv/bin/python -m pipeline.ingest --step migrate     # applies 0001–0006 (metadata-only seed)
 db/.venv/bin/python -m pipeline.ingest --step stage       # writes staging.* from the adapters
 db/.venv/bin/python -m pipeline.ingest --step validate    # crosswalk + quarantine; persists to staging
 db/.venv/bin/python -m pipeline.ingest --step reconcile   # persists to staging.reconciliation_result + quarantine.record
