@@ -110,7 +110,7 @@ def cmd_reconcile(args) -> int:
     adapted = _adapt_all()
     reports = _validate_all(adapted)
     res = reconcile({ds: rep.outcomes for ds, rep in reports.items()},
-                    adapted["_refs"].records)
+                    adapted["_refs"].records, qa_overlay=adapted["_qa"].records)
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     write_full_report(res, REPORTS_DIR / "schema-reconciliation-report.md")
     write_summary(res, REPORTS_DIR / "SUMMARY.md")
@@ -339,7 +339,8 @@ def cmd_all(_args) -> int:
         for o in rep.quarantined:
             print(f"     QUARANTINE {o.target} {o.natural_key}: {o.errors}")
     adapted = _adapt_all()
-    res = reconcile({ds: rep.outcomes for ds, rep in reps.items()}, adapted["_refs"].records)
+    res = reconcile({ds: rep.outcomes for ds, rep in reps.items()}, adapted["_refs"].records,
+                    qa_overlay=adapted["_qa"].records)
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     write_full_report(res, REPORTS_DIR / "schema-reconciliation-report.md")
     write_summary(res, REPORTS_DIR / "SUMMARY.md")

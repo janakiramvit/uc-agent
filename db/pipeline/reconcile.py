@@ -114,11 +114,18 @@ class ReconRow:
     material: bool
     left_value: Any = None
     right_value: Any = None
-    # Set only by a classifier (see _classify_c_row). Both original values above are
+    # Set only by a classifier (see _make_c_classifier). Both original values above are
     # ALWAYS preserved untouched regardless of classification.
     classification: str | None = None      # e.g. "expected_versioned_difference",
     #                                         "requires_clinical_applicability_review"
     detail: str | None = None              # human-readable reason for the classification
+    # Which side(s) of a material mismatch actually get quarantined. A cross-dataset
+    # difference is a reconciliation OBSERVATION, not automatically a validation
+    # failure for both sides - each dataset's validity is judged independently against
+    # its OWN source-of-record/QA/oracle. Defaults to both (pre-independent-validation
+    # behavior) unless a classifier narrows it. Only consulted when the comparison
+    # supplies a side->dataset mapping (comparison C); ignored otherwise.
+    quarantine_sides: frozenset[str] = field(default_factory=lambda: frozenset({"left", "right"}))
 
 
 @dataclass
@@ -176,7 +183,14 @@ def _compare_maps(result: ReconResult, *, comparison: str, left: str, right: str
                   fields_in_scope: set[str], material_scope: set[str],
                   quarantine_datasets: list[str], keep_values: bool,
                   prefer_raw: bool = False,
-                  classify: Callable[[ReconRow], None] | None = None) -> None:
+                  classify: Callable[[ReconRow], None] | None = None,
+                  side_to_dataset: dict[str, str] | None = None) -> None:
+    """``side_to_dataset`` (comparison C only) enables INDEPENDENT per-dataset
+    quarantine: each row's ``quarantine_sides`` (set by ``classify``, default both)
+    decides which dataset(s) actually receive a QuarantineRec for that field - a
+    cross-dataset difference is a reconciliation observation, not automatically a
+    validation failure for both sides. Without it (comparisons A/B), any material
+    mismatch quarantines every dataset in ``quarantine_datasets`` as before."""
     left_ids, right_ids = set(left_map), set(right_map)
     result.id_stability.setdefault(f"{comparison}:{entity_type}", {
         "both": sorted(left_ids & right_ids),
@@ -210,24 +224,42 @@ def _compare_maps(result: ReconResult, *, comparison: str, left: str, right: str
             result.rows.append(row)
             if row.status == "mismatch" and row.material:
                 per_ref_material.append(row)
-        if per_ref_material:
+        if not per_ref_material:
+            continue
+        if side_to_dataset is None:
             for ds in quarantine_datasets:
                 result.quarantine_recommendations.append(QuarantineRec(
                     dataset=ds, entity_type=entity_type, entity_ref=ref,
-                    reasons=[
-                        (f"{r.classification}: {r.field} ({left} vs {right}) - {r.detail}"
-                         if r.classification else
-                         f"material reconciliation mismatch on {r.field} ({left} vs {right})")
-                        for r in per_ref_material
-                    ],
+                    reasons=[_reason_text(r, left, right) for r in per_ref_material],
                 ))
+            continue
+        # Independent per-dataset quarantine: group this ref's material rows by which
+        # side(s) they actually flag, and emit one QuarantineRec per flagged side.
+        by_side: dict[str, list[ReconRow]] = {"left": [], "right": []}
+        for row in per_ref_material:
+            for side in row.quarantine_sides:
+                by_side[side].append(row)
+        for side, rows in by_side.items():
+            if not rows:
+                continue
+            result.quarantine_recommendations.append(QuarantineRec(
+                dataset=side_to_dataset[side], entity_type=entity_type, entity_ref=ref,
+                reasons=[_reason_text(r, left, right) for r in rows],
+            ))
+
+
+def _reason_text(r: ReconRow, left: str, right: str) -> str:
+    if r.classification:
+        return f"{r.classification}: {r.field} ({left} vs {right}) - {r.detail}"
+    return f"material reconciliation mismatch on {r.field} ({left} vs {right})"
 
 
 def reconcile(datasets: dict[str, list[Outcome]], references: list, *,
-              keep_values: bool = True) -> ReconResult:
+              qa_overlay: list | None = None, keep_values: bool = True) -> ReconResult:
     res = ReconResult()
     proto = datasets.get("prototype-v1", [])
     base = datasets.get("baseline-register", [])
+    qa_by_claim = build_qa_by_claim(qa_overlay or [])
 
     # --- A: prototype-v1 workbook vs prototype_json oracle -----------------
     if proto:
@@ -259,11 +291,19 @@ def reconcile(datasets: dict[str, list[Outcome]], references: list, *,
         )
 
     # --- C: baseline-register vs prototype-v1 for SHARED ids (two intentionally
-    #        versioned datasets - NOT required to be byte-identical; see _classify_c_row) --
+    #        versioned datasets - NOT required to be byte-identical; each dataset's
+    #        validity is judged INDEPENDENTLY against its own source-of-record/QA/
+    #        oracle - see _make_c_classifier) -----------------------------------
     if base and proto:
         base_sources = _canon_by_ref(base, "source_raw")
         base_claims = _canon_by_ref(base, "claim_raw")
-        classifier = _make_c_classifier(base_sources=base_sources, base_claims=base_claims)
+        a_material = {(r.entity_type, r.entity_ref) for r in res.rows
+                      if r.comparison == "A" and r.status == "mismatch" and r.material}
+        a_all = {(r.entity_type, r.entity_ref) for r in res.rows if r.comparison == "A"}
+        a_valid_entities = a_all - a_material
+        classifier = _make_c_classifier(base_sources=base_sources, base_claims=base_claims,
+                                        qa_by_claim=qa_by_claim,
+                                        a_valid_entities=a_valid_entities)
         for et, tgt in (("claim", "claim_raw"), ("source", "source_raw")):
             _compare_maps(
                 res, comparison="C", left="baseline-register", right="prototype-v1",
@@ -278,17 +318,88 @@ def reconcile(datasets: dict[str, list[Outcome]], references: list, *,
                                 "authoritative_url", "condition_applicability",
                                 "limitations", "applicability_limitations"},
                 quarantine_datasets=["baseline-register", "prototype-v1"],
+                side_to_dataset={"left": "baseline-register", "right": "prototype-v1"},
                 keep_values=keep_values,
                 classify=classifier,
             )
     return res
 
 
-def _make_c_classifier(*, base_sources: dict[str, dict], base_claims: dict[str, dict]
+def build_qa_by_claim(qa_records: list) -> dict[str, dict[str, dict]]:
+    """claim_ref -> qa_dimension -> {qa_outcome, qa_note, findings} from the QA-overlay
+    adapter's staging records (target == 'claim_qa_raw'). Pure; no DB."""
+    out: dict[str, dict[str, dict]] = {}
+    for rec in qa_records:
+        f = rec.fields if hasattr(rec, "fields") else rec
+        target = getattr(rec, "target", None)
+        if target != "claim_qa_raw":
+            continue
+        claim_ref, dim = f.get("claim_ref"), f.get("qa_dimension")
+        if not claim_ref or not dim:
+            continue
+        out.setdefault(claim_ref, {})[dim] = f
+    return out
+
+
+def _baseline_field_validity(claim_ref: str, field_name: str,
+                             qa_by_claim: dict[str, dict[str, dict]]
+                             ) -> tuple[bool | None, str | None]:
+    """Judge baseline-register's OWN value for `field_name` against ONLY baseline's own
+    QA overlay (never against the other dataset). Returns (valid, reason):
+        True,  None   -> QA affirmatively passed this field -> independently valid
+        False, reason -> QA identified a specific failure -> quarantine with this reason
+        None,  None   -> no QA signal for this field -> caller applies a safe default
+    """
+    qa = qa_by_claim.get(claim_ref, {})
+    sol = qa.get("source_and_locator", {})
+    findings = sol.get("findings", {}) or {}
+    cc = qa.get("corrected_claim", {})
+
+    if field_name == "supporting_excerpt":
+        status = findings.get("Excerpt status")
+        if status:
+            return (status.strip().upper() == "PASS",
+                    None if status.strip().upper() == "PASS"
+                    else f"QA source_and_locator Excerpt status={status!r}")
+        return None, None
+
+    if field_name == "precise_locator":
+        status = findings.get("Locator status")
+        if status:
+            return (status.strip().upper() == "PASS",
+                    None if status.strip().upper() == "PASS"
+                    else f"QA source_and_locator Locator status={status!r}")
+        return None, None
+
+    if field_name in ("condition_applicability", "disease_context", "outcome_type", "topic"):
+        note = cc.get("qa_note") or findings.get("Metadata finding") or sol.get("qa_note")
+        outcome = (cc.get("qa_outcome") or sol.get("qa_outcome") or "")
+        if "fail" in outcome.lower() and note:
+            return False, note
+        if outcome:
+            return True, None
+        return None, None
+
+    # generic fallback for any other field: the overall source_and_locator verdict
+    outcome = (sol.get("qa_outcome") or "").strip().upper()
+    if outcome == "PASS":
+        return True, None
+    if outcome:
+        return False, sol.get("qa_note") or f"QA source_and_locator outcome={outcome!r}"
+    return None, None
+
+
+def _make_c_classifier(*, base_sources: dict[str, dict], base_claims: dict[str, dict],
+                       qa_by_claim: dict[str, dict[str, dict]],
+                       a_valid_entities: set[tuple[str, str]]
                        ) -> Callable[[ReconRow], None]:
-    """Comparison-C classifiers. Each rule is generic (grounded in a documented field
-    already present in the data), never an entity-ID allowlist. Mutates `row` in place;
-    `left_value`/`right_value` (the original, untouched values) are never modified."""
+    """Comparison-C classifiers implementing INDEPENDENT per-dataset validity: a
+    cross-dataset difference is a reconciliation observation, not automatically a
+    validation failure for both sides. Each dataset's validity is judged only against
+    its OWN source-of-record / QA overlay / oracle - never against the other dataset.
+    Every rule is generic (grounded in a documented field already present in the
+    data), never an entity-ID allowlist. Mutates `row` in place; `left_value`/
+    `right_value` (the original, untouched values) are never modified."""
 
     def _register_canonical_url_for(row: ReconRow) -> str | None:
         if row.entity_type == "source":
@@ -302,11 +413,22 @@ def _make_c_classifier(*, base_sources: dict[str, dict], base_claims: dict[str, 
         if row.status != "mismatch":
             return
 
+        # Right/prototype-v1 side: valid whenever Comparison A found no material
+        # mismatch for this SAME entity (its own workbook already matches its own
+        # oracle) - so a cross-dataset difference alone never quarantines it.
+        right_a_valid = (row.entity_type, row.entity_ref) in a_valid_entities
+        row.quarantine_sides = (frozenset({"left"}) if right_a_valid
+                                else frozenset({"left", "right"}))
+
         if row.field == "authoritative_url":
             reg_canonical_url = _register_canonical_url_for(row)
             if (reg_canonical_url and _norm_scalar(reg_canonical_url) ==
                     _norm_scalar(row.right_value)):
+                # Independently valid on BOTH sides: baseline's authoritative_url is
+                # its own documented value; prototype's equals baseline's own
+                # documented canonical_url for the same source. Neither is invalid.
                 row.material = False
+                row.quarantine_sides = frozenset()
                 row.classification = "expected_versioned_difference"
                 row.detail = (
                     "prototype-v1's authoritative_url equals baseline-register's own "
@@ -317,33 +439,56 @@ def _make_c_classifier(*, base_sources: dict[str, dict], base_claims: dict[str, 
                 )
             return
 
-        if row.field == "supporting_excerpt":
-            l_stripped = strip_statement_label(_norm_scalar(row.left_value))
-            r_stripped = strip_statement_label(_norm_scalar(row.right_value))
-            if l_stripped is not None and l_stripped == r_stripped:
-                row.material = False
+        if row.field in ("supporting_excerpt", "precise_locator"):
+            valid, reason = _baseline_field_validity(row.entity_ref, row.field, qa_by_claim)
+            if valid is True:
+                row.quarantine_sides = row.quarantine_sides - {"left"}
+                if not row.quarantine_sides:
+                    row.material = False
                 row.classification = "expected_versioned_difference"
                 row.detail = (
-                    "identical substantive text once the documented leading "
-                    "'Statement N:' / 'Practice Point N:' locator label is isolated - "
-                    "both original excerpts are preserved byte-for-byte."
+                    f"baseline-register's own QA overlay (source_and_locator) passed "
+                    f"this field for {row.entity_ref} - the difference from "
+                    f"prototype-v1 is an expected versioning/condensation difference, "
+                    "not a data-quality failure on either side."
                 )
+            elif valid is False:
+                row.classification = "baseline_qa_failure"
+                row.detail = f"baseline-register's own QA overlay flagged this field: {reason}"
+            # valid is None (no QA signal): leave defaults (both/left as set above,
+            # unclassified) - can't positively validate, stays visible.
             return
 
         if row.field == "condition_applicability":
             left_set = set(row.left_value or [])
             right_set = set(row.right_value or [])
-            if right_set and left_set and right_set < left_set:
-                # material stays True: this is NOT released, only explained. The
-                # broader baseline-register scope needs a clinician's decision before
-                # it can promote with UC applicability; never inferred/upgraded here.
+            valid, reason = _baseline_field_validity(row.entity_ref, row.field, qa_by_claim)
+            if valid is False:
+                # Baseline's OWN QA overlay - not merely disagreement with prototype -
+                # identified this claim's condition/outcome metadata as unsupported.
+                # Never auto-narrowed or auto-upgraded; only the baseline side is
+                # quarantined (prototype's corrected, narrower scope stands on its own
+                # via Comparison A / its correction sheet).
+                row.quarantine_sides = row.quarantine_sides & {"left"}
+                row.classification = "requires_clinical_applicability_review"
+                row.detail = (
+                    f"baseline-register's own QA overlay flagged this claim's "
+                    f"condition/outcome applicability: {reason} (baseline scope "
+                    f"{sorted(left_set)!r} vs prototype-v1's corrected, narrower scope "
+                    f"{sorted(right_set)!r}). Kept quarantined for human clinical "
+                    "review - not auto-narrowed or auto-upgraded."
+                )
+            elif right_set and left_set and right_set < left_set:
+                # Superset with no baseline QA failure on record: still flag for human
+                # review (broader applicability is safety-relevant) but don't invent a
+                # QA finding that doesn't exist.
+                row.quarantine_sides = row.quarantine_sides & {"left"}
                 row.classification = "requires_clinical_applicability_review"
                 row.detail = (
                     "baseline-register's condition_applicability "
                     f"{sorted(left_set)!r} is a strict superset of prototype-v1's "
-                    f"narrower, corrected scope {sorted(right_set)!r} (see the "
-                    "prototype's own correction sheet). Kept quarantined for human "
-                    "clinical review - not auto-narrowed or auto-upgraded."
+                    f"narrower, corrected scope {sorted(right_set)!r}. Kept quarantined "
+                    "for human clinical review - not auto-narrowed or auto-upgraded."
                 )
             return
 
