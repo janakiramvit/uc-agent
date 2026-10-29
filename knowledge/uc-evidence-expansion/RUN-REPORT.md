@@ -1,7 +1,7 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-5c780170eac2` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/40753757694 · **Date:** 2026-10-28
-**Run status:** `partial`
+**Run ID:** `uc-exp-13d547150b6a` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/40940140746 · **Date:** 2026-10-29
+**Run status:** `completed`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
 > `pending_clinical_review`. No application code, deployment, Vercel config, Supabase table, or
@@ -11,7 +11,7 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 12.9s |
+| Internal research | 450s soft / 540s finalize | 0.7s |
 | Discovery queries | 10 | 1 |
 | Records screened | 30 | 0 |
 | New sources accepted | 5 | 0 |
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Continue topic T-UCX-03. Resume search S-AUTO-a from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-090/CLM-183 onward.",
+  "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-091/CLM-184 onward.",
   "topicId": "T-UCX-03",
-  "searchId": "S-AUTO-a",
+  "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-090",
-  "firstNewClaimId": "CLM-183",
+  "firstNewSourceId": "SRC-091",
+  "firstNewClaimId": "CLM-184",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",
