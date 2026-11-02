@@ -35,11 +35,11 @@ def load_evidence_package_from_db(conn=None) -> EvidencePackage:
     conn = conn or _connect()
     try:
         claims = [r[0] for r in conn.execute(
-            "SELECT claim_json FROM canonical.v_prototype_claim").fetchall()]
+            "SELECT claim_json FROM canonical.v_prototype_claim ORDER BY claim_json->>'claimId'").fetchall()]
         sources = [r[0] for r in conn.execute(
-            "SELECT source_json FROM canonical.v_prototype_source").fetchall()]
+            "SELECT source_json FROM canonical.v_prototype_source ORDER BY source_json->>'sourceId'").fetchall()]
         excluded = [r[0] for r in conn.execute(
-            "SELECT claim_ref FROM canonical.v_prototype_excluded_claim_id").fetchall()]
+            "SELECT claim_ref FROM canonical.v_prototype_excluded_claim_id ORDER BY claim_ref").fetchall()]
         limitations = [r[0] for r in conn.execute(
             "SELECT text FROM canonical.v_prototype_limitation ORDER BY ordinal").fetchall()]
         meta = conn.execute(

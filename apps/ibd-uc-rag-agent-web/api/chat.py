@@ -40,7 +40,7 @@ def _redact(text: str) -> str:
 # to be importable (same pattern used by the reference architecture).
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from agent_core.evidence_loader import load_evidence_package  # noqa: E402
+from agent_core.evidence_backend import load_active_evidence_package  # noqa: E402
 from agent_core.graph_v2 import build_graph_v2, run_graph_v2  # noqa: E402
 from agent_core.rate_limit import (  # noqa: E402
     DEFAULT_MAX_QUERY_CHARS,
@@ -64,7 +64,7 @@ def _pipeline():
     per warm function instance, not once per request."""
     global _package, _retriever, _graph
     if _graph is None:
-        _package = load_evidence_package()
+        _package = load_active_evidence_package()
         _retriever = build_retriever(_package)
         _graph = build_graph_v2(_package, _retriever)
     return _graph
