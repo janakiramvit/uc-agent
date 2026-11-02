@@ -64,5 +64,10 @@ def test_reader_cannot_select_base_staging_or_quarantine(reader, obj):
 def test_reader_cannot_write(reader):
     import psycopg
 
-    with pytest.raises((psycopg.errors.InsufficientPrivilege, psycopg.errors.ReadOnlySqlTransaction)):
-        reader.execute("DELETE FROM canonical.v_prototype_claim")
+    for stmt in ("DELETE FROM canonical.claim", "UPDATE canonical.source SET title='x'",
+                 "INSERT INTO canonical.excluded_claim (dataset_id, claim_ref) VALUES (1,'X')",
+                 "DELETE FROM canonical.v_prototype_claim"):
+        with pytest.raises((psycopg.errors.InsufficientPrivilege,
+                            psycopg.errors.ReadOnlySqlTransaction,
+                            psycopg.errors.ObjectNotInPrerequisiteState)):
+            reader.execute(stmt)

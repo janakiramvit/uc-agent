@@ -43,13 +43,14 @@ def main(argv: list[str]) -> int:
     try:
         exists = conn.execute("SELECT 1 FROM pg_roles WHERE rolname=%s", (ROLE,)).fetchone()
         verb = "ALTER" if exists else "CREATE"
-        # password is a generated URL-safe token; role/identifier is a constant.
-        conn.execute(
-            f"{verb} ROLE {ROLE} WITH LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION "
-            f"NOBYPASSRLS CONNECTION LIMIT 10 PASSWORD '{password}'"
-        )
-        if not exists:
-            conn.execute(f"GRANT evidence_reader TO {ROLE}")
+        # Password is a generated URL-safe token; the role name is a constant. Attributes
+        # (NOSUPERUSER etc.) are set at CREATE only - altering them needs extra privileges
+        # on managed Postgres, and a rotation only needs LOGIN + PASSWORD.
+        attrs = ("WITH LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS "
+                 "CONNECTION LIMIT 10 " if not exists else "WITH LOGIN ")
+        conn.execute(f"{verb} ROLE {ROLE} {attrs}PASSWORD '{password}'")
+        conn.execute(f"GRANT evidence_reader TO {ROLE}")   # idempotent; restores membership
+                                                           # if evidence_reader was recreated
         conn.execute(f"ALTER ROLE {ROLE} SET statement_timeout = '15s'")
         conn.execute(f"ALTER ROLE {ROLE} SET default_transaction_read_only = on")
         conn.commit()

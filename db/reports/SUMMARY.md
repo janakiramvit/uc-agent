@@ -1,6 +1,6 @@
 # Reconciliation SUMMARY (redacted - safe to commit)
 
-_Generated 2026-11-02T01:04:14.723747+00:00 by `pipeline.reconcile`. Counts only; no evidence text, no connection strings._
+_Generated 2026-11-02T02:15:17.059871+00:00 by `pipeline.reconcile`. Counts only; no evidence text, no connection strings._
 
 ## Comparison A
 - prototype-v1 workbook  vs  ibd-prototype-evidence.json (same origin - full parity)

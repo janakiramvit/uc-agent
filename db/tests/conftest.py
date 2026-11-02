@@ -73,6 +73,12 @@ def _promotion_has_happened(settings) -> bool:
 
 
 def pytest_collection_modifyitems(config, items):
+    if "destructive" not in (config.option.markexpr or ""):
+        skip_d = pytest.mark.skip(
+            reason="destructive: wipes all pipeline data (rollback drill); opt in with -m destructive")
+        for item in items:
+            if "destructive" in item.keywords:
+                item.add_marker(skip_d)
     settings = load_env()
     if _promotion_has_happened(settings):
         return

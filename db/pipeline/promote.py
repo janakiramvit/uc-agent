@@ -169,28 +169,34 @@ def promote(conn, plans: list[PromotionPlan], recon: ReconResult, batch_id: str,
                 "SELECT dataset_id FROM canonical.dataset WHERE code=%s AND version=%s",
                 (plan.dataset, plan.dataset_version),
             ).fetchone()
-            for o in plan.promote_sources:
-                conn.execute(_INSERT_SOURCE, _row(o.canonical, src_keys, dataset_id))
-            for o in plan.promote_claims:
-                (cid,) = conn.execute(_INSERT_CLAIM,
-                                      _row(o.canonical, clm_keys, dataset_id)).fetchone()
+            cur = conn.cursor()
+            # Batched (pipelined) writes: the target DB is ~0.3 s per round trip away, so
+            # per-row statements make a long transaction that the pooler may drop.
+            if plan.promote_sources:
+                cur.executemany(_INSERT_SOURCE.replace("\nRETURNING id", ""),
+                                [_row(o.canonical, src_keys, dataset_id)
+                                 for o in plan.promote_sources])
+            if plan.promote_claims:
+                cur.executemany(_INSERT_CLAIM.replace("\nRETURNING id", ""),
+                                [_row(o.canonical, clm_keys, dataset_id)
+                                 for o in plan.promote_claims])
+                # one citation per promoted claim, built from the claim row just written
+                # (same values the per-row version took from the canonical dict).
                 conn.execute(
                     "INSERT INTO canonical.claim_citation "
                     "(claim_id, dataset_id, citation_url, exact_locator, supporting_excerpt, "
-                    " authoritative_passage) VALUES (%s,%s,%s,%s,%s,%s)",
-                    (cid, dataset_id, o.canonical.get("authoritative_url"),
-                     o.canonical.get("precise_locator"),
-                     o.canonical.get("supporting_excerpt"),
-                     o.canonical.get("exact_authoritative_passage")),
-                )
-            for o in plan.promote_excluded:
-                conn.execute(
+                    " authoritative_passage) "
+                    "SELECT id, dataset_id, authoritative_url, precise_locator, "
+                    "       supporting_excerpt, exact_authoritative_passage "
+                    "FROM canonical.claim WHERE dataset_id=%s", (dataset_id,))
+            if plan.promote_excluded:
+                conn.cursor().executemany(          # pipelined: one batch, not N round trips
                     "INSERT INTO canonical.excluded_claim "
                     "(dataset_id, claim_ref, result, reason, origin) VALUES (%s,%s,%s,%s,%s) "
                     "ON CONFLICT DO NOTHING",
-                    (dataset_id, o.natural_key, o.canonical.get("result"),
-                     o.canonical.get("reason"), o.canonical.get("origin_sheet")),
-                )
+                    [(dataset_id, o.natural_key, o.canonical.get("result"),
+                      o.canonical.get("reason"), o.canonical.get("origin_sheet"))
+                     for o in plan.promote_excluded])
             for o in plan.promote_qa:
                 f = o.canonical
                 conn.execute(
@@ -210,17 +216,15 @@ def promote(conn, plans: list[PromotionPlan], recon: ReconResult, batch_id: str,
                      json.dumps(qr["raw"], default=str), qr["reasons"]),
                 )
             # snapshot the approved reconciliation into canonical
-            for r in recon.rows:
-                if r.comparison == "A" and r.status == "match":
-                    continue  # keep the note table focused on findings
-                conn.execute(
+            notes = [(dataset_id, r.comparison, r.entity_type, r.entity_ref, r.field, r.status,
+                      r.material, r.left, r.right, None)
+                     for r in recon.rows if not (r.comparison == "A" and r.status == "match")]
+            if notes:
+                conn.cursor().executemany(          # ~1.5k rows: pipelined, not 1.5k round trips
                     "INSERT INTO canonical.reconciliation_note "
                     "(dataset_id, comparison, entity_type, entity_ref, field, status, "
                     " material, left_label, right_label, detail) "
-                    "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                    (dataset_id, r.comparison, r.entity_type, r.entity_ref, r.field,
-                     r.status, r.material, r.left, r.right, None),
-                )
+                    "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", notes)
             meta = (dataset_meta or {}).get(plan.dataset)
             if meta:
                 conn.execute("UPDATE canonical.dataset SET package_meta=%s WHERE dataset_id=%s",

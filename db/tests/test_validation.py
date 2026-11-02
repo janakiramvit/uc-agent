@@ -57,7 +57,7 @@ def test_unmapped_condition_is_fatal():
     o = next(o for o in rep.outcomes if o.natural_key == "CLM-900")
     assert o.status == "quarantine"
     assert o.canonical["condition_applicability"] is None
-    assert o.canonical["condition_applicability_raw"] == ["martian_colitis"]
+    assert o.canonical["condition_applicability_raw"] == "martian_colitis"   # original string form
 
 
 def test_unmapped_evidence_level_is_pending_not_fatal():

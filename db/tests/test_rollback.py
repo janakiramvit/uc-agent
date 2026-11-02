@@ -24,7 +24,11 @@ def test_file_backend_untouched_no_db():
 
 
 @pytest.mark.post_promotion
+@pytest.mark.destructive
 def test_down_migrations_reverse_cleanly(db_conn):
+    """DESTRUCTIVE: rolls every migration back (dropping staged, quarantined AND promoted
+    data) then re-applies the schema. Opt-in only: ``pytest -m destructive``. After it you
+    must re-run stage -> validate -> reconcile -> promote."""
     from pipeline.config import load_env
     from pipeline.db import MigrationRunner
 

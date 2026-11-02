@@ -110,7 +110,9 @@ def _resolve_enum(o: Outcome, field_name: str, dim: str, is_multi: bool,
     flagged ``pending_human_classification`` - never partially normalized.
     """
     raw_tokens = value if isinstance(value, list) else ([value] if value else [])
-    o.canonical[f"{field_name}_raw"] = value
+    # ``*_raw`` keeps the original "a; b; c" form of a multi-valued cell (the file/app
+    # format) - not the split list, which would be stored as a Postgres array literal.
+    o.canonical[f"{field_name}_raw"] = "; ".join(value) if isinstance(value, list) else value
     resolved: list[str] = []
     unmapped: list[str] = []
     for tok in raw_tokens:
