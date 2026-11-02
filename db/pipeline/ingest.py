@@ -7,7 +7,8 @@
     python -m pipeline.ingest --step validate       # crosswalk + quarantine; persists to staging when DB configured
     python -m pipeline.ingest --step reconcile      # writes db/reports/*; persists to staging.reconciliation_result + quarantine.record when DB configured
     python -m pipeline.ingest --step status         # read-only: migrations/schemas/roles/RLS/views/metadata/staging/quarantine/reconciliation counts (DB)
-    python -m pipeline.ingest --step promote --confirm-promote   # GATED (DB)
+    python -m pipeline.ingest --step promote                      # read-only PREVIEW of prototype-v1
+    python -m pipeline.ingest --step promote --confirm-promote    # GATED (DB): promote prototype-v1 only
     python -m pipeline.ingest --step gate           # post-promotion checklist (DB)
     python -m pipeline.ingest --step all            # infer..reconcile in OFFLINE PREVIEW mode only, then STOP
 
@@ -309,15 +310,127 @@ def cmd_status(_args) -> int:
     return 0
 
 
+_STAGE1_EXPECTED = {
+    "dataset": "prototype-v1",
+    "sources": 20,
+    "claims": 49,
+    "uc_eligible": ["CLM-014", "CLM-081", "CLM-093", "CLM-094", "CLM-095"],
+}
+
+
+def _uc_eligible_refs(plan) -> list[str]:
+    """Same rule the app uses: 'ulcerative_colitis' in conditionApplicability."""
+    out = []
+    for o in plan.promote_claims:
+        ca = o.canonical.get("condition_applicability")
+        vals = ca if isinstance(ca, (list, tuple)) else str(ca or "").replace(";", ",").split(",")
+        if any(v.strip() == "ulcerative_colitis" for v in vals):
+            out.append(o.natural_key)
+    return sorted(out)
+
+
+def _build_stage1_plan(dataset: str):
+    """Pure (no DB): the promotion plan for one dataset + its safety checks."""
+    from pipeline.promote import build_plan
+
+    adapted = _adapt_all()
+    reports = _validate_all(adapted)
+    res = reconcile({ds: rep.outcomes for ds, rep in reports.items()},
+                    adapted["_refs"].records, qa_overlay=adapted["_qa"].records)
+    plan = build_plan(reports[dataset], res)
+    return plan, res
+
+
 def cmd_promote(args) -> int:
-    if not args.confirm_promote:
-        print("  REFUSED: promotion requires --confirm-promote AND prior user approval.")
-        print("  Run --step reconcile, review db/reports/SUMMARY.md, then re-run with the flag.")
+    """Promote ONE dataset. Without --confirm-promote this is a read-only PREVIEW."""
+    from pipeline.promote import promote
+
+    dataset = args.dataset
+    if dataset != _STAGE1_EXPECTED["dataset"]:
+        print(f"  REFUSED: Stage 1 promotes only {_STAGE1_EXPECTED['dataset']!r}, not {dataset!r}.")
         return 2
+    plan, res = _build_stage1_plan(dataset)
+    uc = _uc_eligible_refs(plan)
+    quarantined_here = [q["natural_key"] for q in plan.quarantine]
+    review_dist: dict = {}
+    for o in plan.promote_claims:
+        k = o.canonical.get("review_status") or "NULL"
+        review_dist[k] = review_dist.get(k, 0) + 1
+    clm083 = next((o for o in plan.promote_claims if o.natural_key == "CLM-083"), None)
+    clm083_ca = clm083.canonical.get("condition_applicability") if clm083 else None
+
+    print("  -- promotion PREVIEW (no database writes) --")
+    print(f"    dataset:           {dataset}")
+    print(f"    sources:           {len(plan.promote_sources)}  (expected {_STAGE1_EXPECTED['sources']})")
+    print(f"    claims:            {len(plan.promote_claims)}  (expected {_STAGE1_EXPECTED['claims']})")
+    print(f"    excluded ids:      {len(plan.promote_excluded)}")
+    print(f"    claim_qa rows:     {len(plan.promote_qa)}")
+    print(f"    quarantined:       {quarantined_here or 'none'}")
+    print(f"    UC-eligible:       {uc}")
+    print(f"    CLM-083 applicab.: {clm083_ca!r}")
+    print(f"    review_status dist (preserved as staged, not approved): {review_dist}")
+
+    problems = []
+    if len(plan.promote_sources) != _STAGE1_EXPECTED["sources"]:
+        problems.append("source count != 20")
+    if len(plan.promote_claims) != _STAGE1_EXPECTED["claims"]:
+        problems.append("claim count != 49")
+    if uc != _STAGE1_EXPECTED["uc_eligible"]:
+        problems.append("UC-eligible set != the expected five")
+    if quarantined_here:
+        problems.append(f"prototype-v1 entities quarantined: {quarantined_here}")
+    if clm083 is None or "ulcerative_colitis" in str(clm083_ca):
+        problems.append("CLM-083 missing or UC-eligible")
+    if any("approv" in str(k).lower() for k in review_dist):
+        problems.append("a review_status already reads as approved - refusing to imply approval")
+    if problems:
+        print(f"  PREVIEW FAILED - not safe to promote: {problems}")
+        return 3
+    print("  PREVIEW OK: reproduces prototype-v1 only (20 sources / 49 claims / 5 UC-eligible).")
+
+    if not args.confirm_promote:
+        print("  (preview only) re-run with --confirm-promote to promote, after explicit approval.")
+        return 0
+
     settings = load_env()
     if not _need_db(settings):
         return 0
-    print("  promote: gated DB write. Implemented for the DB session.")
+    from pipeline import stage
+    from pipeline.db import ConnectionFailedError, connect
+
+    try:
+        conn = connect(settings)
+    except ConnectionFailedError as exc:
+        print(f"  REFUSED/FAILED: {exc}")
+        return 1
+    try:
+        (n_promoted,) = conn.execute(
+            "SELECT count(*) FROM canonical.dataset WHERE status='promoted'").fetchone()
+        (n_claims,) = conn.execute("SELECT count(*) FROM canonical.claim").fetchone()
+        if n_promoted or n_claims:
+            print("  REFUSED: canonical already holds a promoted dataset or claims; Stage 1 "
+                  "promotion runs once on an empty canonical. Nothing changed.")
+            return 4
+        (qn,) = conn.execute(
+            "SELECT count(*) FROM quarantine.record WHERE source_step='reconcile'").fetchone()
+        if qn != 1:
+            print(f"  REFUSED: expected exactly 1 reconcile quarantine record, found {qn}. "
+                  "Re-run reconcile. Nothing changed.")
+            return 4
+        batch_id = stage.latest_batch(conn)
+        import json as _json
+        oracle = _json.loads(input_registry()["prototype_json"].path.read_text())
+        meta = {dataset: {
+            "package_meta": {"package_version": oracle.get("version"),
+                             "created_at": oracle.get("createdAt"),
+                             "intended_use": oracle.get("intendedUse")},
+            "limitations": oracle.get("limitations") or [],
+        }}
+        result = promote(conn, [plan], res, batch_id, confirm=True, dataset_meta=meta)
+        conn.commit()
+        print(f"  PROMOTED: {result}")
+    finally:
+        conn.close()
     return 0
 
 
@@ -365,7 +478,10 @@ def main(argv: list[str]) -> int:
     p = argparse.ArgumentParser(prog="pipeline.ingest")
     p.add_argument("--step", required=True, choices=sorted(_STEPS))
     p.add_argument("--confirm-promote", action="store_true",
-                   help="required (with prior approval) for --step promote / all")
+                   help="required (with prior approval) to actually promote; without it "
+                        "--step promote is a read-only preview")
+    p.add_argument("--dataset", default="prototype-v1",
+                   help="dataset to preview/promote (Stage 1: prototype-v1 only)")
     args = p.parse_args(argv)
     print(f"# pipeline.ingest --step {args.step}")
     return _STEPS[args.step](args)

@@ -55,6 +55,11 @@ def test_dataset_identity_rows_only(db_conn):
 
 @pytest.mark.parametrize("table", EVIDENCE_TABLES)
 def test_evidence_tables_empty_at_migrate_checkpoint(db_conn, table):
+    (promoted,) = db_conn.execute(
+        "SELECT count(*) FROM canonical.dataset WHERE status='promoted'").fetchone()
+    if promoted:
+        pytest.skip("a dataset is promoted; emptiness only applies at the migrate checkpoint "
+                    "(see test_post_promotion.test_stage1_only_prototype_v1_is_promoted)")
     (n,) = db_conn.execute(f"SELECT count(*) FROM {table}").fetchone()
     assert n == 0, f"{table} is not empty - promotion happened"
 

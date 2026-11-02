@@ -151,7 +151,11 @@ def _row(canonical: dict, keys: tuple[str, ...], dataset_id: int) -> dict:
 
 
 def promote(conn, plans: list[PromotionPlan], recon: ReconResult, batch_id: str, *,
-            confirm: bool = False) -> dict:
+            confirm: bool = False, dataset_meta: dict[str, dict] | None = None) -> dict:
+    """``dataset_meta`` maps dataset code -> {"package_meta": {...}, "limitations": [...]}.
+    Dataset-level limitations/intended-use are not carried by the workbooks, so Stage 1
+    takes them from the read-only prototype JSON oracle (the file the app reads today);
+    a post-promotion shadow test asserts the database view equals that file."""
     if not confirm:
         raise PromotionNotConfirmed(
             "promote() requires confirm=True (ingest: --step promote --confirm-promote)"
@@ -217,6 +221,14 @@ def promote(conn, plans: list[PromotionPlan], recon: ReconResult, batch_id: str,
                     (dataset_id, r.comparison, r.entity_type, r.entity_ref, r.field,
                      r.status, r.material, r.left, r.right, None),
                 )
+            meta = (dataset_meta or {}).get(plan.dataset)
+            if meta:
+                conn.execute("UPDATE canonical.dataset SET package_meta=%s WHERE dataset_id=%s",
+                             (json.dumps(meta.get("package_meta") or {}), dataset_id))
+                for i, text in enumerate(meta.get("limitations") or [], start=1):
+                    conn.execute(
+                        "INSERT INTO canonical.dataset_limitation (dataset_id, ordinal, text) "
+                        "VALUES (%s,%s,%s)", (dataset_id, i, text))
             conn.execute(
                 "UPDATE canonical.dataset SET status='promoted', ingested_at=now(), "
                 "load_batch_id=%s WHERE dataset_id=%s", (batch_id, dataset_id))

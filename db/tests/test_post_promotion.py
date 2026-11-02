@@ -89,3 +89,36 @@ def test_canonical_evidence_not_readable_by_public(db_conn):
         "WHERE table_schema IN ('staging','quarantine') AND grantee IN ('anon','authenticated')"
     ).fetchone()
     assert n == 0
+
+
+def test_stage1_only_prototype_v1_is_promoted(db_conn):
+    """Stage 1 promotes prototype-v1 ONLY: baseline-register stays 'staged' with zero
+    canonical rows, and prototype-v1 carries exactly 20 sources / 49 claims."""
+    st = dict(db_conn.execute("SELECT code, status FROM canonical.dataset").fetchall())
+    assert st["prototype-v1"] == "promoted"
+    assert st["baseline-register"] != "promoted"
+    for tbl in ("source", "claim", "claim_citation", "excluded_claim", "reconciliation_note"):
+        (n,) = db_conn.execute(
+            f"SELECT count(*) FROM canonical.{tbl} t JOIN canonical.dataset d "
+            "USING (dataset_id) WHERE d.code='baseline-register'").fetchone()
+        assert n == 0, f"baseline-register has rows in canonical.{tbl}"
+    (ns,) = db_conn.execute("SELECT count(*) FROM canonical.source").fetchone()
+    (nc,) = db_conn.execute("SELECT count(*) FROM canonical.claim").fetchone()
+    assert (ns, nc) == (20, 49)
+
+
+def test_clm083_is_not_uc_eligible_and_nothing_is_approved(db_conn):
+    eligible = {r[0] for r in db_conn.execute(
+        'SELECT "claimId" FROM canonical.v_uc_eligible_claim').fetchall()}
+    assert "CLM-083" not in eligible
+    (approved,) = db_conn.execute(
+        "SELECT count(*) FROM canonical.claim WHERE lower(coalesce(review_status::text,'')) "
+        "LIKE '%approv%'").fetchone()
+    assert approved == 0, "promotion must not imply clinical approval"
+
+
+def test_baseline_clm083_stays_quarantined(db_conn):
+    rows = db_conn.execute(
+        "SELECT dataset_code, natural_key FROM quarantine.record "
+        "WHERE source_step='reconcile'").fetchall()
+    assert rows == [("baseline-register", "CLM-083")]

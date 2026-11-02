@@ -58,7 +58,7 @@ def load_evidence_package_from_db(conn=None) -> EvidencePackage:
                    if (c.get("conditionApplicability") or "").strip() == "crohns_disease"]
 
     return EvidencePackage(
-        version=version or "prototype-v1",
+        version=(pkg_meta or {}).get("package_version") or version or "prototype-v1",
         created_at=(pkg_meta or {}).get("created_at", ""),
         intended_use=(pkg_meta or {}).get("intended_use", ""),
         sources_by_id=sources_by_id,
