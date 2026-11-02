@@ -76,7 +76,15 @@ def persist_validation(conn, batch_id: str, dataset: str, report: ValidationRepo
 
 def persist_reconciliation(conn, batch_id: str, res: ReconResult) -> dict:
     """Write every reconciliation row to staging.reconciliation_result and quarantine
-    every material-mismatch entity (source_step='reconcile'). Never normalizes."""
+    every material-mismatch entity (source_step='reconcile'). Never normalizes.
+
+    Idempotent per batch: a re-run REPLACES this batch's earlier reconcile output (rows
+    and reconcile-step quarantine records) rather than appending to it, so the stored
+    quarantine always reflects the latest reconciliation. Validation-step quarantine
+    records are left alone."""
+    conn.execute("DELETE FROM staging.reconciliation_result WHERE batch_id=%s", (batch_id,))
+    conn.execute("DELETE FROM quarantine.record WHERE batch_id=%s AND source_step='reconcile'",
+                 (batch_id,))
     for r in res.rows:
         conn.execute(
             "INSERT INTO staging.reconciliation_result "

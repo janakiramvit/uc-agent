@@ -109,3 +109,16 @@ def test_persist_reconciliation_inserts_rows_and_dedupes_quarantine():
     quarantines = [c for c in conn.calls if c[0].startswith("INSERT INTO quarantine.record")]
     assert len(quarantines) == 1                      # deduped
     assert quarantines[0][1][6] == "reconcile"
+
+
+def test_persist_reconciliation_replaces_prior_run_for_the_batch():
+    """Re-running reconcile must not append: this batch's earlier reconcile rows and
+    reconcile-step quarantine records are deleted first (and only those)."""
+    conn = FakeConn()
+    stage.persist_reconciliation(conn, "batch-1", ReconResult())
+    first_writes = [c[0] for c in conn.calls]
+    assert first_writes[0].startswith("DELETE FROM staging.reconciliation_result")
+    assert "batch_id=%s" in first_writes[0]
+    assert first_writes[1].startswith("DELETE FROM quarantine.record")
+    assert "source_step='reconcile'" in first_writes[1]          # validate-step rows untouched
+    assert all(c[1] == ("batch-1",) for c in conn.calls[:2])
