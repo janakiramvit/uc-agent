@@ -1,6 +1,6 @@
 # Reconciliation SUMMARY (redacted - safe to commit)
 
-_Generated 2026-09-04T20:53:30.323050+00:00 by `pipeline.reconcile`. Counts only; no evidence text, no connection strings._
+_Generated 2026-11-02T01:04:14.723747+00:00 by `pipeline.reconcile`. Counts only; no evidence text, no connection strings._
 
 ## Comparison A
 - prototype-v1 workbook  vs  ibd-prototype-evidence.json (same origin - full parity)
@@ -18,7 +18,7 @@ _Generated 2026-09-04T20:53:30.323050+00:00 by `pipeline.reconcile`. Counts only
 ## Comparison C
 - baseline-register  vs  prototype-v1  (shared IDs - both current)
 - rows: 510; json_only=60, match=422, mismatch=9, null_preserved=1, workbook_only=18
-- **material mismatches: 4**
+- **material mismatches: 1**
 - claim ID sets: both=49, {'baseline-register_only': 12}
 - source ID sets: both=20, {'baseline-register_only': 6}
 
@@ -42,23 +42,17 @@ _Generated 2026-09-04T20:53:30.323050+00:00 by `pipeline.reconcile`. Counts only
 | pub_year | 40 | 0 | 0 | 0 | 0 | 0 |
 | review_status | 56 | 0 | 0 | 0 | 0 | 69 |
 | source_type | 20 | 0 | 0 | 0 | 0 | 0 |
-| supporting_excerpt | 151 | 3 | 3 | 0 | 0 | 0 |
+| supporting_excerpt | 151 | 3 | 0 | 0 | 0 | 0 |
 | title | 40 | 0 | 0 | 0 | 0 | 0 |
 | topic | 100 | 0 | 0 | 0 | 0 | 5 |
 
 ## Quarantine recommendations
-- total: 6 across 6 entities
-- `baseline-register`: 3
-- `prototype-v1`: 3
+- total: 1 across 1 entities
+- `baseline-register`: 1
 
 Entity refs with a material mismatch (IDs only, no values):
-- baseline-register:claim:CLM-081
 - baseline-register:claim:CLM-083
-- baseline-register:claim:CLM-085
-- prototype-v1:claim:CLM-081
-- prototype-v1:claim:CLM-083
-- prototype-v1:claim:CLM-085
 
 ## Classifications (IDs + category only, no values)
-- **expected_versioned_difference** (5): claim:CLM-097.authoritative_url, claim:CLM-098.authoritative_url, claim:CLM-099.authoritative_url, claim:CLM-100.authoritative_url, source:SRC-026.authoritative_url
+- **expected_versioned_difference** (8): claim:CLM-081.supporting_excerpt, claim:CLM-083.supporting_excerpt, claim:CLM-085.supporting_excerpt, claim:CLM-097.authoritative_url, claim:CLM-098.authoritative_url, claim:CLM-099.authoritative_url, claim:CLM-100.authoritative_url, source:SRC-026.authoritative_url
 - **requires_clinical_applicability_review** (1): claim:CLM-083.condition_applicability
