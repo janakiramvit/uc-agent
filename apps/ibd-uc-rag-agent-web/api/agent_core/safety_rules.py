@@ -21,6 +21,7 @@ class SafetyBoundary(Enum):
     INDIVIDUALIZED_DIET_PLAN = "individualized_diet_plan"
     SYMPTOM_INFLAMMATION_EQUIVALENCE = "symptom_inflammation_equivalence"
     CROHNS_TO_UC_MISAPPLICATION = "crohns_to_uc_misapplication"
+    URGENT_CARE = "urgent_care"
 
 
 @dataclass
@@ -57,6 +58,12 @@ REFUSAL_MESSAGES = {
         "inflammation with few or no symptoms. This tool cannot confirm or rule out "
         "inflammation based on symptoms alone. Objective testing and clinical assessment "
         "are needed for that."
+    ),
+    SafetyBoundary.URGENT_CARE: (
+        "Some of what you describe may need urgent medical attention. This tool provides "
+        "research evidence only and cannot assess symptoms. Please contact your care team "
+        "or a nurse line now; if symptoms are severe or getting worse, go to the nearest "
+        "emergency department or call your local emergency number (911 in Canada and the US)."
     ),
     SafetyBoundary.CROHNS_TO_UC_MISAPPLICATION: (
         "The evidence located for that request applies to Crohn's disease only and cannot "
@@ -122,6 +129,17 @@ _CROHNS_MISAPPLICATION_PATTERNS = [
     r"\btreat .*crohn'?s.* evidence as.*(\buc\b|ulcerative colitis)\b",
 ]
 
+_URGENT_CARE_PATTERNS = [
+    r"\b(severe|heavy|a lot of|lots of|massive|profuse)\b.{0,40}\b(bleeding|blood|bloody)\b",
+    r"\b(bleeding|blood|bloody)\b.{0,40}\b(severe|heavy|won'?t stop|not stopping|a lot)\b",
+    r"\bfever\b.{0,60}\b(severe|bad|intense)\b.{0,20}\b(abdominal|stomach|belly)\b",
+    r"\b(severe|intense|unbearable)\b.{0,20}\b(abdominal|stomach|belly)\b.{0,20}\bpain\b",
+    r"\b(severe|bloody)\b.{0,30}\bdiarrh?ea\b.{0,80}\b(fever|dehydrat|dizzy|faint)",
+    r"\b(fainting|fainted|passed out|can'?t keep (anything|fluids) down|vomiting blood|black stools?|rapid heart ?rate)\b",
+    r"\b(chest pain|difficulty breathing|trouble breathing|suicid|want to die)\b",
+    r"\bemergency\b|\bam i (dying)\b|\bshould i go to (the )?(er|emergency|hospital)\b",
+]
+
 _CROHNS_KEYWORD = re.compile(r"\bcrohn'?s\b")
 _UC_KEYWORD = re.compile(r"\buc\b|\bulcerative colitis\b")
 _APPLY_KEYWORDS = re.compile(r"\b(apply|use|treat|extend|generalize|carry over|transfer)\b")
@@ -152,6 +170,12 @@ def check_safety_boundaries(query: str) -> SafetyCheckResult:
     order), or a NONE result if nothing is triggered.
     """
     text = (query or "").lower().strip()
+
+    # Highest priority: red-flag symptoms get urgent-care guidance, never an evidence answer.
+    if _matches_any(text, _URGENT_CARE_PATTERNS):
+        return SafetyCheckResult(
+            SafetyBoundary.URGENT_CARE, True, REFUSAL_MESSAGES[SafetyBoundary.URGENT_CARE]
+        )
 
     if _matches_any(text, _CROHNS_MISAPPLICATION_PATTERNS) or _is_crohns_to_uc_misapplication(text):
         return SafetyCheckResult(
