@@ -246,6 +246,18 @@ KNOWN_UNSUPPORTED_KEYWORDS = [
 ]
 
 
+# Coverage gap: the reviewed evidence set contains no UC definition / overview claim
+# (core_condition_knowledge holds only dietary-guidance statements). Definition
+# questions go to the fixed unsupported message instead of letting the synthesizer
+# stretch unrelated claims, which the citation verifier then (correctly) refuses.
+_DEFINITION_PATTERNS = [
+    r"\bwhat (is|are|does)\b.{0,15}\b(uc|ulcerative colitis)\b(?!.{0,40}\b(diet|food|eat|alcohol|fib(er|re)|risk|flare|treat))",
+    r"\bdefin(e|ition of)\b.{0,20}\b(uc|ulcerative colitis)\b",
+    r"\bexplain (uc|ulcerative colitis)\b",
+    r"\b(uc|ulcerative colitis) (overview|basics|definition)\b",
+]
+
+
 def is_known_unsupported_topic(query: str) -> bool:
     text = (query or "").lower()
-    return any(kw in text for kw in KNOWN_UNSUPPORTED_KEYWORDS)
+    return any(kw in text for kw in KNOWN_UNSUPPORTED_KEYWORDS) or _matches_any(text, _DEFINITION_PATTERNS)

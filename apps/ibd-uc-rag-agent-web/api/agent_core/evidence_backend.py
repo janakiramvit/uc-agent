@@ -26,6 +26,10 @@ class SupabaseBackendNotEnabled(RuntimeError):
     """Raised when EVIDENCE_BACKEND=supabase without EVIDENCE_SUPABASE_ENABLED=1."""
 
 
+class EvidenceBackendMismatch(RuntimeError):
+    """The active backend differs from EVIDENCE_REQUIRED_BACKEND (no silent fallback)."""
+
+
 def get_evidence_backend() -> str:
     """Return the active backend name. Defaults to ``"file"``.
 
@@ -33,6 +37,13 @@ def get_evidence_backend() -> str:
     explicit enable flag is not set - the DB path never activates by accident.
     """
     backend = (os.environ.get("EVIDENCE_BACKEND") or FILE_BACKEND).strip().lower()
+    required = (os.environ.get("EVIDENCE_REQUIRED_BACKEND") or "").strip().lower()
+    if required and backend != required:
+        # Production pins the backend: a missing/changed EVIDENCE_BACKEND must fail
+        # loudly instead of quietly serving the bundled JSON.
+        raise EvidenceBackendMismatch(
+            f"EVIDENCE_REQUIRED_BACKEND={required!r} but EVIDENCE_BACKEND resolves to {backend!r}."
+        )
     if backend == FILE_BACKEND:
         return FILE_BACKEND
     if backend == SUPABASE_BACKEND:
@@ -58,4 +69,7 @@ def load_active_evidence_package():
     # supabase path - imported lazily; only reached when explicitly enabled.
     from agent_core.supabase_evidence_source import load_evidence_package_from_db
 
-    return load_evidence_package_from_db()
+    pkg = load_evidence_package_from_db()   # raises on any DB failure - no JSON fallback
+    if pkg.backend != SUPABASE_BACKEND:
+        raise EvidenceBackendMismatch("DB loader returned a package not tagged 'supabase'.")
+    return pkg

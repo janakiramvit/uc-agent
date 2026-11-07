@@ -143,6 +143,7 @@ class handler(BaseHTTPRequestHandler):
             "llmModel": result.get("llm_model"),
             "trace": result.get("trace", []),
             "visitedNodes": result.get("visited_nodes", []),
+            "evidence": _package.provenance() if _package is not None else None,
         }
 
     def _send_json(self, status: int, obj: dict):

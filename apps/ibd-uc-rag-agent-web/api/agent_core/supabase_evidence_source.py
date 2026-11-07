@@ -67,4 +67,5 @@ def load_evidence_package_from_db(conn=None) -> EvidencePackage:
         uc_eligible_claims=uc_eligible,
         crohns_only_claims=crohns_only,
         limitations=limitations,
+        backend="supabase",   # set only here, after the queries above succeeded
     )

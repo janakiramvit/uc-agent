@@ -62,6 +62,20 @@ class EvidencePackage:
     uc_eligible_claims: list[dict[str, Any]]
     crohns_only_claims: list[dict[str, Any]]
     limitations: Any
+    # Which loader produced this package. Set by the loader itself, only after a
+    # successful read - never inferred from env vars.
+    backend: str = "file"
+
+    def provenance(self) -> dict[str, Any]:
+        """Non-secret fingerprint of the evidence actually in memory."""
+        return {
+            "backend": self.backend,
+            "packageVersion": self.version,
+            "sourceCount": len(self.sources_by_id),
+            "claimCount": len(self.all_claims),
+            "ucEligibleCount": len(self.uc_eligible_claims),
+            "ucEligibleClaimIds": sorted(c["claimId"] for c in self.uc_eligible_claims),
+        }
 
 
 def load_raw_evidence(path: str | Path = DEFAULT_EVIDENCE_PATH) -> dict[str, Any]:
