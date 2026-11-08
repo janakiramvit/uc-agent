@@ -1,0 +1,3328 @@
+{
+  "claims": [
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-005",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-005",
+      "claim_text": "The cited source reports that dietary restrictions, along with the clinical complications of IBD, may contribute to malnutrition, an underrecognized condition among this patient population.",
+      "content_hash": "d4f3dbd2367878505ad167bba6f6850216d898186b52904fa55c012570bfd700",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 4",
+      "mapped_question_ids": [
+        "L3-2.2.3"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-005",
+      "review_status": null,
+      "source_id": "SRC-002",
+      "source_title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38276922/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Dietary restrictions, along with the clinical complications of IBD, can result in malnutrition, an underrecognized condition among this patient population.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-006",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-006",
+      "claim_text": "The cited source reports that exclusive enteral nutrition using liquid nutrition formulations is an effective therapy for induction of clinical remission and endoscopic response in Crohn's disease, with stronger evidence in children than adults. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "efa90b1e716ce4f3805abe28a7bf194aa473a466ef1e05d0e83b6ad6b6edc93d",
+      "disease_context": [
+        "active_disease",
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 19",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-006",
+      "review_status": null,
+      "source_id": "SRC-002",
+      "source_title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38276922/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "BEST PRACTICE ADVICE 3: Exclusive enteral nutrition using liquid nutrition formulations is an effective therapy for induction of clinical remission and endoscopic response in Crohn's disease, with stronger evidence in children than adults.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-008",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-008",
+      "claim_text": "The cited source reports that a healthy, balanced, Mediterranean diet rich in a variety of fruits and vegetables and decreased intake of ultraprocessed foods have been associated with a lower risk of developing IBD. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "90547591ce0f13b52e0c303f395670c51930ab9c65032b260ba80dbb5fcd28c3",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 35",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-008",
+      "review_status": null,
+      "source_id": "SRC-002",
+      "source_title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38276922/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "A healthy, balanced, Mediterranean diet rich in a variety of fruits and vegetables and decreased intake of ultraprocessed foods have been associated with a lower risk of developing IBD.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-013",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-013",
+      "claim_text": "The cited source reports that dietary factors associated with an increased incidence and/or progression of IBD include a high intake of red and processed meat, other processed foods, and refined sugars, together with a low intake of vegetables, fruits, and fiber. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "e14afc9d6c750272bfdbba054cbd3b7671fa9fde07f4956dc063aa43e512e4e3",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 4",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-013",
+      "review_status": null,
+      "source_id": "SRC-004",
+      "source_title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Disease: an Umbrella Review.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38599319/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Dietary factors associated with an increased incidence and/or progression of IBD include a high intake of red and processed meat, other processed foods, and refined sugars, together with a low intake of vegetables, fruits, and fiber.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-014",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-014",
+      "claim_text": "The cited source reports that some differences seem to exist between UC and CD and their risk factors, with increased intake of dietary fiber being inversely associated with CD incidence but not clearly associated with UC. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "6770bd8035698fcb637b4deba0367aeea0ca967d11cdf2708d28a67a2affbd31",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 6",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-014",
+      "review_status": null,
+      "source_id": "SRC-004",
+      "source_title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Disease: an Umbrella Review.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38599319/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Some differences seem to exist between UC and CD and their risk factors, with increased intake of dietary fiber being inversely associated with CD incidence but not clearly associated with UC.",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-015",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-015",
+      "claim_text": "The cited source reports that mediterranean diets, vegetarian diets, and a diet low in grains, sugars, and lactose (specific carbohydrate diet) are also associated with lower incidence and/or progression of IBD. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "5f8d8ceff0a0a086c2d8f99e4875113fe134c17b1c65bcbbc19a38b5f2013714",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 10",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-015",
+      "review_status": null,
+      "source_id": "SRC-004",
+      "source_title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Disease: an Umbrella Review.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38599319/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Mediterranean diets, vegetarian diets, and a diet low in grains, sugars, and lactose (specific carbohydrate diet) are also associated with lower incidence and/or progression of IBD.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-017",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-017",
+      "claim_text": "The cited source reports that for induction of remission in Crohn's disease (CD), low refined carbohydrate diet and symptoms-guided diet outperformed controls, but studies had serious imprecision and very low certainty of evidence. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "7855dfc50c2f9849857201e4da3b4fd158182e0370ee0dcfe0b207de610d5c21",
+      "disease_context": [
+        "active_disease",
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 6",
+      "mapped_question_ids": [
+        "L2-1.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-017",
+      "review_status": null,
+      "source_id": "SRC-005",
+      "source_title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systematic Review and Meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36470529/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "For induction of remission in Crohn's disease (CD), low refined carbohydrate diet and symptoms-guided diet outperformed controls, but studies had serious imprecision and very low certainty of evidence.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-018",
+      "claim_text": "The cited source reports that the Mediterranean diet was similar to the Specific Carbohydrate Diet (low certainty of evidence), and partial enteral nutrition (PEN) was similar to exclusive enteral nutrition (very low certainty of evidence).",
+      "content_hash": "a9fb458fe2b3a7f03baa2e1fba685f13a87e7ad5bbf29a30fe1355ac69d2984d",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 7",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-018",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-005",
+      "source_title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systematic Review and Meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36470529/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "The Mediterranean diet was similar to the Specific Carbohydrate Diet (low certainty of evidence), and partial enteral nutrition (PEN) was similar to exclusive enteral nutrition (very low certainty of evidence).",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-019",
+      "claim_text": "The cited source reports that pEN reduced risk of relapse (very low certainty of evidence), whereas reduction of red meat or refined carbohydrates did not (low certainty of evidence). This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "a13af8b2a2619f859f2fc7946be9c83e3401343b8ae380bcf9b4541fded10c73",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 8",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-019",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-005",
+      "source_title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systematic Review and Meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36470529/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "PEN reduced risk of relapse (very low certainty of evidence), whereas reduction of red meat or refined carbohydrates did not (low certainty of evidence).",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-021",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-021",
+      "claim_text": "The cited source reports that high fat intake (RR = 1.24, 95% CI = 1.03-1.49) was modestly associated with increased IBD onset risk. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "eb1cef79065488099bbf1b3ad8cc2c23960ed7f7dc8e2666fd9366f0e0dddde0",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 5",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-021",
+      "review_status": null,
+      "source_id": "SRC-006",
+      "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40844310/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "RESULTS: High fat intake (RR = 1.24, 95% CI = 1.03-1.49) was modestly associated with increased IBD onset risk.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-022",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-022",
+      "claim_text": "The cited source reports that subgroup analyses and meta-regression indicated that Asian (RR = 2.15, 95% CI = 1.46-3.16, Psubgroup < 0.01), high-male-proportion (RR = 1.91, 95% CI = 1.32-2.78, Psubgroup < 0.01) and young (RR = 2.67, 95% CI = 1.80-3.96, Psubgroup < 0.01) populations were more susceptible to fat-associated IBD, and positive dose‒response associations were also confirmed in these populations. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "c5b38efdee066592bd34f74fc76325d8f55480930a6beb835eaee1c420a55c19",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 6",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-022",
+      "review_status": null,
+      "source_id": "SRC-006",
+      "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40844310/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Subgroup analyses and meta-regression indicated that Asian (RR = 2.15, 95% CI = 1.46-3.16, Psubgroup < 0.01), high-male-proportion (RR = 1.91, 95% CI = 1.32-2.78, Psubgroup < 0.01) and young (RR = 2.67, 95% CI = 1.80-3.96, Psubgroup < 0.01) populations were more susceptible to fat-associated IBD, and positive dose‒response associations were also confirmed in these populations.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-023",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-023",
+      "claim_text": "The cited source reports that both the highest-versus-lowest and dose‒response analyses revealed that polyunsaturated fatty acids (PUFAs) (RR = 1.34, 95% CI = 1.10-1.63; Pnonlinearity < 0.05; per 10 g/day RR = 1.39) and cholesterol (RR = 1.52, 95% CI = 1.09-2.12; Pnonlinearity = 0.03; per 0.1 g/day RR = 1.17) were associated with increased IBD onset risk, whereas long-chain n-3 PUFA (LCN-n-3, RR = 0.74, 95% CI = 0.58-0.94) intake and a high n3/n6-PUFA ratio (RR = 0.76, 95% CI = 0.59-0.98) might be associated with decreased IBD risk. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "a6b572e10b2d82c78e8c2ea89f20a3d5a3e728cb543670b9130c9984c42bb30e",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 7",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-023",
+      "review_status": null,
+      "source_id": "SRC-006",
+      "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40844310/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Both the highest-versus-lowest and dose‒response analyses revealed that polyunsaturated fatty acids (PUFAs) (RR = 1.34, 95% CI = 1.10-1.63; Pnonlinearity < 0.05; per 10 g/day RR = 1.39) and cholesterol (RR = 1.52, 95% CI = 1.09-2.12; Pnonlinearity = 0.03; per 0.1 g/day RR = 1.17) were associated with increased IBD onset risk, whereas long-chain n-3 PUFA (LCN-n-3, RR = 0.74, 95% CI = 0.58-0.94) intake and a high n3/n6-PUFA ratio (RR = 0.76, 95% CI = 0.59-0.98) might be associated with decreased IBD risk.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-024",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-024",
+      "claim_text": "The cited source reports that higher fat intake might be modestly associated with increased IBD onset risk, particularly for PUFA and cholesterol, whereas LCN-n-3 and a high n3/n6-PUFA ratio was associated with lower IBD onset. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "6bf04739fa1d437f344ac19137ec052f50e8f2e68b77afa6f8eef0c731253c07",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 8",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-024",
+      "review_status": null,
+      "source_id": "SRC-006",
+      "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40844310/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "CONCLUSIONS: Higher fat intake might be modestly associated with increased IBD onset risk, particularly for PUFA and cholesterol, whereas LCN-n-3 and a high n3/n6-PUFA ratio may offer protective effects against IBD onset.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-025",
+      "claim_text": "The cited source reports that of these 17 were included in meta-analysis which showed overall increased lactose maldigestion in both diseases.",
+      "content_hash": "b846d0fcff93b4a1877f7d913a8c93aad36f6d0a5ff26c989994299a1656902d",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 6",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2016",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-025",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-007",
+      "source_title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nutritional effects of dairy food restriction in inflammatory bowel diseases.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/27411934/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Of these 17 were included in meta-analysis which showed overall increased lactose maldigestion in both diseases.",
+      "uc_applicability": [
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-026",
+      "claim_text": "The cited source reports that lactose maldigestion in inflammatory bowel disease is dependent on ethnic makeup of the population and usually not disease. The specific measured marker or inflammatory outcome should remain explicit.",
+      "content_hash": "dc1cedb3fd637ac4f40b4d51da8af46529d9df8d1c04cfa0c09cfca579330e80",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 12",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2016",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-026",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-007",
+      "source_title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nutritional effects of dairy food restriction in inflammatory bowel diseases.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/27411934/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "CONCLUSIONS: Lactose maldigestion in inflammatory bowel disease is dependent on ethnic makeup of the population and usually not disease.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-028",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-028",
+      "claim_text": "The cited source reports that however increased risk on sub analysis was only found in Crohn's in patients with small bowel involvement. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "2ab50894ba94512e9a2e5f311b1e9288cb95dfcba02ba48d7d9b49db16905df6",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 7",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2016",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-028",
+      "review_status": null,
+      "source_id": "SRC-007",
+      "source_title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nutritional effects of dairy food restriction in inflammatory bowel diseases.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/27411934/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "However increased risk on sub analysis was only found in Crohn's in patients with small bowel involvement.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-029",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-029",
+      "claim_text": "The cited source reports that the evidence summarized in this review showed that many nutritional aspects could be potential targets to induce a better control of symptoms, a deeper remission, and overall improve the quality of life of Inflammatory Bowel Disease patients. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "b2ef06b90a0e3491a90075b35cc8273580716405c1fa02208b3a20fba5dbb39a",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 10",
+      "mapped_question_ids": [
+        "L3-3.2.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-029",
+      "review_status": null,
+      "source_id": "SRC-008",
+      "source_title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammatory Bowel Disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/37686856/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "The evidence summarized in this review showed that many nutritional aspects could be potential targets to induce a better control of symptoms, a deeper remission, and overall improve the quality of life of Inflammatory Bowel Disease patients.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-030",
+      "claim_text": "The cited source reports that during the disease course, most Inflammatory Bowel Disease patients present a condition of malnutrition, undernutrition, or even overnutrition. The specific measured marker or inflammatory outcome should remain explicit.",
+      "content_hash": "c8546ca2429a88c3cbfc6e647f07a2e7640598ee2ca1e8aae5a1de2931b58ab5",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 1",
+      "mapped_question_ids": [
+        "L3-2.2.3"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-030",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-008",
+      "source_title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammatory Bowel Disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/37686856/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "During the disease course, most Inflammatory Bowel Disease patients present a condition of malnutrition, undernutrition, or even overnutrition.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-031",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-031",
+      "claim_text": "The cited source reports that a suboptimal nutritional status and low micronutrient serum levels can have a negative impact on both induction and maintenance of remission and on the quality of life of Inflammatory Bowel Disease patients. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "73f4ef96a6fc7266980decdcd5c29ef5589b62aa39b703cd5d3574cd5d6a16de",
+      "disease_context": [
+        "active_disease",
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 3",
+      "mapped_question_ids": [
+        "L3-2.2.3"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-031",
+      "review_status": null,
+      "source_id": "SRC-008",
+      "source_title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammatory Bowel Disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/37686856/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "A suboptimal nutritional status and low micronutrient serum levels can have a negative impact on both induction and maintenance of remission and on the quality of life of Inflammatory Bowel Disease patients.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-033",
+      "claim_text": "The cited source reports that poor sleep in people with inflammatory bowel disease (IBD) has been demonstrated to be prevalent and has been associated with disease activity. This is population-level association evidence and does not establish causation or predict an individual's disease course. The specific measured marker or inflammatory outcome should remain explicit.",
+      "content_hash": "d70b8ae3ffb32d153cef8d1d0ec95826738a2c22a3f426a0987d66209b727190",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 1",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2022",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-033",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-009",
+      "source_title": "Systematic review and meta-analysis of sleep quality in inactive inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36406652/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Poor sleep in people with inflammatory bowel disease (IBD) has been demonstrated to be prevalent and has been associated with disease activity.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-037",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-037",
+      "claim_text": "The cited source reports that meta-analysis showed depression, anxiety and perceived stress did not have a statistically significant association with an increased risk of symptom exacerbation. This is population-level association evidence and does not establish causation or predict an individual's disease course. Symptom findings do not by themselves show reduced intestinal inflammation.",
+      "content_hash": "ebe86f1230495d434f4386cd73436114854ab4609b1fdce0ea938584d9c47677",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 11",
+      "mapped_question_ids": [
+        "L3-3.2.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2020",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-037",
+      "review_status": null,
+      "source_id": "SRC-010",
+      "source_title": "Assessment of causal link between psychological factors and symptom exacerbation in inflammatory bowel disease: a systematic review utilising Bradford Hill criteria and meta-analysis of prospective cohort studies.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/32738908/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Meta-analysis showed depression, anxiety and perceived stress did not have a statistically significant association with an increased risk of symptom exacerbation.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-038",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-038",
+      "claim_text": "The cited source reports that four of the Bradford Hill criteria were met which indicates that there is weak to moderate evidence of a causal association between all the psychological factors and disease activity.",
+      "content_hash": "a4b4ca60206e6a830ef567f2d385b6e16d47e7f7c402f60771fe6ba4e453cc9a",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 12",
+      "mapped_question_ids": [
+        "L3-3.2.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2020",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-038",
+      "review_status": null,
+      "source_id": "SRC-010",
+      "source_title": "Assessment of causal link between psychological factors and symptom exacerbation in inflammatory bowel disease: a systematic review utilising Bradford Hill criteria and meta-analysis of prospective cohort studies.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/32738908/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Four of the Bradford Hill criteria were met which indicates that there is weak to moderate evidence of a causal association between all the psychological factors and disease activity.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-040",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-040",
+      "claim_text": "The cited source reports that this original review utilising Bradford Hill criteria in addition to meta-analysis to evaluate the causality of relationship between psychological factors and symptom exacerbation in IBD provides evidence that psychological factors have a weak to moderate causal involvement in IBD symptom exacerbation. Symptom findings do not by themselves show reduced intestinal inflammation.",
+      "content_hash": "b0fa6d78db93102113a3302cf57749d6972bd0b98049397a6155cd7a8b3f65fa",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 14",
+      "mapped_question_ids": [
+        "L3-3.2.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2020",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-040",
+      "review_status": null,
+      "source_id": "SRC-010",
+      "source_title": "Assessment of causal link between psychological factors and symptom exacerbation in inflammatory bowel disease: a systematic review utilising Bradford Hill criteria and meta-analysis of prospective cohort studies.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/32738908/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "CONCLUSIONS: This original review utilising Bradford Hill criteria in addition to meta-analysis to evaluate the causality of relationship between psychological factors and symptom exacerbation in IBD provides evidence that psychological factors have a weak to moderate causal involvement in IBD symptom exacerbation.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-041",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-041",
+      "claim_text": "The cited source reports that in conclusion, dietary intake of fruit and vegetables was inversely associated with risk of IBD and its subtypes. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "5119ba86f7c2095fcfdec815a688ccd18d9cfe24e6cf1c367d4d16a99061a89b",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 10",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-041",
+      "review_status": null,
+      "source_id": "SRC-011",
+      "source_title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory Bowel Disease: A Systematic Review and Meta-Analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33186988/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "In conclusion, dietary intake of fruit and vegetables was inversely associated with risk of IBD and its subtypes.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-042",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-042",
+      "claim_text": "The cited source reports that dietary fiber intake was also inversely associated with incidence of IBD and CD, but not with UC. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "5962570d3709a59f88f8d5eed48160e85ac291a2afaf2a82248d517d3d203427",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 11",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-042",
+      "review_status": null,
+      "source_id": "SRC-011",
+      "source_title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory Bowel Disease: A Systematic Review and Meta-Analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33186988/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Dietary fiber intake was also inversely associated with incidence of IBD and CD, but not with UC.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-044",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-044",
+      "claim_text": "The cited source reports that dietary fiber and its major sources has been hypothesized to influence the risk of IBD by modulation of the gut microbiota. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "942d8514d9ba73bd276e7f03d5458875ae2476b70d7687f0ec906e8eadbbbe2a",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 2",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-044",
+      "review_status": null,
+      "source_id": "SRC-011",
+      "source_title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory Bowel Disease: A Systematic Review and Meta-Analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33186988/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Dietary fiber and its major sources can influence the risk of IBD by modulation of the gut microbiota.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-046",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-046",
+      "claim_text": "The cited source reports that probiotics have been widely used in the treatment of inflammatory bowel disease (IBD) due to their special conditioning effects on the intestinal flora, but their efficacy in inducing and maintaining remission is still controversial. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "c77f341c46331777a3d25091976dd9a0f4863714a989b1f3bdd23764723cf2a6",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 1",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-046",
+      "review_status": null,
+      "source_id": "SRC-012",
+      "source_title": "Efficacy and safety of probiotics in the induction and maintenance of inflammatory bowel disease remission: a systematic review and meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34872306/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Probiotics have been widely used in the treatment of inflammatory bowel disease (IBD) due to their special conditioning effects on the intestinal flora, but their efficacy in inducing and maintaining remission is still controversial.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-048",
+      "claim_text": "The cited source reports that meta-analysis showed that there was no significant difference between the clinical recurrence rate of probiotics in the CD remission phase and the control group [relative risk (RR): 0.80, 95% confidence interval (CI): 0.61-1.06, P=0.12]. This is population-level association evidence and does not establish causation or predict an individual's disease course. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "55646b1bc46feaaea5f3cd91d198576309b39dcfa47a6dca93bf30cd1078e143",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 8",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-048",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-012",
+      "source_title": "Efficacy and safety of probiotics in the induction and maintenance of inflammatory bowel disease remission: a systematic review and meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34872306/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Meta-analysis showed that there was no significant difference between the clinical recurrence rate of probiotics in the CD remission phase and the control group [relative risk (RR): 0.80, 95% confidence interval (CI): 0.61-1.06, P=0.12].",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-049",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-049",
+      "claim_text": "The cited source reports that for example, evidence shows that some emulsifiers, sweeteners, colours, and microparticles and nanoparticles have effects on a range of outcomes, including the gut microbiome, intestinal permeability and intestinal inflammation. The specific measured marker or inflammatory outcome should remain explicit.",
+      "content_hash": "c3b716f8d99e6470519e421f69866aba9ba80356bdfff97ccfca8110aa772a19",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 4",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-049",
+      "review_status": null,
+      "source_id": "SRC-013",
+      "source_title": "Ultra-processed foods and food additives in gut health and disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38388570/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "For example, evidence shows that some emulsifiers, sweeteners, colours, and microparticles and nanoparticles have effects on a range of outcomes, including the gut microbiome, intestinal permeability and intestinal inflammation.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-050",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-050",
+      "claim_text": "Broadly speaking, evidence for the effect of UPFs on gut disease comes from observational epidemiological studies, whereas, by contrast, evidence for the effect of food additives comes largely from preclinical studies conducted in vitro or in animal models.",
+      "content_hash": "a5fd081abcd79ba8539824dde381d743f14746cb277217379b7199b5866d9875",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 5",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-050",
+      "review_status": null,
+      "source_id": "SRC-013",
+      "source_title": "Ultra-processed foods and food additives in gut health and disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38388570/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Broadly speaking, evidence for the effect of UPFs on gut disease comes from observational epidemiological studies, whereas, by contrast, evidence for the effect of food additives comes largely from preclinical studies conducted in vitro or in animal models.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-051",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-051",
+      "claim_text": "The cited source reports that there is increasing evidence of an association between diets rich in UPFs and gut disease, including inflammatory bowel disease, colorectal cancer and irritable bowel syndrome. The specific measured marker or inflammatory outcome should remain explicit.",
+      "content_hash": "b4b5229e41153c91ae07f00ef87786c16149caf986f30f225d3863ceee18b4c4",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 2",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-051",
+      "review_status": null,
+      "source_id": "SRC-013",
+      "source_title": "Ultra-processed foods and food additives in gut health and disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38388570/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "There is increasing evidence of an association between diets rich in UPFs and gut disease, including inflammatory bowel disease, colorectal cancer and irritable bowel syndrome.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-053",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-053",
+      "claim_text": "The cited source reports that this meta-analysis suggests that physical activity is inversely associated with the risk of developing IBD, more so in CD than in UC. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "cbd0c670445fad73a952bd634e28e373ef2d1167ed9e026ec57d58ce697159d3",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 12",
+      "mapped_question_ids": [
+        "L3-3.1.3"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-053",
+      "review_status": null,
+      "source_id": "SRC-014",
+      "source_title": "Physical Activity is Associated with a Decreased Risk of Developing Inflammatory Bowel Disease: A Systematic Review and Meta-analysis.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38597690/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "CONCLUSION: This meta-analysis suggests that physical activity is inversely associated with the risk of developing IBD, more so in CD than in UC.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-061",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-061",
+      "claim_text": "The cited source reports that the SCD was not superior to the MD to achieve symptomatic remission, FC response, and CRP response. This is source-attributed information, not a treatment recommendation for an individual. Symptom findings do not by themselves show reduced intestinal inflammation.",
+      "content_hash": "eb859b25ac3735d4c85151e7dfa56e3cf49eec69547047f36de39ebcd4471533",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 11",
+      "mapped_question_ids": [
+        "L2-1.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-061",
+      "review_status": null,
+      "source_id": "SRC-016",
+      "source_title": "A Randomized Trial Comparing the Specific Carbohydrate Diet to a Mediterranean Diet in Adults With Crohn's Disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34052278/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "CONCLUSIONS: The SCD was not superior to the MD to achieve symptomatic remission, FC response, and CRP response.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-062",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-062",
+      "claim_text": "The cited source reports that given these results, the greater ease of following the MD and other health benefits associated with the MD, the MD may be preferred to the SCD for most patients with CD with mild to moderate symptoms. This is population-level association evidence and does not establish causation or predict an individual's disease course. This is source-attributed information, not a treatment recommendation for an individual. Symptom findings do not by themselves show reduced intestinal inflammation.",
+      "content_hash": "3b9f00ee8b740ae0d92253da2fe5874238af0fe6d57861b724e187b705ebce8d",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 13",
+      "mapped_question_ids": [
+        "L2-1.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-062",
+      "review_status": null,
+      "source_id": "SRC-016",
+      "source_title": "A Randomized Trial Comparing the Specific Carbohydrate Diet to a Mediterranean Diet in Adults With Crohn's Disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34052278/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "Given these results, the greater ease of following the MD and other health benefits associated with the MD, the MD may be preferred to the SCD for most patients with CD with mild to moderate symptoms.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-066",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-066",
+      "claim_text": "The cited source reports that in children given CDED plus PEN, corticosteroid-free remission was associated with sustained reductions in inflammation (based on serum level of C-reactive protein and fecal level of calprotectin) and fecal Proteobacteria. This is population-level association evidence and does not establish causation or predict an individual's disease course. This is source-attributed information, not a treatment recommendation for an individual. The specific measured marker or inflammatory outcome should remain explicit.",
+      "content_hash": "fe94ceba2a46c2b7a46641ffd37c98f3cd564a22d0814a7c9ecb9a312aec6c7e",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 12",
+      "mapped_question_ids": [
+        "L2-1.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2019",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-066",
+      "review_status": null,
+      "source_id": "SRC-017",
+      "source_title": "Crohn's Disease Exclusion Diet Plus Partial Enteral Nutrition Induces Sustained Remission in a Randomized Controlled Trial.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/31170412/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "In children given CDED plus PEN, corticosteroid-free remission was associated with sustained reductions in inflammation (based on serum level of C-reactive protein and fecal level of calprotectin) and fecal Proteobacteria.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-068",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-068",
+      "claim_text": "The cited source reports that cDED plus PEN was better tolerated than EEN in children with mild to moderate CD.",
+      "content_hash": "0256f8131185b77f4bde20aad246dd85e6d637fbe45187316ddb558b704f2e4c",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 13",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2019",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-068",
+      "review_status": null,
+      "source_id": "SRC-017",
+      "source_title": "Crohn's Disease Exclusion Diet Plus Partial Enteral Nutrition Induces Sustained Remission in a Randomized Controlled Trial.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/31170412/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "CONCLUSION: CDED plus PEN was better tolerated than EEN in children with mild to moderate CD.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-071",
+      "claim_text": "The cited source reports that in an analysis of data from the FACES trial, we found that among patients with CD in remission, level of red and processed meat consumption was not associated with time to symptomatic relapse. This is population-level association evidence and does not establish causation or predict an individual's disease course. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "319cd50f5319d04e2c4a2efacbb1190c212a47f976114f6c7aec4e15fe7097db",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "PubMed abstract — sentence 10",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2019",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-071",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-018",
+      "source_title": "A Diet Low in Red and Processed Meat Does Not Reduce Rate of Crohn's Disease Flares.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/30872105/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "CONCLUSIONS: In an analysis of data from the FACES trial, we found that among patients with CD in remission, level of red and processed meat consumption was not associated with time to symptomatic relapse.",
+      "uc_applicability": [
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_public_abstract"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-073",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-073",
+      "claim_text": "The cited source reports that a short-term, LFD is safe for patients with IBD, and is associated with an amelioration of fecal inflammatory markers and quality of life even in patients with mainly quiescent disease. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "f96db7e257915e111db7473512eba444031842a391fb5361ed61d03e535ef80f",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 8",
+      "mapped_question_ids": [
+        "L3-3.2.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2019",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-073",
+      "review_status": null,
+      "source_id": "SRC-019",
+      "source_title": "A randomized, 6-wk trial of a low FODMAP diet in patients with inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/31470260/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "CONCLUSIONS: A short-term, LFD is safe for patients with IBD, and is associated with an amelioration of fecal inflammatory markers and quality of life even in patients with mainly quiescent disease.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-074",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-074",
+      "claim_text": "The cited source reports that after the 6-wk dietary intervention, median HBi decreased in the LFD (4; IQR, 3-5 versus 3; IQR, 2-3; P = 0.024) but not in the SD (3; IQR, 3-3 versus 3; IQR, 2-4), whereas Mayo scores were numerically decreased in the LFD group and unmodified in the SD group. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "742ac12016afe9d12a8416285fdcebd7d5e950e40e5d4bf047a44cffadbf66dc",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 5",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2019",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-074",
+      "review_status": null,
+      "source_id": "SRC-019",
+      "source_title": "A randomized, 6-wk trial of a low FODMAP diet in patients with inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/31470260/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "RESULTS: After the 6-wk dietary intervention, median HBi decreased in the LFD (4; IQR, 3-5 versus 3; IQR, 2-3; P = 0.024) but not in the SD (3; IQR, 3-3 versus 3; IQR, 2-4), whereas Mayo scores were numerically decreased in the LFD group and unmodified in the SD group.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-077",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-077",
+      "claim_text": "The cited source reports that after adjustment for potential confounding factors, higher intake of ultra-processed food was associated with a higher risk of incident IBD (hazard ratio 1.82, 95% confidence interval 1.22 to 2.72 for ≥5 servings/day and 1.67, 1.18 to 2.37 for 1-4 servings/day compared with <1 serving/day, P=0.006 for trend). This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "f9710634cd066577c8d8a8f50309c16436d31250be93b08949d2dc61c9e2d593",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 11",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-077",
+      "review_status": null,
+      "source_id": "SRC-020",
+      "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34261638/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "After adjustment for potential confounding factors, higher intake of ultra-processed food was associated with a higher risk of incident IBD (hazard ratio 1.82, 95% confidence interval 1.22 to 2.72 for ≥5 servings/day and 1.67, 1.18 to 2.37 for 1-4 servings/day compared with <1 serving/day, P=0.006 for trend).",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-078",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-078",
+      "claim_text": "The cited source reports that different subgroups of ultra-processed food, including soft drinks, refined sweetened foods, salty snacks, and processed meat, each were associated with higher hazard ratios for IBD. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "953df20dc7b6881bffbf5f9efd9ae1a0f2e89d54d66d9d576b862f071cfdcbf3",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 12",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-078",
+      "review_status": null,
+      "source_id": "SRC-020",
+      "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34261638/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Different subgroups of ultra-processed food, including soft drinks, refined sweetened foods, salty snacks, and processed meat, each were associated with higher hazard ratios for IBD.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-079",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-079",
+      "claim_text": "The cited source reports that intakes of white meat, red meat, dairy, starch, and fruit, vegetables, and legumes were not associated with incident IBD. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "b88074818a1d4353dc2670232eb9a3ad4cf0c6abdb43a46a469cac877719e4fc",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 14",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-079",
+      "review_status": null,
+      "source_id": "SRC-020",
+      "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34261638/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Intakes of white meat, red meat, dairy, starch, and fruit, vegetables, and legumes were not associated with incident IBD.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-080",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-080",
+      "claim_text": "The cited source reports that higher intake of ultra-processed food was positively associated with risk of IBD. This is population-level association evidence and does not establish causation or predict an individual's disease course.",
+      "content_hash": "58c8561ed0811b265e82bf8672e284d2cee1e7c501c790d1f0b11329892c139d",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "PubMed abstract — sentence 15",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2021",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-080",
+      "review_status": null,
+      "source_id": "SRC-020",
+      "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34261638/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "CONCLUSIONS: Higher intake of ultra-processed food was positively associated with risk of IBD.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-081",
+      "claim_text": "The cited source reports that in the absence of a specific dietary intervention that is recommended by an IBD healthcare professional, healthy eating guidelines should be followed by people with IBD, as recommended for the general population. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "4ab264cea82c8ebe4e364bc8ddfb36a526db3a9bc5579d788dedb43d262c3bf6",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "Official ECCO consensus article — Section 3, \"Translation and execution of dietary management\"; Statement 1; paragraph beginning \"Statement 1: In the absence of a specific dietary intervention...\"",
+      "mapped_question_ids": [
+        "L2-2.2"
+      ],
+      "mapping_basis": "claim_override",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-081",
+      "review_status": null,
+      "source_id": "SRC-021",
+      "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/19/9/jjaf122/8198055",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Statement 1: In the absence of a specific dietary intervention that is recommended by an IBD healthcare professional, healthy eating guidelines should be followed by people with IBD, as recommended for the general population. (EL5) (Consensus: 100%)",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-081",
+      "claim_text": "The cited source reports that in the absence of a specific dietary intervention that is recommended by an IBD healthcare professional, healthy eating guidelines should be followed by people with IBD, as recommended for the general population. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "d90e5a3ead282c7253f4e8bc8351fee3f8ea29ca93cc3d37283ebbcfa71785d0",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ECCO consensus article — Section 3, \"Translation and execution of dietary management\"; Statement 1; paragraph beginning \"Statement 1: In the absence of a specific dietary intervention...\"",
+      "mapped_question_ids": [
+        "L2-2.2"
+      ],
+      "mapping_basis": "claim_override",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-081",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-021",
+      "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/19/9/jjaf122/8198055",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "In the absence of a specific dietary intervention that is recommended by an IBD healthcare professional, healthy eating guidelines should be followed by people with IBD, as recommended for the general population.",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "direct_support_verified_official_ecco_article"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-082",
+      "claim_text": "The cited source reports that most evidence for dietary interventions was of low quality, with few studies measuring endoscopic, radiological, or biochemical endpoints or durability of response. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "5f46e41a6164098808e22c4e4dbb387d0a82c1ce54a8637c38a394362c75e12a",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ECCO consensus article — Section 4.1, \"Dietary therapy to induce and maintain remission of IBD\"; opening paragraph; sentence beginning \"Most evidence for dietary interventions...\"",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-082",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-021",
+      "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/19/9/jjaf122/8198055",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Most evidence for dietary interventions was of low quality, with few studies measuring endoscopic, radiological, or biochemical endpoints or durability of response.",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "direct_support_verified_official_ecco_article"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-083",
+      "claim_text": "The ECCO consensus states that no data support a modified or low-fiber diet to manage stricturing Crohn’s disease; based on mechanism-based reasoning, a low-bulking-fiber diet in people with stricturing Crohn’s disease and obstructive symptoms might reduce the risk of intestinal obstruction. This is source-attributed guidance, not individualized treatment advice.",
+      "content_hash": "5b1e06850f55dbb9e6df50fedbc1dd67d81673abfc3c80fc37b3c8cb6cca43de",
+      "disease_context": [
+        "stricture_or_obstruction_risk"
+      ],
+      "evidence_status": "prototype_eligible_with_limitation",
+      "in_production": true,
+      "locator": "Official ECCO consensus article — Section 4.3.2, \"Strictures\"; Statement 21.1, paragraph 1; paragraph beginning \"Statement 21.1: While there are no data supporting...\"",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-083",
+      "review_status": null,
+      "source_id": "SRC-021",
+      "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/19/9/jjaf122/8198055",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only",
+        "conflicting: applicability differs across datasets: prototype-v1=['crohns_disease'] | baseline-register=['crohns_disease', 'ibd_general', 'ulcerative_colitis']"
+      ],
+      "supporting_excerpt": "Statement 21.1: While there are no data supporting a modified or low-fiber diet to manage stricturing Crohn’s disease (CD), mechanism-based reasoning suggests that a diet low in bulking fiber in people with stricturing CD and obstructive symptoms might reduce the risk of developing intestinal obstruction. (EL5) (Consensus: 100%)",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-083",
+      "claim_text": "The ECCO consensus states that no data support a modified or low-fiber diet to manage stricturing Crohn’s disease; based on mechanism-based reasoning, a low-bulking-fiber diet in people with stricturing Crohn’s disease and obstructive symptoms might reduce the risk of intestinal obstruction. This is source-attributed guidance, not individualized treatment advice.",
+      "content_hash": "2cd91791eff6df12439143870e1eb3f87e99f41d5eda4920c2449af4292e006d",
+      "disease_context": [
+        "stricture_or_obstruction_risk"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ECCO consensus article — Section 4.3.2, \"Strictures\"; Statement 21.1, paragraph 1; paragraph beginning \"Statement 21.1: While there are no data supporting...\"",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2025",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-083",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-021",
+      "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/19/9/jjaf122/8198055",
+      "status": "conflicting",
+      "status_reasons": [
+        "conflicting: applicability differs across datasets: prototype-v1=['crohns_disease'] | baseline-register=['crohns_disease', 'ibd_general', 'ulcerative_colitis']"
+      ],
+      "supporting_excerpt": "A modified or low-fiber diet may reduce obstruction risk in people with stricturing Crohn's disease.",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "direct_support_verified_official_ecco_article"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-084",
+      "claim_text": "The cited source reports that there is emerging evidence that dietary therapies may be beneficial in reducing the inflammatory burden in Crohn's disease.",
+      "content_hash": "c74bb46d500cf75d60586a5dad5dd5a79e0758345ae53fcd1978199a9cbcb877",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ECCO guideline article — Section 3.8.2.1, \"Dietary therapy for the induction of remission in CD\"; Practice Point 2A, sentence 1",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-084",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-022",
+      "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/18/10/1531/7693895",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "There is emerging evidence that dietary therapies may be beneficial in reducing the inflammatory burden in Crohn's disease.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": "direct_support_verified_official_ecco_article"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-085",
+      "claim_text": "The cited source reports that dietary intervention should be considered based on disease activity, patient motivation, current evidence, and availability of dietetic support. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "85eaa9050506b8d56eabbaba7d43e2074199dbed2b93855c5d071b13650a126b",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible_with_limitation",
+      "in_production": true,
+      "locator": "Official ECCO guideline article — Section 3.8.2.1, \"Dietary therapy for the induction of remission in CD\"; Practice Point 2A, sentence 3",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-085",
+      "review_status": null,
+      "source_id": "SRC-022",
+      "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/18/10/1531/7693895",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "Dietary intervention should primarily be considered based on disease activity, the patient’s motivation, the current evidence, and the availability of dietetic support.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-085",
+      "claim_text": "The cited source reports that dietary intervention should be considered based on disease activity, patient motivation, current evidence, and availability of dietetic support. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "5f3cccaae432afc94722c7030df585fc3d2bdd84dfc3f9a64d8865be16c7b91d",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ECCO guideline article — Section 3.8.2.1, \"Dietary therapy for the induction of remission in CD\"; Practice Point 2A, sentence 3",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-085",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-022",
+      "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/18/10/1531/7693895",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "Dietary intervention should be considered based on disease activity, patient motivation, current evidence, and availability of dietetic support.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": "direct_support_verified_official_ecco_article"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-086",
+      "claim_text": "The cited source reports that partial enteral nutrition might be considered for maintaining remission in a subset of patients who can tolerate formula with routine monitoring. This is source-attributed information, not a treatment recommendation for an individual.",
+      "content_hash": "9832c13c9eec577ba5c16c41967aa5420def3acf779e321ac035ef6f792ff47b",
+      "disease_context": [
+        "remission"
+      ],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ECCO guideline article — Section 3.8.2.2, \"Dietary therapy for the maintenance of remission in CD\"; Practice Point 2B, sentence 1",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-086",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-022",
+      "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/18/10/1531/7693895",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "Partial enteral nutrition might be considered for maintaining remission in a subset of patients who can tolerate formula with routine monitoring.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": "direct_support_verified_official_ecco_article"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-087",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-087",
+      "claim_text": "Depending on your symptoms and the medicines you take, your doctor may recommend changes to what you eat and drink.",
+      "content_hash": "4ee6247343990ea447c14a76f6d3824e97b88f1732c74f409b77e4529a19b94c",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "Official NIDDK webpage — heading \"Eating, Diet, & Nutrition for Crohn’s Disease\"; paragraph containing the cited excerpt",
+      "mapped_question_ids": [
+        "L2-1.1"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-087",
+      "review_status": null,
+      "source_id": "SRC-023",
+      "source_title": "Eating, Diet, & Nutrition for Crohn’s Disease",
+      "source_url": "https://www.niddk.nih.gov/health-information/digestive-diseases/crohns-disease/eating-diet-nutrition",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "Depending on your symptoms and the medicines you take, your doctor may recommend changes to what you eat and drink.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-088",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-088",
+      "claim_text": "The cited source reports that your doctor may recommend eating more fruits and vegetables for Crohn’s disease.",
+      "content_hash": "39576b462d152a2e5f15d1da197acf86e20627a1f42e6d5beacdacd0d3ec8c5b",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "Official NIDDK webpage — heading \"Eating, Diet, & Nutrition for Crohn’s Disease\"; paragraph containing the cited excerpt",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-088",
+      "review_status": null,
+      "source_id": "SRC-023",
+      "source_title": "Eating, Diet, & Nutrition for Crohn’s Disease",
+      "source_url": "https://www.niddk.nih.gov/health-information/digestive-diseases/crohns-disease/eating-diet-nutrition",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "Your doctor may recommend eating more fruits and vegetables for Crohn’s disease.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-089",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-089",
+      "claim_text": "The cited source reports that your doctor may also recommend dietary supplements if your body doesn’t absorb enough nutrients.",
+      "content_hash": "dabc65c8345b156736ec0d3841069b53a841f81e73ab454fcb2e8165235068e4",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "Official NIDDK webpage — heading \"Eating, Diet, & Nutrition for Crohn’s Disease\"; paragraph containing the cited excerpt",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-089",
+      "review_status": null,
+      "source_id": "SRC-023",
+      "source_title": "Eating, Diet, & Nutrition for Crohn’s Disease",
+      "source_url": "https://www.niddk.nih.gov/health-information/digestive-diseases/crohns-disease/eating-diet-nutrition",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "10 Your doctor may also recommend dietary supplements if your body doesn’t absorb enough nutrients.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-092",
+      "claim_text": "The cited source reports that disordered eating is common in people with GI diseases and is associated with worse disease outcomes 2 . This is population-level association evidence and does not establish causation or predict an individual's disease course. The webpage version date should be confirmed before approval.",
+      "content_hash": "056619d9d2cc7143b45e0b9be428ce57fcf1a73f63da705ba1bee65ed05dab30",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "still_needs_evidence",
+      "in_production": false,
+      "locator": "Official Crohn’s & Colitis Foundation webpage — heading \"Important points to keep in mind\"; bullet 2",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2026",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-092",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-024",
+      "source_title": "What Should I Eat with IBD?",
+      "source_url": "https://www.crohnscolitisfoundation.org/patientsandcaregivers/diet-and-nutrition/what-should-i-eat",
+      "status": "incomplete",
+      "status_reasons": [
+        "incomplete: evidence status unresolved: still_needs_evidence"
+      ],
+      "supporting_excerpt": "Disordered eating is common in people with GI diseases and is associated with worse disease outcomes 2 .",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": "verified_against_authoritative_public_page"
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-093",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-093",
+      "claim_text": "The cited source reports that fruit and vegetables It is recommended that people try to eat at least five portions of a variety of fruit and vegetables every day. This is source-attributed information, not a treatment recommendation for an individual. The webpage version date should be confirmed before approval.",
+      "content_hash": "1639b9e78ae3e1027c40fd9cb29e0042309982d1606894a093dca370b52bbfb5",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "Official Crohn’s & Colitis UK webpage — heading \"Fruit and vegetables\"; first paragraph",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2026",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-093",
+      "review_status": null,
+      "source_id": "SRC-025",
+      "source_title": "Food and IBD",
+      "source_url": "https://www.crohnsandcolitis.org.uk/info-support/information-about-crohns-and-colitis/all-information-about-crohns-and-colitis/living-with-crohns-or-colitis/food",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Melanie Living with Crohn's Fruit and vegetables It is recommended that people try to eat at least five portions of a variety of fruit and vegetables every day.",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-094",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-094",
+      "claim_text": "The cited source reports that guidelines recommend that you eat 30g of fibre a day. The webpage version date should be confirmed before approval.",
+      "content_hash": "42f421b92c9571527bcad062172f72e7b451c4bd01b599b13e70beed9fbe0156",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "Official Crohn’s & Colitis UK webpage — heading \"Fibre\"; first paragraph",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2026",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-094",
+      "review_status": null,
+      "source_id": "SRC-025",
+      "source_title": "Food and IBD",
+      "source_url": "https://www.crohnsandcolitis.org.uk/info-support/information-about-crohns-and-colitis/all-information-about-crohns-and-colitis/living-with-crohns-or-colitis/food",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Guidelines recommend that you eat 30g of fibre a day.",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [
+        {
+          "claim_id": "CLM-095",
+          "dataset": "baseline-register"
+        }
+      ],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-095",
+      "claim_text": "The cited source reports that there is not enough high-quality evidence to know for certain if drinking alcohol could increase your risk of a flare-up. This is population-level association evidence and does not establish causation or predict an individual's disease course. The webpage version date should be confirmed before approval.",
+      "content_hash": "8e102c4e9423f523dcde7c7a47c982df5beadf46843d8ab606ea780185e37fda",
+      "disease_context": [
+        "general_or_unspecified"
+      ],
+      "evidence_status": "prototype_eligible",
+      "in_production": true,
+      "locator": "Official Crohn’s & Colitis UK webpage — heading \"Alcohol\"; first paragraph",
+      "mapped_question_ids": [
+        "L3-2.2.2"
+      ],
+      "mapping_basis": "topic_rule",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2026",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-095",
+      "review_status": null,
+      "source_id": "SRC-025",
+      "source_title": "Food and IBD",
+      "source_url": "https://www.crohnsandcolitis.org.uk/info-support/information-about-crohns-and-colitis/all-information-about-crohns-and-colitis/living-with-crohns-or-colitis/food",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Alcohol There is not enough high-quality evidence to know for certain if drinking alcohol could increase your risk of a flare-up.",
+      "uc_applicability": [
+        "ulcerative_colitis",
+        "crohns_disease",
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-096",
+      "claim_text": "The 2023 ESPEN guideline states that perioperative nutrition principles from its surgery guideline apply to IBD surgical care, while noting that IBD-specific ERAS evidence is sparse.",
+      "content_hash": "c29ecc383ddded1026381adb38888a6196ca57afc303159549096844dd178552",
+      "disease_context": [
+        "perioperative"
+      ],
+      "evidence_status": "prototype_eligible_with_limitation",
+      "in_production": true,
+      "locator": "Official ESPEN PDF — journal page 363, Recommendations 40–41 commentary, first paragraph",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-096",
+      "review_status": null,
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36739756/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "The recommendations have been adapted from the ESPEN Guideline: Clinical Nutrition in Surgery in a slightly modified way since the principles apply equally to the IBD patient undergoing surgical intervention. Evidence of ERAS in patients with IBD is sparse.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "unspecified",
+      "claim_id": "CLM-096",
+      "claim_text": "The 2023 ESPEN guideline states that perioperative nutrition principles from its surgery guideline apply to IBD surgical care, while noting that IBD-specific ERAS evidence is sparse.",
+      "content_hash": "587fc2250cf7d1c132143e93986bdec0f4a1cc863230024a12a85a96444f339a",
+      "disease_context": [],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ESPEN PDF — journal page 363, Recommendations 40–41 commentary, first paragraph",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-096",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": null,
+      "status": "unverifiable",
+      "status_reasons": [
+        "unverifiable: no authoritative source URL",
+        "incomplete: UC applicability missing or unrecognised"
+      ],
+      "supporting_excerpt": "The recommendations have been adapted from the ESPEN Guideline: Clinical Nutrition in Surgery in a slightly modified way since the principles apply equally to the IBD patient undergoing surgical intervention. Evidence of ERAS in patients with IBD is sparse.",
+      "uc_applicability": [],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-097",
+      "claim_text": "The 2023 ESPEN guideline states that no oral IBD diet can be generally recommended to promote remission in patients with active IBD.",
+      "content_hash": "16bf70e1450f0636efbcceb07e3cdc302eb92f0ac2cb1a28c6ed0f21364b4779",
+      "disease_context": [
+        "active_disease"
+      ],
+      "evidence_status": "prototype_eligible_with_limitation",
+      "in_production": true,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; Recommendation 15 commentary, final paragraph beginning \"Therefore, no oral IBD diet...\"",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-097",
+      "review_status": null,
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36739756/",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Therefore, no “oral IBD diet” can be generally recommended to promote remission in patients with IBD with active disease.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "unspecified",
+      "claim_id": "CLM-097",
+      "claim_text": "The 2023 ESPEN guideline states that no oral IBD diet can be generally recommended to promote remission in patients with active IBD.",
+      "content_hash": "b0ffd5ef44b3162292d9230011282fabde7d51f5438d22296d82fc63db17a032",
+      "disease_context": [],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; Recommendation 15 commentary, final paragraph beginning \"Therefore, no oral IBD diet...\"",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-097",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://www.espen.org/files/ESPEN-Guidelines/ESPEN_guideline_on_Clinical_nutrition_in_inflammatory_bowel_disease.pdf",
+      "status": "incomplete",
+      "status_reasons": [
+        "incomplete: UC applicability missing or unrecognised"
+      ],
+      "supporting_excerpt": "Therefore, no “oral IBD diet” can be generally recommended to promote remission in patients with IBD with active disease.",
+      "uc_applicability": [],
+      "verification_status": "PASS_direct_support_verified_official_pdf"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-098",
+      "claim_text": "The 2023 ESPEN guideline states that a Crohn’s disease exclusion diet plus partial enteral nutrition should be considered as an alternative to exclusive enteral nutrition in pediatric patients with mild-to-moderate Crohn’s disease to achieve remission.",
+      "content_hash": "225ee019f7f1a4291d85521f777a24f3c3ba25def574eb07ba06495e1c859b4d",
+      "disease_context": [
+        "active_disease"
+      ],
+      "evidence_status": "prototype_eligible_with_limitation",
+      "in_production": true,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; Recommendation 16",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-098",
+      "review_status": null,
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36739756/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "CD exclusion diet (plus partial EN) should be considered as an alternative to exclusive EN in pediatric patients with mild to moderate CD to achieve remission.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "unspecified",
+      "claim_id": "CLM-098",
+      "claim_text": "The 2023 ESPEN guideline states that a Crohn’s disease exclusion diet plus partial enteral nutrition should be considered as an alternative to exclusive enteral nutrition in pediatric patients with mild-to-moderate Crohn’s disease to achieve remission.",
+      "content_hash": "5979559939aa98709ac09653b39d6f7b0a3f40ce6e939a426d57e5900620b62c",
+      "disease_context": [],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; Recommendation 16",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-098",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://www.espen.org/files/ESPEN-Guidelines/ESPEN_guideline_on_Clinical_nutrition_in_inflammatory_bowel_disease.pdf",
+      "status": "incomplete",
+      "status_reasons": [
+        "incomplete: UC applicability missing or unrecognised"
+      ],
+      "supporting_excerpt": "CD exclusion diet (plus partial EN) should be considered as an alternative to exclusive EN in pediatric patients with mild to moderate CD to achieve remission.",
+      "uc_applicability": [],
+      "verification_status": "direct_support_verified_official_pdf"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-099",
+      "claim_text": "The 2023 ESPEN guideline states that, in adults with mild-to-moderate active Crohn’s disease, a Crohn’s disease exclusion diet can be considered with or without enteral nutrition.",
+      "content_hash": "45bc68ddc7923d0ac1fcdd1987df57ed4b0c9f7739d9d17f2264ae14806f2c18",
+      "disease_context": [
+        "active_disease"
+      ],
+      "evidence_status": "prototype_eligible_with_limitation",
+      "in_production": true,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; Recommendation 17",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-099",
+      "review_status": null,
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36739756/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "In adult patients, a CD exclusion diet can be considered with or without EN in mild to moderate active CD.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "unspecified",
+      "claim_id": "CLM-099",
+      "claim_text": "The 2023 ESPEN guideline states that, in adults with mild-to-moderate active Crohn’s disease, a Crohn’s disease exclusion diet can be considered with or without enteral nutrition.",
+      "content_hash": "164c5be92477595e52d252a8041c7d589461162b003037acf916efe62a75d373",
+      "disease_context": [],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; Recommendation 17",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-099",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://www.espen.org/files/ESPEN-Guidelines/ESPEN_guideline_on_Clinical_nutrition_in_inflammatory_bowel_disease.pdf",
+      "status": "incomplete",
+      "status_reasons": [
+        "incomplete: UC applicability missing or unrecognised"
+      ],
+      "supporting_excerpt": "In adult patients, a CD exclusion diet can be considered with or without EN in mild to moderate active CD.",
+      "uc_applicability": [],
+      "verification_status": "direct_support_verified_official_pdf"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "crohns_only",
+      "claim_id": "CLM-100",
+      "claim_text": "The 2023 ESPEN guideline states that data on long-term effectiveness and the possible risk of nutritional deficiencies or eating-behavior disturbances from long-term exclusion-diet use are not yet available.",
+      "content_hash": "25c2e68fa7360245bac9b16d504dc339c99e9c382da539e99ffcfe2dd2526802",
+      "disease_context": [
+        "active_disease"
+      ],
+      "evidence_status": "prototype_eligible_with_limitation",
+      "in_production": true,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; commentary for Recommendations 16 and 17, paragraph ending immediately before Recommendation 18",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "prototype-v1",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "prototype-v1:CLM-100",
+      "review_status": null,
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/36739756/",
+      "status": "crohns_only",
+      "status_reasons": [
+        "crohns_only: applicability is Crohn's disease only"
+      ],
+      "supporting_excerpt": "Data on long-term effectiveness and possible risk of nutritional deficiencies or eating behavior disturbances due to long-term use of exclusion diets are not (yet) available.",
+      "uc_applicability": [
+        "crohns_disease"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "unspecified",
+      "claim_id": "CLM-100",
+      "claim_text": "The 2023 ESPEN guideline states that data on long-term effectiveness and the possible risk of nutritional deficiencies or eating-behavior disturbances from long-term exclusion-diet use are not yet available.",
+      "content_hash": "4c067bb0a2707d4bbcf9e62530996a6d5489727552fdf22918b77f5df701f9cf",
+      "disease_context": [],
+      "evidence_status": "ready_for_human_review",
+      "in_production": false,
+      "locator": "Official ESPEN PDF — journal page 357, Section 5 \"Dietetic recommendations in active disease\"; commentary for Recommendations 16 and 17, paragraph ending immediately before Recommendation 18",
+      "mapped_question_ids": [],
+      "mapping_basis": "unmapped",
+      "originating_dataset": "baseline-register",
+      "publication_date": "2023",
+      "publication_date_precision": "year",
+      "record_id": "baseline-register:CLM-100",
+      "review_status": "pending_human_review",
+      "source_id": "SRC-026",
+      "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+      "source_url": "https://www.espen.org/files/ESPEN-Guidelines/ESPEN_guideline_on_Clinical_nutrition_in_inflammatory_bowel_disease.pdf",
+      "status": "incomplete",
+      "status_reasons": [
+        "incomplete: UC applicability missing or unrecognised"
+      ],
+      "supporting_excerpt": "Data on long-term effectiveness and possible risk of nutritional deficiencies or eating behavior disturbances due to long-term use of exclusion diets are not (yet) available.",
+      "uc_applicability": [],
+      "verification_status": "direct_support_verified_official_pdf"
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-115",
+      "claim_text": "In people with ulcerative colitis in symptomatic remission, the AGA guideline panel suggests a monitoring strategy that combines a non-invasive biomarker with symptoms rather than symptoms alone.",
+      "content_hash": "9c95d96e725bae119b376ed5f23ef4d87dbad1a97e492e59ed80e9ec0c844eaf",
+      "disease_context": [
+        "symptomatic_remission"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:36822736; Gastroenterology 2023;164(3):344-372. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L2-1.2",
+        "L3-1.2.1"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2023-03",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-115",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-028",
+      "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "source_url": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "In patients with UC in symptomatic remission, the panel suggests the use of a biomarker- and symptom-based monitoring strategy over a symptom-based monitoring strategy.",
+      "uc_applicability": [
+        "ulcerative_colitis"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-116",
+      "claim_text": "For a person with ulcerative colitis in symptomatic remission, the panel suggests using fecal calprotectin below 150 micrograms per gram, a normal fecal lactoferrin, and/or a normal CRP to rule out active inflammation and avoid routine endoscopic assessment.",
+      "content_hash": "7b15b933ebfb237997734469abe2880362c654b2cebb2cf43f7bfe788db6b0bd",
+      "disease_context": [
+        "symptomatic_remission"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:36822736; Gastroenterology 2023;164(3):344-372. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.1",
+        "L3-1.2.3"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2023-03",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-116",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-028",
+      "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "source_url": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "For patients in symptomatic remission, the panel suggests using fecal calprotectin <150 μg/g, normal fecal lactoferrin, and/or normal CRP to rule out active inflammation and avoid routine endoscopic assessment of disease.",
+      "uc_applicability": [
+        "ulcerative_colitis"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-117",
+      "claim_text": "For a person with ulcerative colitis who has moderate-to-severe symptoms, the panel suggests using fecal calprotectin above 150 micrograms per gram, an elevated fecal lactoferrin, or an elevated CRP to inform treatment decisions and avoid routine endoscopic assessment.",
+      "content_hash": "8cd23c5ccc74cd28fce0e3a7c7122402ff3a699538cd4d68e093f52dc510b749",
+      "disease_context": [
+        "active_disease",
+        "moderate_to_severe_symptoms"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:36822736; Gastroenterology 2023;164(3):344-372. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.1",
+        "L2-1.1"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2023-03",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-117",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-028",
+      "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "source_url": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "In patients with UC with moderate to severe symptoms, the panel suggests using fecal calprotectin >150 μg/g, elevated fecal lactoferrin, or elevated CRP to inform treatment decisions and avoid routine endoscopic assessment of disease.",
+      "uc_applicability": [
+        "ulcerative_colitis"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-118",
+      "claim_text": "When symptoms and biomarkers disagree in ulcerative colitis — symptomatic remission with elevated biomarkers, or moderate-to-severe symptoms with normal biomarkers — the panel suggests endoscopic assessment of disease to inform treatment decisions.",
+      "content_hash": "aed7389e8081f840fe5694b082eaa8fb1249a1e17624f4125736968cf712df26",
+      "disease_context": [
+        "symptomatic_remission",
+        "active_disease",
+        "biomarker_symptom_discordance"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:36822736; Gastroenterology 2023;164(3):344-372. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.2"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2023-03",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-118",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-028",
+      "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "source_url": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "However, in patients in symptomatic remission but elevated biomarkers, and in patients with moderate to severe symptoms with normal biomarkers, the panel suggests endoscopic assessment of disease to inform treatment decisions.",
+      "uc_applicability": [
+        "ulcerative_colitis"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-119",
+      "claim_text": "For a person with ulcerative colitis who has only mild symptoms, the panel suggests endoscopic assessment of disease activity to inform treatment decisions.",
+      "content_hash": "aff51899f6aa52a0d252c0945f3e420a5fcb870452327bd8f33dfd160104d7f5",
+      "disease_context": [
+        "mild_symptoms"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:36822736; Gastroenterology 2023;164(3):344-372. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.2"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2023-03",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-119",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-028",
+      "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "source_url": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "In patients with UC with mild symptoms, the panel suggests endoscopic assessment of disease activity to inform treatment decisions.",
+      "uc_applicability": [
+        "ulcerative_colitis"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-120",
+      "claim_text": "The AGA guideline panel made 7 conditional recommendations on biomarker use in ulcerative colitis, and identified using a biomarker-based rather than an endoscopy-based monitoring strategy as a knowledge gap.",
+      "content_hash": "a99dd4a202ccc131b8c840b70c728da5c60ffc4de653880dbc28f60439a2a557",
+      "disease_context": [
+        "general_monitoring"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:36822736; Gastroenterology 2023;164(3):344-372. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L2-1.2"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2023-03",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-120",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-028",
+      "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "source_url": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "The panel identified the use of a biomarker-based monitoring strategy over an endoscopy-based monitoring strategy as a knowledge gap.",
+      "uc_applicability": [
+        "ulcerative_colitis"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "uc_specific",
+      "claim_id": "CLM-121",
+      "claim_text": "The guideline concludes that in ulcerative colitis, non-invasive biomarkers including fecal calprotectin, fecal lactoferrin and serum CRP can inform disease monitoring and management.",
+      "content_hash": "0ca6b7f1b240a7d0806eda633c77ea45dd0ad200117d05d44cec1ec22c17f81f",
+      "disease_context": [
+        "general_monitoring"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Conclusions section — Europe PMC record EXT_ID:36822736; Gastroenterology 2023;164(3):344-372.",
+      "mapped_question_ids": [
+        "L2-1.2",
+        "L3-1.2.1"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2023-03",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-121",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-028",
+      "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+      "source_url": "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "In patients with UC, noninvasive biomarkers, including fecal calprotectin, fecal lactoferrin, and serum CRP can inform disease monitoring and management.",
+      "uc_applicability": [
+        "ulcerative_colitis"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-122",
+      "claim_text": "The STRIDE-II consensus was informed by a systematic review in which 11,278 manuscripts were screened and 435 were included.",
+      "content_hash": "69b93e18636b2ab53a6b168078c6aad7bb531dcafbda16204defc8bb502c004a",
+      "disease_context": [
+        "evidence_base"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:33359090; Gastroenterology 2021;160(5):1570-1583. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L2-1.2"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2021-04",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-122",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-033",
+      "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "source_url": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "In the systematic review, 11,278 manuscripts were screened, of which 435 were included.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-123",
+      "claim_text": "An initial IOIBD survey rated the most important treat-to-target goals in IBD as clinical response and remission, endoscopic healing, and normalisation of C-reactive protein / erythrocyte sedimentation rate and calprotectin.",
+      "content_hash": "3b62f2b10b36061b65475469647aa9cfa0e196fbb362d9973402f85a4fac9275",
+      "disease_context": [
+        "target_setting"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:33359090; Gastroenterology 2021;160(5):1570-1583. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.1"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2021-04",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-123",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-033",
+      "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "source_url": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "The first IOIBD survey identified the following targets as most important: clinical response and remission, endoscopic healing, and normalization of C-reactive protein/erythrocyte sedimentation rate and calprotectin.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-124",
+      "claim_text": "STRIDE-II confirmed the STRIDE-I long-term targets of clinical remission and endoscopic healing, and added absence of disability, restoration of quality of life, and normal growth in children.",
+      "content_hash": "dacd6846fdacc2147dc4368b85b91e0a747e18fb39726a076c1a5a689cb24de9",
+      "disease_context": [
+        "remission",
+        "long_term_targets"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:33359090; Gastroenterology 2021;160(5):1570-1583. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.3",
+        "L2-1.2"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2021-04",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-124",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-033",
+      "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "source_url": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "STRIDE-II confirmed STRIDE-I long-term targets of clinical remission and endoscopic healing and added absence of disability, restoration of quality of life, and normal growth in children.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-125",
+      "claim_text": "STRIDE-II designates symptomatic relief and normalisation of serum and fecal markers as short-term treatment targets in IBD.",
+      "content_hash": "b501688b730426b6efa07f9f69a28e1b31537f78ebcf4365a40758b283ed9861",
+      "disease_context": [
+        "short_term_targets",
+        "active_disease"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:33359090; Gastroenterology 2021;160(5):1570-1583. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.3"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2021-04",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-125",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-033",
+      "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "source_url": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Symptomatic relief and normalization of serum and fecal markers have been determined as short-term targets.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-126",
+      "claim_text": "In STRIDE-II, transmural healing in Crohn's disease and histological healing in ulcerative colitis are not formal treatment targets but should be assessed as measures of the depth of remission.",
+      "content_hash": "b392a716922a40ea94d75cebc1feb53d155b12bd6e506e465b18db53bf923044",
+      "disease_context": [
+        "remission",
+        "remission_depth",
+        "histologic_healing"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Results section — Europe PMC record EXT_ID:33359090; Gastroenterology 2021;160(5):1570-1583. Page/statement-level locators require full text (link_only).",
+      "mapped_question_ids": [
+        "L3-1.2.3"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2021-04",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-126",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-033",
+      "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "source_url": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "Transmural healing in Crohn's disease and histological healing in ulcerative colitis are not formal targets but should be assessed as measures of the remission depth.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    },
+    {
+      "also_present_in": [],
+      "applicability_class": "ibd_general",
+      "claim_id": "CLM-127",
+      "claim_text": "STRIDE-II states that its treat-to-target framework should be adapted to individual patients and to local resources in order to improve outcomes.",
+      "content_hash": "df10cbdf370deb6c913408b4e8075f57dfcb9210b6adb72a8676d8c9da6823a4",
+      "disease_context": [
+        "implementation"
+      ],
+      "evidence_status": "extracted",
+      "in_production": false,
+      "locator": "Abstract (structured), Conclusions section — Europe PMC record EXT_ID:33359090; Gastroenterology 2021;160(5):1570-1583.",
+      "mapped_question_ids": [
+        "L2-1.2",
+        "L3-1.3.3"
+      ],
+      "mapping_basis": "source_provided",
+      "originating_dataset": "uc-evidence-expansion",
+      "publication_date": "2021-04",
+      "publication_date_precision": "month",
+      "record_id": "uc-evidence-expansion:CLM-127",
+      "review_status": "pending_clinical_review",
+      "source_id": "SRC-033",
+      "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+      "source_url": "https://doi.org/10.1053/j.gastro.2020.12.031",
+      "status": "usable",
+      "status_reasons": [],
+      "supporting_excerpt": "should be adapted to individual patients and local resources to improve outcomes.",
+      "uc_applicability": [
+        "ibd_general"
+      ],
+      "verification_status": null
+    }
+  ],
+  "counts": {
+    "after_by_dataset": {
+      "baseline-register": 20,
+      "prototype-v1": 49,
+      "uc-evidence-expansion": 13
+    },
+    "after_dedupe": 82,
+    "before_by_dataset": {
+      "baseline-register": 61,
+      "prototype-v1": 49,
+      "uc-evidence-expansion": 13
+    },
+    "before_dedupe": 123,
+    "by_dataset_and_status": {
+      "baseline-register": {
+        "conflicting": 1,
+        "crohns_only": 3,
+        "incomplete": 5,
+        "unverifiable": 1,
+        "usable": 10
+      },
+      "daily-discovery": {
+        "conflicting": 0,
+        "crohns_only": 0,
+        "incomplete": 0,
+        "unverifiable": 0,
+        "usable": 0
+      },
+      "prototype-v1": {
+        "conflicting": 0,
+        "crohns_only": 15,
+        "incomplete": 0,
+        "unverifiable": 0,
+        "usable": 34
+      },
+      "uc-evidence-expansion": {
+        "conflicting": 0,
+        "crohns_only": 0,
+        "incomplete": 0,
+        "unverifiable": 0,
+        "usable": 13
+      }
+    },
+    "by_status": {
+      "conflicting": 1,
+      "crohns_only": 18,
+      "incomplete": 5,
+      "unverifiable": 1,
+      "usable": 57
+    },
+    "exact_duplicates_removed": 41
+  },
+  "datasets": [
+    {
+      "available": true,
+      "claim_rows": 49,
+      "dataset": "prototype-v1",
+      "files": [
+        "apps/ibd-uc-rag-agent-web/api/data/ibd-prototype-evidence.json"
+      ],
+      "notes": [],
+      "source_rows": 20
+    },
+    {
+      "available": true,
+      "claim_rows": 61,
+      "dataset": "baseline-register",
+      "files": [
+        "knowledge/ibd-research-review/ibd-evidence-review-final-remediation.xlsx"
+      ],
+      "notes": [
+        "1 claim(s) flagged unresolved_not_approval_ready by the register"
+      ],
+      "source_rows": 26
+    },
+    {
+      "available": true,
+      "claim_rows": 13,
+      "dataset": "uc-evidence-expansion",
+      "files": [
+        "knowledge/uc-evidence-expansion/candidate-claims.json",
+        "knowledge/uc-evidence-expansion/sources.json"
+      ],
+      "notes": [
+        "3 source(s) in sources.json; sources with no candidate claim: SRC-034"
+      ],
+      "source_rows": 3
+    },
+    {
+      "available": true,
+      "claim_rows": 0,
+      "dataset": "daily-discovery",
+      "files": [
+        "automation/artifact"
+      ],
+      "notes": [
+        "63 redacted run report(s); statuses={'partial_no_op': 63}",
+        "claimsExtracted reported across runs=0; sourcesAccepted=0",
+        "run artifacts are redacted by design (no claim text); they cannot yield claim records"
+      ],
+      "source_rows": 0
+    }
+  ],
+  "dedupe_log": [
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-005",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-005"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-006",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-006"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-008",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-008"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-013",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-013"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-014",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-014"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-015",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-015"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-017",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-017"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-021",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-021"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-022",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-022"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-023",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-023"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-024",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-024"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-028",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-028"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-029",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-029"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-031",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-031"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-037",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-037"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-038",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-038"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-040",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-040"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-041",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-041"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-042",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-042"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-044",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-044"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-046",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-046"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-049",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-049"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-050",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-050"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-051",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-051"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-053",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-053"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-061",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-061"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-062",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-062"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-066",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-066"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-068",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-068"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-073",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-073"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-074",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-074"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-077",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-077"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-078",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-078"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-079",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-079"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-080",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-080"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-087",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-087"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-088",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-088"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-089",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-089"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-093",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-093"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-094",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-094"
+    },
+    {
+      "collapsed": [
+        {
+          "claim_id": "CLM-095",
+          "dataset": "baseline-register"
+        }
+      ],
+      "retained": "prototype-v1:CLM-095"
+    }
+  ],
+  "schema": "phase2-checkpoint1-manifest/1"
+}

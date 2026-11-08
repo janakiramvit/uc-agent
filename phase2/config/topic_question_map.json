@@ -1,0 +1,21 @@
+{
+  "_note": "Explicit, auditable mapping from a claim's recorded `topic` to patient-question IDs, used ONLY for claims that carry no question mapping of their own (production prototype-v1 and the baseline register). It is a coarse topic proxy, not a clinical judgement; every use is tagged mapping_basis=topic_rule. Candidate claims keep their own source-provided mappedPatientQuestionIds. Topics not listed (core_condition_knowledge, null) are deliberately left unmapped.",
+  "topic_rules": {
+    "fibre": ["L3-2.2.2"],
+    "fruit_vegetables": ["L3-2.2.2"],
+    "ultra_processed": ["L3-2.2.2"],
+    "food_additives": ["L3-2.2.2"],
+    "dietary_patterns": ["L3-2.2.2"],
+    "dairy_lactose": ["L3-2.2.2"],
+    "alcohol": ["L3-2.2.2"],
+    "probiotics_prebiotics": ["L3-2.2.2"],
+    "enteral_nutrition": ["L3-2.2.2"],
+    "nutrition_status": ["L3-2.2.3"],
+    "stress_quality_of_life": ["L3-3.2.1"],
+    "physical_activity": ["L3-3.1.3"],
+    "symptoms_vs_inflammation": ["L2-1.1"]
+  },
+  "claim_overrides": {
+    "CLM-081": ["L2-2.2"]
+  }
+}
