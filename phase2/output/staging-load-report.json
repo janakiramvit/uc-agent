@@ -1,0 +1,73 @@
+{
+  "annotations": {
+    "already_present": 33,
+    "to_insert": 0
+  },
+  "applied": false,
+  "batch_id": "4028d89d-acc6-41ae-bf64-5182d4561d43",
+  "datasets_already_in_staging": {
+    "baseline-register": {
+      "content_mismatches": [],
+      "in_inventory": 61,
+      "missing_from_staging": [],
+      "present_in_staging": 61
+    },
+    "prototype-v1": {
+      "content_mismatches": [],
+      "in_inventory": 49,
+      "missing_from_staging": [],
+      "present_in_staging": 49
+    }
+  },
+  "expansion_claims": {
+    "already_present": [
+      "CLM-115",
+      "CLM-116",
+      "CLM-117",
+      "CLM-118",
+      "CLM-119",
+      "CLM-120",
+      "CLM-121",
+      "CLM-122",
+      "CLM-123",
+      "CLM-124",
+      "CLM-125",
+      "CLM-126",
+      "CLM-127"
+    ],
+    "to_insert": []
+  },
+  "expansion_sources": {
+    "already_present": [
+      "SRC-028",
+      "SRC-033",
+      "SRC-034"
+    ],
+    "to_insert": []
+  },
+  "first_apply": {
+    "already_quarantined_other_step": 1,
+    "annotations_inserted": 33,
+    "claims_inserted": 13,
+    "quarantined": 9,
+    "sources_inserted": 3
+  },
+  "note": "Post-load state (dev staging). First apply inserted 3 sources, 13 claims, 33 annotation rows and 9 quarantine records; this re-plan proves idempotency (nothing left to insert).",
+  "quarantine": {
+    "already_quarantined_by_other_step": [
+      "baseline-register:CLM-083"
+    ],
+    "non_usable_nonproduction": 10,
+    "to_quarantine": [
+      "baseline-register:CLM-084 (crohns_only)",
+      "baseline-register:CLM-085 (crohns_only)",
+      "baseline-register:CLM-086 (crohns_only)",
+      "baseline-register:CLM-092 (incomplete)",
+      "baseline-register:CLM-096 (unverifiable)",
+      "baseline-register:CLM-097 (incomplete)",
+      "baseline-register:CLM-098 (incomplete)",
+      "baseline-register:CLM-099 (incomplete)",
+      "baseline-register:CLM-100 (incomplete)"
+    ]
+  }
+}

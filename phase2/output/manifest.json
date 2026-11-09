@@ -26,6 +26,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-005",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-002",
       "source_title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
@@ -37,6 +38,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -66,6 +68,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-006",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-002",
       "source_title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
@@ -79,6 +82,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -107,6 +111,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-008",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-002",
       "source_title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
@@ -118,6 +123,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -146,6 +152,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-013",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-004",
       "source_title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Disease: an Umbrella Review.",
@@ -157,6 +164,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -185,6 +193,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-014",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-004",
       "source_title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Disease: an Umbrella Review.",
@@ -198,6 +207,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -226,6 +236,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-015",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-004",
       "source_title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Disease: an Umbrella Review.",
@@ -237,6 +248,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -266,6 +278,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-017",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-005",
       "source_title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systematic Review and Meta-analysis.",
@@ -279,6 +292,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -302,6 +316,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-018",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-005",
       "source_title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systematic Review and Meta-analysis.",
@@ -315,6 +330,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -336,6 +352,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-019",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-005",
       "source_title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systematic Review and Meta-analysis.",
@@ -349,6 +366,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -375,6 +393,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-021",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-006",
       "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
@@ -386,6 +405,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -412,6 +432,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-022",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-006",
       "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
@@ -423,6 +444,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -449,6 +471,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-023",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-006",
       "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
@@ -460,6 +483,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -486,6 +510,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-024",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-006",
       "source_title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
@@ -497,6 +522,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -520,6 +546,7 @@
       "publication_date": "2016",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-025",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-007",
       "source_title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nutritional effects of dairy food restriction in inflammatory bowel diseases.",
@@ -532,6 +559,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -555,6 +583,7 @@
       "publication_date": "2016",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-026",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-007",
       "source_title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nutritional effects of dairy food restriction in inflammatory bowel diseases.",
@@ -566,6 +595,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -592,6 +622,7 @@
       "publication_date": "2016",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-028",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-007",
       "source_title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nutritional effects of dairy food restriction in inflammatory bowel diseases.",
@@ -605,6 +636,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -633,6 +665,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-029",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-008",
       "source_title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammatory Bowel Disease.",
@@ -644,6 +677,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -667,6 +701,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-030",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-008",
       "source_title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammatory Bowel Disease.",
@@ -678,6 +713,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -707,6 +743,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-031",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-008",
       "source_title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammatory Bowel Disease.",
@@ -718,6 +755,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -739,6 +777,7 @@
       "publication_date": "2022",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-033",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-009",
       "source_title": "Systematic review and meta-analysis of sleep quality in inactive inflammatory bowel disease.",
@@ -750,6 +789,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -778,6 +818,7 @@
       "publication_date": "2020",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-037",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-010",
       "source_title": "Assessment of causal link between psychological factors and symptom exacerbation in inflammatory bowel disease: a systematic review utilising Bradford Hill criteria and meta-analysis of prospective cohort studies.",
@@ -789,6 +830,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -817,6 +859,7 @@
       "publication_date": "2020",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-038",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-010",
       "source_title": "Assessment of causal link between psychological factors and symptom exacerbation in inflammatory bowel disease: a systematic review utilising Bradford Hill criteria and meta-analysis of prospective cohort studies.",
@@ -828,6 +871,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -856,6 +900,7 @@
       "publication_date": "2020",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-040",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-010",
       "source_title": "Assessment of causal link between psychological factors and symptom exacerbation in inflammatory bowel disease: a systematic review utilising Bradford Hill criteria and meta-analysis of prospective cohort studies.",
@@ -867,6 +912,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -895,6 +941,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-041",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-011",
       "source_title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory Bowel Disease: A Systematic Review and Meta-Analysis.",
@@ -906,6 +953,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -934,6 +982,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-042",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-011",
       "source_title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory Bowel Disease: A Systematic Review and Meta-Analysis.",
@@ -945,6 +994,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -973,6 +1023,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-044",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-011",
       "source_title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory Bowel Disease: A Systematic Review and Meta-Analysis.",
@@ -984,6 +1035,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1012,6 +1064,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-046",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-012",
       "source_title": "Efficacy and safety of probiotics in the induction and maintenance of inflammatory bowel disease remission: a systematic review and meta-analysis.",
@@ -1023,6 +1076,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1046,6 +1100,9 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-048",
+      "review_flags": [
+        "applicability lists ulcerative colitis, but the claim text itself refers only to Crohn's disease (the applicability may come from the whole source, not this finding)"
+      ],
       "review_status": "pending_human_review",
       "source_id": "SRC-012",
       "source_title": "Efficacy and safety of probiotics in the induction and maintenance of inflammatory bowel disease remission: a systematic review and meta-analysis.",
@@ -1059,6 +1116,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -1087,6 +1145,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-049",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-013",
       "source_title": "Ultra-processed foods and food additives in gut health and disease.",
@@ -1098,6 +1157,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1126,6 +1186,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-050",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-013",
       "source_title": "Ultra-processed foods and food additives in gut health and disease.",
@@ -1137,6 +1198,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1163,6 +1225,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-051",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-013",
       "source_title": "Ultra-processed foods and food additives in gut health and disease.",
@@ -1174,6 +1237,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1202,6 +1266,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-053",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-014",
       "source_title": "Physical Activity is Associated with a Decreased Risk of Developing Inflammatory Bowel Disease: A Systematic Review and Meta-analysis.",
@@ -1213,6 +1278,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1241,6 +1307,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-061",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-016",
       "source_title": "A Randomized Trial Comparing the Specific Carbohydrate Diet to a Mediterranean Diet in Adults With Crohn's Disease.",
@@ -1254,6 +1321,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1282,6 +1350,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-062",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-016",
       "source_title": "A Randomized Trial Comparing the Specific Carbohydrate Diet to a Mediterranean Diet in Adults With Crohn's Disease.",
@@ -1295,6 +1364,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1323,6 +1393,7 @@
       "publication_date": "2019",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-066",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-017",
       "source_title": "Crohn's Disease Exclusion Diet Plus Partial Enteral Nutrition Induces Sustained Remission in a Randomized Controlled Trial.",
@@ -1336,6 +1407,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1362,6 +1434,7 @@
       "publication_date": "2019",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-068",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-017",
       "source_title": "Crohn's Disease Exclusion Diet Plus Partial Enteral Nutrition Induces Sustained Remission in a Randomized Controlled Trial.",
@@ -1375,6 +1448,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1396,6 +1470,7 @@
       "publication_date": "2019",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-071",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-018",
       "source_title": "A Diet Low in Red and Processed Meat Does Not Reduce Rate of Crohn's Disease Flares.",
@@ -1408,6 +1483,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_public_abstract"
     },
     {
@@ -1436,6 +1512,7 @@
       "publication_date": "2019",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-073",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-019",
       "source_title": "A randomized, 6-wk trial of a low FODMAP diet in patients with inflammatory bowel disease.",
@@ -1447,6 +1524,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1473,6 +1551,7 @@
       "publication_date": "2019",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-074",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-019",
       "source_title": "A randomized, 6-wk trial of a low FODMAP diet in patients with inflammatory bowel disease.",
@@ -1484,6 +1563,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1512,6 +1592,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-077",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-020",
       "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
@@ -1523,6 +1604,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1551,6 +1633,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-078",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-020",
       "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
@@ -1562,6 +1645,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1590,6 +1674,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-079",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-020",
       "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
@@ -1601,6 +1686,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1629,6 +1715,7 @@
       "publication_date": "2021",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-080",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-020",
       "source_title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
@@ -1640,6 +1727,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -1663,6 +1751,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-081",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-021",
       "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
@@ -1675,6 +1764,14 @@
         "ulcerative_colitis",
         "crohns_disease",
         "ibd_general"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "supporting_excerpt"
+          ],
+          "record_id": "baseline-register:CLM-081"
+        }
       ],
       "verification_status": null
     },
@@ -1699,6 +1796,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-081",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-021",
       "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
@@ -1711,6 +1809,14 @@
         "ulcerative_colitis",
         "crohns_disease",
         "ibd_general"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "supporting_excerpt"
+          ],
+          "record_id": "prototype-v1:CLM-081"
+        }
       ],
       "verification_status": "direct_support_verified_official_ecco_article"
     },
@@ -1733,6 +1839,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-082",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-021",
       "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
@@ -1746,6 +1853,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "direct_support_verified_official_ecco_article"
     },
     {
@@ -1769,6 +1877,7 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-083",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-021",
       "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
@@ -1782,6 +1891,15 @@
       "topic": "fibre",
       "uc_applicability": [
         "crohns_disease"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "supporting_excerpt",
+            "uc_applicability"
+          ],
+          "record_id": "baseline-register:CLM-083"
+        }
       ],
       "verification_status": null
     },
@@ -1806,6 +1924,9 @@
       "publication_date": "2025",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-083",
+      "review_flags": [
+        "applicability lists ulcerative colitis, but the claim text itself refers only to Crohn's disease (the applicability may come from the whole source, not this finding)"
+      ],
       "review_status": "pending_human_review",
       "source_id": "SRC-021",
       "source_title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
@@ -1820,6 +1941,15 @@
         "ulcerative_colitis",
         "crohns_disease",
         "ibd_general"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "supporting_excerpt",
+            "uc_applicability"
+          ],
+          "record_id": "prototype-v1:CLM-083"
+        }
       ],
       "verification_status": "direct_support_verified_official_ecco_article"
     },
@@ -1842,6 +1972,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-084",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-022",
       "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
@@ -1855,6 +1986,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": "direct_support_verified_official_ecco_article"
     },
     {
@@ -1876,6 +2008,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-085",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-022",
       "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
@@ -1888,6 +2021,14 @@
       "topic": "core_condition_knowledge",
       "uc_applicability": [
         "crohns_disease"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "supporting_excerpt"
+          ],
+          "record_id": "baseline-register:CLM-085"
+        }
       ],
       "verification_status": null
     },
@@ -1910,6 +2051,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-085",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-022",
       "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
@@ -1922,6 +2064,14 @@
       "topic": "core_condition_knowledge",
       "uc_applicability": [
         "crohns_disease"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "supporting_excerpt"
+          ],
+          "record_id": "prototype-v1:CLM-085"
+        }
       ],
       "verification_status": "direct_support_verified_official_ecco_article"
     },
@@ -1946,6 +2096,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-086",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-022",
       "source_title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
@@ -1959,6 +2110,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": "direct_support_verified_official_ecco_article"
     },
     {
@@ -1987,6 +2139,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-087",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-023",
       "source_title": "Eating, Diet, & Nutrition for Crohn’s Disease",
@@ -2000,6 +2153,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2028,6 +2182,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-088",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-023",
       "source_title": "Eating, Diet, & Nutrition for Crohn’s Disease",
@@ -2041,6 +2196,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2067,6 +2223,7 @@
       "publication_date": "2024",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-089",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-023",
       "source_title": "Eating, Diet, & Nutrition for Crohn’s Disease",
@@ -2080,6 +2237,7 @@
       "uc_applicability": [
         "crohns_disease"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2101,6 +2259,7 @@
       "publication_date": "2026",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-092",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-024",
       "source_title": "What Should I Eat with IBD?",
@@ -2116,6 +2275,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": "verified_against_authoritative_public_page"
     },
     {
@@ -2144,6 +2304,7 @@
       "publication_date": "2026",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-093",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-025",
       "source_title": "Food and IBD",
@@ -2157,6 +2318,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2185,6 +2347,7 @@
       "publication_date": "2026",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-094",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-025",
       "source_title": "Food and IBD",
@@ -2198,6 +2361,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2226,6 +2390,7 @@
       "publication_date": "2026",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-095",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-025",
       "source_title": "Food and IBD",
@@ -2239,6 +2404,7 @@
         "crohns_disease",
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2260,6 +2426,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-096",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2270,6 +2437,15 @@
       "topic": null,
       "uc_applicability": [
         "ibd_general"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "baseline-register:CLM-096"
+        }
       ],
       "verification_status": null
     },
@@ -2290,6 +2466,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-096",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2302,6 +2479,15 @@
       "supporting_excerpt": "The recommendations have been adapted from the ESPEN Guideline: Clinical Nutrition in Surgery in a slightly modified way since the principles apply equally to the IBD patient undergoing surgical intervention. Evidence of ERAS in patients with IBD is sparse.",
       "topic": null,
       "uc_applicability": [],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "prototype-v1:CLM-096"
+        }
+      ],
       "verification_status": null
     },
     {
@@ -2323,6 +2509,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-097",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2333,6 +2520,15 @@
       "topic": null,
       "uc_applicability": [
         "ibd_general"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "baseline-register:CLM-097"
+        }
       ],
       "verification_status": null
     },
@@ -2353,6 +2549,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-097",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2364,6 +2561,15 @@
       "supporting_excerpt": "Therefore, no “oral IBD diet” can be generally recommended to promote remission in patients with IBD with active disease.",
       "topic": null,
       "uc_applicability": [],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "prototype-v1:CLM-097"
+        }
+      ],
       "verification_status": "PASS_direct_support_verified_official_pdf"
     },
     {
@@ -2385,6 +2591,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-098",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2397,6 +2604,15 @@
       "topic": null,
       "uc_applicability": [
         "crohns_disease"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "baseline-register:CLM-098"
+        }
       ],
       "verification_status": null
     },
@@ -2417,6 +2633,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-098",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2428,6 +2645,15 @@
       "supporting_excerpt": "CD exclusion diet (plus partial EN) should be considered as an alternative to exclusive EN in pediatric patients with mild to moderate CD to achieve remission.",
       "topic": null,
       "uc_applicability": [],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "prototype-v1:CLM-098"
+        }
+      ],
       "verification_status": "direct_support_verified_official_pdf"
     },
     {
@@ -2449,6 +2675,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-099",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2461,6 +2688,15 @@
       "topic": null,
       "uc_applicability": [
         "crohns_disease"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "baseline-register:CLM-099"
+        }
       ],
       "verification_status": null
     },
@@ -2481,6 +2717,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-099",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2492,6 +2729,15 @@
       "supporting_excerpt": "In adult patients, a CD exclusion diet can be considered with or without EN in mild to moderate active CD.",
       "topic": null,
       "uc_applicability": [],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "prototype-v1:CLM-099"
+        }
+      ],
       "verification_status": "direct_support_verified_official_pdf"
     },
     {
@@ -2513,6 +2759,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "prototype-v1:CLM-100",
+      "review_flags": [],
       "review_status": null,
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2525,6 +2772,15 @@
       "topic": null,
       "uc_applicability": [
         "crohns_disease"
+      ],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "baseline-register:CLM-100"
+        }
       ],
       "verification_status": null
     },
@@ -2545,6 +2801,7 @@
       "publication_date": "2023",
       "publication_date_precision": "year",
       "record_id": "baseline-register:CLM-100",
+      "review_flags": [],
       "review_status": "pending_human_review",
       "source_id": "SRC-026",
       "source_title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
@@ -2556,6 +2813,15 @@
       "supporting_excerpt": "Data on long-term effectiveness and possible risk of nutritional deficiencies or eating behavior disturbances due to long-term use of exclusion diets are not (yet) available.",
       "topic": null,
       "uc_applicability": [],
+      "variant_of": [
+        {
+          "differs_in": [
+            "source_url",
+            "uc_applicability"
+          ],
+          "record_id": "prototype-v1:CLM-100"
+        }
+      ],
       "verification_status": "direct_support_verified_official_pdf"
     },
     {
@@ -2580,6 +2846,7 @@
       "publication_date": "2023-03",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-115",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-028",
       "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
@@ -2591,6 +2858,7 @@
       "uc_applicability": [
         "ulcerative_colitis"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2615,6 +2883,7 @@
       "publication_date": "2023-03",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-116",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-028",
       "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
@@ -2626,6 +2895,7 @@
       "uc_applicability": [
         "ulcerative_colitis"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2651,6 +2921,7 @@
       "publication_date": "2023-03",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-117",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-028",
       "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
@@ -2662,6 +2933,7 @@
       "uc_applicability": [
         "ulcerative_colitis"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2687,6 +2959,7 @@
       "publication_date": "2023-03",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-118",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-028",
       "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
@@ -2698,6 +2971,7 @@
       "uc_applicability": [
         "ulcerative_colitis"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2721,6 +2995,7 @@
       "publication_date": "2023-03",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-119",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-028",
       "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
@@ -2732,6 +3007,7 @@
       "uc_applicability": [
         "ulcerative_colitis"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2755,6 +3031,7 @@
       "publication_date": "2023-03",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-120",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-028",
       "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
@@ -2766,6 +3043,7 @@
       "uc_applicability": [
         "ulcerative_colitis"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2790,6 +3068,7 @@
       "publication_date": "2023-03",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-121",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-028",
       "source_title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
@@ -2801,6 +3080,7 @@
       "uc_applicability": [
         "ulcerative_colitis"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2824,6 +3104,7 @@
       "publication_date": "2021-04",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-122",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-033",
       "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
@@ -2835,6 +3116,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2858,6 +3140,7 @@
       "publication_date": "2021-04",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-123",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-033",
       "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
@@ -2869,6 +3152,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2894,6 +3178,7 @@
       "publication_date": "2021-04",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-124",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-033",
       "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
@@ -2905,6 +3190,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2929,6 +3215,7 @@
       "publication_date": "2021-04",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-125",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-033",
       "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
@@ -2940,6 +3227,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -2965,6 +3253,7 @@
       "publication_date": "2021-04",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-126",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-033",
       "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
@@ -2976,6 +3265,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     },
     {
@@ -3000,6 +3290,7 @@
       "publication_date": "2021-04",
       "publication_date_precision": "month",
       "record_id": "uc-evidence-expansion:CLM-127",
+      "review_flags": [],
       "review_status": "pending_clinical_review",
       "source_id": "SRC-033",
       "source_title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
@@ -3011,6 +3302,7 @@
       "uc_applicability": [
         "ibd_general"
       ],
+      "variant_of": [],
       "verification_status": null
     }
   ],

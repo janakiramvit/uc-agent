@@ -14,9 +14,10 @@ from collections import Counter
 from pathlib import Path
 
 from phase2 import paths
-from phase2.classify import STATUSES, applicability_class, classify, find_conflicts
+from phase2.classify import STATUSES, applicability_class, classify, find_conflicts, review_flags
 from phase2.coverage import assign_question_ids, compute_coverage, compare_with_tree, load_questions
 from phase2.dedupe import content_hash, dedupe_exact
+from phase2.review import render as render_review
 from phase2.loaders import DatasetSummary, Record, load_all
 
 MANIFEST_SCHEMA = "phase2-checkpoint1-manifest/1"
@@ -24,6 +25,7 @@ MANIFEST_SCHEMA = "phase2-checkpoint1-manifest/1"
 
 def _row(r: Record, status: str, reasons: list[str], also_in: list[dict]) -> dict:
     return {
+        "review_flags": review_flags(r),
         "record_id": f"{r.dataset}:{r.claim_id}",
         "claim_id": r.claim_id,
         "originating_dataset": r.dataset,
@@ -53,6 +55,24 @@ def _row(r: Record, status: str, reasons: list[str], also_in: list[dict]) -> dic
     }
 
 
+_VARIANT_FIELDS = ("claim_text", "supporting_excerpt", "source_url", "locator", "source_id", "uc_applicability")
+
+
+def _annotate_variants(rows: list[dict]) -> None:
+    """A retained record that shares its claim ID with another retained record is a *variant*, not an
+    exact duplicate; say exactly which fields differ so an owner can see why both were kept."""
+    by_id: dict[str, list[dict]] = {}
+    for r in rows:
+        by_id.setdefault(r["claim_id"], []).append(r)
+    for rs in by_id.values():
+        for r in rs:
+            r["variant_of"] = [
+                {"record_id": o["record_id"],
+                 "differs_in": [f for f in _VARIANT_FIELDS
+                                if (r[f] or None) != (o[f] or None)]}
+                for o in rs if o is not r]
+
+
 def build(records: list[Record] | None = None, summaries: list[DatasetSummary] | None = None,
           questions: list[dict] | None = None) -> dict:
     if records is None:
@@ -68,6 +88,7 @@ def build(records: list[Record] | None = None, summaries: list[DatasetSummary] |
         status, reasons = classify(r, conflicts)
         rows.append(_row(r, status, reasons, dd.merged.get(f"{r.dataset}:{r.claim_id}", [])))
 
+    _annotate_variants(rows)
     before_by_ds = Counter(r.dataset for r in records)
     after_by_ds = Counter(r["originating_dataset"] for r in rows)
     coverage = compute_coverage(questions, rows)
@@ -132,8 +153,9 @@ def write_outputs(result: dict, out_dir: Path = paths.OUTPUT_DIR) -> list[Path]:
         "tree-disagreement.json": result["tree_comparison"],
     }
     written = []
-    (out_dir / "inventory-report.md").write_text(render_report(result))
-    written.append(out_dir / "inventory-report.md")
+    for name, text in (("inventory-report.md", render_report(result)), ("owner-review.md", render_review(result))):
+        (out_dir / name).write_text(text)
+        written.append(out_dir / name)
     for name, obj in files.items():
         p = out_dir / name
         p.write_text(json.dumps(obj, indent=2, sort_keys=True, ensure_ascii=False) + "\n")

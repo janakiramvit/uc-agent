@@ -116,3 +116,19 @@ def classify(record: Record, conflicts: dict[str, list[str]]) -> tuple[str, list
     else:
         status = "usable"
     return status, reasons
+
+
+_CD_TEXT_RE = re.compile(r"\b(crohn'?s?|CD)\b", re.I)
+_UC_TEXT_RE = re.compile(r"\b(ulcerative colitis|UC)\b", re.I)
+
+
+def review_flags(record: Record) -> list[str]:
+    """Advisory flags for the owner. They never change the status - they point at things a reviewer should
+    look at before relying on a claim."""
+    flags = []
+    text = record.claim_text or ""
+    if applicability_class(record.uc_applicability) == "uc_specific" and _CD_TEXT_RE.search(text) \
+            and not _UC_TEXT_RE.search(text):
+        flags.append("applicability lists ulcerative colitis, but the claim text itself refers only to Crohn's disease "
+                     "(the applicability may come from the whole source, not this finding)")
+    return flags
