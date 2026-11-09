@@ -32,6 +32,7 @@ class Record:
     review_status: str | None = None
     verification_status: str | None = None
     declared_conflict_note: str | None = None
+    limitations: str | None = None
     native_question_ids: list[str] = field(default_factory=list)
     topic: str | None = None
     source_resolved: bool = True
@@ -101,6 +102,7 @@ def load_production(path: Path = paths.PRODUCTION_JSON) -> tuple[list[Record], D
             evidence_status=_clean(c.get("prototypeEligibilityStatus")),
             review_status=_clean(s.get("reviewStatus")) if s else None,
             topic=_clean(c.get("topic")), source_resolved=s is not None, in_production=True,
+            limitations=_clean(c.get("limitations")),
         ))
     return recs, DatasetSummary(paths.DS_PRODUCTION, True, [_rel(path)], len(recs), len(sources))
 
@@ -140,6 +142,7 @@ def load_baseline(path: Path = paths.BASELINE_REGISTER_XLSX) -> tuple[list[Recor
             disease_context=split_multi(c.get("Disease context")),
             evidence_status=_clean(c.get("Evidence status")), review_status=_clean(c.get("Review status")),
             verification_status=_clean(c.get("Verification status")), topic=_clean(c.get("Topic")),
+            limitations=_clean(c.get("Limitations")),
             source_resolved=s is not None,
         ))
     notes = []
@@ -172,6 +175,7 @@ def load_expansion(claims_path: Path = paths.EXPANSION_CLAIMS,
             evidence_status=_clean(c.get("lifecycleState")) or _clean(c.get("evidenceStrength")),
             review_status=_clean(c.get("reviewStatus")),
             declared_conflict_note=_clean(c.get("conflictsWithExistingEvidence")),
+            limitations=_clean(c.get("limitations")),
             native_question_ids=list(c.get("mappedPatientQuestionIds") or []),
             source_resolved=s is not None,
         ))
@@ -182,26 +186,22 @@ def load_expansion(claims_path: Path = paths.EXPANSION_CLAIMS,
                                 len(recs), len(sources), notes)
 
 
-def load_daily(artifact_dir: Path = paths.DAILY_ARTIFACT_DIR) -> tuple[list[Record], DatasetSummary]:
+def load_daily(manifest_path: Path = paths.DAILY_MANIFEST) -> tuple[list[Record], DatasetSummary]:
     """Daily-discovery runs persist only *redacted* run reports (no claim text/excerpts), so they can
-    contribute counts but never claim records. Any run reporting extracted claims whose text we
-    do not hold is surfaced as a note, not invented."""
-    if not artifact_dir.exists():
-        return [], DatasetSummary(paths.DS_DAILY, False, [_rel(artifact_dir)], notes=["directory missing"])
-    files = sorted(artifact_dir.glob("redacted-run-*.json"))
-    statuses: dict[str, int] = {}
-    claims_reported = sources_reported = 0
-    for f in files:
-        d = json.loads(f.read_text())
-        statuses[d.get("status", "?")] = statuses.get(d.get("status", "?"), 0) + 1
-        claims_reported += int(d.get("counters", {}).get("claimsExtracted", 0))
-        sources_reported += int(d.get("counters", {}).get("sourcesAccepted", 0))
-    notes = [f"{len(files)} redacted run report(s); statuses={statuses}",
-             f"claimsExtracted reported across runs={claims_reported}; sourcesAccepted={sources_reported}",
+    contribute counts but never claim records. Read from the committed per-run manifest (counts + sha256),
+    which phase2.inputs regenerates from automation/artifact. Runs reporting extracted claims whose text we
+    do not hold are surfaced as a note, never invented."""
+    if not manifest_path.exists():
+        return [], DatasetSummary(paths.DS_DAILY, False, [_rel(manifest_path)], notes=["manifest missing"])
+    m = json.loads(manifest_path.read_text())
+    t = m["totals"]
+    notes = [f"{m['run_count']} redacted run report(s); statuses={m['by_status']}",
+             f"claimsExtracted reported across runs={t['claimsExtracted']}; sourcesAccepted={t['sourcesAccepted']}; "
+             f"zero-claim runs={m['zero_claim_runs']}",
              "run artifacts are redacted by design (no claim text); they cannot yield claim records"]
-    if claims_reported:
+    if t["claimsExtracted"]:
         notes.append("WARNING: runs report extracted claims but no claim text is stored locally")
-    return [], DatasetSummary(paths.DS_DAILY, True, [_rel(artifact_dir)], 0, sources_reported, notes)
+    return [], DatasetSummary(paths.DS_DAILY, True, [_rel(manifest_path)], 0, t["sourcesAccepted"], notes)
 
 
 def load_all() -> tuple[list[Record], list[DatasetSummary]]:

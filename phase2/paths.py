@@ -11,8 +11,9 @@ BASELINE_REGISTER_XLSX = REPO / "knowledge" / "ibd-research-review" / "ibd-evide
 EXPANSION_DIR = REPO / "knowledge" / "uc-evidence-expansion"
 EXPANSION_CLAIMS = EXPANSION_DIR / "candidate-claims.json"
 EXPANSION_SOURCES = EXPANSION_DIR / "sources.json"
-DAILY_ARTIFACT_DIR = REPO / "automation" / "artifact"
-QUESTION_TREE = REPO / "uc_39_question_tree.json"
+DAILY_ARTIFACT_DIR = REPO / "automation" / "artifact"          # not committed; see inputs/daily-discovery-manifest.json
+QUESTION_TREE = Path(__file__).resolve().parent / "inputs" / "question-tree.min.json"
+DAILY_MANIFEST = Path(__file__).resolve().parent / "inputs" / "daily-discovery-manifest.json"
 TOPIC_QUESTION_MAP = Path(__file__).resolve().parent / "config" / "topic_question_map.json"
 OUTPUT_DIR = Path(__file__).resolve().parent / "output"
 

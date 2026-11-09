@@ -15,7 +15,7 @@ from pathlib import Path
 
 from phase2 import paths
 from phase2.classify import STATUSES, applicability_class, classify, find_conflicts
-from phase2.coverage import assign_question_ids, compute_coverage, load_questions
+from phase2.coverage import assign_question_ids, compute_coverage, compare_with_tree, load_questions
 from phase2.dedupe import content_hash, dedupe_exact
 from phase2.loaders import DatasetSummary, Record, load_all
 
@@ -42,6 +42,8 @@ def _row(r: Record, status: str, reasons: list[str], also_in: list[dict]) -> dic
         "evidence_status": r.evidence_status,
         "review_status": r.review_status,
         "verification_status": r.verification_status,
+        "limitations": r.limitations,
+        "topic": r.topic,
         "in_production": r.in_production,
         "mapped_question_ids": r.mapped_question_ids,
         "mapping_basis": r.mapping_basis,
@@ -69,6 +71,7 @@ def build(records: list[Record] | None = None, summaries: list[DatasetSummary] |
     before_by_ds = Counter(r.dataset for r in records)
     after_by_ds = Counter(r["originating_dataset"] for r in rows)
     coverage = compute_coverage(questions, rows)
+    tree_comparison = compare_with_tree(coverage)
 
     return {
         "schema": MANIFEST_SCHEMA,
@@ -85,6 +88,7 @@ def build(records: list[Record] | None = None, summaries: list[DatasetSummary] |
         "dedupe_log": [{"retained": k, "collapsed": v} for k, v in sorted(dd.merged.items())],
         "claims": rows,
         "coverage": coverage,
+        "tree_comparison": tree_comparison,
     }
 
 
@@ -125,6 +129,7 @@ def write_outputs(result: dict, out_dir: Path = paths.OUTPUT_DIR) -> list[Path]:
     files = {
         "manifest.json": manifest,
         "coverage.json": result["coverage"],
+        "tree-disagreement.json": result["tree_comparison"],
     }
     written = []
     (out_dir / "inventory-report.md").write_text(render_report(result))

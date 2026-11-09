@@ -1,0 +1,96 @@
+{
+  "agree": 28,
+  "disagree": 11,
+  "disagreements": [
+    {
+      "evaluated_all_possessed": "partial",
+      "evaluated_production_servable": "not_covered",
+      "level": 1,
+      "question_id": "L1-1",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "partial",
+      "evaluated_production_servable": "not_covered",
+      "level": 2,
+      "question_id": "L2-1.1",
+      "reason": "only Crohn's-only claims map here; they cannot count for UC",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-1.1.1",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "partial",
+      "evaluated_production_servable": "not_covered",
+      "level": 2,
+      "question_id": "L2-1.3",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-1.3.1",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-1.3.2",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-2.2.1",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-3.1.1",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-3.1.2",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-3.2.2",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    },
+    {
+      "evaluated_all_possessed": "not_covered",
+      "evaluated_production_servable": "not_covered",
+      "level": 3,
+      "question_id": "L3-3.2.3",
+      "reason": "tree marks this partial, but no production claim is mapped to this question under the evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)",
+      "tree_prior": "partial"
+    }
+  ],
+  "evaluation_basis": "evidence-derived mapping (phase2/config/topic_question_map.json + candidate source-provided mappings); tree annotation informational only",
+  "nodes_compared": 39
+}

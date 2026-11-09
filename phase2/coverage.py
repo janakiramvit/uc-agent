@@ -33,6 +33,7 @@ def load_questions(path: Path = paths.QUESTION_TREE) -> list[dict]:
         "question_id": n["question_id"], "level": n["level"],
         "parent_question_id": n.get("parent_question_id") or None,
         "question": n["normalized_question"], "urgency_clinical_risk": n.get("urgency_clinical_risk"),
+        # informational only - never used to compute coverage (see phase2/MAPPING-DECISION.md)
         "prior_tree_coverage": n.get("current_evidence_package_coverage"),
     } for n in nodes]
 
@@ -122,3 +123,33 @@ def compute_coverage(questions: list[dict], manifest_rows: list[dict]) -> dict:
         result["scopes"][scope] = {"all_39": tally(None), "leaf_level_3": tally(3),
                                    "level_2": tally(2), "level_1": tally(1)}
     return result
+
+
+def compare_with_tree(coverage: dict) -> dict:
+    """Document - not 'fix' - where the question tree's own prior coverage annotation disagrees with the
+    evidence-derived evaluation. The tree annotation is never an input to compute_coverage."""
+    tree_to_expected = {"none": {"not_covered"}, "partial": {"partial", "covered"}}
+    rows, agree = [], 0
+    for qid, q in coverage["questions"].items():
+        prior = q["prior_tree_coverage"]
+        mine = q["scopes"]["production_servable"]["status"]
+        ok = mine in tree_to_expected.get(prior, set())
+        agree += ok
+        if ok:
+            continue
+        s = q["scopes"]["production_servable"]
+        a = q["scopes"]["all_possessed"]
+        if s["crohns_only_not_counted"] and not s["direct_claims"]:
+            why = "only Crohn's-only claims map here; they cannot count for UC"
+        elif prior == "partial" and not (s["direct_claims"] or s["crohns_only_not_counted"]):
+            why = ("tree marks this partial, but no production claim is mapped to this question under the "
+                   "evaluation mapping (the tree's own basis for 'partial' is not recorded in the file)")
+        elif prior == "none":
+            why = "production holds UC-applicable material mapped here that the tree did not count"
+        else:
+            why = "no usable UC-applicable production claim mapped"
+        rows.append({"question_id": qid, "level": q["level"], "tree_prior": prior, "evaluated_production_servable": mine,
+                     "evaluated_all_possessed": a["status"], "reason": why})
+    return {"evaluation_basis": "evidence-derived mapping (phase2/config/topic_question_map.json + candidate "
+                                "source-provided mappings); tree annotation informational only",
+            "nodes_compared": len(coverage["questions"]), "agree": agree, "disagree": len(rows), "disagreements": rows}
