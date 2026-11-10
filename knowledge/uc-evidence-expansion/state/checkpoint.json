@@ -1,9 +1,9 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-5a6475e5397f",
+  "runId": "uc-exp-d27c0ed1114a",
   "runStartTime": "2026-09-02T13:08:34Z",
-  "runFinishTime": "2026-11-10T01:37:31Z",
-  "lastCheckpointTime": "2026-11-10T01:37:31Z",
+  "runFinishTime": "2026-11-10T01:38:38Z",
+  "lastCheckpointTime": "2026-11-10T01:38:38Z",
   "runStatus": "completed",
   "currentTopicId": "T-UCX-03",
   "currentSearchStrategyId": null,
@@ -577,6 +577,62 @@
       "query": "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/10..2026/11/10]",
       "resultsScreened": 0,
       "executedAt": "2026-11-10T01:37:31Z"
+    },
+    {
+      "searchId": "clinicaltrials-d1114a",
+      "service": "clinicaltrials",
+      "query": "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-10,2026-11-10]",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
+    },
+    {
+      "searchId": "aga-d1114a",
+      "service": "aga",
+      "query": "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American G",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
+    },
+    {
+      "searchId": "acg-d1114a",
+      "service": "acg",
+      "query": "site:gi.org (robots-permitting listing; window 2026-11-10..2026-11-10) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenter",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
+    },
+    {
+      "searchId": "ecco-d1114a",
+      "service": "ecco",
+      "query": "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
+    },
+    {
+      "searchId": "nice-d1114a",
+      "service": "nice",
+      "query": "site:www.nice.org.uk (robots-permitting listing; window 2026-11-10..2026-11-10)",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
+    },
+    {
+      "searchId": "bsg-d1114a",
+      "service": "bsg",
+      "query": "site:www.bsg.org.uk (robots-permitting listing; window 2026-11-10..2026-11-10) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta]",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
+    },
+    {
+      "searchId": "europepmc-d1114a",
+      "service": "europepmc",
+      "query": "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-10 TO 2026-11-10]) NOT SRC:PPR",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
+    },
+    {
+      "searchId": "pubmed-d1114a",
+      "service": "pubmed",
+      "query": "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/10..2026/11/10]",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-10T01:38:38Z"
     }
   ],
   "pendingSearches": [],
@@ -967,7 +1023,7 @@
     "europepmc_search": 1
   },
   "counters": {
-    "elapsedResearchSeconds": 31.5,
+    "elapsedResearchSeconds": 27.1,
     "queriesConsumed": 16,
     "recordsScreened": 0,
     "sourcesAccepted": 0,
@@ -987,12 +1043,12 @@
   },
   "stopReason": "all_providers_attempted",
   "nextRecommendedOperation": {
-    "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-103/CLM-196 onward.",
+    "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-104/CLM-197 onward.",
     "topicId": "T-UCX-03",
     "searchId": null,
     "cursor": 0,
-    "firstNewSourceId": "SRC-103",
-    "firstNewClaimId": "CLM-196",
+    "firstNewSourceId": "SRC-104",
+    "firstNewClaimId": "CLM-197",
     "doNot": [
       "approve any source or claim",
       "download a PDF whose redistribution licence is not established",
@@ -1003,9 +1059,9 @@
   },
   "schemaMigratedFrom": "uc-evidence-expansion-1.0.0",
   "promptVersion": "uc-daily-evidence-discovery-v1.0.0",
-  "workflowRunUrl": "",
-  "triggeringCommit": "",
-  "sourceDataCutoff": "2026-11-10T01:37:31Z",
+  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/42737160838",
+  "triggeringCommit": "fcdbe6dc2d0f19a618cf7487c3b599839d8f11d9",
+  "sourceDataCutoff": "2026-11-10T01:38:38Z",
   "duplicateRecords": [],
   "limitConsumption": {
     "queries": "16/40",
@@ -1030,8 +1086,8 @@
       "topicId": "T-UCX-03",
       "searchId": null,
       "cursor": 0,
-      "firstNewSourceId": "SRC-102",
-      "firstNewClaimId": "CLM-195"
+      "firstNewSourceId": "SRC-103",
+      "firstNewClaimId": "CLM-196"
     },
     "resolution": "checkpoint is authoritative; prompt hints ignored"
   }

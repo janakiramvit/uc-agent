@@ -47,6 +47,18 @@
       "level": "INFO",
       "message": "provider healthy (wide-window canary returned 6); no new matching records in 2026-11-10 .. 2026-11-10",
       "provider": "bsg"
+    },
+    {
+      "code": "UNEXPECTED_ZERO",
+      "level": "WARNING",
+      "message": "2 consecutive zero-result runs for a provider that normally returns results daily",
+      "provider": "europepmc"
+    },
+    {
+      "code": "UNEXPECTED_ZERO",
+      "level": "WARNING",
+      "message": "2 consecutive zero-result runs for a provider that normally returns results daily",
+      "provider": "pubmed"
     }
   ],
   "date": "2026-11-10",
@@ -55,7 +67,7 @@
     "acg": {
       "accepted": 0,
       "access_limits": [],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 7,
       "claims_extracted": 0,
       "deferred": 0,
@@ -82,7 +94,7 @@
       "searches_attempted": 2,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 7); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "aga": {
@@ -90,7 +102,7 @@
       "access_limits": [
         "gastro.org: robots.txt disallows automated access to /guidelines/"
       ],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 11,
       "claims_extracted": 0,
       "deferred": 0,
@@ -117,13 +129,13 @@
       "searches_attempted": 1,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 11); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "bsg": {
       "accepted": 0,
       "access_limits": [],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 6,
       "claims_extracted": 0,
       "deferred": 0,
@@ -150,13 +162,13 @@
       "searches_attempted": 2,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 6); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "clinicaltrials": {
       "accepted": 0,
       "access_limits": [],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 539,
       "claims_extracted": 0,
       "deferred": 0,
@@ -182,7 +194,7 @@
       "searches_attempted": 1,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 539); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "ecco": {
@@ -190,7 +202,7 @@
       "access_limits": [
         "www.ecco-ibd.eu: robots.txt returned HTTP 403 (site refuses automated clients)"
       ],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 8,
       "claims_extracted": 0,
       "deferred": 0,
@@ -217,13 +229,13 @@
       "searches_attempted": 1,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 8); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "europepmc": {
       "accepted": 0,
       "access_limits": [],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 14562,
       "claims_extracted": 0,
       "deferred": 0,
@@ -249,13 +261,13 @@
       "searches_attempted": 1,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 14562); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "nice": {
       "accepted": 0,
       "access_limits": [],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 2,
       "claims_extracted": 0,
       "deferred": 0,
@@ -281,13 +293,13 @@
       "searches_attempted": 2,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 2); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "pubmed": {
       "accepted": 0,
       "access_limits": [],
-      "advanced_cutoff": true,
+      "advanced_cutoff": false,
       "canary_hits": 4535,
       "claims_extracted": 0,
       "deferred": 0,
@@ -313,11 +325,11 @@
       "searches_attempted": 1,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-10 .. 2026-11-10; first run (no backfill before the discovery start date)",
+      "window": "2026-11-10 .. 2026-11-10",
       "zero_reason": "provider healthy (wide-window canary returned 4535); no new matching records in 2026-11-10 .. 2026-11-10"
     }
   },
-  "runId": "uc-exp-5a6475e5397f",
+  "runId": "uc-exp-d27c0ed1114a",
   "schema": "uc-provider-funnel/1",
   "totals": {
     "accepted": 0,
