@@ -101,7 +101,9 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
             journal.append("provider_invalid_query", f"{prov.name}: {exc}")
             ps["consecutiveFailures"] = ps.get("consecutiveFailures", 0) + 1
             continue
-        except ProviderError as exc:
+        except Exception as exc:  # noqa: BLE001 - ONE provider must never take the other seven down with it
+            if not isinstance(exc, ProviderError):
+                exc = ProviderError(f"{prov.name}: unexpected {type(exc).__name__}")
             f.status, f.error, f.searches_failed = "failed", str(exc), 1
             f.searches_attempted = 1
             alerts.append(Alert(ERROR, "PROVIDER_FAILURE", prov.name, str(exc)))
@@ -129,9 +131,10 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
         if needs_canary and clock.may_start_new_work():
             try:
                 st.queries += 1
-                f.canary_hits = prov.canary_count(canary_http or http, today)
-            except ProviderError as exc:
-                alerts.append(Alert(WARNING, "CANARY_FAILED", prov.name, str(exc)))
+                f.canary_hits = prov.canary_count(canary_http or http, today, wp.window)
+            except Exception as exc:  # noqa: BLE001 - a failed canary is itself reported, never fatal
+                alerts.append(Alert(WARNING, "CANARY_FAILED", prov.name,
+                                    f"{prov.name}: canary could not run ({type(exc).__name__})"))
         if f.canary_hits is not None and out.hit_count > f.canary_hits and prov.name in ("europepmc", "pubmed", "clinicaltrials"):
             f.status = "invalid_query"
             f.error = (f"window returned {out.hit_count} hits but the wider {365}-day canary only {f.canary_hits}: "
@@ -168,6 +171,7 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
         queues.setdefault(rec.get("provider", ""), []).append(rec)
     order = [p.name for p in rotated(providers, today) if p.name in queues]
     rejected_memory = {n: set(provider_state.provider(pstate, n).get("rejectedKeys", [])) for n in order}
+    rejected_new: dict[str, list[str]] = {}
     interleaved: list[dict] = []
     while any(queues[n] for n in order):
         for n in order:
@@ -196,11 +200,14 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
             disp = screening.screen(rec, index=index, topic_id=TOPIC_ID, topic_keywords=())
         st.dispositions.append(disp)
         d = rec.get("publicationDate") or rec.get("pubYear") or ""
-        if d and d > st.latest_pub_seen:
-            st.latest_pub_seen = d
+        if d and not disp.evidence_type in ("ongoing_trial", "completed_trial_record") \
+                and d[:10] <= today.isoformat()[:len(d[:10])] and d > st.latest_pub_seen:
+            st.latest_pub_seen = d          # registry completion dates can lie in the future: never used as a cutoff
         index.add(CandidateKey.from_record(rec))
         _tally(f, disp)
-        if disp.status == "rejected" and ident:
+        if disp.status == "rejected" and ident and len((rec.get("abstractText") or "").strip()) >= 120:
+            # remembered only when judged on a real abstract: a title-only record may be re-judged once its abstract appears
+            rejected_new.setdefault(name, []).append(ident)
             rejected_memory.setdefault(name, set()).add(ident)
         if disp.status != "accepted":
             continue
@@ -237,7 +244,7 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
             },
         })
 
-    # ---- 4. state: cutoffs advance only for fully retrieved + fully screened windows ----------------------
+    # ---- 4. state: a cutoff advances ONLY over days that were fully retrieved AND fully screened -----------------
     for prov in providers:
         f = funnel.providers.get(prov.name)
         if f is None:
@@ -245,20 +252,38 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
         ps = provider_state.provider(pstate, prov.name)
         out = outcomes.get(prov.name)
         wp = windows.get(prov.name)
-        complete = (out is not None and not out.truncated and f.not_screened_limit == 0
-                    and f.status not in ("failed", "invalid_query", "skipped_deadline", "access_limited"))
-        if f.status == "ok" and (out is None or out.truncated or f.not_screened_limit):
-            f.status = "partial"
-        if complete and wp is not None:
-            ps["lastSuccessfulCutoff"] = wp.window.end.isoformat()
+        healthy = f.status in ("ok", "no_new_records", "partial")          # not failed / invalid / skipped / access-limited / unexplained zero
+        new_cutoff = None
+        if out is not None and wp is not None and healthy and f.not_screened_limit == 0:
+            if out.covered_through is not None:
+                new_cutoff = out.covered_through
+            elif not out.truncated:
+                new_cutoff = wp.window.end
+        complete = new_cutoff is not None and new_cutoff >= wp.window.end
+        if new_cutoff is not None and (ps.get("lastSuccessfulCutoff") is None
+                                       or new_cutoff.isoformat() > ps["lastSuccessfulCutoff"]):
+            ps["lastSuccessfulCutoff"] = new_cutoff.isoformat()
             ps["lastSuccessfulRunAt"] = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             f.advanced_cutoff = True
-        elif out is not None and (out.truncated or f.not_screened_limit):
-            alerts.append(Alert(WARNING, "WINDOW_NOT_COMPLETE", prov.name,
-                                "window not fully retrieved/screened; cutoff NOT advanced - continues next run"))
+        if f.status == "ok" and not complete and out is not None:
+            f.status = "partial"
+        if out is not None and healthy:
+            if complete:
+                ps["consecutiveIncomplete"] = 0
+            else:
+                ps["consecutiveIncomplete"] = ps.get("consecutiveIncomplete", 0) + 1
+                alerts.append(Alert(WARNING, "WINDOW_NOT_COMPLETE", prov.name,
+                                    "window not fully retrieved/screened; the cutoff advanced only over complete days "
+                                    "and the rest continues next run"))
+                if ps["consecutiveIncomplete"] >= config.REPEATED_INCOMPLETE_ERROR:
+                    alerts.append(Alert(ERROR, "REPEATED_INCOMPLETE_WINDOW", prov.name,
+                                        f"{ps['consecutiveIncomplete']} consecutive runs could not complete the window "
+                                        "(busy day or screening limits): records may be waiting"))
         ps["lastStatus"] = f.status
-        ps["rejectedKeys"] = sorted(rejected_memory.get(prov.name, set(ps.get("rejectedKeys", []))))[-provider_state.MAX_REJECTED_KEYS:]
-        if hasattr(prov, "listing_seen") and prov.listing_seen:
+        old = [k for k in ps.get("rejectedKeys", []) if k not in set(rejected_new.get(prov.name, []))]
+        ps["rejectedKeys"] = (old + rejected_new.get(prov.name, []))[-provider_state.MAX_REJECTED_KEYS:]
+        if complete and getattr(prov, "listing_seen", None):
+            # the site-listing baseline is committed only together with the cutoff, so a lost window cannot hide new items
             ps["knownListingUrls"] = sorted(prov.listing_seen | set(ps.get("knownListingUrls", [])))[:500]
 
     st.stop_reason = st.stop_reason if st.stop_reason != "no_research_executed" else "all_providers_attempted"
@@ -289,6 +314,12 @@ def _explain_zero(prov: Provider, f: ProviderFunnel, ps: dict, alerts: list[Aler
     if c is None:
         f.status, f.zero_reason = "zero_unexplained", "0 results and the wide-window canary could not be run"
         alerts.append(Alert(WARNING, "UNEXPECTED_ZERO", prov.name, f.zero_reason))
+        return
+    if c == 0 and not prov.canary_zero_is_error:
+        f.status = "no_new_records"
+        f.zero_reason = ("0 results; the wide-window canary is also 0, which is plausible for a body that publishes rarely "
+                         "- query health could not be confirmed this run")
+        alerts.append(Alert(WARNING, "ZERO_CANARY_UNCONFIRMED", prov.name, f.zero_reason))
         return
     if c == 0:
         f.status = "invalid_query"

@@ -100,6 +100,8 @@ def parse_pubmed_xml(xml_text: str) -> list[dict]:
     from defusedxml import ElementTree as ET     # refuses entity-expansion / external entities
 
     root = ET.fromstring(xml_text)
+    if root.tag != "PubmedArticleSet":
+        raise RuntimeError("efetch returned something other than a PubmedArticleSet")
     out = []
     for art in root.findall("PubmedArticle"):
         mc = art.find("MedlineCitation")

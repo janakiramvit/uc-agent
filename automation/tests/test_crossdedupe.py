@@ -54,3 +54,20 @@ def test_different_papers_are_not_merged_and_short_titles_do_not_merge():
 def test_duplicate_within_one_provider_is_counted_against_that_provider():
     m = crossdedupe.merge([rec("pubmed", pmid="5"), rec("pubmed", pmid="5")])
     assert len(m.records) == 1 and m.absorbed_by_provider == {"pubmed": 1}
+
+
+def test_two_versions_of_a_guideline_with_the_same_title_but_different_dois_are_not_merged():
+    t = "ACG Clinical Guideline: Ulcerative Colitis in Adults"
+    v1 = rec("acg", title=t, doi="10.14309/ajg.2019.1", pmid="1", evidenceType="clinical_guideline")
+    v2 = rec("pubmed", title=t, doi="10.14309/ajg.2025.2", pmid="2", evidenceType="clinical_guideline")
+    assert len(crossdedupe.merge([v1, v2]).records) == 2
+
+
+def test_title_only_prior_duplicate_rule_does_not_swallow_a_new_version_with_its_own_doi():
+    from uc_evidence_discovery.dedup import CandidateKey, ProcessedIndex
+    idx = ProcessedIndex()
+    idx.add(CandidateKey.from_record({"title": "ACG Clinical Guideline: Ulcerative Colitis in Adults", "doi": "10.1/old"}))
+    new_version = CandidateKey.from_record({"title": "ACG Clinical Guideline: Ulcerative Colitis in Adults", "doi": "10.1/new"})
+    assert idx.duplicate_reason(new_version) is None
+    no_ids = CandidateKey.from_record({"title": "ACG Clinical Guideline: Ulcerative Colitis in Adults"})
+    assert idx.duplicate_reason(no_ids) is not None

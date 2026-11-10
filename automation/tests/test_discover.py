@@ -34,11 +34,13 @@ def make_record(i: int, provider: str, **kw) -> dict:
 
 class FakeProvider(Provider):
     def __init__(self, name, records=None, *, error=None, canary=100000, hits=None, truncated=False, access=None,
-                 expects_daily=False, evidence_type=EvidenceType.PUBLISHED_STUDY):
+                 expects_daily=False, evidence_type=EvidenceType.PUBLISHED_STUDY, covered=None, canary_error=True):
         self.name, self.label, self.evidence_type = name, name.upper(), evidence_type
         self.expects_daily_results = expects_daily
         self._records, self._error, self._canary = list(records or []), error, canary
         self._hits, self._truncated, self._access = hits, truncated, access or []
+        self._covered = covered
+        self.canary_zero_is_error = canary_error
         self.windows: list[Window] = []
         self.searched = 0
 
@@ -51,10 +53,12 @@ class FakeProvider(Provider):
         if self._error:
             raise self._error
         recs = [dict(r) for r in self._records]
+        covered = self._covered(window) if callable(self._covered) else self._covered
         return SearchOutcome(records=recs, hit_count=self._hits if self._hits is not None else len(recs), searches=1,
-                             queries=[self.build_query(window)], truncated=self._truncated, access_limits=list(self._access))
+                             queries=[self.build_query(window)], truncated=self._truncated, access_limits=list(self._access),
+                             covered_through=covered)
 
-    def canary_count(self, http, today):
+    def canary_count(self, http, today, window=None):
         return self._canary
 
 
@@ -289,11 +293,72 @@ def test_missed_run_dates_are_reported_loudly():
     assert "2026-11-11, 2026-11-12, 2026-11-13" in alert.message and st.missed_dates == ["2026-11-11", "2026-11-12", "2026-11-13"]
 
 
-def test_truncated_window_does_not_advance_the_cutoff_and_alerts():
+def test_truncated_window_without_any_complete_day_does_not_advance_the_cutoff_and_alerts():
     st, ps = run_once([FakeProvider("europepmc", [make_record(1, "europepmc")], hits=500, truncated=True)])
     assert ps["providers"]["europepmc"]["lastSuccessfulCutoff"] is None
     assert ("WARNING", "WINDOW_NOT_COMPLETE", "europepmc") in codes(st)
     assert st.funnel.providers["europepmc"].status == "partial"
+
+
+def test_a_busy_day_cannot_deadlock_catch_up_the_cutoff_advances_over_the_complete_days():
+    ps = provider_state.empty_state()
+    _, ps = run_once([FakeProvider("europepmc", [make_record(1, "europepmc")])], pstate=ps)       # cutoff 11-10
+    # 4 days later: days 10,11,12 complete, day 13 too busy (truncated) -> cutoff moves to 11-12, not stuck at 11-10
+    p = FakeProvider("europepmc", [make_record(2, "europepmc")], hits=900, truncated=True,
+                     covered=dt.date(2026, 11, 12))
+    st, ps = run_once([p], pstate=ps, today=dt.date(2026, 11, 14))
+    assert ps["providers"]["europepmc"]["lastSuccessfulCutoff"] == "2026-11-12"
+    assert ("WARNING", "WINDOW_NOT_COMPLETE", "europepmc") in codes(st)
+
+
+def test_repeated_incomplete_windows_escalate_to_an_error():
+    ps = provider_state.empty_state()
+    levels = []
+    for i in range(3):
+        st, ps = run_once([FakeProvider("europepmc", [make_record(i, "europepmc")], hits=900, truncated=True)],
+                          pstate=ps, today=TODAY + dt.timedelta(days=i))
+        levels.append(("ERROR", "REPEATED_INCOMPLETE_WINDOW", "europepmc") in codes(st))
+    assert levels == [False, False, True]
+
+
+def test_one_provider_raising_any_exception_does_not_take_down_the_run():
+    class Boom(FakeProvider):
+        def search_window(self, http, window, *, max_pages):
+            raise RuntimeError("html error page parsed as json")
+    st, ps = run_once([Boom("pubmed"), FakeProvider("europepmc", [make_record(1, "europepmc")])])
+    assert st.funnel.providers["pubmed"].status == "failed" and st.funnel.providers["europepmc"].accepted == 1
+    assert ("ERROR", "PROVIDER_FAILURE", "pubmed") in codes(st)
+
+
+def test_zero_unexplained_does_not_advance_the_cutoff():
+    class NoCanary(FakeProvider):
+        def canary_count(self, http, today, window=None):
+            raise ProviderUnavailable("canary down")
+    st, ps = run_once([NoCanary("europepmc", [], expects_daily=True)])
+    assert st.funnel.providers["europepmc"].status == "zero_unexplained"
+    assert ps["providers"]["europepmc"]["lastSuccessfulCutoff"] is None
+
+
+def test_guideline_body_with_zero_window_and_zero_canary_is_a_warning_not_an_error():
+    st, ps = run_once([FakeProvider("aga", [], canary=0, canary_error=False,
+                                    evidence_type=EvidenceType.CLINICAL_GUIDELINE)])
+    f = st.funnel.providers["aga"]
+    assert f.status == "no_new_records" and not codes(st, "ERROR")
+    assert ("WARNING", "ZERO_CANARY_UNCONFIRMED", "aga") in codes(st)
+    assert ps["providers"]["aga"]["lastSuccessfulCutoff"] == "2026-11-10"
+
+
+def test_listing_baseline_is_not_committed_when_the_window_was_not_completed():
+    p = FakeProvider("acg", [], hits=3, truncated=True)
+    p.listing_seen = {"https://example.org/g1"}
+    _, ps = run_once([p])
+    assert ps["providers"]["acg"]["knownListingUrls"] == []
+
+
+def test_title_only_rejection_is_not_remembered_so_a_later_abstract_gets_a_fresh_look():
+    title_only = make_record(9, "europepmc", title="Colonic study of 9", abstractText="")
+    _, ps = run_once([FakeProvider("europepmc", [title_only])])
+    assert ps["providers"]["europepmc"]["rejectedKeys"] == []
 
 
 def test_nothing_is_ever_searched_before_the_discovery_start_date():

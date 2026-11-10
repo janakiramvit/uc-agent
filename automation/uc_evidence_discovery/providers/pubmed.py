@@ -26,6 +26,12 @@ def check_translation(translation: str, errors: dict, warnings: dict, *, expect:
     if errs:
         raise InvalidQuery(f"pubmed: NCBI reported query errors: {sorted(errs)}")
     warn = _non_empty(warnings)
+    # "No items found." is NCBI's normal message for an empty result - not a query problem
+    msgs = [m for m in (warn.get("outputmessages") or []) if str(m).strip().lower() != "no items found."]
+    if msgs:
+        warn["outputmessages"] = msgs
+    else:
+        warn.pop("outputmessages", None)
     if warn:
         raise InvalidQuery(f"pubmed: NCBI query warnings: {sorted(warn)}")
     low = translation.lower()
@@ -52,7 +58,7 @@ class PubMedProvider(Provider):
         s, e = window.iso()
         return s.replace("-", "/"), e.replace("-", "/")
 
-    def search_window(self, http: Http, window: Window, *, max_pages: int) -> SearchOutcome:
+    def search_range(self, http: Http, window: Window, *, max_pages: int) -> SearchOutcome:
         out = SearchOutcome()
         term = self.build_query(window)
         mindate, maxdate = self._dates(window)

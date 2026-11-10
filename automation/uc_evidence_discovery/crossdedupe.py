@@ -30,6 +30,16 @@ def _keys(rec: dict) -> list[str]:
     return ks
 
 
+def _conflict(a: dict, b: dict) -> bool:
+    """Two records whose strong identifiers DIFFER are different items even if their titles match (e.g. two versions
+    of the same guideline, each with its own DOI/PMID)."""
+    for key, norm in (("doi", norm_doi), ("pmid", norm_pmid), ("pmcid", norm_pmcid), ("nctId", norm_nct)):
+        x, y = norm(a.get(key)), norm(b.get(key))
+        if x and y and x != y:
+            return True
+    return False
+
+
 def _is_trial(rec: dict) -> bool:
     return rec.get("evidenceType") in (EvidenceType.ONGOING_TRIAL.value, EvidenceType.COMPLETED_TRIAL_RECORD.value)
 
@@ -61,6 +71,9 @@ def merge(records: list[dict]) -> MergeResult:
             # a trial registry record and a publication never merge, even if they share a title/NCT id
             token = f"trial|{k}" if _is_trial(rec) else k
             if token in seen:
+                weak = k.startswith(("title:", "url:"))
+                if weak and _conflict(rec, records[seen[token]]):
+                    continue                         # same title/url but different DOI/PMID/NCT: different items
                 a, b = find(i), find(seen[token])
                 if a != b:
                     parent[max(a, b)] = min(a, b)

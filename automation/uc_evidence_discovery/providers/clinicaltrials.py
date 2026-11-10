@@ -29,7 +29,7 @@ class ClinicalTrialsProvider(Provider):
         s, e = window.iso()
         return f"cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[{s},{e}]"
 
-    def search_window(self, http: Http, window: Window, *, max_pages: int) -> SearchOutcome:
+    def search_range(self, http: Http, window: Window, *, max_pages: int) -> SearchOutcome:
         out = SearchOutcome()
         s, e = window.iso()
         out.queries.append(self.build_query(window))

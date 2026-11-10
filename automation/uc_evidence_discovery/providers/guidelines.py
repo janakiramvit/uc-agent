@@ -113,10 +113,16 @@ class _IndexChannel(PubMedProvider):
         self.extra_clause = clause
         self.expect_in_translation = ("[Journal]",)
 
+    def canary_window(self, today, window=None):
+        # guideline publications are rare: a 1-year canary can legitimately be empty, so look back 5 years
+        start = (window.start if window else today) - _dt.timedelta(days=5 * 365)
+        return Window(start, today)
+
 
 class SocietyProvider(Provider):
     evidence_type = EvidenceType.CLINICAL_GUIDELINE
     expects_daily_results = False
+    canary_zero_is_error = False       # guideline bodies publish rarely; an empty canary cannot prove a broken query
 
     def __init__(self, *, name: str, label: str, society: str, robots_host: str, robots_probe: str,
                  site: Optional[Callable] = None, index_clause: str = "") -> None:
@@ -150,13 +156,17 @@ class SocietyProvider(Provider):
 
     def _in_window(self, rec: dict, window: Window) -> bool:
         d = (rec.get("publicationDate") or "")[:10]
+        dated = len(d) == 10
+        if dated and d < config.EARLIEST_DISCOVERY_DATE:
+            return False          # nothing older than the discovery start date is ever ingested (no backfill)
         new_url = bool(self.known_listing_urls) and rec.get("canonicalUrl") not in self.known_listing_urls
-        return new_url or (len(d) == 10 and window.start.isoformat() <= d <= window.end.isoformat())
+        return new_url or (dated and window.start.isoformat() <= d <= window.end.isoformat())
 
     def search_window(self, http: Http, window: Window, *, max_pages: int) -> SearchOutcome:
         out = SearchOutcome()
         out.queries.append(self.build_query(window))
         robots = RobotsPolicy(http)
+        self.listing_seen = set()          # committed to state by the orchestrator only if the window is completed
         site_ok = False
         try:
             robots.require(self.robots_probe)          # always learn (and report) the site's policy
@@ -179,6 +189,7 @@ class SocietyProvider(Provider):
 
         if self._index:
             sub = self._index.search_window(http, window, max_pages=max_pages)
+            out.covered_through = sub.covered_through
             out.searches += sub.searches
             out.queries.extend(sub.queries)
             kept = 0
@@ -196,7 +207,7 @@ class SocietyProvider(Provider):
             raise AccessLimited("; ".join(out.access_limits) or f"{self.robots_host}: not accessible")
         return out
 
-    def canary_count(self, http: Http, today: _dt.date) -> int:
+    def canary_count(self, http: Http, today: _dt.date, window: Optional[Window] = None) -> int:
         """Listing channel: how many UC/IBD guidelines are visible at all (not date-filtered)."""
         robots = RobotsPolicy(http)
         total = 0
@@ -208,7 +219,7 @@ class SocietyProvider(Provider):
             except AccessLimited:
                 pass
         if self._index:
-            total += self._index.canary_count(http, today)
+            total += self._index.canary_count(http, today, window)
         return total
 
 

@@ -91,3 +91,19 @@ def test_source_records_never_contain_full_text_or_pdf_fields():
                                       archival=plan_archival(rec), disposition_reason="ok")
     assert src["archivalStatus"] == "link_only" and src["fullTextStatus"] == "abstract_only_retrieved"
     assert not any(k in src for k in ("fullText", "pdf", "pdfPath", "pdfUrl"))
+
+
+def test_redirects_are_never_followed():
+    from uc_evidence_discovery.apis.http import HttpRedirect
+    h = _http(_Resp(status=301))
+    with pytest.raises(HttpRedirect):
+        h.get("https://www.nice.org.uk/guidance/ng130")
+    assert h._session.calls == 1
+
+
+def test_alert_text_from_remote_sources_cannot_inject_workflow_commands():
+    from uc_evidence_discovery.alerts import Alert
+    a = Alert("ERROR", "INVALID_QUERY", "pubmed", "bad\n::error::pwned\r\n::add-mask::x " + "y" * 1000)
+    line = a.github_annotation()
+    assert "\n" not in line and "\r" not in line and len(a.message) <= 300
+    assert line.count("::") == 2                                  # only our own ::error ...:: delimiters

@@ -48,11 +48,12 @@ HARD_TIMEOUT_SECONDS = 600
 # Sized for 8 independently-reported providers (3 literature/registry APIs + 5 guideline bodies);
 # the 600 s job timeout and the 450 s research soft deadline are unchanged.
 MAX_QUERIES = 40
-MAX_SCREENED = 150
-MAX_ACCEPTED = 20
-MAX_CLAIMS = 60
+MAX_SCREENED = 200
+MAX_ACCEPTED = 40
+MAX_CLAIMS = 100
 MAX_PAGES_PER_SEARCH = 3          # pages fetched per provider search per run
 PAGE_SIZE = 25
+MAX_DAY_PAGE_FACTOR = 3           # a single day may use up to MAX_PAGES_PER_SEARCH x this many pages
 MAX_GUIDELINE_PAGES_PER_RUN = 6   # society-site pages fetched per run (all societies together)
 MAX_RETRIES_PER_SERVICE = 2
 BACKOFF_BASE_SECONDS = 1.5
@@ -91,9 +92,11 @@ USER_AGENT = (
 # long outage: catch-up is from the last successful cutoff, floored here.
 EARLIEST_DISCOVERY_DATE = "2026-11-10"
 WINDOW_OVERLAP_DAYS = 1            # re-cover the last day to absorb index-lag; duplicates are removed
-MAX_CATCHUP_DAYS = 31              # a longer gap is searched in 31-day slices over successive runs
+MAX_CATCHUP_DAYS = 14              # a longer gap is searched in 14-day slices over successive runs
 REPEATED_ZERO_WARN = 2             # consecutive unexpected zero-result runs -> WARNING
 REPEATED_ZERO_ERROR = 3            # ... -> ERROR alert
+REPEATED_INCOMPLETE_ERROR = 3      # consecutive runs whose window could not be completed -> ERROR
+MAX_ROBOTS_CRAWL_DELAY = 30.0      # a larger Crawl-delay than this is treated as 'not permitted within our budget'
 
 # --- ID reservations (documented in knowledge/uc-evidence-expansion/README.md) --------------
 SOURCE_ID_FLOOR = 32     # SRC-001..SRC-032 reserved by prior packages

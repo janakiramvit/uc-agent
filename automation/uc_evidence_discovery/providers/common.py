@@ -6,7 +6,7 @@ import re
 
 import requests
 
-from ..apis.http import DisallowedHost, HttpClientError, NetworkDisabled, PdfRefused, ResponseTooLarge
+from ..apis.http import DisallowedHost, HttpClientError, HttpRedirect, NetworkDisabled, PdfRefused, ResponseTooLarge
 from .base import EvidenceType, InvalidQuery, ProviderUnavailable
 
 
@@ -18,12 +18,18 @@ def guarded(provider: str, fn, *args, **kwargs):
         if exc.status == 400:
             raise InvalidQuery(f"{provider}: HTTP 400 (query rejected)") from None
         raise ProviderUnavailable(f"{provider}: HTTP {exc.status}") from None
+    except HttpRedirect as exc:
+        raise ProviderUnavailable(f"{provider}: unexpected redirect (HTTP {exc.status})") from None
     except ValueError as exc:                                  # API-side explicit rejection / bad JSON
         raise InvalidQuery(f"{provider}: {exc}") from None
-    except (NetworkDisabled, DisallowedHost, PdfRefused):
+    except NetworkDisabled:
         raise
+    except (DisallowedHost, PdfRefused) as exc:
+        raise ProviderUnavailable(f"{provider}: blocked by client policy ({type(exc).__name__})") from None
     except (requests.RequestException, ResponseTooLarge) as exc:
         raise ProviderUnavailable(f"{provider}: {type(exc).__name__}") from None
+    except Exception as exc:                       # malformed payloads (XML/JSON/shape): provider-level failure, not a crash
+        raise ProviderUnavailable(f"{provider}: unparseable response ({type(exc).__name__})") from None
 
 
 _GUIDELINE_TYPES = ("practice guideline", "guideline", "consensus development conference", "consensus statement")

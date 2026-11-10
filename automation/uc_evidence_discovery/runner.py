@@ -366,6 +366,13 @@ def _write_provider_outputs(paths, run_id: str, run_url: str, today: _dt.date, s
         "alerts": len(st.alerts), "errors": sum(1 for a in st.alerts if a.level == "ERROR")})
     pstate["lastRunId"] = run_id
     provider_state.save(paths, pstate)
+    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_file:                      # the worktree is removed in `finally`, so the report is copied out here
+        try:
+            with open(summary_file, "a", encoding="utf-8") as fh:
+                fh.write(paths.daily_report_path.read_text(encoding="utf-8") + "\n")
+        except OSError:
+            pass
 
 
 def _build_checkpoint(cp: dict, run_id: str, run_url: str, commit: str, st: _ResearchState,

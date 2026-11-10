@@ -30,6 +30,15 @@ class PdfRefused(RuntimeError):
     """PDFs are never downloaded (copyright / no established redistribution licence)."""
 
 
+class HttpRedirect(RuntimeError):
+    """3xx: redirects are never followed (a different host could be named), so the response is unusable."""
+
+    def __init__(self, status: int, host: str) -> None:
+        super().__init__(f"HTTP {status} redirect from {host}")
+        self.status = status
+        self.host = host
+
+
 class HttpClientError(RuntimeError):
     """A 4xx response (other than 429). Deterministic: never retried."""
 
@@ -116,9 +125,8 @@ class Http:
                     self._backoff(attempt)
                     continue
                 if 300 <= resp.status_code < 400:
-                    loc = resp.headers.get("Location", "")
-                    if not host_allowed(loc):
-                        raise DisallowedHost(f"redirect to disallowed host: {loc}")
+                    resp.close()
+                    raise HttpRedirect(resp.status_code, host)
                 if 400 <= resp.status_code < 500 and resp.status_code != 429:
                     resp.close()
                     raise HttpClientError(resp.status_code, host)      # deterministic: no retry
@@ -129,7 +137,7 @@ class Http:
                     raise PdfRefused(f"refusing {ctype.split(';')[0]} response from {host}")
                 self._enforce_size(resp)
                 return resp
-            except (PdfRefused, HttpClientError):
+            except (PdfRefused, HttpClientError, HttpRedirect):
                 raise
             except (requests.ConnectionError, requests.Timeout, requests.HTTPError) as exc:
                 last_exc = exc
@@ -150,7 +158,7 @@ class Http:
 
     def _enforce_size(self, resp: "requests.Response") -> None:
         declared = resp.headers.get("Content-Length")
-        if declared and int(declared) > self.max_bytes:
+        if declared and declared.isdigit() and int(declared) > self.max_bytes:
             raise ResponseTooLarge(f"{declared} bytes > {self.max_bytes}")
         body = bytearray()
         for chunk in resp.iter_content(8192):

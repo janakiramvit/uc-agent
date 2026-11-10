@@ -59,3 +59,10 @@ def test_state_is_bounded(paths):
     again = provider_state.load(paths)
     assert len(again["providers"]["europepmc"]["rejectedKeys"]) == provider_state.MAX_REJECTED_KEYS
     assert len(again["runHistory"]) == provider_state.MAX_HISTORY
+
+
+def test_unparseable_primary_with_no_known_good_is_a_safe_stop_not_a_silent_reset(paths):
+    paths.state_dir.mkdir(parents=True)
+    paths.provider_state_path.write_text("{truncated", encoding="utf-8")
+    with pytest.raises(SafeStop):
+        provider_state.load(paths)

@@ -33,23 +33,29 @@ def validate(doc: dict) -> list[str]:
             for e in sorted(v.iter_errors(doc), key=lambda e: list(e.path))]
 
 
-def _read(path: Path) -> dict | None:
+_UNPARSEABLE = object()
+
+
+def _read(path: Path):
+    """dict, None (file does not exist) or _UNPARSEABLE (exists but is not valid JSON)."""
     try:
         return json.loads(path.read_text("utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError):
+    except FileNotFoundError:
         return None
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return _UNPARSEABLE
 
 
 def load(paths: config.StatePaths) -> dict:
     """Primary, else known-good, else (only if neither file exists) an empty first-run state.
     A present-but-invalid pair is a safe stop: silently resetting would re-open a backfill window."""
     primary = _read(paths.provider_state_path)
-    if primary is not None and not validate(primary):
+    if isinstance(primary, dict) and not validate(primary):
         return primary
     known_good = _read(paths.provider_state_known_good_path)
-    if known_good is not None and not validate(known_good):
+    if isinstance(known_good, dict) and not validate(known_good):
         return known_good
-    if primary is None and known_good is None:
+    if primary is None and known_good is None:      # neither file exists: a genuine first run
         return empty_state()
     raise SafeStop("provider-state.json present but invalid and no valid known-good copy; refusing to reset the cutoff")
 
@@ -57,7 +63,7 @@ def load(paths: config.StatePaths) -> dict:
 def provider(state: dict, name: str) -> dict:
     return state["providers"].setdefault(name, {
         "lastSuccessfulCutoff": None, "lastSuccessfulRunAt": None, "lastStatus": None,
-        "consecutiveUnexpectedZero": 0, "consecutiveFailures": 0, "recentHitCounts": [],
+        "consecutiveUnexpectedZero": 0, "consecutiveFailures": 0, "consecutiveIncomplete": 0, "recentHitCounts": [],
         "rejectedKeys": [], "knownListingUrls": []})
 
 
@@ -78,6 +84,6 @@ def save(paths: config.StatePaths, doc: dict) -> None:
         raise SafeStop("refusing to write invalid provider-state: " + "; ".join(errs[:4]))
     _atomic_write(paths.provider_state_path, doc)
     reread = _read(paths.provider_state_path)
-    if reread is None or validate(reread):
+    if not isinstance(reread, dict) or validate(reread):
         raise SafeStop("provider-state failed post-write validation; known-good left intact")
     _atomic_write(paths.provider_state_known_good_path, reread)

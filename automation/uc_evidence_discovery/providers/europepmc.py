@@ -40,7 +40,7 @@ class EuropePmcProvider(Provider):
         if "first_idate:[" not in low or " to " not in low:
             raise InvalidQuery("europepmc: generated query has no Europe PMC date range")
 
-    def search_window(self, http: Http, window: Window, *, max_pages: int) -> SearchOutcome:
+    def search_range(self, http: Http, window: Window, *, max_pages: int) -> SearchOutcome:
         out = SearchOutcome()
         query = self.build_query(window)
         out.queries.append(query)

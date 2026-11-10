@@ -36,19 +36,19 @@ def http():
 def test_europepmc_old_syntax_returns_zero_and_corrected_syntax_returns_records(http):
     old = epmc_api.search(http, '"ulcerative colitis" AND (2021:2026[pub_year])', page_size=1)
     assert old["hitCount"] == 0                                           # the documented root cause
-    out = EuropePmcProvider().search_window(http, MONTH, max_pages=1)
+    out = EuropePmcProvider().search_range(http, MONTH, max_pages=1)         # one request over the wide window
     assert out.hit_count > 0 and out.records
     assert all(r["evidenceType"] in ("published_study", "clinical_guideline") for r in out.records)
 
 
 def test_pubmed_corrected_query_returns_records_with_abstracts(http):
-    out = PubMedProvider().search_window(http, Window(TODAY - dt.timedelta(days=7), TODAY), max_pages=1)
+    out = PubMedProvider().search_range(http, Window(TODAY - dt.timedelta(days=7), TODAY), max_pages=1)
     assert out.hit_count > 0 and out.records
     assert any(len(r["abstractText"]) > 100 for r in out.records)
 
 
 def test_clinicaltrials_returns_trials_labelled_as_trials(http):
-    out = ClinicalTrialsProvider().search_window(http, MONTH, max_pages=1)
+    out = ClinicalTrialsProvider().search_range(http, MONTH, max_pages=1)
     assert out.hit_count > 0 and out.records
     assert all(r["evidenceType"] in ("ongoing_trial", "completed_trial_record") and r["nctId"].startswith("NCT")
                for r in out.records)
@@ -59,9 +59,11 @@ def _provider(name):
 
 
 def test_aga_site_is_refused_by_robots_and_the_pubmed_index_still_finds_guidelines(http):
-    out = _provider("aga").search_window(http, TWO_YEARS, max_pages=1)
+    aga = _provider("aga")
+    out = aga.search_window(http, Window(TODAY, TODAY), max_pages=1)             # the real (one-day) code path
     assert out.access_limits and "gastro.org" in out.access_limits[0]          # legitimate access limitation, reported
-    assert out.records and all(r["evidenceType"] == "clinical_guideline" for r in out.records)
+    wide = aga._index.search_range(http, TWO_YEARS, max_pages=1)                 # the PubMed-index channel over a wide window
+    assert wide.records and any("Practice Guideline" in (r.get("publicationTypes") or []) for r in wide.records)
 
 
 def test_acg_listing_contains_the_public_ulcerative_colitis_guideline(http):
@@ -72,7 +74,7 @@ def test_acg_listing_contains_the_public_ulcerative_colitis_guideline(http):
 
 
 def test_ecco_site_blocks_automated_clients_and_is_reported_as_an_access_limitation(http):
-    out = _provider("ecco").search_window(http, TWO_YEARS, max_pages=1)
+    out = _provider("ecco").search_window(http, Window(TODAY, TODAY), max_pages=1)
     assert out.access_limits and "ecco-ibd.eu" in out.access_limits[0]
 
 
