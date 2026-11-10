@@ -17,7 +17,7 @@ def test_a_mid_finalize_crash_leaves_the_branch_resumable(monkeypatch, main_chec
     monkeypatch.setattr(qa, "run_checks", boom)
 
     rc = main(["--state-root", str(state_root), "--no-network"])
-    assert rc == 0, "a handled crash must not fail the job"
+    assert rc == 1, "a handled crash must be VISIBLE (non-zero exit) while leaving the branch resumable"
     assert not state_root.exists()  # worktree still cleaned up on the failure path
 
     # the branch was never pushed to (crash happened before commit); fetch a *fresh* worktree
@@ -47,6 +47,6 @@ def test_a_crash_after_the_checkpoint_write_still_leaves_a_valid_checkpoint(monk
     monkeypatch.setattr(artifact_mod, "build", boom)
 
     rc = main(["--state-root", str(state_root), "--no-network"])
-    assert rc == 0
+    assert rc == 1
     # worktree was removed by the runner; nothing further to assert about --state-root itself,
     # but the run must not have crashed the process.

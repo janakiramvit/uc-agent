@@ -6,6 +6,10 @@ normalize it, extract verbatim candidate excerpts, atomically advance a checkpoi
 results. It never approves evidence, never promotes into the live RAG index, never touches
 canonical Supabase tables, the app, or Vercel, and never makes a paid model/API call.
 
+> **Multi-source discovery:** the runner now searches eight sources every day (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO,
+> NICE, BSG) with provider-specific queries, a per-provider funnel and alerts. See [PROVIDERS.md](PROVIDERS.md). The limits below were
+> raised to suit eight sources (40 searches / 200 screened / 40 accepted / 100 excerpts); the time budget is unchanged.
+
 ## Trusted code vs. mutable state — the one rule that matters
 
 **Executable code (this whole `automation/` tree) lives only on `main`.** All mutable
@@ -41,7 +45,7 @@ workflow definition, this runner, its tests, and documentation.
 
 ## Hard daily limits
 
-10 discovery queries · 30 records screened · 5 newly accepted sources · 20 candidate
+40 searches · 200 records screened · 40 newly accepted sources · 100 candidate
 claims/excerpts · bounded retries with exponential backoff · per-host rate limiting · a
 response-size ceiling. Hitting any limit stops research, keeps a valid continuation
 checkpoint, still finishes QA/finalization, and exits `0` with a `partial` status recording the

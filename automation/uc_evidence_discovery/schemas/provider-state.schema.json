@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "uc-provider-state-1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "providers"],
+  "properties": {
+    "schemaVersion": {"const": "uc-provider-state-1.0.0"},
+    "discoveryStartDate": {"type": "string"},
+    "lastRunDate": {"type": ["string", "null"]},
+    "lastRunId": {"type": ["string", "null"]},
+    "providers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["lastSuccessfulCutoff"],
+        "properties": {
+          "lastSuccessfulCutoff": {"type": ["string", "null"]},
+          "lastSuccessfulRunAt": {"type": ["string", "null"]},
+          "lastStatus": {"type": ["string", "null"]},
+          "consecutiveUnexpectedZero": {"type": "integer", "minimum": 0},
+          "consecutiveFailures": {"type": "integer", "minimum": 0},
+          "consecutiveIncomplete": {"type": "integer", "minimum": 0},
+          "recentHitCounts": {"type": "array", "items": {"type": "integer"}, "maxItems": 14},
+          "rejectedKeys": {"type": "array", "items": {"type": "string"}, "maxItems": 4000},
+          "knownListingUrls": {"type": "array", "items": {"type": "string"}, "maxItems": 500}
+        }
+      }
+    },
+    "runHistory": {
+      "type": "array",
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "runId"],
+        "properties": {
+          "date": {"type": "string"},
+          "runId": {"type": "string"},
+          "window": {"type": "string"},
+          "missedDates": {"type": "array", "items": {"type": "string"}},
+          "providerStatus": {"type": "object", "additionalProperties": {"type": "string"}},
+          "alerts": {"type": "integer"},
+          "errors": {"type": "integer"}
+        }
+      }
+    }
+  }
+}

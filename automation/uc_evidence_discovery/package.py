@@ -30,6 +30,29 @@ def _dump(path: Path, doc: Any) -> None:
     path.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def _source_type(rec: dict) -> str:
+    et = rec.get("evidenceType") or "published_study"
+    if et == "ongoing_trial":
+        return "ongoing clinical trial (registry record)"
+    if et == "completed_trial_record":
+        return "completed clinical trial (registry record, not a publication)"
+    if et == "clinical_guideline":
+        return "clinical guideline"
+    return rec.get("sourceType", "") or "journal article"
+
+
+def _limitations(rec: dict) -> str:
+    et = rec.get("evidenceType") or "published_study"
+    if et in ("ongoing_trial", "completed_trial_record"):
+        return ("Trial registry record only. Not a publication and NOT evidence of treatment effect; "
+                "no claims are extracted from it. Results, if any, must be read from the published paper.")
+    if et == "clinical_guideline":
+        return ("Public guideline metadata/abstract only; recommendation text not accessed. "
+                "Full-text verification required before any recommendation is cited.")
+    return ("Retrieved as public abstract/metadata only; full text not accessed or stored. "
+            "Full-text verification required.")
+
+
 def build_source_record(rec: dict, *, source_id: str, applicability: str, archival, disposition_reason: str) -> dict:
     return {
         "sourceId": source_id,
@@ -37,7 +60,13 @@ def build_source_record(rec: dict, *, source_id: str, applicability: str, archiv
         "authors": rec.get("authors", ""),
         "publishingOrganisation": rec.get("publishingOrganisation", ""),
         "journalOrPublisher": rec.get("journal", ""),
-        "sourceType": rec.get("sourceType", "") or "journal article",
+        "sourceType": _source_type(rec),
+        "evidenceType": rec.get("evidenceType") or "published_study",
+        "society": rec.get("society", ""),
+        "foundBy": rec.get("foundBy") or ([rec["provider"]] if rec.get("provider") else []),
+        "accessStatus": rec.get("accessStatus", ""),
+        "requiresFullTextVerification": bool(rec.get("requiresFullTextVerification", True)),
+        "trialStatus": rec.get("overallStatus", ""),
         "studyDesign": rec.get("studyDesign", "") or "not_reported",
         "publicationDate": rec.get("publicationDate", "") or rec.get("pubYear", "") or "unknown",
         "doi": rec.get("doi", ""),
@@ -47,7 +76,10 @@ def build_source_record(rec: dict, *, source_id: str, applicability: str, archiv
         "canonicalUrl": rec.get("canonicalUrl", ""),
         "alternateUrl": rec.get("alternateUrl", ""),
         "accessDate": _dt.date.today().isoformat(),
-        "fullTextStatus": "abstract_only_retrieved",
+        "fullTextStatus": ("registry_record_only" if (rec.get("evidenceType") or "") in
+                           ("ongoing_trial", "completed_trial_record")
+                           else ("abstract_only_retrieved" if (rec.get("abstractText") or "").strip()
+                                 else "metadata_only_no_abstract")),
         "abstractOrFullTextLocator": rec.get("retrievedVia", ""),
         "studyPopulation": "not_reported",
         "ucApplicability": applicability,
@@ -55,7 +87,7 @@ def build_source_record(rec: dict, *, source_id: str, applicability: str, archiv
         "interventionOrExposure": "not_reported",
         "comparator": "not_reported",
         "outcomes": "not_reported",
-        "limitations": "Retrieved as abstract/registry metadata only; full recommendation text not accessed.",
+        "limitations": _limitations(rec),
         "regionalApplicability": {
             "canada": "requires_human_review",
             "unitedStates": "requires_human_review",

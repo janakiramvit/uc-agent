@@ -1,0 +1,13 @@
+User-agent: ChatGPT-User
+Crawl-delay: 10
+Disallow: /*?rul
+
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow: /*?rul
+Disallow:
+
+Sitemap: https://gi.org/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK

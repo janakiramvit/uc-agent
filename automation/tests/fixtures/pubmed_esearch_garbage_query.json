@@ -1,0 +1,28 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "64066",
+  "retmax": "1",
+  "retstart": "0",
+  "idlist": [
+   "43002066"
+  ],
+  "translationset": [],
+  "querytranslation": "\"ulcerative colitis\"[All Fields]",
+  "errorlist": {
+   "phrasesnotfound": [],
+   "fieldsnotfound": []
+  },
+  "warninglist": {
+   "phrasesignored": [],
+   "quotedphrasesnotfound": [],
+   "outputmessages": [
+    "AND",
+    "("
+   ]
+  }
+ }
+}

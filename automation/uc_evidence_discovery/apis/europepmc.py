@@ -39,7 +39,15 @@ def _norm(result: dict) -> dict:
         "retrievedVia": f"Europe PMC REST /search ({result.get('source','MED')}:{result.get('id','')})",
         "raw_ext_id": result.get("id", ""),
         "raw_source": result.get("source", "MED"),
+        "publicationTypes": _pub_types(result),
+        "isPreprint": (result.get("source") == "PPR"),
+        "firstIndexDate": result.get("firstIndexDate") or "",
     }
+
+
+def _pub_types(result: dict) -> list[str]:
+    pt = (result.get("pubTypeList") or {}).get("pubType") or []
+    return [str(x) for x in (pt if isinstance(pt, list) else [pt])]
 
 
 def search(
@@ -59,6 +67,8 @@ def search(
         "sort": "P_PDATE_D desc",
     }
     data = http.get_json(f"{BASE}/search", params)
+    if data.get("errCode") or data.get("error"):           # explicit API-side rejection
+        raise ValueError(f"Europe PMC rejected the query: {data.get('errMsg') or data.get('error')}")
     results = (data.get("resultList") or {}).get("result", []) or []
     return {
         "records": [_norm(r) for r in results],

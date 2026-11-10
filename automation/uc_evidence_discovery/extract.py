@@ -24,12 +24,16 @@ def _sentences(text: str) -> list[str]:
     return [s.strip() for s in _SENT_SPLIT.split(text) if len(s.strip()) >= 40]
 
 
+_NO_CLAIM_TYPES = ("ongoing_trial", "completed_trial_record")
+
+
 def _locator(source_record: dict) -> str:
     ext = source_record.get("raw_ext_id") or source_record.get("pmid") or "n/a"
     journal = source_record.get("journal") or "source"
     year = source_record.get("pubYear") or ""
+    via = source_record.get("retrievedVia") or "public index"
     return (
-        f"Abstract (retrieved), Results/Conclusions — Europe PMC record EXT_ID:{ext}; "
+        f"Abstract (retrieved), Results/Conclusions — {via}; record id {ext}; "
         f"{journal} {year}. Statement/page-level locators require full text (link_only)."
     )
 
@@ -46,6 +50,9 @@ def extract_candidates(
     topic_keywords: tuple[str, ...] = (),
     max_per_source: int = 4,
 ) -> list[dict]:
+    # Hard rule: a trial registry record is never converted into a claim (not evidence of treatment effect).
+    if source_record.get("evidenceType") in _NO_CLAIM_TYPES:
+        return []
     abstract = (source_record.get("abstractText") or source_record.get("abstract") or "").strip()
     if not abstract or remaining_global <= 0:
         return []
@@ -72,6 +79,8 @@ def extract_candidates(
                 "exactSupportingExcerpt": sentence,
                 "exactLocator": _locator(source_record),
                 "verificationBasis": "abstract_only",
+                "requiresFullTextVerification": True,
+                "evidenceType": source_record.get("evidenceType") or "published_study",
                 "conditionApplicability": applicability,   # never upgraded downstream
                 "diseaseContext": [topic_id],
                 "evidenceStrength": "not_stated_by_source",

@@ -34,8 +34,8 @@ from . import artifact as artifact_mod
 from . import checkpoint as checkpoint_mod
 from . import config, gitio, ids
 from . import journal as journal_mod
-from . import lockfile, package, qa, screening
-from .apis import clinicaltrials, europepmc, pubmed
+from . import discover, lockfile, package, provider_state, qa, reporting, screening
+from .alerts import has_errors
 from .apis.http import Http
 from .clock import Deadline
 from .dedup import CandidateKey, ProcessedIndex
@@ -53,6 +53,8 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
     p.add_argument("--finalize-deadline-seconds", type=int, default=config.FINALIZE_DEADLINE_SECONDS)
     p.add_argument("--dry-run", action="store_true", help="run everything except commit/push")
     p.add_argument("--no-network", action="store_true", help="skip the research loop entirely")
+    p.add_argument("--no-push", action="store_true",
+                   help="do the research and write the worktree, but skip commit/push (controlled live runs)")
     p.add_argument("--validate-checkpoint", action="store_true",
                    help="load + schema-validate the state-root checkpoint, print status, exit")
     p.add_argument("--allow-bootstrap", action="store_true",
@@ -62,6 +64,14 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
 
 def _now_iso() -> str:
     return _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _today() -> _dt.date:
+    """UTC calendar date of this run. ``UC_DISCOVERY_TODAY=YYYY-MM-DD`` overrides it (tests, controlled runs)."""
+    override = os.environ.get("UC_DISCOVERY_TODAY")
+    if override:
+        return _dt.date.fromisoformat(override)
+    return _dt.datetime.now(_dt.timezone.utc).date()
 
 
 def _github_run_url() -> str:
@@ -162,6 +172,13 @@ def main(argv: list[str]) -> int:
                            "checkpoint is authoritative; prompt resume hints ignored")
             cp["promptVsCheckpointDifference"] = loaded.prompt_difference
 
+        try:
+            pstate = provider_state.load(paths)
+        except SafeStop as exc:
+            journal.append("provider_state_invalid", str(exc))
+            print(f"[uc-evidence] SAFE STOP: {exc}", file=sys.stderr)
+            return 1
+
         index = ProcessedIndex.from_checkpoint(cp)
         if paths.sources_path.exists():
             index.merge_sources_json(json.loads(paths.sources_path.read_text("utf-8")))
@@ -169,8 +186,10 @@ def main(argv: list[str]) -> int:
 
         # ---- research --------------------------------------------------------------------
         research = _ResearchState(cp)
+        today = _today()
         if not args.no_network and not args.dry_run:
-            _do_research(args, clock, cp, index, allocator, research, journal)
+            discover.run(http=Http(enabled=True), clock=clock, pstate=pstate, index=index, allocator=allocator,
+                         st=research, journal=journal, today=today)
         else:
             journal.append("research_skipped",
                            "no_network/dry_run: discovery loop not executed")
@@ -202,6 +221,8 @@ def main(argv: list[str]) -> int:
         )
 
         checkpoint_mod.save(paths, new_cp)
+        if research.funnel is not None:
+            _write_provider_outputs(paths, run_id, run_url, today, research, pstate)
         journal.append("checkpoint_saved",
                        f"status={research.status}; accepted={counters['sourcesAccepted']}; "
                        f"claims={counters['claimsExtracted']}; screened={counters['recordsScreened']}")
@@ -214,10 +235,14 @@ def main(argv: list[str]) -> int:
             accepted_sources=accepted_source_records, query_labels=research.query_labels,
             qa_summary=qa_summary, checkpoint_valid=not checkpoint_mod.validate(new_cp),
             next_topic_id=research.next_topic_id, error_categories=error_categories,
+            provider_health=(reporting.provider_health_for_artifact(research.funnel) if research.funnel else None),
+            alert_counts=_alert_counts(research.alerts),
         )
         journal.append("artifact_written", "redacted artifact built under the main checkout")
 
-        if not args.dry_run:
+        if args.no_push:
+            journal.append("no_push", "commit/push skipped (--no-push); results left in the state worktree")
+        elif not args.dry_run:
             staged = gitio.stage_paths(paths)
             sha = gitio.commit(paths, date=_dt.date.today().isoformat())
             if sha:
@@ -229,14 +254,21 @@ def main(argv: list[str]) -> int:
             journal.append("dry_run", "commit/push skipped")
 
         status = research.status
+        for line in reporting.github_annotations(research.alerts):
+            print(line)
+        if has_errors(research.alerts):
+            # evidence + state are already staged; a non-zero exit makes GitHub flag the run so it is not silent
+            print("[uc-evidence] one or more ERROR alerts - see DAILY-REPORT.md on the staging branch", file=sys.stderr)
+            return 1
         return 0
 
     except Exception as exc:  # noqa: BLE001 - last-resort: preserve recoverable state, don't crash the job
         error_categories.append(type(exc).__name__)
         journal.append("error_handled", f"{type(exc).__name__}: {exc}")
         print(f"[uc-evidence] handled error: {type(exc).__name__}: {exc}", file=sys.stderr)
+        print(f"::error title=UC discovery crashed::{type(exc).__name__}")
         status = "failed"
-        return 0
+        return 1
     finally:
         if lock_acquired:
             lockfile.release(paths.lock_path, run_id)
@@ -247,7 +279,7 @@ def main(argv: list[str]) -> int:
         # would-be checkpoint/journal/reports (see automation/README.md); every real run
         # (including a safe-stop or a handled crash) removes it, from its own primary
         # checkout, with an explicit target path.
-        if not args.dry_run:
+        if not args.dry_run and not args.no_push:
             gitio.remove_worktree(paths.root, paths.primary_checkout or config.REPO_ROOT)
 
 
@@ -268,6 +300,11 @@ class _ResearchState:
         self.consecutive_empty = 0
         self.stop_reason = "no_research_executed"
         self._elapsed = 0.0
+        self.funnel = None                 # RunFunnel, set by discover.run
+        self.alerts: list = []
+        self.missed_dates: list[str] = []
+        self.provider_windows: dict = {}
+        self.cross_provider_merges: list = []
 
     @property
     def status(self) -> str:
@@ -303,134 +340,39 @@ class _ResearchState:
         return cats
 
 
-def _topic_keywords(topic_id: str) -> tuple[str, ...]:
-    if topic_id == "T-UCX-03":
-        return ("acute severe", "truelove", "witts", "fulminant", "hospitali",
-                "intravenous cortico", "ciclosporin", "cyclosporine", "rescue therapy", "colectomy")
-    return ()
+def _alert_counts(alerts: list) -> dict:
+    out: dict[str, int] = {}
+    for a in alerts:
+        key = f"{a.level}:{a.code}"
+        out[key] = out.get(key, 0) + 1
+    return out
 
 
-def _do_research(args, clock: Deadline, cp: dict, index: ProcessedIndex, allocator: ids.Allocator,
-                 st: _ResearchState, journal: journal_mod.Journal) -> None:
-    http = Http(enabled=True)
-    tkw = _topic_keywords(st.topic_id)
-    mapped_qs = _mapped_question_ids(cp, st.topic_id)
-
-    searches = st.pending or [
-        {"searchId": "S-AUTO-a", "service": "europepmc",
-         "query": "ulcerative colitis AND (acute severe OR calprotectin OR treat to target) "
-                  "AND (guideline OR consensus OR randomized) AND (2021:2026[pub_year])"},
-    ]
-
-    for search in searches:
-        if not clock.may_start_new_work() or st.queries >= config.MAX_QUERIES \
-                or st.screened >= config.MAX_SCREENED or len(st.accepted) >= config.MAX_ACCEPTED \
-                or st.claims_made >= config.MAX_CLAIMS:
-            st.stop_reason = "limit_or_deadline_before_query"
-            break
-        query = search.get("query", "")
-        st.queries += 1
-        st.query_labels.append(query)
+def _write_provider_outputs(paths, run_id: str, run_url: str, today: _dt.date, st, pstate: dict) -> None:
+    """Funnel JSON + human-readable daily report on the staging branch, then the provider cutoffs."""
+    doc = reporting.funnel_document(run_id, today, st.funnel, st.alerts, st.missed_dates)
+    paths.provider_funnel_path.write_text(json.dumps(doc, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
+                                          encoding="utf-8")
+    accepted = [(a["sourceRecord"]["sourceId"], a["sourceRecord"].get("evidenceType", ""),
+                 a["sourceRecord"].get("title", "")) for a in st.accepted]
+    paths.daily_report_path.write_text(
+        reporting.render_daily_report(run_id, run_url, today, st.funnel, st.alerts, st.missed_dates, accepted),
+        encoding="utf-8")
+    pstate.setdefault("runHistory", []).append({
+        "date": today.isoformat(), "runId": run_id,
+        "window": next(iter(st.funnel.providers.values())).window.split(";")[0] if st.funnel.providers else "",
+        "missedDates": st.missed_dates,
+        "providerStatus": {n: f.status for n, f in st.funnel.providers.items()},
+        "alerts": len(st.alerts), "errors": sum(1 for a in st.alerts if a.level == "ERROR")})
+    pstate["lastRunId"] = run_id
+    provider_state.save(paths, pstate)
+    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_file:                      # the worktree is removed in `finally`, so the report is copied out here
         try:
-            records = _run_query(http, search, query)
-        except Exception as exc:  # noqa: BLE001
-            journal.append("query_error", f"{search.get('searchId')}: {type(exc).__name__}")
-            st.consecutive_empty += 1
-            if st.consecutive_empty >= config.STOP_AFTER_CONSECUTIVE_EMPTY_SEARCHES:
-                st.stop_reason = "consecutive_empty_searches"
-                break
-            continue
-
-        eligible_new = 0
-        for rec in records:
-            if not clock.may_start_new_work() or st.screened >= config.MAX_SCREENED:
-                st.stop_reason = "limit_or_deadline_during_screening"
-                break
-            st.screened += 1
-            disp = screening.screen(rec, index=index, topic_id=st.topic_id, topic_keywords=tkw)
-            st.dispositions.append(disp)
-            rec_date = rec.get("publicationDate") or rec.get("pubYear") or ""
-            if rec_date and rec_date > st.latest_pub_seen:
-                st.latest_pub_seen = rec_date
-            key = CandidateKey.from_record(rec)
-            index.add(key)  # never re-screen the same record within a run
-
-            if disp.status != "accepted":
-                continue
-            if len(st.accepted) >= config.MAX_ACCEPTED:
-                st.stop_reason = "max_accepted"
-                break
-            eligible_new += 1
-            src_id = allocator.source_id()
-            arch = plan_archival(rec)
-            claims = extract_candidates(
-                rec, source_id=src_id, applicability=disp.applicability, topic_id=st.topic_id,
-                mapped_question_ids=mapped_qs, allocate_claim_id=allocator.claim_id,
-                remaining_global=config.MAX_CLAIMS - st.claims_made, topic_keywords=tkw,
-            )
-            abstract = rec.get("abstractText") or rec.get("abstract") or ""
-            claims = [c for c in claims if not verify_verbatim(c, abstract)]
-            st.claims_made += len(claims)
-            src_record = package.build_source_record(
-                rec, source_id=src_id, applicability=disp.applicability, archival=arch,
-                disposition_reason=disp.reason,
-            )
-            st.accepted.append({
-                "record": rec, "sourceRecord": src_record, "claims": claims,
-                "licensing": {
-                    "sourceId": src_id, "title": rec.get("title", ""),
-                    "canonicalUrl": rec.get("canonicalUrl", ""), "doi": rec.get("doi", ""),
-                    "pubmedId": rec.get("pmid", ""),
-                    "statedLicence": rec.get("license", "") or "not stated in retrieved metadata",
-                    "localArchivalPermitted": "no_not_established"
-                        if arch.redistribution_status == "not_established" else "eligible_open_licence",
-                    "redistributionPermitted": arch.redistribution_status,
-                    "archivalStatus": arch.archival_status,
-                    "acquisitionDate": _dt.date.today().isoformat(),
-                    "retainedArtifacts": ["citation metadata", "DOI/PMID", "canonical URL", "abstract text"],
-                    "notStored": ["full text", "publisher PDF"],
-                },
-            })
-        if eligible_new == 0:
-            st.consecutive_empty += 1
-        else:
-            st.consecutive_empty = 0
-        prior_cursor = search.get("cursor")
-        new_cursor = search.get("nextCursor")
-        if new_cursor and new_cursor not in (prior_cursor, "*"):
-            search["cursor"] = new_cursor    # more pages likely available; stays pending
-        else:
-            search["_done"] = True           # this page exhausted the search
-        if st.consecutive_empty >= config.STOP_AFTER_CONSECUTIVE_EMPTY_SEARCHES:
-            st.stop_reason = "consecutive_empty_searches"
-            break
-
-    st._elapsed = clock.elapsed()
-    # anything not fully processed (never started, or more pages available) stays pending
-    st.pending = [s for s in searches if s.get("_done") is not True]
-    journal.append(
-        "research_done",
-        f"queries={st.queries} screened={st.screened} accepted={len(st.accepted)} "
-        f"claims={st.claims_made} stop={st.stop_reason}",
-    )
-
-
-def _run_query(http: Http, search: dict, query: str) -> list[dict]:
-    service = (search.get("service") or "europepmc").lower()
-    if "clinicaltrials" in service or "ctgov" in service:
-        return clinicaltrials.search(http, query)["records"]
-    if "pubmed" in service or "ncbi" in service or "efetch" in service:
-        hit = pubmed.esearch(http, query, retmax=15)
-        return pubmed.esummary(http, hit["ids"])
-    res = europepmc.search(http, query, cursor=str(search.get("cursor", "*") or "*"))
-    search["nextCursor"] = res["nextCursor"]
-    return res["records"]
-
-
-def _mapped_question_ids(cp: dict, topic_id: str) -> list[str]:
-    if topic_id == "T-UCX-03":
-        return ["L3-1.1.2"]
-    return []
+            with open(summary_file, "a", encoding="utf-8") as fh:
+                fh.write(paths.daily_report_path.read_text(encoding="utf-8") + "\n")
+        except OSError:
+            pass
 
 
 def _build_checkpoint(cp: dict, run_id: str, run_url: str, commit: str, st: _ResearchState,
@@ -480,9 +422,10 @@ def _build_checkpoint(cp: dict, run_id: str, run_url: str, commit: str, st: _Res
     out["duplicateRecords"] = duplicate_records
 
     out["completedSearches"] = list(cp.get("completedSearches", [])) + [
-        {"searchId": f"auto-{run_id[-6:]}-{i}", "service": "europepmc", "query": q,
-         "resultsScreened": 0, "executedAt": now}
-        for i, q in enumerate(st.query_labels)
+        {"searchId": f"{name}-{run_id[-6:]}", "service": name,
+         "query": (f.queries[0] if f.queries else f.window)[:300],
+         "resultsScreened": f.records_screened, "executedAt": now}
+        for name, f in ((st.funnel.providers.items()) if st.funnel else [])
     ]
     out["pendingSearches"] = st.pending
     out["currentTopicId"] = st.topic_id
@@ -525,7 +468,7 @@ def _build_checkpoint(cp: dict, run_id: str, run_url: str, commit: str, st: _Res
     out["failedItems"] = list(cp.get("failedItems", []))
     out["retryCounts"] = cp.get("retryCounts", {})
     out["stopReason"] = st.stop_reason
-    out["accessAndLicensingStatus"] = "all sources link_only; no redistribution licence established; 0 files archived"
+    out["accessAndLicensingStatus"] = "all sources link_only; no redistribution licence established; 0 files archived; no PDFs downloaded"
     out["completedTopics"] = sorted(set(cp.get("completedTopics", [])) |
                                     ({st.topic_id} if status_hint == "completed" else set()))
     out["pendingTopics"] = cp.get("pendingTopics", [])
@@ -533,11 +476,10 @@ def _build_checkpoint(cp: dict, run_id: str, run_url: str, commit: str, st: _Res
     first_src = st.accepted and None
     out["nextRecommendedOperation"] = {
         "description": (
-            f"Continue topic {st.next_topic_id}. Resume "
-            f"{('search ' + st.pending[0]['searchId']) if st.pending else 'a fresh discovery query'} "
-            f"from cursor {out['currentApiCursor']}. Skip every identifier in "
-            f"processedSourceIdentifiers. Allocate new ids from "
-            f"{_peek(cp, st)} onward."
+            "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, "
+            "BSG) for evidence published or updated since that provider's last successful cutoff "
+            "(state/provider-state.json). Skip every identifier in processedSourceIdentifiers. "
+            f"Allocate new ids from {_peek(cp, st)} onward."
         ),
         "topicId": st.next_topic_id,
         "searchId": out["currentSearchStrategyId"],

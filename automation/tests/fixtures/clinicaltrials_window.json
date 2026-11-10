@@ -1,0 +1,419 @@
+{
+ "totalCount": 43,
+ "studies": [
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT06266663",
+     "orgStudyIdInfo": {
+      "id": "2022-13788"
+     },
+     "secondaryIdInfos": [
+      {
+       "id": "CNTO1275IBD4012",
+       "type": "OTHER",
+       "domain": "Janssen Scientific Affairs, LLC"
+      }
+     ],
+     "organization": {
+      "fullName": "Montefiore Medical Center",
+      "class": "OTHER"
+     },
+     "briefTitle": "Social Determinants of Health, Medication Use, and Quality of Life in Inflammatory Bowel Disease",
+     "officialTitle": "Social Determinants of Health, Medication Use, and Quality of Life in Inflammatory Bowel Disease"
+    },
+    "statusModule": {
+     "statusVerifiedDate": "2026-11",
+     "overallStatus": "COMPLETED",
+     "expandedAccessInfo": {
+      "hasExpandedAccess": false
+     },
+     "startDateStruct": {
+      "date": "2024-04-26",
+      "type": "ACTUAL"
+     },
+     "primaryCompletionDateStruct": {
+      "date": "2026-08-26",
+      "type": "ACTUAL"
+     },
+     "completionDateStruct": {
+      "date": "2026-08-26",
+      "type": "ACTUAL"
+     },
+     "studyFirstSubmitDate": "2024-02-12",
+     "studyFirstSubmitQcDate": "2024-02-12",
+     "studyFirstPostDateStruct": {
+      "date": "2024-02-20",
+      "type": "ACTUAL"
+     },
+     "lastUpdateSubmitDate": "2026-11-02",
+     "lastUpdatePostDateStruct": {
+      "date": "2026-11-04",
+      "type": "ACTUAL"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "responsibleParty": {
+      "type": "SPONSOR"
+     },
+     "leadSponsor": {
+      "name": "Montefiore Medical Center",
+      "class": "OTHER"
+     },
+     "collaborators": [
+      {
+       "name": "Icahn School of Medicine at Mount Sinai",
+       "class": "OTHER"
+      },
+      {
+       "name": "Janssen Scientific Affairs, LLC",
+       "class": "INDUSTRY"
+      }
+     ]
+    },
+    "descriptionModule": {
+     "briefSummary": "Optimizing health related-quality of life (HRQoL) for patients with inflammatory bowel disease (IBD), who often experience a relapsing disease course, is an essential component of care. Improving IBD disease control is linked to increased health-related quality of life. Even as many effective pharmacotherapies to promote disease control are available, evidence suggests that Hispanic and Non-Hispanic Black IBD patients may not receive full benefit from these therapies compared to their Non-Hispanic White counterparts. Underlying mechanisms that contribute to observed disparities in the use of IBD medical therapies are likely multifactorial. Adequate access to treatment has been implicated. Hispanic and Non-Hispanic Black IBD patients are more likely to be Medicaid-insured, and Medicaid insurance has been associated with increased emergency room visits, a proxy for sub-optimal IBD control. Medication adherence has also been proposed as a potential mediating factor. IBD therapies can be time-consuming and costly, which can pose a challenge in achieving medication adherence. While previous studies suggest Black IBD patients have lower medication adherence than Non-Hispanic White patients, it is unclear the extent to which social factors contribute to this observation. The purpose of this study is to evaluate the association between social determinants of health, medication adherence, and HRQoL among Hispanic and Non-Hispanic Black IBD patients. Understanding potentially modifiable psychosocial factors that contribute to medication adherence and HRQoL will provide targets for later intervention towards the goal of health equity."
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Inflammatory Bowel Diseases",
+      "Crohn Disease",
+      "Ulcerative Colitis"
+     ]
+    },
+    "designModule": {
+     "studyType": "OBSERVATIONAL",
+     "patientRegistry": false,
+     "designInfo": {
+      "observationalModel": "COHORT",
+      "timePerspective": "CROSS_SECTIONAL"
+     },
+     "enrollmentInfo": {
+      "count": 366,
+      "type": "ACTUAL"
+     }
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT07158242",
+     "orgStudyIdInfo": {
+      "id": "CA45905"
+     },
+     "secondaryIdInfos": [
+      {
+       "id": "2025-522518-22-01",
+       "type": "CTIS"
+      },
+      {
+       "id": "2025",
+       "type": "NIH",
+       "link": "https://reporter.nih.gov/quickSearch/2025"
+      }
+     ],
+     "organization": {
+      "fullName": "Hoffmann-La Roche",
+      "class": "INDUSTRY"
+     },
+     "briefTitle": "A Study to Evaluate the Pharmacokinetics, Safety and Efficacy of Afimkibart (RO7790121) in Children With Moderately to Severely Active Ulcerative Colitis",
+     "officialTitle": "A Phase III Randomized Double-Blind Multi-Center Treat-Through Study to Evaluate the Pharmacokinetics, Safety and Efficacy of Induction and Maintenance Therapy With Afimkibart (RO7790121) in Children Aged 2 - 17 Years With Moderately to Severely Active Ulcerative Colitis",
+     "acronym": "AMETRINE-PEDS"
+    },
+    "statusModule": {
+     "statusVerifiedDate": "2026-11",
+     "overallStatus": "RECRUITING",
+     "expandedAccessInfo": {
+      "hasExpandedAccess": false
+     },
+     "startDateStruct": {
+      "date": "2026-04-15",
+      "type": "ACTUAL"
+     },
+     "primaryCompletionDateStruct": {
+      "date": "2030-03-31",
+      "type": "ESTIMATED"
+     },
+     "completionDateStruct": {
+      "date": "2031-03-31",
+      "type": "ESTIMATED"
+     },
+     "studyFirstSubmitDate": "2025-08-28",
+     "studyFirstSubmitQcDate": "2025-08-28",
+     "studyFirstPostDateStruct": {
+      "date": "2025-09-05",
+      "type": "ACTUAL"
+     },
+     "lastUpdateSubmitDate": "2026-11-04",
+     "lastUpdatePostDateStruct": {
+      "date": "2026-11-05",
+      "type": "ACTUAL"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "responsibleParty": {
+      "type": "SPONSOR"
+     },
+     "leadSponsor": {
+      "name": "Hoffmann-La Roche",
+      "class": "INDUSTRY"
+     }
+    },
+    "descriptionModule": {
+     "briefSummary": "This Phase III, randomized, double-blind, multicenter, induction and maintenance study will evaluate the safety and efficacy of Afimkibart (RO7790121) in pediatric participants with moderate to severe active ulcerative colitis (UC)."
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Moderately to Severely Active Ulcerative Colitis"
+     ]
+    },
+    "designModule": {
+     "studyType": "INTERVENTIONAL",
+     "phases": [
+      "PHASE3"
+     ],
+     "designInfo": {
+      "allocation": "RANDOMIZED",
+      "interventionModel": "PARALLEL",
+      "primaryPurpose": "TREATMENT",
+      "maskingInfo": {
+       "masking": "QUADRUPLE",
+       "whoMasked": [
+        "PARTICIPANT",
+        "CARE_PROVIDER",
+        "INVESTIGATOR",
+        "OUTCOMES_ASSESSOR"
+       ]
+      }
+     },
+     "enrollmentInfo": {
+      "count": 100,
+      "type": "ESTIMATED"
+     }
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT07186101",
+     "orgStudyIdInfo": {
+      "id": "27704"
+     },
+     "secondaryIdInfos": [
+      {
+       "id": "J6E-MC-KWAN",
+       "type": "OTHER",
+       "domain": "Eli Lilly and Company"
+      },
+      {
+       "id": "MORF-057",
+       "type": "OTHER",
+       "domain": "Eli Lilly and Company"
+      }
+     ],
+     "organization": {
+      "fullName": "Eli Lilly and Company",
+      "class": "INDUSTRY"
+     },
+     "briefTitle": "LY4268989 (MORF-057) Co-Administered With Mirikizumab in Adults With Moderately to Severely Active Ulcerative Colitis:",
+     "officialTitle": "A Phase 2, Multicenter, Randomized, Double-Blind, Active-Controlled Study of LY4268989 (MORF-057) Co-Administered With Mirikizumab in Adults With Moderately to Severely Active Ulcerative Colitis",
+     "acronym": "TOPAZ-UC"
+    },
+    "statusModule": {
+     "statusVerifiedDate": "2026-11",
+     "overallStatus": "RECRUITING",
+     "expandedAccessInfo": {
+      "hasExpandedAccess": false
+     },
+     "startDateStruct": {
+      "date": "2025-11-10",
+      "type": "ACTUAL"
+     },
+     "primaryCompletionDateStruct": {
+      "date": "2027-05",
+      "type": "ESTIMATED"
+     },
+     "completionDateStruct": {
+      "date": "2029-03",
+      "type": "ESTIMATED"
+     },
+     "studyFirstSubmitDate": "2025-09-16",
+     "studyFirstSubmitQcDate": "2025-09-16",
+     "studyFirstPostDateStruct": {
+      "date": "2025-09-22",
+      "type": "ACTUAL"
+     },
+     "lastUpdateSubmitDate": "2026-11-03",
+     "lastUpdatePostDateStruct": {
+      "date": "2026-11-04",
+      "type": "ACTUAL"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "responsibleParty": {
+      "type": "SPONSOR"
+     },
+     "leadSponsor": {
+      "name": "Eli Lilly and Company",
+      "class": "INDUSTRY"
+     }
+    },
+    "descriptionModule": {
+     "briefSummary": "The main purpose of the study is to evaluate the effectiveness and safety of LY4268989 when given with mirikizumab compared to mirikizumab alone in adult participants with moderately to severely active ulcerative colitis (UC).\n\nStudy participation will last approximately 118 weeks, including 104 weeks of treatment and may include up to 21 visits."
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Ulcerative Colitis"
+     ]
+    },
+    "designModule": {
+     "studyType": "INTERVENTIONAL",
+     "phases": [
+      "PHASE2"
+     ],
+     "designInfo": {
+      "allocation": "RANDOMIZED",
+      "interventionModel": "PARALLEL",
+      "primaryPurpose": "TREATMENT",
+      "maskingInfo": {
+       "masking": "DOUBLE",
+       "whoMasked": [
+        "PARTICIPANT",
+        "CARE_PROVIDER"
+       ]
+      }
+     },
+     "enrollmentInfo": {
+      "count": 252,
+      "type": "ESTIMATED"
+     }
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT05528510",
+     "orgStudyIdInfo": {
+      "id": "CR109228"
+     },
+     "secondaryIdInfos": [
+      {
+       "id": "CNTO1959UCO3004",
+       "type": "OTHER",
+       "domain": "Janssen Research & Development, LLC"
+      },
+      {
+       "id": "2022-000365-41",
+       "type": "EUDRACT_NUMBER"
+      },
+      {
+       "id": "2023-504719-34-00",
+       "type": "REGISTRY",
+       "domain": "EUCT number"
+      },
+      {
+       "id": "2023",
+       "type": "NIH",
+       "link": "https://reporter.nih.gov/quickSearch/2023"
+      }
+     ],
+     "organization": {
+      "fullName": "Janssen Research & Development, LLC",
+      "class": "INDUSTRY"
+     },
+     "briefTitle": "A Study of Guselkumab Therapy in Participants With Moderately to Severely Active Ulcerative Colitis",
+     "officialTitle": "A Phase 3, Randomized, Double-blind, Placebo-controlled, Parallel-group, Multicenter Study to Evaluate the Efficacy and Safety of Guselkumab Subcutaneous Induction Therapy in Participants With Moderately to Severely Active Ulcerative Colitis",
+     "acronym": "ASTRO"
+    },
+    "statusModule": {
+     "statusVerifiedDate": "2026-11",
+     "overallStatus": "ACTIVE_NOT_RECRUITING",
+     "expandedAccessInfo": {
+      "hasExpandedAccess": false
+     },
+     "startDateStruct": {
+      "date": "2022-09-13",
+      "type": "ACTUAL"
+     },
+     "primaryCompletionDateStruct": {
+      "date": "2024-04-02",
+      "type": "ACTUAL"
+     },
+     "completionDateStruct": {
+      "date": "2028-10-06",
+      "type": "ESTIMATED"
+     },
+     "studyFirstSubmitDate": "2022-08-19",
+     "studyFirstSubmitQcDate": "2022-09-02",
+     "studyFirstPostDateStruct": {
+      "date": "2022-09-06",
+      "type": "ACTUAL"
+     },
+     "resultsFirstSubmitDate": "2025-10-16",
+     "resultsFirstSubmitQcDate": "2025-11-21",
+     "resultsFirstPostDateStruct": {
+      "date": "2025-12-09",
+      "type": "ACTUAL"
+     },
+     "dispFirstSubmitDate": "2025-04-01",
+     "dispFirstPostDateStruct": {
+      "date": "2025-12-09",
+      "type": "ACTUAL"
+     },
+     "lastUpdateSubmitDate": "2026-11-02",
+     "lastUpdatePostDateStruct": {
+      "date": "2026-11-04",
+      "type": "ACTUAL"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "responsibleParty": {
+      "type": "SPONSOR"
+     },
+     "leadSponsor": {
+      "name": "Janssen Research & Development, LLC",
+      "class": "INDUSTRY"
+     }
+    },
+    "descriptionModule": {
+     "briefSummary": "The purpose of this study is to evaluate the efficacy, including clinical remission of guselkumab subcutaneous (SC) induction compared to placebo in participants with moderately to severely active ulcerative colitis (UC)."
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Colitis, Ulcerative"
+     ],
+     "keywords": [
+      "Guselkumab",
+      "Colitis, Ulcerative"
+     ]
+    },
+    "designModule": {
+     "studyType": "INTERVENTIONAL",
+     "phases": [
+      "PHASE3"
+     ],
+     "designInfo": {
+      "allocation": "RANDOMIZED",
+      "interventionModel": "PARALLEL",
+      "primaryPurpose": "TREATMENT",
+      "maskingInfo": {
+       "masking": "DOUBLE",
+       "whoMasked": [
+        "PARTICIPANT",
+        "INVESTIGATOR"
+       ]
+      }
+     },
+     "enrollmentInfo": {
+      "count": 418,
+      "type": "ACTUAL"
+     }
+    }
+   }
+  }
+ ],
+ "nextPageToken": "ZVNj7o2Elu8o3lpyBYqp6rLumpOQJJxtbfCt3f0W"
+}

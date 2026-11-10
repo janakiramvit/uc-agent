@@ -115,9 +115,12 @@ class ProcessedIndex:
             return f"duplicate_trial_id:{rec.trial_id}"
         if rec.canonical_url and rec.canonical_url in self.canonical_url:
             return f"duplicate_canonical_url:{rec.canonical_url}"
-        if rec.checksum and rec.checksum in self.checksum:
+        has_strong_id = bool(rec.doi or rec.pmid or rec.pmcid or rec.trial_id)
+        if not has_strong_id and rec.checksum and rec.checksum in self.checksum:
             return f"duplicate_content_hash:{rec.checksum[:12]}"
-        if rec.normalized_title and rec.normalized_title in self.normalized_title:
+        # A title alone is weak evidence: a revised guideline or a trial can share an earlier record's title. It is used
+        # only when the candidate carries no DOI/PMID/PMCID/trial id of its own that could have told them apart.
+        if not has_strong_id and rec.normalized_title and rec.normalized_title in self.normalized_title:
             return f"duplicate_normalized_title:{rec.normalized_title[:60]}"
         return None
 
