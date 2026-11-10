@@ -1,0 +1,15 @@
+{
+ "version": "6.9",
+ "hitCount": 0,
+ "request": {
+  "queryString": "\"ulcerative colitis\" AND (2021:2026[pub_year])",
+  "resultType": "lite",
+  "cursorMark": "*",
+  "pageSize": 2,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": []
+ }
+}

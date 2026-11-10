@@ -26,11 +26,31 @@ class ResponseTooLarge(RuntimeError):
     pass
 
 
+class PdfRefused(RuntimeError):
+    """PDFs are never downloaded (copyright / no established redistribution licence)."""
+
+
+class HttpClientError(RuntimeError):
+    """A 4xx response (other than 429). Deterministic: never retried."""
+
+    def __init__(self, status: int, host: str) -> None:
+        super().__init__(f"HTTP {status} from {host}")
+        self.status = status
+        self.host = host
+
+
 def host_allowed(url: str) -> bool:
-    host = (urlparse(url).hostname or "").lower()
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
     if any(bad in host for bad in config.DENY_HOST_SUBSTRINGS):
         return False
+    if host in config.ROBOTS_ONLY_HOSTS:
+        return parsed.path == "/robots.txt"          # may learn the policy, never fetch content
     return host in config.API_HOST_ALLOWLIST
+
+
+def looks_like_pdf(url: str) -> bool:
+    return urlparse(url).path.lower().endswith(".pdf")
 
 
 class Http:
@@ -54,6 +74,7 @@ class Http:
         self.max_bytes = max_bytes
         self._sleep = sleep
         self._last_hit: dict[str, float] = {}
+        self._host_interval: dict[str, float] = {}
         self._session = session
         if enabled and self._session is None:
             self._session = requests.Session()
@@ -61,10 +82,14 @@ class Http:
         self.request_log: list[str] = []   # host+path only; never query values
 
     # ----------------------------------------------------------------------------------
+    def set_host_interval(self, host: str, seconds: float) -> None:
+        """Honour a robots.txt Crawl-delay (never lower than the global minimum)."""
+        self._host_interval[host.lower()] = max(self.min_interval, float(seconds))
+
     def _rate_limit(self, host: str) -> None:
         last = self._last_hit.get(host)
         if last is not None:
-            wait = self.min_interval - (time.monotonic() - last)
+            wait = self._host_interval.get(host, self.min_interval) - (time.monotonic() - last)
             if wait > 0:
                 self._sleep(wait)
         self._last_hit[host] = time.monotonic()
@@ -72,6 +97,8 @@ class Http:
     def get(self, url: str, params: Optional[dict] = None) -> "requests.Response":
         if not self.enabled:
             raise NetworkDisabled(f"--no-network: refusing GET {urlparse(url).hostname}")
+        if looks_like_pdf(url):
+            raise PdfRefused(f"refusing to request a PDF URL on {urlparse(url).hostname}")
         if not host_allowed(url):
             raise DisallowedHost(url)
         host = (urlparse(url).hostname or "").lower()
@@ -92,9 +119,18 @@ class Http:
                     loc = resp.headers.get("Location", "")
                     if not host_allowed(loc):
                         raise DisallowedHost(f"redirect to disallowed host: {loc}")
+                if 400 <= resp.status_code < 500 and resp.status_code != 429:
+                    resp.close()
+                    raise HttpClientError(resp.status_code, host)      # deterministic: no retry
                 resp.raise_for_status()
+                ctype = (resp.headers.get("Content-Type") or "").lower()
+                if any(ctype.startswith(t) for t in config.REFUSED_CONTENT_TYPES):
+                    resp.close()
+                    raise PdfRefused(f"refusing {ctype.split(';')[0]} response from {host}")
                 self._enforce_size(resp)
                 return resp
+            except (PdfRefused, HttpClientError):
+                raise
             except (requests.ConnectionError, requests.Timeout, requests.HTTPError) as exc:
                 last_exc = exc
                 self._backoff(attempt)

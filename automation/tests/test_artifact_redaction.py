@@ -34,7 +34,7 @@ def test_artifact_contains_only_allowlisted_fields(tmp_path):
         "artifactSchema", "runId", "workflowRunUrl", "startedAt", "finishedAt",
         "sourceDataCutoff", "status", "counters", "dispositionReasonCategories",
         "queryLabels", "acceptedSources", "qa", "checkpointValidation", "nextTopicId",
-        "errorCategories", "note",
+        "errorCategories", "providerHealth", "alerts", "note",
     }
     assert set(doc.keys()) == allowed_top
     src = doc["acceptedSources"][0]

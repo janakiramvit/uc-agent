@@ -37,6 +37,9 @@ def _norm(study: dict) -> dict:
         "studyDesign": design.get("studyType", ""),
         "conditions": conds,
         "overallStatus": status.get("overallStatus", ""),
+        "lastUpdatePostDate": (status.get("lastUpdatePostDateStruct", {}) or {}).get("date", ""),
+        "firstPostDate": (status.get("studyFirstPostDateStruct", {}) or {}).get("date", ""),
+        "phases": design.get("phases", []) or [],
         "canonicalUrl": f"https://clinicaltrials.gov/study/{nct}" if nct else "",
         "alternateUrl": "",
         "retrievedVia": f"ClinicalTrials.gov API v2 /studies ({nct})",
@@ -57,4 +60,27 @@ def search(http: Http, query: str, *, page_token: str | None = None, page_size: 
         "records": [_norm(s) for s in data.get("studies", [])],
         "nextCursor": data.get("nextPageToken", ""),
         "hitCount": data.get("totalCount", 0),
+    }
+
+
+def search_window(http: Http, *, start: str, end: str, page_token: str | None = None, page_size: int = 25) -> dict:
+    """Trials for ulcerative colitis whose registry record was posted/updated in [start, end] (YYYY-MM-DD).
+
+    ClinicalTrials.gov uses its own ``AREA[...]RANGE[a,b]`` expression; a malformed date range returns an
+    EMPTY 200 response rather than an error, so the provider pairs this with a wide-window canary.
+    """
+    params = {
+        "query.cond": "ulcerative colitis",
+        "filter.advanced": f"AREA[LastUpdatePostDate]RANGE[{start},{end}]",
+        "pageSize": str(page_size),
+        "countTotal": "true",
+        "format": "json",
+    }
+    if page_token:
+        params["pageToken"] = page_token
+    data = http.get_json(f"{BASE}/studies", params)
+    return {
+        "records": [_norm(s) for s in data.get("studies", [])],
+        "nextCursor": data.get("nextPageToken", ""),
+        "hitCount": int(data.get("totalCount", 0) or 0),
     }

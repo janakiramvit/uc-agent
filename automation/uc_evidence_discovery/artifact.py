@@ -48,6 +48,8 @@ def build(
     checkpoint_valid: bool,
     next_topic_id: str | None,
     error_categories: list[str],
+    provider_health: dict | None = None,
+    alert_counts: dict | None = None,
     out_dir: Path = config.ARTIFACT_DIR,
 ) -> Path:
     doc = {
@@ -84,6 +86,8 @@ def build(
         "checkpointValidation": "valid" if checkpoint_valid else "invalid",
         "nextTopicId": next_topic_id,
         "errorCategories": sorted(set(error_categories)),
+        "providerHealth": provider_health or {},
+        "alerts": alert_counts or {},
         "note": "Redacted. Contains no abstracts, excerpts, claim text, raw responses, or secrets.",
     }
     _assert_clean(doc)
@@ -112,6 +116,15 @@ def build(
     for s in doc["acceptedSources"]:
         ident = s["doi"] or s["pubmedId"] or s["pmcId"] or s["clinicalTrialsId"] or "—"
         md.append(f"| {s['sourceId']} | {s['title']} | {ident} | {s['ucApplicability']} |")
+    if provider_health:
+        md += ["", "## Provider health (counts only)", "",
+               "| provider | status | hits | returned | screened | dupes | rejected | deferred | accepted | claims |",
+               "|---|---|---|---|---|---|---|---|---|---|"]
+        for name, h in provider_health.items():
+            md.append(f"| {name} | {h['status']} | {h['hits']} | {h['returned']} | {h['screened']} | {h['duplicates']} | "
+                      f"{h['rejected']} | {h['deferred']} | {h['accepted']} | {h['claims']} |")
+        if alert_counts:
+            md += ["", "Alerts: " + ", ".join(f"{k} x{v}" for k, v in sorted(alert_counts.items()))]
     md_path = out_dir / f"redacted-run-{run_id}.md"
     md_path.write_text("\n".join(md) + "\n", encoding="utf-8")
     return json_path

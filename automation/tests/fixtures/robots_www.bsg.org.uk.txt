@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/*
+Disallow: /web-education
+Disallow: /profile
+Disallow: /journals
+Allow: /
+Sitemap: https://www.bsg.org.uk/sitemap.xml

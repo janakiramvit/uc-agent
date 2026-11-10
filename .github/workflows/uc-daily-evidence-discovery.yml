@@ -59,6 +59,12 @@ jobs:
             --soft-deadline-seconds 450 \
             --finalize-deadline-seconds 540
 
+      - name: Show provider health in the run summary
+        if: always()
+        run: |
+          REPORT="${{ steps.worktree.outputs.state_root }}/knowledge/uc-evidence-expansion/DAILY-REPORT.md"
+          if [ -f "${REPORT}" ]; then cat "${REPORT}" >> "${GITHUB_STEP_SUMMARY}"; else echo "No daily report was produced." >> "${GITHUB_STEP_SUMMARY}"; fi
+
       - name: Remove the state worktree (from the trusted main checkout, explicit target path)
         if: always()
         run: |
@@ -66,6 +72,7 @@ jobs:
           git worktree prune
 
       - name: Upload redacted run artifact
+        if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: uc-evidence-discovery-redacted-${{ github.run_id }}

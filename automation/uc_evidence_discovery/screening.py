@@ -45,11 +45,14 @@ def relevance(record: dict, extra_keywords: tuple[str, ...] = ()) -> tuple[bool,
     return (bool(matched), matched)
 
 
+TRIAL_TYPES = ("ongoing_trial", "completed_trial_record")
+
+
 def _has_min_metadata(record: dict) -> bool:
     has_title = bool((record.get("title") or "").strip())
     has_id = any(
         record.get(k) for k in ("doi", "pmid", "pubmedId", "pmcid", "nctId", "trialId")
-    )
+    ) or (record.get("evidenceType") == "clinical_guideline" and bool(record.get("canonicalUrl")))
     has_venue = bool((record.get("journal") or record.get("publishingOrganisation") or "").strip())
     return has_title and has_id and has_venue
 
@@ -62,6 +65,8 @@ class Disposition:
     requires_human_review: bool = False
     topic_id: Optional[str] = None
     matched_keywords: tuple[str, ...] = ()
+    evidence_type: str = "published_study"
+    claims_allowed: bool = True
 
     def __post_init__(self) -> None:
         assert self.status in DISPOSITIONS, self.status
@@ -77,41 +82,52 @@ def screen(
     topic_keywords: tuple[str, ...] = (),
 ) -> Disposition:
     key = CandidateKey.from_record(record)
+    etype = record.get("evidenceType") or "published_study"
+    is_trial = etype in TRIAL_TYPES
 
     dup = index.duplicate_reason(key)
     if dup:
-        return Disposition("duplicate", dup, applicability_label(record), topic_id=topic_id)
+        return Disposition("duplicate", dup, applicability_label(record), topic_id=topic_id,
+                           evidence_type=etype, claims_allowed=not is_trial)
 
     label = applicability_label(record)
+    base = dict(topic_id=topic_id, evidence_type=etype, claims_allowed=not is_trial)
 
     is_rel, matched = relevance(record, topic_keywords)
-    if not is_rel:
-        return Disposition("rejected", "not_relevant:no_priority_topic_keyword_match", label, topic_id=topic_id)
+    title_uc = "ulcerative colitis" in (record.get("title") or "").lower()
+    if not (is_rel or (label in ("ulcerative_colitis", "ibd_general")
+                       and (title_uc or etype == "clinical_guideline" or is_trial))):
+        return Disposition("rejected", "not_relevant:no_priority_topic_keyword_match", label, **base)
 
     if label == "crohns_only":
-        return Disposition(
-            "rejected", "out_of_scope:crohns_only_not_uc", label, topic_id=topic_id,
-            matched_keywords=tuple(matched),
-        )
+        return Disposition("rejected", "out_of_scope:crohns_only_not_uc", label,
+                           matched_keywords=tuple(matched), **base)
+
+    if label == "unknown" and not is_rel:
+        return Disposition("rejected", "not_relevant:ulcerative_colitis_not_mentioned", label, **base)
 
     if not _has_min_metadata(record):
-        return Disposition(
-            "deferred", "missing_required_metadata:need_title+id+venue", label,
-            requires_human_review=True, topic_id=topic_id, matched_keywords=tuple(matched),
-        )
+        return Disposition("deferred", "missing_required_metadata:need_title+id+venue", label,
+                           requires_human_review=True, matched_keywords=tuple(matched), **base)
+
+    if is_trial:
+        # A registry record is kept as a labelled trial source. It is never a treatment-effect claim.
+        return Disposition("accepted", "trial_registry_record:no_claims_extracted_not_treatment_effect_evidence",
+                           label, requires_human_review=True, matched_keywords=tuple(matched), **base)
 
     abstract = (record.get("abstractText") or record.get("abstract") or "").strip()
+    if etype == "clinical_guideline" and len(abstract) < 120:
+        # public listing metadata only (title/date/DOI/link): a legitimate guideline source, nothing to quote
+        return Disposition("accepted", "guideline_listing_metadata_only:full_text_verification_required", label,
+                           requires_human_review=True, matched_keywords=tuple(matched),
+                           **{**base, "claims_allowed": False})
     if len(abstract) < 120:
-        return Disposition(
-            "deferred", "no_usable_abstract:full_text_not_retrieved_within_limits", label,
-            requires_human_review=True, topic_id=topic_id, matched_keywords=tuple(matched),
-        )
+        return Disposition("deferred", "no_usable_abstract:paywalled_or_abstract_not_public", label,
+                           requires_human_review=True, matched_keywords=tuple(matched), **base)
 
-    rhr = label in ("unknown", "ibd_general")
+    rhr = label in ("unknown", "ibd_general") or etype == "clinical_guideline"
     reason = "passes_relevance_provenance_and_min_metadata"
     if label == "ibd_general":
         reason += ";ibd_general_label_retained_not_upgraded_to_uc"
-    return Disposition(
-        "accepted", reason, label, requires_human_review=rhr, topic_id=topic_id,
-        matched_keywords=tuple(matched),
-    )
+    return Disposition("accepted", reason, label, requires_human_review=rhr,
+                       matched_keywords=tuple(matched), **base)

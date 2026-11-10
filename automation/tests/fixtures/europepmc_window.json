@@ -1,0 +1,1343 @@
+{
+ "version": "6.9",
+ "hitCount": 190,
+ "nextCursorMark": "AoIIQP8FYig1Njg0MzI3NQ==",
+ "nextPageUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22ulcerative+colitis%22+OR+%22colitis%2C+ulcerative%22%29+AND+%28FIRST_IDATE%3A%5B2026-11-03+TO+2026-11-10%5D%29+NOT+SRC%3APPR&cursorMark=AoIIQP8FYig1Njg0MzI3NQ%3D%3D&resultType=core&pageSize=4&format=json",
+ "request": {
+  "queryString": "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-03 TO 2026-11-10]) NOT SRC:PPR",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 4,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "42986541",
+    "source": "MED",
+    "pmid": "42986541",
+    "doi": "10.1007/s12026-026-09867-y",
+    "title": "Effects of low-dose atorvastatin combined with reduced-dose prednisolone in acetic acid-induced ulcerative colitis in rats.",
+    "authorString": "Qaderi M, Abtahi Froushani SM.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Qaderi M",
+       "lastName": "Qaderi",
+       "firstName": "Milad",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0003-6722-894X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Microbiology, Faculty of Veterinary Medicine, Urmia University, Urmia, 571531177, Iran."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Abtahi Froushani SM",
+       "lastName": "Abtahi Froushani",
+       "firstName": "Seyyed Meysam",
+       "initials": "SM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2579-6618"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Microbiology, Faculty of Veterinary Medicine, Urmia University, Urmia, 571531177, Iran. sm.abtahi@urmia.ac.ir."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2579-6618"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0003-6722-894X"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "74",
+     "journalIssueId": 4306852,
+     "dateOfPublication": "2026 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Immunol Res",
+      "title": "Immunologic research",
+      "essn": "1559-0755",
+      "issn": "0257-277X",
+      "nlmid": "8611087",
+      "isoabbreviation": "Immunol Res"
+     },
+     "printPublicationDate": "2026-11-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "133",
+    "abstractText": "Long-term corticosteroid treatment for ulcerative colitis (UC) is often limited by dose-dependent adverse effects, highlighting the need for strategies that reduce steroid exposure. This study evaluated the efficacy of a combination of half-doses of Atorvastatin and Prednisolone in rats with acetic acid-induced colitis. Thirty-five rats were allocated to five groups (n\u2009=\u20097 per group): normal contr",
+    "affiliation": "Department of Microbiology, Faculty of Veterinary Medicine, Urmia University, Urmia, 571531177, Iran.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Animals"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Rats"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Colitis, Ulcerative",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DT",
+          "qualifierName": "drug therapy"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Disease Models, Animal"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Nitric Oxide",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Acetic Acid"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Prednisolone",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AD",
+          "qualifierName": "administration & dosage"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TU",
+          "qualifierName": "therapeutic use"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Peroxidase",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "NF-kappa B",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anti-Inflammatory Agents",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TU",
+          "qualifierName": "therapeutic use"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cytokines",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Drug Therapy, Combination"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Atorvastatin",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AD",
+          "qualifierName": "administration & dosage"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TU",
+          "qualifierName": "therapeutic use"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Atorvastatin",
+      "Ulcerative colitis",
+      "Combination therapy",
+      "Experimental colitis",
+      "Prednisolone"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Anti-Inflammatory Agents",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Peroxidase",
+       "registryNumber": "EC 1.11.1.7"
+      },
+      {
+       "name": "Cytokines",
+       "registryNumber": "0"
+      },
+      {
+       "name": "NF-kappa B",
+       "registryNumber": "0"
+      },
+      {
+       "name": "atorvastatin",
+       "registryNumber": "A0JWA85V8F"
+      },
+      {
+       "name": "Nitric Oxide",
+       "registryNumber": "31C4KY9ESH"
+      },
+      {
+       "name": "Prednisolone",
+       "registryNumber": "9PHQ9Y1OLM"
+      },
+      {
+       "name": "Acetic Acid",
+       "registryNumber": "Q40Q9N063P"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s12026-026-09867-y"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "N",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-11-05",
+    "dateOfCreation": "2026-11-05",
+    "dateOfRevision": "2026-11-05",
+    "electronicPublicationDate": "2026-11-05",
+    "firstPublicationDate": "2026-11-05",
+    "firstIndexDate": "2026-11-07",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "42989894",
+    "source": "MED",
+    "pmid": "42989894",
+    "doi": "10.1002/jssc.70576",
+    "title": "Potential Anti-inflammatory Compounds in Shaoyao Decoction to Treat Ulcerative Colitis Explored by Bioaffinity Ultrafiltration Liquid Chromatography-Mass Spectrometry With Multiple Drug Targets.",
+    "authorString": "Wang S, Hua X, Liu D, Sarker SD, Nahar L, Zhang Y, Guo M.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Wang S",
+       "lastName": "Wang",
+       "firstName": "Shujun",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Affiliated Cixi Hospital, Wenzhou Medical University, Cixi, P. R. China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hua X",
+       "lastName": "Hua",
+       "firstName": "Xiaowen",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Advanced Theranostic Materials and Technology, Ningbo Institute of Materials Technology and Engineering, Chinese Academy of Sciences, Ningbo, P. R. China."
+         },
+         {
+          "affiliation": "Zhejiang International Scientific and Technological Cooperative Base of Biomedical Materials and Technology, Zhejiang Engineering Research Center for Biomedical Materials, Ningbo Cixi Institute of Biomedical Engineering, Cixi, P. R. China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu D",
+       "lastName": "Liu",
+       "firstName": "Dan",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Jiangxi Province Key Laboratory of Drug Target Discovery and Validation, School of Pharmacy, Jiangxi Medical College, Nanchang University, Nanchang, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sarker SD",
+       "lastName": "Sarker",
+       "firstName": "Satyajit Dey",
+       "initials": "SD",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Natural Products Discovery, School of Pharmacy and Biomolecular Sciences, Liverpool John Moores University, Liverpool, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nahar L",
+       "lastName": "Nahar",
+       "firstName": "Lutfun",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Growth Regulators, Palack\u00fd University and Institute of Experimental Botany, The Czech Academy of Sciences, Olomouc, Czech Republic."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhang Y",
+       "lastName": "Zhang",
+       "firstName": "Yingying",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Advanced Theranostic Materials and Technology, Ningbo Institute of Materials Technology and Engineering, Chinese Academy of Sciences, Ningbo, P. R. China."
+         },
+         {
+          "affiliation": "Zhejiang International Scientific and Technological Cooperative Base of Biomedical Materials and Technology, Zhejiang Engineering Research Center for Biomedical Materials, Ningbo Cixi Institute of Biomedical Engineering, Cixi, P. R. China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Guo M",
+       "lastName": "Guo",
+       "firstName": "Mingquan",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Advanced Theranostic Materials and Technology, Ningbo Institute of Materials Technology and Engineering, Chinese Academy of Sciences, Ningbo, P. R. China."
+         },
+         {
+          "affiliation": "Zhejiang International Scientific and Technological Cooperative Base of Biomedical Materials and Technology, Zhejiang Engineering Research Center for Biomedical Materials, Ningbo Cixi Institute of Biomedical Engineering, Cixi, P. R. China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "11",
+     "volume": "49",
+     "journalIssueId": 4303351,
+     "dateOfPublication": "2026 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "J Sep Sci",
+      "title": "Journal of separation science",
+      "essn": "1615-9314",
+      "issn": "1615-9306",
+      "nlmid": "101088554",
+      "isoabbreviation": "J Sep Sci"
+     },
+     "printPublicationDate": "2026-11-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "e70576",
+    "abstractText": "Shaoyao Decoction (SYD) demonstrates therapeutic efficacy in ulcerative colitis (UC), though its active components are still unclear. The present investigation was conducted to comprehensively identify those major constituents of SYD responsible for therapeutic action, focusing on their interaction with important inflammation-related mediators, NOD-, LRR-, and pyrin domain-containing protein 3 (NL",
+    "affiliation": "Affiliated Cixi Hospital, Wenzhou Medical University, Cixi, P. R. China.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Ningbo Yongjiang Talent Programme",
+       "grantId": "2024A-427-G",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Colitis, Ulcerative",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DT",
+          "qualifierName": "drug therapy"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anti-Inflammatory Agents",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PD",
+          "qualifierName": "pharmacology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TU",
+          "qualifierName": "therapeutic use"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CH",
+          "qualifierName": "chemistry"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Drugs, Chinese Herbal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PD",
+          "qualifierName": "pharmacology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TU",
+          "qualifierName": "therapeutic use"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CH",
+          "qualifierName": "chemistry"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Interleukin-6",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Ultrafiltration"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Chromatography, High Pressure Liquid"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Tandem Mass Spectrometry"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Molecular Docking Simulation"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Liquid Chromatography-Mass Spectrometry"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Ulcerative colitis",
+      "Bioaffinity Ultrafiltration",
+      "Multi\u2010target Screening",
+      "Shaoyao Decoction"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Anti-Inflammatory Agents",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Drugs, Chinese Herbal",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Interleukin-6",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1002/jssc.70576"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "N",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-11-06",
+    "dateOfCreation": "2026-11-06",
+    "dateOfRevision": "2026-11-06",
+    "firstPublicationDate": "2026-11-01",
+    "firstIndexDate": "2026-11-07",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "42999039",
+    "source": "MED",
+    "pmid": "42999039",
+    "doi": "10.1080/19490976.2026.2756799",
+    "title": "Colonoscopy-based <i>Clostridioides difficile</i> screening for inflammatory bowel disease patients. ",
+    "authorString": "Allegretti JR, Carlin A, McClure E, Delaney M, Bry L.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Allegretti JR",
+       "lastName": "Allegretti",
+       "firstName": "Jessica R",
+       "initials": "JR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Gastroenterology, Hepatology and Endoscopy, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Carlin A",
+       "lastName": "Carlin",
+       "firstName": "Alexander",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1821-4694"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Gastroenterology, Hepatology and Endoscopy, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "McClure E",
+       "lastName": "McClure",
+       "firstName": "Emma",
+       "initials": "E",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Gastroenterology, Hepatology and Endoscopy, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Delaney M",
+       "lastName": "Delaney",
+       "firstName": "Mary",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Massachusetts Host-Microbiome Center, Department of Pathology, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+         },
+         {
+          "affiliation": "Clinical Microbiology Laboratory, Department of Pathology, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bry L",
+       "lastName": "Bry",
+       "firstName": "Lynn",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Massachusetts Host-Microbiome Center, Department of Pathology, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+         },
+         {
+          "affiliation": "Clinical Microbiology Laboratory, Department of Pathology, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1821-4694"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "18",
+     "journalIssueId": 4076112,
+     "dateOfPublication": "2026 Dec",
+     "monthOfPublication": 12,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Gut Microbes",
+      "title": "Gut microbes",
+      "essn": "1949-0984",
+      "issn": "1949-0976",
+      "nlmid": "101495343",
+      "isoabbreviation": "Gut Microbes"
+     },
+     "printPublicationDate": "2026-12-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "2756799",
+    "abstractText": "Patients with IBD have an increased risk for Clostridioides difficile infection, and the significance of asymptomatic colonization is poorly understood. Overlapping symptoms often complicate diagnosis, and there is a lack of validated screening methods. Colonic wash aspirates collected during routine colonoscopies may offer a convenient screening option. We aimed to evaluate culture methods for de",
+    "affiliation": "Division of Gastroenterology, Hepatology and Endoscopy, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "IM",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Hatch Family Fund",
+       "orderIn": 0
+      },
+      {
+       "agency": "Massachusetts Life Sciences Center",
+       "orderIn": 0
+      },
+      {
+       "agency": "National Institutes of Health",
+       "grantId": "R01 AI179807",
+       "orderIn": 0
+      },
+      {
+       "agency": "National Institutes of Health",
+       "grantId": "Harvard Digestive Diseases Center grant P30 DK034854",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Clostridium Infections",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DI",
+          "qualifierName": "diagnosis"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MI",
+          "qualifierName": "microbiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Colitis, Ulcerative",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MI",
+          "qualifierName": "microbiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Inflammatory Bowel Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CO",
+          "qualifierName": "complications"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MI",
+          "qualifierName": "microbiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Crohn Disease",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MI",
+          "qualifierName": "microbiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Bacterial Proteins",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "GE",
+          "qualifierName": "genetics"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Bacterial Toxins",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "GE",
+          "qualifierName": "genetics"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Colonoscopy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Mass Screening",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Middle Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Clostridioides difficile",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "GE",
+          "qualifierName": "genetics"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "IP",
+          "qualifierName": "isolation & purification"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "toxB protein, Clostridium difficile",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Bacterial Toxins",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Bacterial Proteins",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/19490976.2026.2756799"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-11-08",
+    "dateOfCreation": "2026-11-08",
+    "dateOfRevision": "2026-11-08",
+    "electronicPublicationDate": "2026-11-08",
+    "firstPublicationDate": "2026-11-08",
+    "firstIndexDate": "2026-11-08",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "42976275",
+    "source": "MED",
+    "pmid": "42976275",
+    "doi": "10.1093/ecco-jcc/jjag166",
+    "title": "Interpretable machine learning models for early prediction of Crohn's disease and ulcerative colitis in a nationwide health system.",
+    "authorString": "Haluts E, Dyer EC, Ben Tov A, Kariv R, Borenstein E, Cohen NA.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Haluts E",
+       "lastName": "Haluts",
+       "firstName": "Eyal",
+       "initials": "E",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Blavatnik School of Computer Science and AI, Tel Aviv University, Tel Aviv, Israel."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Dyer EC",
+       "lastName": "Dyer",
+       "firstName": "Emma C",
+       "initials": "EC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Data Science, Dana-Farber Cancer Institute, Boston, MA, United States."
+         },
+         {
+          "affiliation": "Department of Environmental Health, Harvard T.H. Chan School of Public Health, Boston, MA, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ben Tov A",
+       "lastName": "Ben Tov",
+       "firstName": "Amir",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "KSM Research Institute and Health Division, Maccabi Health Services, Maccabi, Israel."
+         },
+         {
+          "affiliation": "Gray Faculty of Medical & Health Sciences, Tel Aviv University, Tel Aviv, Israel."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kariv R",
+       "lastName": "Kariv",
+       "firstName": "Revital",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "KSM Research Institute and Health Division, Maccabi Health Services, Maccabi, Israel."
+         },
+         {
+          "affiliation": "Gray Faculty of Medical & Health Sciences, Tel Aviv University, Tel Aviv, Israel."
+         },
+         {
+          "affiliation": "Digestive Disease Institute, Shaare Zedek Medical Center, Jerusalem, Israel."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Borenstein E",
+       "lastName": "Borenstein",
+       "firstName": "Elhanan",
+       "initials": "E",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3002-0945"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Blavatnik School of Computer Science and AI, Tel Aviv University, Tel Aviv, Israel."
+         },
+         {
+          "affiliation": "Gray Faculty of Medical & Health Sciences, Tel Aviv University, Tel Aviv, Israel."
+         },
+         {
+          "affiliation": "Santa Fe Institute, Santa Fe, NM, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cohen NA",
+       "lastName": "Cohen",
+       "firstName": "Nathaniel Aviv",
+       "initials": "NA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9252-9208"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "KSM Research Institute and Health Division, Maccabi Health Services, Maccabi, Israel."
+         },
+         {
+          "affiliation": "Gray Faculty of Medical & Health Sciences, Tel Aviv University, Tel Aviv, Israel."
+         },
+         {
+          "affiliation": "IBD Center, Department of Gastroenterology, Tel Aviv Sourasky University Medical Center, Tel Aviv, Israel."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9252-9208"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3002-0945"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "20",
+     "journalIssueId": 4283536,
+     "dateOfPublication": "2026 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "J Crohns Colitis",
+      "title": "Journal of Crohn's & colitis",
+      "essn": "1876-4479",
+      "issn": "1873-9946",
+      "nlmid": "101318676",
+      "isoabbreviation": "J Crohns Colitis"
+     },
+     "printPublicationDate": "2026-10-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "jjag166",
+    "abstractText": "<h4>Background & aims</h4>Delayed diagnosis of inflammatory bowel disease (IBD) is associated with worse outcomes. Existing prediction studies often rely on small cohorts or specialized biomarkers that limit scalability. We evaluated whether machine learning models based on routinely collected clinical data can predict future Crohn's disease (CD) and ulcerative colitis (UC) years before diagnosis ",
+    "affiliation": "Blavatnik School of Computer Science and AI, Tel Aviv University, Tel Aviv, Israel.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Kahn Segol Maccabi Research and Innovative Institute",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Colitis, Ulcerative",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DI",
+          "qualifierName": "diagnosis"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Crohn Disease",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DI",
+          "qualifierName": "diagnosis"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Assessment",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Retrospective Studies"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "ROC Curve"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adolescent"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Middle Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Young Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Electronic Health Records"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Machine Learning"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Boosting Machine Learning Algorithms"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Predictive Learning Models"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Prediction",
+      "Ulcerative colitis",
+      "Inflammatory Bowel Disease",
+      "Machine Learning",
+      "Crohn\u2019s Disease"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1093/ecco-jcc/jjag166"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "N",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-11-03",
+    "dateOfCreation": "2026-11-03",
+    "dateOfRevision": "2026-11-03",
+    "firstPublicationDate": "2026-10-01",
+    "firstIndexDate": "2026-11-04",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

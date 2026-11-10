@@ -107,6 +107,21 @@ def run_checks(
         not re.search(r"(?i)reddit\.com|redd\.it|/u/[a-z0-9_-]+|/user/[a-z0-9_-]+", blob),
         "regex scan")
 
+    # --- multi-source evidence-type invariants -------------------------------------------------
+    trial_types = ("ongoing_trial", "completed_trial_record")
+    trial_src = {s.get("sourceId") for s in sources if s.get("evidenceType") in trial_types}
+    add("QA-16", "No candidate claim is attached to a trial registry source (trials are never treatment-effect claims)",
+        not any(c.get("sourceId") in trial_src for c in claims), f"{len(trial_src)} trial source(s)")
+    add("QA-17", "Every source's evidenceType (when present) is one of the four separate evidence types",
+        all(s.get("evidenceType", "published_study") in ("published_study", "clinical_guideline", *trial_types)
+            for s in sources), "checked")
+    add("QA-18", "No PDF link or downloaded-file field is stored on any source",
+        not any(re.search(r"\.pdf(\?|$)", (s.get(k) or "").lower()) for s in sources
+                for k in ("canonicalUrl", "alternateUrl"))
+        and not any(k in s for s in sources for k in ("fullText", "pdfPath", "pdfUrl")), "checked")
+    add("QA-19", "Every extracted claim is flagged as requiring full-text verification",
+        all(c.get("requiresFullTextVerification", True) is True for c in claims), "checked")
+
     total = len(checks)
     passed = sum(1 for c in checks if c["result"] == "PASS")
     doc = {

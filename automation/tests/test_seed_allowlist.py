@@ -20,11 +20,13 @@ def test_commit_allowlist_excludes_caches_locks_and_raw_reddit_file():
     assert ".uc_reddit_work/" in deny
 
 
-def test_only_a_fixed_trio_is_force_added():
+def test_only_a_fixed_set_is_force_added():
     force = config.StatePaths.COMMIT_FORCE_PATHS
     assert force == {
         "knowledge/uc-evidence-expansion/state/checkpoint.json",
         "knowledge/uc-evidence-expansion/state/checkpoint.json.known-good",
+        "knowledge/uc-evidence-expansion/state/provider-state.json",
+        "knowledge/uc-evidence-expansion/state/provider-state.json.known-good",
         "knowledge/uc-evidence-expansion/journal/run-journal.ndjson",
     }
     assert force <= set(config.StatePaths.COMMIT_ALLOWLIST)

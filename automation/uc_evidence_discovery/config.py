@@ -45,10 +45,15 @@ UPLOAD_CLEANUP_RESERVE_SECONDS = 60
 HARD_TIMEOUT_SECONDS = 600
 
 # --- Hard daily limits ---------------------------------------------------------------------
-MAX_QUERIES = 10
-MAX_SCREENED = 30
-MAX_ACCEPTED = 5
-MAX_CLAIMS = 20
+# Sized for 8 independently-reported providers (3 literature/registry APIs + 5 guideline bodies);
+# the 600 s job timeout and the 450 s research soft deadline are unchanged.
+MAX_QUERIES = 40
+MAX_SCREENED = 150
+MAX_ACCEPTED = 20
+MAX_CLAIMS = 60
+MAX_PAGES_PER_SEARCH = 3          # pages fetched per provider search per run
+PAGE_SIZE = 25
+MAX_GUIDELINE_PAGES_PER_RUN = 6   # society-site pages fetched per run (all societies together)
 MAX_RETRIES_PER_SERVICE = 2
 BACKOFF_BASE_SECONDS = 1.5
 MAX_RESPONSE_BYTES = 5_000_000
@@ -64,14 +69,31 @@ API_HOST_ALLOWLIST = frozenset(
         "eutils.ncbi.nlm.nih.gov",  # NCBI E-utilities
         "clinicaltrials.gov",       # ClinicalTrials.gov API v2
         "api.github.com",           # stale-lock liveness check only (actions: read)
+        # Guideline bodies whose robots.txt permits automated access (checked at run time, per path):
+        "gi.org",                   # ACG
+        "www.nice.org.uk",          # NICE
+        "www.bsg.org.uk",           # BSG
     }
 )
+# Hosts we may fetch ONLY /robots.txt from: to learn (and report) that automated access is not permitted.
+# Their content is never requested. AGA (gastro.org) disallows all generic bots; ECCO returns 403.
+ROBOTS_ONLY_HOSTS = frozenset({"gastro.org", "www.gastro.org", "www.ecco-ibd.eu", "ecco-ibd.eu"})
+REFUSED_CONTENT_TYPES = ("application/pdf", "application/x-pdf", "application/octet-stream")
 DENY_HOST_SUBSTRINGS = ("reddit.", "redd.it", "openai.", "anthropic.", "api.anthropic.")
 
 USER_AGENT = (
     "uc-agent-evidence-discovery/1.0 (+https://github.com/janakiramvit/uc-agent; "
     "deterministic non-LLM research staging bot)"
 )
+
+# --- Discovery window ---------------------------------------------------------------------
+# Discovery starts on this date. Nothing earlier is ever searched (no backfill), even after a
+# long outage: catch-up is from the last successful cutoff, floored here.
+EARLIEST_DISCOVERY_DATE = "2026-11-10"
+WINDOW_OVERLAP_DAYS = 1            # re-cover the last day to absorb index-lag; duplicates are removed
+MAX_CATCHUP_DAYS = 31              # a longer gap is searched in 31-day slices over successive runs
+REPEATED_ZERO_WARN = 2             # consecutive unexpected zero-result runs -> WARNING
+REPEATED_ZERO_ERROR = 3            # ... -> ERROR alert
 
 # --- ID reservations (documented in knowledge/uc-evidence-expansion/README.md) --------------
 SOURCE_ID_FLOOR = 32     # SRC-001..SRC-032 reserved by prior packages
@@ -147,6 +169,22 @@ class StatePaths:
         return self.evidence_dir / "topic-priority-map.json"
 
     @property
+    def provider_state_path(self) -> Path:
+        return self.state_dir / "provider-state.json"
+
+    @property
+    def provider_state_known_good_path(self) -> Path:
+        return self.state_dir / "provider-state.json.known-good"
+
+    @property
+    def provider_funnel_path(self) -> Path:
+        return self.evidence_dir / "provider-funnel.json"
+
+    @property
+    def daily_report_path(self) -> Path:
+        return self.evidence_dir / "DAILY-REPORT.md"
+
+    @property
     def sources_path(self) -> Path:
         return self.evidence_dir / "sources.json"
 
@@ -201,6 +239,10 @@ class StatePaths:
         "knowledge/uc-evidence-expansion/topic-priority-map.json",
         "knowledge/uc-evidence-expansion/state/checkpoint.json",
         "knowledge/uc-evidence-expansion/state/checkpoint.json.known-good",
+        "knowledge/uc-evidence-expansion/state/provider-state.json",
+        "knowledge/uc-evidence-expansion/state/provider-state.json.known-good",
+        "knowledge/uc-evidence-expansion/provider-funnel.json",
+        "knowledge/uc-evidence-expansion/DAILY-REPORT.md",
         "knowledge/uc-evidence-expansion/journal/run-journal.ndjson",
     )
     # These are force-added because the repo .gitignore ignores them; still only ever inside a
@@ -209,6 +251,8 @@ class StatePaths:
         {
             "knowledge/uc-evidence-expansion/state/checkpoint.json",
             "knowledge/uc-evidence-expansion/state/checkpoint.json.known-good",
+            "knowledge/uc-evidence-expansion/state/provider-state.json",
+            "knowledge/uc-evidence-expansion/state/provider-state.json.known-good",
             "knowledge/uc-evidence-expansion/journal/run-journal.ndjson",
         }
     )
