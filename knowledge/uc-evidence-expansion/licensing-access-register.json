@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-e648136e30e7",
-  "generatedAt": "2026-09-02T13:17:27Z",
+  "runId": "uc-exp-18f1e85b8e6a",
+  "generatedAt": "2026-11-10T20:43:56Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -84,6 +84,292 @@
         "canonical URL",
         "access status",
         "abstract text (SRC-028, SRC-033)"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-105",
+      "title": "Longitudinal Immunophenotyping of Patients With Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07619547",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-106",
+      "title": "Comparative effectiveness of infliximab and tofacitinib in advanced therapy-naive and -exposed patients with ulcerative colitis: a multicenter real-world study",
+      "canonicalUrl": "https://doi.org/10.1093/ibd/izag248",
+      "doi": "10.1093/ibd/izag248",
+      "pubmedId": "43007333",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-107",
+      "title": "Evaluation of a Remote Monitoring Application in the Follow-up of Patients With Active Inflammatory Bowel Diseases: The SECURITY Trial",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06742385",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-108",
+      "title": "A Phase 3 Extension Study to Evaluate the Long-term Safety and Efficacy of Tulisokibart in Participants With Crohn's Disease or Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06651281",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-109",
+      "title": "Cellular therapies and immune reprogramming in inflammatory bowel disease: lessons learned and the promise of CAR T-cell therapy",
+      "canonicalUrl": "https://doi.org/10.1093/ibd/izag233",
+      "doi": "10.1093/ibd/izag233",
+      "pubmedId": "43007306",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-110",
+      "title": "Safety and Efficacy of a STOPping Strategy Versus Classical Maintenance Dose of JAK Inhibitors in Deep Remission Patients With Ulcerative Colitis: a Randomized Controlled Trial",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07718529",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-111",
+      "title": "Impact of in vitro fertilization on disease activity and pregnancy outcomes in women with inflammatory bowel disease",
+      "canonicalUrl": "https://doi.org/10.1093/ibd/izag223",
+      "doi": "10.1093/ibd/izag223",
+      "pubmedId": "43007293",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-112",
+      "title": "Laparoscopic first-stage subtotal colectomy for ulcerative and indeterminate colitis: a propensity-matched study",
+      "canonicalUrl": "https://doi.org/10.1007/s00464-026-13526-6",
+      "doi": "10.1007/s00464-026-13526-6",
+      "pubmedId": "43003990",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-113",
+      "title": "An ulcerative colitis taxonomy defined by individual patient-reported response trajectories",
+      "canonicalUrl": "https://doi.org/10.1038/s41591-026-04741-8",
+      "doi": "10.1038/s41591-026-04741-8",
+      "pubmedId": "43003903",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-114",
+      "title": "Intestinal obstruction due to rectal neoplasia in a patient with ulcerative colitis undergoing surgery with total mesorectal excision: case report and literature review",
+      "canonicalUrl": "https://doi.org/10.1097/RC9.0000000000001088",
+      "doi": "10.1097/RC9.0000000000001088",
+      "pubmedId": "43005814",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-115",
+      "title": "Enteric Neurons and Glial Cells Are Partially Protected in P2X7 Receptor-Deficient Mice With Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.1111/nmo.70499",
+      "doi": "10.1111/nmo.70499",
+      "pubmedId": "43004949",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-116",
+      "title": "Diagnostic prediction of ulcerative colitis using simplified endoscopic features and blood count-derived indices: a multicenter study",
+      "canonicalUrl": "https://doi.org/10.3389/fmed.2026.1991253",
+      "doi": "10.3389/fmed.2026.1991253",
+      "pubmedId": "43005062",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-117",
+      "title": "Metabolic glycoengineered exosomes enable in situ PD-L1-Fc assembly for targeted immunotherapy in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1186/s12951-026-04909-x",
+      "doi": "10.1186/s12951-026-04909-x",
+      "pubmedId": "43004433",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
       ],
       "notStored": [
         "full text",

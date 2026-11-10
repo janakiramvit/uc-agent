@@ -1,12 +1,6 @@
 {
   "alerts": [
     {
-      "code": "NO_NEW_RECORDS",
-      "level": "INFO",
-      "message": "provider healthy (wide-window canary returned 539); no new matching records in 2026-11-10 .. 2026-11-10",
-      "provider": "clinicaltrials"
-    },
-    {
       "code": "ACCESS_LIMITED",
       "level": "WARNING",
       "message": "gastro.org: robots.txt disallows automated access to /guidelines/; covered via other channel only",
@@ -49,16 +43,10 @@
       "provider": "bsg"
     },
     {
-      "code": "UNEXPECTED_ZERO",
-      "level": "WARNING",
-      "message": "2 consecutive zero-result runs for a provider that normally returns results daily",
+      "code": "REPEATED_UNEXPECTED_ZERO",
+      "level": "ERROR",
+      "message": "3 consecutive runs returned zero for a provider that normally returns results daily",
       "provider": "europepmc"
-    },
-    {
-      "code": "UNEXPECTED_ZERO",
-      "level": "WARNING",
-      "message": "2 consecutive zero-result runs for a provider that normally returns results daily",
-      "provider": "pubmed"
     }
   ],
   "date": "2026-11-10",
@@ -166,10 +154,10 @@
       "zero_reason": "provider healthy (wide-window canary returned 6); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "clinicaltrials": {
-      "accepted": 0,
+      "accepted": 4,
       "access_limits": [],
       "advanced_cutoff": false,
-      "canary_hits": 539,
+      "canary_hits": 540,
       "claims_extracted": 0,
       "deferred": 0,
       "deferred_reasons": {},
@@ -179,7 +167,7 @@
       "duplicates_prior": 0,
       "error": null,
       "evidence_type": "ongoing_trial",
-      "hit_count": 0,
+      "hit_count": 4,
       "label": "ClinicalTrials.gov",
       "not_screened_limit": 0,
       "notes": [],
@@ -187,15 +175,15 @@
       "queries": [
         "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-10,2026-11-10]"
       ],
-      "records_screened": 0,
+      "records_screened": 4,
       "rejected": 0,
       "rejected_reasons": {},
-      "results_returned": 0,
+      "results_returned": 4,
       "searches_attempted": 1,
       "searches_failed": 0,
-      "status": "no_new_records",
+      "status": "ok",
       "window": "2026-11-10 .. 2026-11-10",
-      "zero_reason": "provider healthy (wide-window canary returned 539); no new matching records in 2026-11-10 .. 2026-11-10"
+      "zero_reason": null
     },
     "ecco": {
       "accepted": 0,
@@ -297,20 +285,22 @@
       "zero_reason": "provider healthy (wide-window canary returned 2); no new matching records in 2026-11-10 .. 2026-11-10"
     },
     "pubmed": {
-      "accepted": 0,
+      "accepted": 9,
       "access_limits": [],
       "advanced_cutoff": false,
-      "canary_hits": 4535,
-      "claims_extracted": 0,
-      "deferred": 0,
-      "deferred_reasons": {},
+      "canary_hits": 4550,
+      "claims_extracted": 13,
+      "deferred": 1,
+      "deferred_reasons": {
+        "no_usable_abstract": 1
+      },
       "duplicate_reasons": {},
       "duplicates": 0,
       "duplicates_cross": 0,
       "duplicates_prior": 0,
       "error": null,
       "evidence_type": "published_study",
-      "hit_count": 0,
+      "hit_count": 14,
       "label": "PubMed/MEDLINE",
       "not_screened_limit": 0,
       "notes": [],
@@ -318,27 +308,30 @@
       "queries": [
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/10..2026/11/10]"
       ],
-      "records_screened": 0,
-      "rejected": 0,
-      "rejected_reasons": {},
-      "results_returned": 0,
-      "searches_attempted": 1,
+      "records_screened": 14,
+      "rejected": 4,
+      "rejected_reasons": {
+        "not_relevant": 3,
+        "out_of_scope": 1
+      },
+      "results_returned": 14,
+      "searches_attempted": 2,
       "searches_failed": 0,
-      "status": "no_new_records",
+      "status": "ok",
       "window": "2026-11-10 .. 2026-11-10",
-      "zero_reason": "provider healthy (wide-window canary returned 4535); no new matching records in 2026-11-10 .. 2026-11-10"
+      "zero_reason": null
     }
   },
-  "runId": "uc-exp-d27c0ed1114a",
+  "runId": "uc-exp-18f1e85b8e6a",
   "schema": "uc-provider-funnel/1",
   "totals": {
-    "accepted": 0,
-    "claims_extracted": 0,
-    "deferred": 0,
+    "accepted": 13,
+    "claims_extracted": 13,
+    "deferred": 1,
     "duplicates": 0,
-    "records_screened": 0,
-    "rejected": 0,
-    "results_returned": 0,
-    "searches_attempted": 11
+    "records_screened": 18,
+    "rejected": 4,
+    "results_returned": 18,
+    "searches_attempted": 12
   }
 }

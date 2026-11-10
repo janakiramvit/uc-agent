@@ -1,7 +1,7 @@
 {
   "discoveryStartDate": "2026-11-10",
   "lastRunDate": "2026-11-10",
-  "lastRunId": "uc-exp-d27c0ed1114a",
+  "lastRunId": "uc-exp-18f1e85b8e6a",
   "providers": {
     "acg": {
       "consecutiveFailures": 0,
@@ -16,6 +16,7 @@
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
       "recentHitCounts": [
         0,
+        0,
         0
       ],
       "rejectedKeys": []
@@ -29,6 +30,7 @@
       "lastSuccessfulCutoff": "2026-11-10",
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
       "recentHitCounts": [
+        0,
         0,
         0
       ],
@@ -49,6 +51,7 @@
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
       "recentHitCounts": [
         0,
+        0,
         0
       ],
       "rejectedKeys": []
@@ -58,12 +61,13 @@
       "consecutiveIncomplete": 0,
       "consecutiveUnexpectedZero": 0,
       "knownListingUrls": [],
-      "lastStatus": "no_new_records",
+      "lastStatus": "ok",
       "lastSuccessfulCutoff": "2026-11-10",
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
       "recentHitCounts": [
         0,
-        0
+        0,
+        4
       ],
       "rejectedKeys": []
     },
@@ -77,6 +81,7 @@
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
       "recentHitCounts": [
         0,
+        0,
         0
       ],
       "rejectedKeys": []
@@ -84,12 +89,14 @@
     "europepmc": {
       "consecutiveFailures": 0,
       "consecutiveIncomplete": 0,
-      "consecutiveUnexpectedZero": 2,
+      "consecutiveUnexpectedZero": 3,
       "knownListingUrls": [],
       "lastStatus": "no_new_records",
       "lastSuccessfulCutoff": "2026-11-10",
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "lastZeroDate": "2026-11-10",
       "recentHitCounts": [
+        0,
         0,
         0
       ],
@@ -108,6 +115,7 @@
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
       "recentHitCounts": [
         0,
+        0,
         0
       ],
       "rejectedKeys": []
@@ -115,16 +123,22 @@
     "pubmed": {
       "consecutiveFailures": 0,
       "consecutiveIncomplete": 0,
-      "consecutiveUnexpectedZero": 2,
+      "consecutiveUnexpectedZero": 0,
       "knownListingUrls": [],
-      "lastStatus": "no_new_records",
+      "lastStatus": "ok",
       "lastSuccessfulCutoff": "2026-11-10",
       "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
       "recentHitCounts": [
         0,
-        0
+        0,
+        14
       ],
-      "rejectedKeys": []
+      "rejectedKeys": [
+        "doi:10.1093/ibd/izag230",
+        "doi:10.1155/grp/7973438",
+        "doi:10.1002/iid3.70570",
+        "doi:10.3389/fimmu.2026.1903865"
+      ]
     }
   },
   "runHistory": [
@@ -162,6 +176,24 @@
         "pubmed": "no_new_records"
       },
       "runId": "uc-exp-d27c0ed1114a",
+      "window": "2026-11-10 .. 2026-11-10"
+    },
+    {
+      "alerts": 8,
+      "date": "2026-11-10",
+      "errors": 1,
+      "missedDates": [],
+      "providerStatus": {
+        "acg": "no_new_records",
+        "aga": "no_new_records",
+        "bsg": "no_new_records",
+        "clinicaltrials": "ok",
+        "ecco": "no_new_records",
+        "europepmc": "no_new_records",
+        "nice": "no_new_records",
+        "pubmed": "ok"
+      },
+      "runId": "uc-exp-18f1e85b8e6a",
       "window": "2026-11-10 .. 2026-11-10"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-e648136e30e7",
-  "generatedAt": "2026-09-02T13:17:27Z",
+  "runId": "uc-exp-18f1e85b8e6a",
+  "generatedAt": "2026-11-10T20:43:56Z",
   "questionTreeSource": {
     "file": "uc_39_question_tree.json",
     "title": "Ulcerative-colitis public Reddit demand: validated 39-node question tree",
@@ -81,14 +81,8 @@
   ],
   "nextRecommendedTopic": {
     "topicId": "T-UCX-03",
-    "title": "Acute severe ulcerative colitis: red-flag symptoms and urgent/emergency assessment thresholds",
-    "primaryQuestionNode": "L3-1.1.2",
-    "candidateSources": [
-      "ACG Clinical Guideline: Ulcerative Colitis in Adults 2019 (PMID 30840605) full-text ASUC section",
-      "AGA hospitalized/acute-severe-UC guidance",
-      "BSG IBD guideline 2019 acute severe colitis section"
-    ],
-    "rationale": "Only remaining 'none'-coverage node with High urgency_clinical_risk in branch L1-1."
+    "setBy": "automated-runner",
+    "at": "2026-11-10T20:43:56Z"
   },
   "coverageByNode": [
     {
@@ -238,6 +232,13 @@
       "priorCoverage": "none",
       "urgencyClinicalRisk": "High",
       "status": "deferred_this_run"
+    }
+  ],
+  "automatedRunHistory": [
+    {
+      "runId": "uc-exp-18f1e85b8e6a",
+      "topicId": "T-UCX-03",
+      "at": "2026-11-10T20:43:56Z"
     }
   ]
 }
