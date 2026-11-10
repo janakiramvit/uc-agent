@@ -372,3 +372,35 @@ def test_listing_baseline_is_stored_for_site_channel_providers():
     p.listing_seen = {"https://example.org/g1", "https://example.org/g2"}
     _, ps = run_once([p])
     assert set(ps["providers"]["acg"]["knownListingUrls"]) == p.listing_seen
+
+
+def test_a_window_bigger_than_the_screening_budget_still_finishes_over_several_runs(monkeypatch):
+    """N1 regression: prior-run duplicates must not re-consume the budget, or the same first N records starve the rest."""
+    monkeypatch.setattr(config, "MAX_SCREENED", 50)
+    monkeypatch.setattr(config, "MAX_ACCEPTED", 10)
+    recs = [make_record(i, "europepmc") for i in range(120)]
+    ps, idx, accepted = provider_state.empty_state(), ProcessedIndex(), 0
+    for run in range(14):
+        st, ps = run_once([FakeProvider("europepmc", recs)], pstate=ps, index=idx, today=TODAY + dt.timedelta(days=run))
+        accepted += len(st.accepted)
+        if ps["providers"]["europepmc"]["lastSuccessfulCutoff"]:
+            break
+    assert accepted == 120                                                     # every record accepted exactly once
+    assert ps["providers"]["europepmc"]["lastSuccessfulCutoff"] is not None   # and the window finally completed
+    assert run < 13
+
+
+def test_the_day_walk_stops_at_the_soft_deadline_and_keeps_the_days_already_done():
+    from uc_evidence_discovery.providers.base import Provider
+    class Days(Provider):
+        name = "x"; label = "X"
+        def search_range(self, http, window, *, max_pages):
+            return SearchOutcome(records=[make_record(1, "x")], hit_count=1, searches=1, queries=["q"])
+    p = Days()
+    calls = {"n": 0}
+    def stop():
+        calls["n"] += 1
+        return calls["n"] > 1
+    p.should_stop = stop
+    out = p.search_window(object(), Window(dt.date(2026, 11, 10), dt.date(2026, 11, 14)), max_pages=1)
+    assert out.truncated and out.covered_through == dt.date(2026, 11, 11) or out.covered_through == dt.date(2026, 11, 10)

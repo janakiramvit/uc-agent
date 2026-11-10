@@ -28,6 +28,8 @@ class _Rules:
 
 
 def _pattern_regex(pattern: str) -> re.Pattern:
+    if len(pattern) > 200 or pattern.count("*") > 10:          # bound backtracking from a hostile robots.txt
+        return re.compile(r"(?!)")                              # such a rule never matches
     anchored = pattern.endswith("$")
     body = re.escape(pattern[:-1] if anchored else pattern).replace(r"\*", ".*")
     return re.compile("^" + body + ("$" if anchored else ""))

@@ -56,7 +56,8 @@ and flagged `requiresFullTextVerification`.
   permitted; found through the *J Crohns Colitis* PubMed index. **ACG** (gi.org listing), **BSG** (sitemap) and **NICE** (seeded from NG130
   and the guidance it links) are read only where robots.txt allows. These access limits are reported every run as `ACCESS_LIMITED` warnings.
 * Known limitations: NICE has no machine-readable feed (its listing page returns 403), so technology appraisals are only found when linked
-  from a watched page; BSG titles come from the URL slug (no page fetch); a guideline listing without dates is change-detected by new URLs.
+  from a watched page; BSG titles come from the URL slug (no page fetch); a guideline listing without dates is change-detected by new URLs; a *revision* of an already-staged NICE/BSG page (same URL) is treated as a duplicate and not re-staged;
+  deferred records (no public abstract yet) are retried only while they stay inside the 1-day overlap window.
 
 ## Running
 

@@ -307,3 +307,8 @@ def test_robots_wildcards_longest_match_and_allow_override_follow_rfc_9309():
 def test_robots_group_for_our_agent_overrides_star():
     robots = "User-agent: *\nDisallow: /\n\nUser-agent: uc-agent-evidence-discovery\nAllow: /\n"
     RobotsPolicy(FakeHttp([route_robots("x.org", robots)])).require("https://x.org/anything")
+
+
+def test_robots_hostile_patterns_are_bounded_and_never_match():
+    robots = "User-agent: *\nDisallow: /" + "*a" * 20 + "\nDisallow: /" + "x" * 300 + "\n"
+    RobotsPolicy(FakeHttp([route_robots("x.org", robots)])).require("https://x.org/" + "a" * 40)

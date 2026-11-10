@@ -83,6 +83,7 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
             alerts.append(Alert(WARNING, "SKIPPED_DEADLINE", prov.name,
                                 "research soft deadline reached before this provider; its window is retained for the next run"))
             continue
+        prov.should_stop = lambda: not clock.may_start_new_work()
         if hasattr(prov, "known_listing_urls"):
             prov.known_listing_urls = set(ps.get("knownListingUrls", []))
         st.queries += 1
@@ -178,22 +179,30 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
             if queues[n]:
                 interleaved.append(queues[n].pop(0))
 
+    budget_used = 0        # records that cost screening effort. Duplicates of earlier runs are FREE: otherwise the same
+    #                        first N records would re-consume the budget every run and a big window could never finish.
     limit_hit = False
     for rec in interleaved:
         name = rec.get("provider", "")
         f = funnel.providers.get(name)
-        if limit_hit or not clock.may_start_new_work() or st.screened >= config.MAX_SCREENED \
-                or len(st.accepted) >= config.MAX_ACCEPTED:
+        ident = _identity(rec)
+        key = CandidateKey.from_record(rec)
+        prior_dup = index.duplicate_reason(key)
+        remembered = bool(ident) and ident in rejected_memory.get(name, set())
+        free = bool(prior_dup) or remembered
+        if not free and (limit_hit or not clock.may_start_new_work() or budget_used >= config.MAX_SCREENED
+                         or len(st.accepted) >= config.MAX_ACCEPTED):
             limit_hit = True
             if f:
                 f.not_screened_limit += 1
             st.stop_reason = "limit_or_deadline_during_screening"
             continue
-        ident = _identity(rec)
+        if not free:
+            budget_used += 1
         st.screened += 1
         if f:
             f.records_screened += 1
-        if ident and ident in rejected_memory.get(name, set()):
+        if remembered and not prior_dup:
             disp = screening.Disposition("duplicate", "duplicate_previously_rejected", topic_id=TOPIC_ID,
                                          evidence_type=rec.get("evidenceType", "published_study"))
         else:
@@ -267,7 +276,7 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
             f.advanced_cutoff = True
         if f.status == "ok" and not complete and out is not None:
             f.status = "partial"
-        if out is not None and healthy:
+        if (out is not None and healthy) or f.status == "zero_unexplained":
             if complete:
                 ps["consecutiveIncomplete"] = 0
             else:

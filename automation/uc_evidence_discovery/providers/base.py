@@ -93,6 +93,8 @@ class Provider:
     #: a zero window AND a zero canary is an ERROR for providers that index UC literature continuously;
     #: guideline bodies publish rarely, so there it is only a WARNING (the canary cannot prove breakage)
     canary_zero_is_error = True
+    #: set by the orchestrator: lets the day-by-day walk stop at the research soft deadline (days done still count)
+    should_stop: Callable[[], bool] = staticmethod(lambda: False)
 
     def build_query(self, window: Window) -> str:                      # pragma: no cover - interface
         raise NotImplementedError
@@ -111,6 +113,10 @@ class Provider:
         day = window.start
         covered: Optional[_dt.date] = None
         while day <= window.end:
+            if total.records and self.should_stop():
+                total.truncated = True
+                total.notes.append("research soft deadline reached during the day-by-day walk")
+                break
             one = Window(day, day)
             sub = self.search_range(http, one, max_pages=max_pages * config.MAX_DAY_PAGE_FACTOR)
             total.records.extend(sub.records)
