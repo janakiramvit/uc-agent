@@ -1,0 +1,143 @@
+{
+  "discoveryStartDate": "2026-11-10",
+  "lastRunDate": "2026-11-10",
+  "lastRunId": "uc-exp-5a6475e5397f",
+  "providers": {
+    "acg": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 0,
+      "knownListingUrls": [
+        "https://journals.lww.com/ajg/fulltext/2025/07000/acg_clinical_guideline_update__preventive_care_in.15.aspx",
+        "https://www.doi.org/10.14309/ajg.0000000000003463"
+      ],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    },
+    "aga": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 0,
+      "knownListingUrls": [],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    },
+    "bsg": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 0,
+      "knownListingUrls": [
+        "https://www.bsg.org.uk/clinical-resource/bsg-guidance-on-ibd-during-covid",
+        "https://www.bsg.org.uk/clinical-resource/bsg-guidelines-on-colorectal-surveillance-in-ibd",
+        "https://www.bsg.org.uk/clinical-resource/bsg-guidelines-on-ibd-in-adults-2025",
+        "https://www.bsg.org.uk/clinical-resource/consensus-guideline-genomic-diagnosis-ibd"
+      ],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    },
+    "clinicaltrials": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 0,
+      "knownListingUrls": [],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    },
+    "ecco": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 0,
+      "knownListingUrls": [],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    },
+    "europepmc": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 1,
+      "knownListingUrls": [],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    },
+    "nice": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 0,
+      "knownListingUrls": [
+        "https://www.nice.org.uk/guidance/ng130",
+        "https://www.nice.org.uk/guidance/qs81"
+      ],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    },
+    "pubmed": {
+      "consecutiveFailures": 0,
+      "consecutiveIncomplete": 0,
+      "consecutiveUnexpectedZero": 1,
+      "knownListingUrls": [],
+      "lastStatus": "no_new_records",
+      "lastSuccessfulCutoff": "2026-11-10",
+      "lastSuccessfulRunAt": "2026-11-10T01:37:31Z",
+      "recentHitCounts": [
+        0
+      ],
+      "rejectedKeys": []
+    }
+  },
+  "runHistory": [
+    {
+      "alerts": 8,
+      "date": "2026-11-10",
+      "errors": 0,
+      "missedDates": [],
+      "providerStatus": {
+        "acg": "no_new_records",
+        "aga": "no_new_records",
+        "bsg": "no_new_records",
+        "clinicaltrials": "no_new_records",
+        "ecco": "no_new_records",
+        "europepmc": "no_new_records",
+        "nice": "no_new_records",
+        "pubmed": "no_new_records"
+      },
+      "runId": "uc-exp-5a6475e5397f",
+      "window": "2026-11-10 .. 2026-11-10"
+    }
+  ],
+  "schemaVersion": "uc-provider-state-1.0.0"
+}

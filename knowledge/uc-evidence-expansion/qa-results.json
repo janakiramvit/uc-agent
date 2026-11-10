@@ -1,11 +1,11 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-c1e54e4cccbd",
-  "generatedAt": "2026-11-09T23:18:37Z",
+  "runId": "uc-exp-5a6475e5397f",
+  "generatedAt": "2026-11-10T01:37:31Z",
   "disclaimer": "Automated QA only. Automated QA does NOT constitute clinical approval.",
   "summary": {
-    "total": 15,
-    "passed": 13,
+    "total": 19,
+    "passed": 17,
     "failed": 2
   },
   "checks": [
@@ -98,6 +98,30 @@
       "check": "No Reddit URL / handle in any output",
       "result": "PASS",
       "detail": "regex scan"
+    },
+    {
+      "id": "QA-16",
+      "check": "No candidate claim is attached to a trial registry source (trials are never treatment-effect claims)",
+      "result": "PASS",
+      "detail": "0 trial source(s)"
+    },
+    {
+      "id": "QA-17",
+      "check": "Every source's evidenceType (when present) is one of the four separate evidence types",
+      "result": "PASS",
+      "detail": "checked"
+    },
+    {
+      "id": "QA-18",
+      "check": "No PDF link or downloaded-file field is stored on any source",
+      "result": "PASS",
+      "detail": "checked"
+    },
+    {
+      "id": "QA-19",
+      "check": "Every extracted claim is flagged as requiring full-text verification",
+      "result": "PASS",
+      "detail": "checked"
     }
   ]
 }

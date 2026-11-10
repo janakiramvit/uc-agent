@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-c1e54e4cccbd` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/42719368906 · **Date:** 2026-11-09
+**Run ID:** `uc-exp-5a6475e5397f` · **Run:** local · **Date:** 2026-11-10
 **Run status:** `completed`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,11 +11,11 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 0.7s |
-| Discovery queries | 10 | 1 |
-| Records screened | 30 | 0 |
-| New sources accepted | 5 | 0 |
-| Candidate excerpts | 20 | 0 |
+| Internal research | 450s soft / 540s finalize | 31.5s |
+| Discovery queries | 40 | 16 |
+| Records screened | 200 | 0 |
+| New sources accepted | 40 | 0 |
+| Candidate excerpts | 100 | 0 |
 | PDFs archived | 0 (policy) | 0 |
 
 ## Dispositions
@@ -29,19 +29,19 @@
 
 ## QA
 
-13 / 15 automated checks PASS
+17 / 19 automated checks PASS
 (automated QA is **not** clinical approval).
 
 ## Exact next operation
 
 ```json
 {
-  "description": "Continue topic T-UCX-03. Resume a fresh discovery query from cursor 0. Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-102/CLM-195 onward.",
+  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-103/CLM-196 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-102",
-  "firstNewClaimId": "CLM-195",
+  "firstNewSourceId": "SRC-103",
+  "firstNewClaimId": "CLM-196",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",

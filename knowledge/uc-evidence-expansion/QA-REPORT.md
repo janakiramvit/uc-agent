@@ -1,10 +1,10 @@
 # UC Evidence-Discovery — QA Report
 
-**Run ID:** `uc-exp-c1e54e4cccbd` · **Generated:** 2026-11-09T23:18:37Z
+**Run ID:** `uc-exp-5a6475e5397f` · **Generated:** 2026-11-10T01:37:31Z
 
 > Automated QA only. Automated QA does NOT constitute clinical approval.
 
-**Result: 13 / 15 PASS**
+**Result: 17 / 19 PASS**
 
 | # | Check | Result | Detail |
 |---|---|---|---|
@@ -23,3 +23,7 @@
 | QA-13 | No secret / token / connection-string pattern in outputs | **PASS** | regex scan |
 | QA-14 | targetIndex is NONE (no promotion) | **PASS** | checked |
 | QA-15 | No Reddit URL / handle in any output | **PASS** | regex scan |
+| QA-16 | No candidate claim is attached to a trial registry source (trials are never treatment-effect claims) | **PASS** | 0 trial source(s) |
+| QA-17 | Every source's evidenceType (when present) is one of the four separate evidence types | **PASS** | checked |
+| QA-18 | No PDF link or downloaded-file field is stored on any source | **PASS** | checked |
+| QA-19 | Every extracted claim is flagged as requiring full-text verification | **PASS** | checked |
