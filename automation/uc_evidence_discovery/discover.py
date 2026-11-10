@@ -146,7 +146,7 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
             continue
 
         if out.hit_count == 0 and not out.records:
-            _explain_zero(prov, f, ps, alerts)
+            _explain_zero(prov, f, ps, alerts, today)
         else:
             ps["consecutiveUnexpectedZero"] = 0
         ps.setdefault("recentHitCounts", []).append(out.hit_count)
@@ -317,7 +317,7 @@ def _tally(f: Optional[ProviderFunnel], disp: screening.Disposition) -> None:
         f.duplicate_reasons[cat] += 1
 
 
-def _explain_zero(prov: Provider, f: ProviderFunnel, ps: dict, alerts: list[Alert]) -> None:
+def _explain_zero(prov: Provider, f: ProviderFunnel, ps: dict, alerts: list[Alert], today: _dt.date) -> None:
     """A zero-result window must carry an explanation, and the right alert."""
     c = f.canary_hits
     if c is None:
@@ -341,7 +341,9 @@ def _explain_zero(prov: Provider, f: ProviderFunnel, ps: dict, alerts: list[Aler
     f.zero_reason = (f"provider healthy (wide-window canary returned {c}); no new matching records in "
                      f"{f.window.split(';')[0]}")
     if prov.expects_daily_results:
-        ps["consecutiveUnexpectedZero"] = ps.get("consecutiveUnexpectedZero", 0) + 1
+        if ps.get("lastZeroDate") != today.isoformat():       # several runs on one date are ONE zero day, not several
+            ps["consecutiveUnexpectedZero"] = ps.get("consecutiveUnexpectedZero", 0) + 1
+            ps["lastZeroDate"] = today.isoformat()
         n = ps["consecutiveUnexpectedZero"]
         if n >= config.REPEATED_ZERO_ERROR:
             alerts.append(Alert(ERROR, "REPEATED_UNEXPECTED_ZERO", prov.name,

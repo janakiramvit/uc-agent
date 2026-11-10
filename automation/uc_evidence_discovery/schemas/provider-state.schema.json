@@ -22,6 +22,7 @@
           "consecutiveUnexpectedZero": {"type": "integer", "minimum": 0},
           "consecutiveFailures": {"type": "integer", "minimum": 0},
           "consecutiveIncomplete": {"type": "integer", "minimum": 0},
+          "lastZeroDate": {"type": ["string", "null"]},
           "recentHitCounts": {"type": "array", "items": {"type": "integer"}, "maxItems": 14},
           "rejectedKeys": {"type": "array", "items": {"type": "string"}, "maxItems": 4000},
           "knownListingUrls": {"type": "array", "items": {"type": "string"}, "maxItems": 500}

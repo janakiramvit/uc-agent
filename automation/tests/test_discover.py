@@ -404,3 +404,11 @@ def test_the_day_walk_stops_at_the_soft_deadline_and_keeps_the_days_already_done
     p.should_stop = stop
     out = p.search_window(object(), Window(dt.date(2026, 11, 10), dt.date(2026, 11, 14)), max_pages=1)
     assert out.truncated and out.covered_through == dt.date(2026, 11, 11) or out.covered_through == dt.date(2026, 11, 10)
+
+
+def test_two_runs_on_the_same_date_count_as_one_zero_day():
+    ps = provider_state.empty_state()
+    for _ in range(3):
+        st, ps = run_once([FakeProvider("europepmc", [], canary=900, expects_daily=True)], pstate=ps)
+    assert ps["providers"]["europepmc"]["consecutiveUnexpectedZero"] == 1
+    assert not [c for c in codes(st) if c[0] in ("WARNING", "ERROR") and c[1].endswith("ZERO")]
