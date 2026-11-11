@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-18f1e85b8e6a",
-  "generatedAt": "2026-11-10T20:43:56Z",
+  "runId": "uc-exp-f96662ebf3d4",
+  "generatedAt": "2026-11-11T21:07:12Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -365,6 +365,160 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-10",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-119",
+      "title": "Lactobacillus-Based Therapy for Ulcerative Colitis: From Strain Heterogeneity and TCM-Mediated Modulation to Engineered Delivery and Precision Translation",
+      "canonicalUrl": "https://doi.org/10.1007/s12602-026-11297-z",
+      "doi": "10.1007/s12602-026-11297-z",
+      "pubmedId": "43007539",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-11",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-120",
+      "title": "Caffeic acid regulates the gut microbiota-tryptophan metabolic axis to improve intestinal barrier function and relieve ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1016/j.phymed.2026.158905",
+      "doi": "10.1016/j.phymed.2026.158905",
+      "pubmedId": "43008558",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-11",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-121",
+      "title": "Weiling decoction alleviates dampness-exacerbated ulcerative colitis in a spleen-deficient mouse model: associations with the gut microbiota composition and TLR4/NF-κB-related inflammatory responses",
+      "canonicalUrl": "https://doi.org/10.1007/s13205-026-05080-8",
+      "doi": "10.1007/s13205-026-05080-8",
+      "pubmedId": "43011250",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-11",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-122",
+      "title": "Clinical profiles and management strategies in older adults with mild-to-moderate ulcerative colitis: a multicenter, comparative, real-world study",
+      "canonicalUrl": "https://doi.org/10.5217/ir.2026.00083",
+      "doi": "10.5217/ir.2026.00083",
+      "pubmedId": "43010798",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-11",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-123",
+      "title": "Real-world paediatric inflammatory bowel disease surgery: International variation in care and practice",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70655",
+      "doi": "10.1002/jpn3.70655",
+      "pubmedId": "43010702",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-11",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-124",
+      "title": "Infliximab for Refractory Diffuse Sclerosing Osteomyelitis of the Mandible Associated With Ulcerative Colitis: A Case Report",
+      "canonicalUrl": "https://doi.org/10.1002/ccr3.73892",
+      "doi": "10.1002/ccr3.73892",
+      "pubmedId": "43011495",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-11",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-125",
+      "title": "Intestinal Ultrasound in Inflammatory Bowel Disease: From Point-of-Care Assessment to Standardized Treat-to-Target Monitoring",
+      "canonicalUrl": "https://doi.org/10.5152/tjg.2026.26656",
+      "doi": "10.5152/tjg.2026.26656",
+      "pubmedId": "43012356",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-11",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
