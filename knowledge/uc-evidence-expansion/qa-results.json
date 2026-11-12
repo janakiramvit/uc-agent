@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-f96662ebf3d4",
-  "generatedAt": "2026-11-11T21:07:12Z",
+  "runId": "uc-exp-d2aed195360a",
+  "generatedAt": "2026-11-12T21:21:55Z",
   "disclaimer": "Automated QA only. Automated QA does NOT constitute clinical approval.",
   "summary": {
     "total": 19,
@@ -13,7 +13,7 @@
       "id": "QA-01",
       "check": "Every candidate claim references a known source",
       "result": "PASS",
-      "detail": "32 claims / 23 sources"
+      "detail": "37 claims / 36 sources"
     },
     {
       "id": "QA-02",
@@ -103,7 +103,7 @@
       "id": "QA-16",
       "check": "No candidate claim is attached to a trial registry source (trials are never treatment-effect claims)",
       "result": "PASS",
-      "detail": "4 trial source(s)"
+      "detail": "14 trial source(s)"
     },
     {
       "id": "QA-17",
