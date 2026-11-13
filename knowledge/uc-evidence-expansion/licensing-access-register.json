@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-d2aed195360a",
-  "generatedAt": "2026-11-12T21:21:55Z",
+  "runId": "uc-exp-bad40544162e",
+  "generatedAt": "2026-11-13T20:48:31Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -805,6 +805,204 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-12",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-141",
+      "title": "A randomized controlled trial of alternate-day versus daily iron therapy in ulcerative colitis in remission",
+      "canonicalUrl": "https://doi.org/10.1016/j.isci.2026.118014",
+      "doi": "10.1016/j.isci.2026.118014",
+      "pubmedId": "43022869",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-142",
+      "title": "Pediatric inflammatory bowel diseases in patients with genetic syndromes: A case-control multicentre SIGENP study",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70666",
+      "doi": "10.1002/jpn3.70666",
+      "pubmedId": "43021322",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-143",
+      "title": "Optimized W1/O/W2 Double Emulsions for Lactobacillus paracasei Encapsulation: Stability, Viability, and Anti-Inflammatory Efficacy in a Rat Model of Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.1002/fsn3.72598",
+      "doi": "10.1002/fsn3.72598",
+      "pubmedId": "43022407",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-144",
+      "title": "Identification of Candidate Targets and Immune Characteristics of Salvianolic Acid E Against Ulcerative Colitis via Integrative Transcriptomic Analysis and Machine Learning",
+      "canonicalUrl": "https://doi.org/10.2174/0115665240520377261027060601",
+      "doi": "10.2174/0115665240520377261027060601",
+      "pubmedId": "43023287",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-145",
+      "title": "Panhypopituitarism: A Case Report of a Rare Complication of Cerebral Venous Thrombosis Secondary to Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.7759/cureus.117868",
+      "doi": "10.7759/cureus.117868",
+      "pubmedId": "43022789",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-146",
+      "title": "Cohorte Nantaise de Maladies Inflammatoires Chroniques Intestinales",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06256393",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-147",
+      "title": "N-Trans Caffeoyltyramine Alleviates Ulcerative Colitis by Targeting FXR to Promote Epithelial Barrier Protection and M2 Macrophage Polarization",
+      "canonicalUrl": "https://doi.org/10.1002/ptr.70520",
+      "doi": "10.1002/ptr.70520",
+      "pubmedId": "43021644",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-148",
+      "title": "Benefit-risk trade-offs among patients and providers selecting advanced therapy for moderate-to-severe ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.14309/ctg.0000000000001124",
+      "doi": "10.14309/ctg.0000000000001124",
+      "pubmedId": "43019553",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-149",
+      "title": "Preoperative computed tomography measurement for predicting difficulty in hand-sewn ileal pouch-anal anastomosis: a refined single-center cohort study",
+      "canonicalUrl": "https://doi.org/10.1007/s00423-026-04186-0",
+      "doi": "10.1007/s00423-026-04186-0",
+      "pubmedId": "43018751",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-13",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
