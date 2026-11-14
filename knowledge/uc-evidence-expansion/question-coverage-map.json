@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-bad40544162e",
-  "generatedAt": "2026-11-13T20:48:31Z",
+  "runId": "uc-exp-03db8c5de11b",
+  "generatedAt": "2026-11-14T18:58:58Z",
   "questionTreeSource": {
     "file": "uc_39_question_tree.json",
     "title": "Ulcerative-colitis public Reddit demand: validated 39-node question tree",
@@ -82,7 +82,7 @@
   "nextRecommendedTopic": {
     "topicId": "T-UCX-03",
     "setBy": "automated-runner",
-    "at": "2026-11-13T20:48:31Z"
+    "at": "2026-11-14T18:58:58Z"
   },
   "coverageByNode": [
     {
@@ -254,6 +254,11 @@
       "runId": "uc-exp-bad40544162e",
       "topicId": "T-UCX-03",
       "at": "2026-11-13T20:48:31Z"
+    },
+    {
+      "runId": "uc-exp-03db8c5de11b",
+      "topicId": "T-UCX-03",
+      "at": "2026-11-14T18:58:58Z"
     }
   ]
 }

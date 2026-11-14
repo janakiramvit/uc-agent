@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-bad40544162e",
-  "generatedAt": "2026-11-13T20:48:31Z",
+  "runId": "uc-exp-03db8c5de11b",
+  "generatedAt": "2026-11-14T18:58:58Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -1003,6 +1003,116 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-13",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-151",
+      "title": "Fecal Microbiota Transplantation in the Treatment Strategy of Inflammatory Bowel Disease: Molecular Mechanisms, Clinical Evidence, and the Transition Toward Defined Microbial Therapeutics",
+      "canonicalUrl": "https://doi.org/10.3390/ijms272110001",
+      "doi": "10.3390/ijms272110001",
+      "pubmedId": "43028246",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-14",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-152",
+      "title": "[Guidelines ulcerative colitis: surgery : Status November 2025]",
+      "canonicalUrl": "https://doi.org/10.1007/s00104-026-02615-w",
+      "doi": "10.1007/s00104-026-02615-w",
+      "pubmedId": "43026331",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-14",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-153",
+      "title": "Cyclosporine-to-biologic bridging in biologic-exposed acute severe ulcerative colitis: a single-center retrospective cohort study",
+      "canonicalUrl": "https://doi.org/10.1093/ibd/izag222",
+      "doi": "10.1093/ibd/izag222",
+      "pubmedId": "43024783",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-14",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-154",
+      "title": "Roflumilast and Melatonin Alleviate Acetic Acid-Induced Ulcerative Colitis via Modulating AMPK/mTOR Signaling, Autophagy-Related Markers, Intestinal Epithelial Barrier, and NLRP3 Inflammasome",
+      "canonicalUrl": "https://doi.org/10.1002/ardp.70384",
+      "doi": "10.1002/ardp.70384",
+      "pubmedId": "43024542",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-14",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-155",
+      "title": "Gene and microRNA Expression Profiling in Experimental Colitis and Human Ulcerative Colitis: Effects of <i>STAT6</i> Knockout and <i>Corylus avellana</i> Treatment",
+      "canonicalUrl": "https://doi.org/10.3390/ijms27219411",
+      "doi": "10.3390/ijms27219411",
+      "pubmedId": "43027663",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-14",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",

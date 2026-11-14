@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-bad40544162e",
-  "generatedAt": "2026-11-13T20:48:31Z",
+  "runId": "uc-exp-03db8c5de11b",
+  "generatedAt": "2026-11-14T18:58:58Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -322,6 +322,41 @@
       "pubmedId": "43018751",
       "doi": "10.1007/s00423-026-04186-0",
       "canonicalUrl": "https://doi.org/10.1007/s00423-026-04186-0",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-151",
+      "pubmedId": "43028246",
+      "doi": "10.3390/ijms272110001",
+      "canonicalUrl": "https://doi.org/10.3390/ijms272110001",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-152",
+      "pubmedId": "43026331",
+      "doi": "10.1007/s00104-026-02615-w",
+      "canonicalUrl": "https://doi.org/10.1007/s00104-026-02615-w",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-153",
+      "pubmedId": "43024783",
+      "doi": "10.1093/ibd/izag222",
+      "canonicalUrl": "https://doi.org/10.1093/ibd/izag222",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-154",
+      "pubmedId": "43024542",
+      "doi": "10.1002/ardp.70384",
+      "canonicalUrl": "https://doi.org/10.1002/ardp.70384",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-155",
+      "pubmedId": "43027663",
+      "doi": "10.3390/ijms27219411",
+      "canonicalUrl": "https://doi.org/10.3390/ijms27219411",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],
