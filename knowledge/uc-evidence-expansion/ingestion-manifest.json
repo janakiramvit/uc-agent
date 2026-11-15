@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-03db8c5de11b",
-  "generatedAt": "2026-11-14T18:58:58Z",
+  "runId": "uc-exp-4daef5e63bb7",
+  "generatedAt": "2026-11-15T19:38:31Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -357,6 +357,41 @@
       "pubmedId": "43027663",
       "doi": "10.3390/ijms27219411",
       "canonicalUrl": "https://doi.org/10.3390/ijms27219411",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-157",
+      "pubmedId": "43032265",
+      "doi": "10.1093/crocol/otag108",
+      "canonicalUrl": "https://doi.org/10.1093/crocol/otag108",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-158",
+      "pubmedId": "43032278",
+      "doi": "10.3389/fphar.2026.1915609",
+      "canonicalUrl": "https://doi.org/10.3389/fphar.2026.1915609",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-159",
+      "pubmedId": "43034281",
+      "doi": "10.1002/ctm2.70896",
+      "canonicalUrl": "https://doi.org/10.1002/ctm2.70896",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-160",
+      "pubmedId": "43034232",
+      "doi": "10.1186/s12876-026-05560-4",
+      "canonicalUrl": "https://doi.org/10.1186/s12876-026-05560-4",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-161",
+      "pubmedId": "43034047",
+      "doi": "10.1093/ibd/izag236",
+      "canonicalUrl": "https://doi.org/10.1093/ibd/izag236",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],

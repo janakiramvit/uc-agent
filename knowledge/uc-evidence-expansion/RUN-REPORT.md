@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-03db8c5de11b` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/43629484690 · **Date:** 2026-11-14
+**Run ID:** `uc-exp-4daef5e63bb7` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/43753430405 · **Date:** 2026-11-15
 **Run status:** `completed`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,11 +11,11 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 47.7s |
+| Internal research | 450s soft / 540s finalize | 71.9s |
 | Discovery queries | 40 | 16 |
-| Records screened | 200 | 68 |
+| Records screened | 200 | 52 |
 | New sources accepted | 40 | 5 |
-| Candidate excerpts | 100 | 7 |
+| Candidate excerpts | 100 | 9 |
 | PDFs archived | 0 (policy) | 0 |
 
 ## Dispositions
@@ -24,8 +24,8 @@
 |---|---|
 | accepted | 5 |
 | deferred | 5 |
-| duplicate | 35 |
-| rejected | 23 |
+| duplicate | 34 |
+| rejected | 8 |
 
 ## QA
 
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-156/CLM-237 onward.",
+  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-162/CLM-247 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-156",
-  "firstNewClaimId": "CLM-237",
+  "firstNewSourceId": "SRC-162",
+  "firstNewClaimId": "CLM-247",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-03db8c5de11b",
-  "generatedAt": "2026-11-14T18:58:58Z",
+  "runId": "uc-exp-4daef5e63bb7",
+  "generatedAt": "2026-11-15T19:38:31Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -1113,6 +1113,116 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-14",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-157",
+      "title": "Cognitive screening performance in patients with inflammatory bowel disease in remission: a case-control study",
+      "canonicalUrl": "https://doi.org/10.1093/crocol/otag108",
+      "doi": "10.1093/crocol/otag108",
+      "pubmedId": "43032265",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-15",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-158",
+      "title": "Bioactive metabolites and botanical preparations from plants used as medicines and foods in ulcerative colitis: a mechanism-oriented narrative review of multi-target regulation",
+      "canonicalUrl": "https://doi.org/10.3389/fphar.2026.1915609",
+      "doi": "10.3389/fphar.2026.1915609",
+      "pubmedId": "43032278",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-15",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-159",
+      "title": "A wearable perspiration biosensor for continuous biomarker monitoring in inflammatory bowel disease: Feasibility, concordance, and exploratory temporal dynamics",
+      "canonicalUrl": "https://doi.org/10.1002/ctm2.70896",
+      "doi": "10.1002/ctm2.70896",
+      "pubmedId": "43034281",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-15",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-160",
+      "title": "Sequence-dependent real-world efficacy of anti-TNF antibodies and vedolizumab in ulcerative colitis: a propensity score-weighted cohort study",
+      "canonicalUrl": "https://doi.org/10.1186/s12876-026-05560-4",
+      "doi": "10.1186/s12876-026-05560-4",
+      "pubmedId": "43034232",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-15",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-161",
+      "title": "Microbiota transplant therapy improves ulcerative colitis symptoms independent of donor engraftment in a pilot randomized placebo-controlled trial",
+      "canonicalUrl": "https://doi.org/10.1093/ibd/izag236",
+      "doi": "10.1093/ibd/izag236",
+      "pubmedId": "43034047",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-15",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
