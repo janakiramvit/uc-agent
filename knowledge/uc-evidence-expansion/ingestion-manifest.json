@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-4daef5e63bb7",
-  "generatedAt": "2026-11-15T19:38:31Z",
+  "runId": "uc-exp-f3fa2ae0157e",
+  "generatedAt": "2026-11-16T23:15:35Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -392,6 +392,41 @@
       "pubmedId": "43034047",
       "doi": "10.1093/ibd/izag236",
       "canonicalUrl": "https://doi.org/10.1093/ibd/izag236",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-163",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06510296",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-164",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07484620",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-165",
+      "pubmedId": "43035116",
+      "doi": "10.1016/j.jep.2026.122618",
+      "canonicalUrl": "https://doi.org/10.1016/j.jep.2026.122618",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-166",
+      "pubmedId": "43037284",
+      "doi": "10.1021/acs.chemrestox.6c00252",
+      "canonicalUrl": "https://doi.org/10.1021/acs.chemrestox.6c00252",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-167",
+      "pubmedId": "43037158",
+      "doi": "10.1080/03007995.2026.2761162",
+      "canonicalUrl": "https://doi.org/10.1080/03007995.2026.2761162",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],

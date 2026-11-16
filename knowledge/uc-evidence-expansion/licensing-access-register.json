@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-4daef5e63bb7",
-  "generatedAt": "2026-11-15T19:38:31Z",
+  "runId": "uc-exp-f3fa2ae0157e",
+  "generatedAt": "2026-11-16T23:15:35Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -1223,6 +1223,116 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-15",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-163",
+      "title": "Digital Mind Body Intervention Among Black and Hispanic Patients Living With Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06510296",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-16",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-164",
+      "title": "Effects of Physical Activity and Physical Fitness on Inflammation, Clinical Outcomes, and Quality of Life in Pediatric Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07484620",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-16",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-165",
+      "title": "Ampelopsis grossedentata restores the homeostasis of Th17/Treg cells to mitigate DSS-induced ulcerative colitis through TLR1-2/NF-κB signaling pathway",
+      "canonicalUrl": "https://doi.org/10.1016/j.jep.2026.122618",
+      "doi": "10.1016/j.jep.2026.122618",
+      "pubmedId": "43035116",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-16",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-166",
+      "title": "Multidimensional Deciphering Underlying Effects of PFOA Exposure in Ulcerative Colitis: From Epidemiological Insights to Toxicological Mechanisms",
+      "canonicalUrl": "https://doi.org/10.1021/acs.chemrestox.6c00252",
+      "doi": "10.1021/acs.chemrestox.6c00252",
+      "pubmedId": "43037284",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-16",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-167",
+      "title": "Surgery rates in Japan around market-entry milestones of advanced therapies for Crohn's disease and ulcerative colitis: an interrupted time-series study using a large-scale Japanese claims database",
+      "canonicalUrl": "https://doi.org/10.1080/03007995.2026.2761162",
+      "doi": "10.1080/03007995.2026.2761162",
+      "pubmedId": "43037158",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-16",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",

@@ -1,16 +1,16 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-4daef5e63bb7",
+  "runId": "uc-exp-f3fa2ae0157e",
   "runStartTime": "2026-09-02T13:08:34Z",
-  "runFinishTime": "2026-11-15T19:38:31Z",
-  "lastCheckpointTime": "2026-11-15T19:38:31Z",
+  "runFinishTime": "2026-11-16T23:15:35Z",
+  "lastCheckpointTime": "2026-11-16T23:15:35Z",
   "runStatus": "completed",
   "currentTopicId": "T-UCX-03",
   "currentSearchStrategyId": null,
   "currentSearchQuery": null,
   "currentApiCursor": 0,
-  "lastProcessedRecord": "52 screened this run",
-  "latestPublicationTimestampEncountered": "2026-11-14",
+  "lastProcessedRecord": "36 screened this run",
+  "latestPublicationTimestampEncountered": "2026-11-15",
   "completedSearches": [
     {
       "searchId": "S-UCX-01-a",
@@ -969,6 +969,62 @@
       "query": "site:www.nice.org.uk (robots-permitting listing; window 2026-11-13..2026-11-15)",
       "resultsScreened": 0,
       "executedAt": "2026-11-15T19:38:31Z"
+    },
+    {
+      "searchId": "europepmc-e0157e",
+      "service": "europepmc",
+      "query": "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-14 TO 2026-11-14]) NOT SRC:PPR",
+      "resultsScreened": 14,
+      "executedAt": "2026-11-16T23:15:35Z"
+    },
+    {
+      "searchId": "pubmed-e0157e",
+      "service": "pubmed",
+      "query": "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/14..2026/11/14]",
+      "resultsScreened": 20,
+      "executedAt": "2026-11-16T23:15:35Z"
+    },
+    {
+      "searchId": "clinicaltrials-e0157e",
+      "service": "clinicaltrials",
+      "query": "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-14,2026-11-14]",
+      "resultsScreened": 2,
+      "executedAt": "2026-11-16T23:15:35Z"
+    },
+    {
+      "searchId": "aga-e0157e",
+      "service": "aga",
+      "query": "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American G",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-16T23:15:35Z"
+    },
+    {
+      "searchId": "acg-e0157e",
+      "service": "acg",
+      "query": "site:gi.org (robots-permitting listing; window 2026-11-14..2026-11-16) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenter",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-16T23:15:35Z"
+    },
+    {
+      "searchId": "ecco-e0157e",
+      "service": "ecco",
+      "query": "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-16T23:15:35Z"
+    },
+    {
+      "searchId": "nice-e0157e",
+      "service": "nice",
+      "query": "site:www.nice.org.uk (robots-permitting listing; window 2026-11-14..2026-11-16)",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-16T23:15:35Z"
+    },
+    {
+      "searchId": "bsg-e0157e",
+      "service": "bsg",
+      "query": "site:www.bsg.org.uk (robots-permitting listing; window 2026-11-14..2026-11-16) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta]",
+      "resultsScreened": 0,
+      "executedAt": "2026-11-16T23:15:35Z"
     }
   ],
   "pendingSearches": [],
@@ -987,12 +1043,15 @@
       "10.1007/s12602-026-11297-z",
       "10.1007/s13205-026-05080-8",
       "10.1016/j.isci.2026.118014",
+      "10.1016/j.jep.2026.122618",
       "10.1016/j.phymed.2026.158905",
+      "10.1021/acs.chemrestox.6c00252",
       "10.1021/acs.jmedchem.6c01880",
       "10.1038/s41591-026-04741-8",
       "10.1053/j.gastro.2020.01.006",
       "10.1053/j.gastro.2020.12.031",
       "10.1053/j.gastro.2022.12.007",
+      "10.1080/03007995.2026.2761162",
       "10.1093/crocol/otag108",
       "10.1093/ecco-jcc/jjab178",
       "10.1093/ibd/izag222",
@@ -1060,7 +1119,10 @@
       "43032278",
       "43034047",
       "43034232",
-      "43034281"
+      "43034281",
+      "43035116",
+      "43037158",
+      "43037284"
     ],
     "pmcid": [
       "PMC13745218",
@@ -1080,11 +1142,13 @@
       "NCT05668013",
       "NCT06256393",
       "NCT06294925",
+      "NCT06510296",
       "NCT06636656",
       "NCT06651281",
       "NCT06742385",
       "NCT06758024",
       "NCT07463183",
+      "NCT07484620",
       "NCT07535489",
       "NCT07619547",
       "NCT07718529",
@@ -1097,11 +1161,13 @@
       "https://clinicaltrials.gov/study/NCT05668013",
       "https://clinicaltrials.gov/study/NCT06256393",
       "https://clinicaltrials.gov/study/NCT06294925",
+      "https://clinicaltrials.gov/study/NCT06510296",
       "https://clinicaltrials.gov/study/NCT06636656",
       "https://clinicaltrials.gov/study/NCT06651281",
       "https://clinicaltrials.gov/study/NCT06742385",
       "https://clinicaltrials.gov/study/NCT06758024",
       "https://clinicaltrials.gov/study/NCT07463183",
+      "https://clinicaltrials.gov/study/NCT07484620",
       "https://clinicaltrials.gov/study/NCT07535489",
       "https://clinicaltrials.gov/study/NCT07619547",
       "https://clinicaltrials.gov/study/NCT07718529",
@@ -1120,12 +1186,15 @@
       "https://doi.org/10.1007/s12602-026-11297-z",
       "https://doi.org/10.1007/s13205-026-05080-8",
       "https://doi.org/10.1016/j.isci.2026.118014",
+      "https://doi.org/10.1016/j.jep.2026.122618",
       "https://doi.org/10.1016/j.phymed.2026.158905",
+      "https://doi.org/10.1021/acs.chemrestox.6c00252",
       "https://doi.org/10.1021/acs.jmedchem.6c01880",
       "https://doi.org/10.1038/s41591-026-04741-8",
       "https://doi.org/10.1053/j.gastro.2020.01.006",
       "https://doi.org/10.1053/j.gastro.2020.12.031",
       "https://doi.org/10.1053/j.gastro.2022.12.007",
+      "https://doi.org/10.1080/03007995.2026.2761162",
       "https://doi.org/10.1093/crocol/otag108",
       "https://doi.org/10.1093/ibd/izag222",
       "https://doi.org/10.1093/ibd/izag223",
@@ -1151,14 +1220,17 @@
     "checksum": [
       "004c7db65bfef0c1a50539ebf5dc7ddf6d6edbfb80fa31cafa3655f60ec0114e",
       "02718d79e02753a1f0bd6ff128d8561bd56b4e2491e2dada0b3169f496ec02a3",
+      "0283233b1492ae8ff241a72396c96a08a2390703b175991c9cd7b712715506bc",
       "1cb34c2c6dedbe29676ac9bb97a87a76624d6030d45385f10828ed30a4bbb8d2",
       "1e0dc9f88c69a4919dad8cb3e316b08325fc5bd2bd5f18e9f57f817b0e3ae358",
       "24c78462c8ce97857f9f3f4327f6eb40985420e2c5717fe6e77654c0ba192a76",
       "2a81e10a87964174ee8bcd108b963e27306cf63c3e5964f2fda2ed8908e73da6",
+      "2b6a9d28a4e35940114a231000b9b4e27329a58500351a715e957b11e7b6e897",
       "2ed3fc8e3d6ecd6d3b134c7df1912c5148e4ed211f82f4a69fbf28271acbba8f",
       "39a5f7ed6d16d4eb21b64bd7695bd0f22e68a4a01375c9405c63610dc71ca130",
       "429f5456ce12b73bc2b37e66d9ddfe9a9b1f3d3d0b809e247575b75c22dde9e2",
       "4aa24715d8665f1d019caa23c65350de45cd34966716d933864d76db199c9dc3",
+      "4abfb2417ae0237f50f0a96424e90e27186ee5058522b73ef51821aade8f4051",
       "4cf337cc73c066db464b657ced1a0cdf6aee692e394c179c8fc82250b26f0537",
       "505dc25226dd67bb1a08a85c1627405b2d3668f15845fdb2465876f4cfe13dc7",
       "57eea57011a8f8e9a3db11ab11dfedab402632166d0fe248fe8ade08b4181cc0",
@@ -1170,6 +1242,7 @@
       "6f06feaecbe855ec06e3cf808078c7cb2ba3489359909a10cf7e0db3abb0c058",
       "71c1699a507684ff2ad6f20a63e9ade400e4e4b8de2090e018dbdb6b4a6fc8e7",
       "7721bbd3489bb0c149da2aa458414450e21f8155b2d0e0849525902a7e91ff32",
+      "78c8accb79983c516fc3564530a80d6ecf7cd0460d79d717c892db3b1bc30e1f",
       "7bc8a1102035c0dd9406d40f52f911d133351a60c9ee506f296ad702173364dd",
       "7d87d2da71577804d885e8a3dc4ecb4edb5ed64f385c3be0abd297634801bd86",
       "8838b07b56217f7202700a55b1ce06678560830570b3708d7c8edac26398689e",
@@ -1186,6 +1259,7 @@
       "ad3ea4affdb8865ca73a2763286157395e29d2d7c2d57c12dca5cb84fbb6fd1d",
       "aea6bc54b48e80ec2baa818b1f7d346c823b5b26293efbec2dc382a85722eb97",
       "bcbd91ad73aa69b5878db07986c84ebc4098f061a12aa66fecc5b49d2d407a2a",
+      "be91202045d7614547eabccc0d7befc9811ff43d52d3070a81a1484642601d32",
       "bf1f3d8ac0694f1a6da37635723065f76cec58d8686b621244fb146ee4cbb2b1",
       "c18c02f6f79f636800fb80e684f936d26e08648ea02673469949d324279f2989",
       "c19895ecaf9e5a661ed3be6e8e3e9b12b7b0fe0f86b5b6a4547d123b2be45fae",
@@ -1218,6 +1292,7 @@
       "acg clinical guideline ulcerative colitis in adults",
       "aga clinical practice guideline on the role of biomarkers for the management of ulcerative colitis",
       "aga clinical practice guidelines on the management of moderate to severe ulcerative colitis",
+      "ampelopsis grossedentata restores the homeostasis of th17 treg cells to mitigate dss induced ulcerative colitis through tlr1 2 nf κb signaling pathway",
       "an ulcerative colitis taxonomy defined by individual patient reported response trajectories",
       "benefit risk trade offs among patients and providers selecting advanced therapy for moderate to severe ulcerative colitis",
       "bioactive metabolites and botanical preparations from plants used as medicines and foods in ulcerative colitis a mechanism oriented narrative review of multi target regulation",
@@ -1231,8 +1306,10 @@
       "cyclosporine to biologic bridging in biologic exposed acute severe ulcerative colitis a single center retrospective cohort study",
       "design and synthesis of novel non atp competitive mkk3 modulators as suppressors of tnf α production for the treatment of ulcerative colitis",
       "diagnostic prediction of ulcerative colitis using simplified endoscopic features and blood count derived indices a multicenter study",
+      "digital mind body intervention among black and hispanic patients living with inflammatory bowel disease",
       "ecco guidelines on therapeutics in ulcerative colitis medical treatment",
       "effectiveness of etrasimod on disease activity and patient reported outcomes in ulcerative colitis effect uc",
+      "effects of physical activity and physical fitness on inflammation clinical outcomes and quality of life in pediatric inflammatory bowel disease",
       "enteric neurons and glial cells are partially protected in p2x7 receptor deficient mice with ulcerative colitis",
       "evaluation of a remote monitoring application in the follow up of patients with active inflammatory bowel diseases the security trial",
       "fecal microbiota transplantation in the treatment strategy of inflammatory bowel disease molecular mechanisms clinical evidence and the transition toward defined microbial therapeutics",
@@ -1249,6 +1326,7 @@
       "metabolic glycoengineered exosomes enable in situ pd l1 fc assembly for targeted immunotherapy in ulcerative colitis",
       "microbiota transplant therapy improves ulcerative colitis symptoms independent of donor engraftment in a pilot randomized placebo controlled trial",
       "multicentric evaluation of a strategy for early infliximab optimization among adult inflammatory bowel disease patients",
+      "multidimensional deciphering underlying effects of pfoa exposure in ulcerative colitis from epidemiological insights to toxicological mechanisms",
       "n trans caffeoyltyramine alleviates ulcerative colitis by targeting fxr to promote epithelial barrier protection and m2 macrophage polarization",
       "optimized w1 o w2 double emulsions for lactobacillus paracasei encapsulation stability viability and anti inflammatory efficacy in a rat model of ulcerative colitis",
       "panhypopituitarism a case report of a rare complication of cerebral venous thrombosis secondary to ulcerative colitis",
@@ -1260,6 +1338,7 @@
       "safety and efficacy of a stopping strategy versus classical maintenance dose of jak inhibitors in deep remission patients with ulcerative colitis a randomized controlled trial",
       "sequence dependent real world efficacy of anti tnf antibodies and vedolizumab in ulcerative colitis a propensity score weighted cohort study",
       "stride-ii an update on the selecting therapeutic targets in inflammatory bowel disease stride initiative",
+      "surgery rates in japan around market entry milestones of advanced therapies for crohn s disease and ulcerative colitis an interrupted time series study using a large scale japanese claims database",
       "testing of an educational tool for patients with melanoma and concomitant autoimmune disease who are candidates for adjuvant therapy with immune checkpoint inhibitors acceptability and usability with patients and providers",
       "the hidden burden of sarcopenia in inflammatory bowel disease a strong predictor of complications",
       "weiling decoction alleviates dampness exacerbated ulcerative colitis in a spleen deficient mouse model associations with the gut microbiota composition and tlr4 nf κb related inflammatory responses"
@@ -1702,6 +1781,46 @@
       "reason": "passes_relevance_provenance_and_min_metadata",
       "archivalStatus": "link_only",
       "requiresHumanReview": false
+    },
+    {
+      "sourceId": "SRC-163",
+      "pubmedId": "",
+      "decision": "accepted",
+      "reason": "trial_registry_record:no_claims_extracted_not_treatment_effect_evidence",
+      "archivalStatus": "link_only",
+      "requiresHumanReview": true
+    },
+    {
+      "sourceId": "SRC-164",
+      "pubmedId": "",
+      "decision": "accepted",
+      "reason": "trial_registry_record:no_claims_extracted_not_treatment_effect_evidence",
+      "archivalStatus": "link_only",
+      "requiresHumanReview": true
+    },
+    {
+      "sourceId": "SRC-165",
+      "pubmedId": "43035116",
+      "decision": "accepted",
+      "reason": "passes_relevance_provenance_and_min_metadata",
+      "archivalStatus": "link_only",
+      "requiresHumanReview": false
+    },
+    {
+      "sourceId": "SRC-166",
+      "pubmedId": "43037284",
+      "decision": "accepted",
+      "reason": "passes_relevance_provenance_and_min_metadata",
+      "archivalStatus": "link_only",
+      "requiresHumanReview": false
+    },
+    {
+      "sourceId": "SRC-167",
+      "pubmedId": "43037158",
+      "decision": "accepted",
+      "reason": "passes_relevance_provenance_and_min_metadata;ibd_general_label_retained_not_upgraded_to_uc",
+      "archivalStatus": "link_only",
+      "requiresHumanReview": true
     }
   ],
   "rejectedRecords": [
@@ -2256,6 +2375,14 @@
     {
       "identifier": "topic=T-DAILY;applicability=ibd_general;kw=",
       "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ibd_general;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "not_relevant:no_priority_topic_keyword_match"
     }
   ],
   "deferredRecords": [
@@ -2594,6 +2721,14 @@
     {
       "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
       "reason": "no_usable_abstract:paywalled_or_abstract_not_public"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=biologic",
+      "reason": "missing_required_metadata:need_title+id+venue"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "no_usable_abstract:paywalled_or_abstract_not_public"
     }
   ],
   "failedItems": [
@@ -2616,12 +2751,12 @@
     "europepmc_search": 1
   },
   "counters": {
-    "elapsedResearchSeconds": 71.9,
+    "elapsedResearchSeconds": 41.4,
     "queriesConsumed": 16,
-    "recordsScreened": 52,
+    "recordsScreened": 36,
     "sourcesAccepted": 5,
     "pdfsDownloaded": 0,
-    "claimsExtracted": 9
+    "claimsExtracted": 1
   },
   "limits": {
     "maxRuntimeSeconds": 600,
@@ -2636,12 +2771,12 @@
   },
   "stopReason": "all_providers_attempted",
   "nextRecommendedOperation": {
-    "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-162/CLM-247 onward.",
+    "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-168/CLM-249 onward.",
     "topicId": "T-UCX-03",
     "searchId": null,
     "cursor": 0,
-    "firstNewSourceId": "SRC-162",
-    "firstNewClaimId": "CLM-247",
+    "firstNewSourceId": "SRC-168",
+    "firstNewClaimId": "CLM-249",
     "doNot": [
       "approve any source or claim",
       "download a PDF whose redistribution licence is not established",
@@ -2652,9 +2787,9 @@
   },
   "schemaMigratedFrom": "uc-evidence-expansion-1.0.0",
   "promptVersion": "uc-daily-evidence-discovery-v1.0.0",
-  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/43753430405",
+  "workflowRunUrl": "https://github.com/janakiramvit/uc-agent/actions/runs/43977565385",
   "triggeringCommit": "690990722508c90464f643e80267f5ccd69ed792",
-  "sourceDataCutoff": "2026-11-14",
+  "sourceDataCutoff": "2026-11-15",
   "duplicateRecords": [
     {
       "identifier": "topic=T-DAILY;applicability=ibd_general;kw=",
@@ -3299,13 +3434,121 @@
     {
       "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
       "reason": "duplicate_doi:10.2174/0115665240520377261027060601"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.1007/s00104-026-02615-w"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ibd_general;kw=",
+      "reason": "duplicate_doi:10.3390/ijms272110001"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.1093/ibd/izag222"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.1002/ardp.70384"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.3390/ijms27219411"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ibd_general;kw=",
+      "reason": "duplicate_doi:10.1002/ctm2.70896"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.2174/0115665240520377261027060601"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.1186/s12876-026-05560-4"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.1016/j.isci.2026.118014"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.1002/fsn3.72598"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.7759/cureus.117868"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ibd_general;kw=",
+      "reason": "duplicate_doi:10.1093/crocol/otag108"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.1093/ibd/izag236"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=unknown;kw=",
+      "reason": "duplicate_previously_rejected"
+    },
+    {
+      "identifier": "topic=T-DAILY;applicability=ulcerative_colitis;kw=",
+      "reason": "duplicate_doi:10.3389/fphar.2026.1915609"
     }
   ],
   "limitConsumption": {
     "queries": "16/40",
-    "screened": "52/200",
+    "screened": "36/200",
     "accepted": "5/40",
-    "claims": "9/100"
+    "claims": "1/100"
   },
   "accessAndLicensingStatus": "all sources link_only; no redistribution licence established; 0 files archived; no PDFs downloaded",
   "completedTopics": [
@@ -3324,8 +3567,8 @@
       "topicId": "T-UCX-03",
       "searchId": null,
       "cursor": 0,
-      "firstNewSourceId": "SRC-156",
-      "firstNewClaimId": "CLM-237"
+      "firstNewSourceId": "SRC-162",
+      "firstNewClaimId": "CLM-247"
     },
     "resolution": "checkpoint is authoritative; prompt hints ignored"
   }

@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-4daef5e63bb7` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/43753430405 · **Date:** 2026-11-15
+**Run ID:** `uc-exp-f3fa2ae0157e` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/43977565385 · **Date:** 2026-11-16
 **Run status:** `completed`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,11 +11,11 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 71.9s |
+| Internal research | 450s soft / 540s finalize | 41.4s |
 | Discovery queries | 40 | 16 |
-| Records screened | 200 | 52 |
+| Records screened | 200 | 36 |
 | New sources accepted | 40 | 5 |
-| Candidate excerpts | 100 | 9 |
+| Candidate excerpts | 100 | 1 |
 | PDFs archived | 0 (policy) | 0 |
 
 ## Dispositions
@@ -23,9 +23,9 @@
 | Disposition | Count |
 |---|---|
 | accepted | 5 |
-| deferred | 5 |
-| duplicate | 34 |
-| rejected | 8 |
+| deferred | 2 |
+| duplicate | 27 |
+| rejected | 2 |
 
 ## QA
 
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-162/CLM-247 onward.",
+  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-168/CLM-249 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-162",
-  "firstNewClaimId": "CLM-247",
+  "firstNewSourceId": "SRC-168",
+  "firstNewClaimId": "CLM-249",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",
