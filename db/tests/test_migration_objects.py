@@ -18,6 +18,7 @@ VIEWS = [
     "v_dataset", "v_source", "v_claim", "v_claim_qa", "v_schema_reconciliation",
     "v_prototype_source", "v_prototype_claim", "v_prototype_excluded_claim_id",
     "v_prototype_limitation", "v_uc_eligible_claim",
+    "v_pilot_source", "v_pilot_claim", "v_pilot_excluded_claim_id", "v_pilot_limitation",
 ]
 
 

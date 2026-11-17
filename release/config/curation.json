@@ -1,0 +1,346 @@
+{
+  "_note": "Curator decisions for the 2026-11-17 pilot release. Every staged claim has an explicit category and reason. Only proposed_include rows carry patient-facing text. Nothing here is approval: owner decisions are recorded separately as owner_reviewed_for_pilot.",
+  "id_reservation": "CLM-701..CLM-799 are reserved for curator-authored release claims (the daily-discovery allocator continues from CLM-253 and would never collide in practice; tests assert no overlap).",
+  "authored_claims": [
+    {
+      "claimId": "CLM-701",
+      "sourceId": "SRC-141",
+      "normalizedClaim": "In a small randomized, open-label trial of 56 people with ulcerative colitis in remission who had iron-deficiency anaemia, daily and alternate-day oral iron did not differ significantly in haemoglobin, red-cell indices or iron measures after 8 weeks, nor in side effects or disease flares.",
+      "exactSupportingExcerpt": "Our study did not show any significant difference in mean hemoglobin levels, RBC indices, or iron profiles between the daily and alternate-day oral iron groups.",
+      "exactLocator": "PubMed abstract (PMID 43022869), Results/Conclusions; iScience 2026",
+      "studyPopulation": "Adults with ulcerative colitis in remission and iron-deficiency anaemia (n = 56)",
+      "studyDesign": "Randomized, open-label trial; daily vs alternate-day oral iron; primary outcome mean change in haemoglobin at 8 weeks",
+      "conditionApplicability": "ulcerative_colitis",
+      "diseaseContext": [
+        "remission",
+        "iron_deficiency_anaemia"
+      ],
+      "evidenceStrength": "single small open-label randomized trial (low)",
+      "limitations": "56 participants, open-label, 8 weeks, one oral iron formulation, single country; the authors say larger studies are needed. 'No significant difference' does not prove the two schedules are equivalent.",
+      "mappedPatientQuestionIds": [
+        "L3-2.2.3"
+      ]
+    },
+    {
+      "claimId": "CLM-702",
+      "sourceId": "SRC-152",
+      "normalizedClaim": "A German guideline update on ulcerative colitis surgery (status November 2025) states that in acute severe ulcerative colitis, colectomy (surgery to remove the colon) is still indicated when standard drug treatment has failed; in selected cases a JAK inhibitor can be considered as an alternative third-line treatment in specialised centres.",
+      "exactSupportingExcerpt": "In patients with acute severe ulcerative colitis, colectomy is still indicated for treatment after failure of standard pharmacotherapy, in selected cases a Janus kinase (JAK) inhibitor can be considered as an alternative third line treatment in centers.",
+      "exactLocator": "PubMed abstract (PMID 43026331), first sentence; Chirurgie 2026 (German-language guideline summary with English abstract)",
+      "studyPopulation": "Adults with acute severe ulcerative colitis who failed standard pharmacotherapy",
+      "studyDesign": "National clinical practice guideline (surgery chapter), abstract-level summary",
+      "conditionApplicability": "ulcerative_colitis",
+      "diseaseContext": [
+        "acute_severe_ulcerative_colitis",
+        "surgery"
+      ],
+      "evidenceStrength": "national guideline statement (abstract only; strength-of-recommendation grading not stated in the abstract)",
+      "limitations": "German national guideline summarised in a journal abstract; the recommendation grade, evidence level and the full text were not read. Applicability to Canada/US care pathways is not assessed. Decisions about surgery are made with the treating team.",
+      "mappedPatientQuestionIds": [
+        "L3-2.3.3",
+        "L3-1.1.2"
+      ]
+    }
+  ],
+  "proposed": {
+    "CLM-115": {
+      "patient": "If you have ulcerative colitis and feel well (symptomatic remission), the AGA guideline suggests checking a biomarker test together with your symptoms, rather than relying on symptoms alone.",
+      "reason": "UC-specific AGA practice guideline recommendation; excerpt is verbatim and the claim restates it without adding.",
+      "strength": "conditional guideline recommendation (GRADE; AGA)",
+      "design": "Clinical practice guideline"
+    },
+    "CLM-116": {
+      "patient": "If you have ulcerative colitis in symptomatic remission, the AGA guideline suggests that a fecal calprotectin below 150 µg/g, a normal fecal lactoferrin and/or a normal CRP can be used to rule out active inflammation, so routine endoscopy can be avoided.",
+      "reason": "UC-specific AGA guideline recommendation; thresholds are decision thresholds, not individual diagnoses (stated in limitations).",
+      "strength": "conditional guideline recommendation (GRADE; AGA)",
+      "design": "Clinical practice guideline"
+    },
+    "CLM-117": {
+      "patient": "If you have ulcerative colitis with moderate-to-severe symptoms, the AGA guideline suggests that a fecal calprotectin above 150 µg/g, an elevated fecal lactoferrin or an elevated CRP can help guide treatment decisions without routine endoscopy.",
+      "reason": "UC-specific AGA guideline recommendation; verbatim excerpt.",
+      "strength": "conditional guideline recommendation (GRADE; AGA)",
+      "design": "Clinical practice guideline"
+    },
+    "CLM-118": {
+      "patient": "When symptoms and biomarker tests disagree (feeling well but raised markers, or moderate-to-severe symptoms with normal markers), the AGA guideline suggests an endoscopic assessment to guide treatment.",
+      "reason": "UC-specific AGA guideline recommendation addressing a common patient question (do symptoms always match inflammation?).",
+      "strength": "conditional guideline recommendation (GRADE; AGA)",
+      "design": "Clinical practice guideline"
+    },
+    "CLM-119": {
+      "patient": "If you have ulcerative colitis with only mild symptoms, the AGA guideline suggests an endoscopic assessment of disease activity to guide treatment decisions.",
+      "reason": "UC-specific AGA guideline recommendation; verbatim excerpt.",
+      "strength": "conditional guideline recommendation (GRADE; AGA)",
+      "design": "Clinical practice guideline"
+    },
+    "CLM-120": {
+      "patient": "The AGA guideline panel noted it is not yet known whether monitoring with biomarkers is better than monitoring with endoscopy; it listed this as a knowledge gap.",
+      "reason": "UC-specific guideline statement of uncertainty; included so the agent can say what is NOT known rather than overstate biomarkers.",
+      "strength": "guideline-identified knowledge gap",
+      "design": "Clinical practice guideline"
+    },
+    "CLM-121": {
+      "patient": "The AGA guideline concludes that non-invasive tests, including fecal calprotectin, fecal lactoferrin and blood CRP, can inform monitoring and management of ulcerative colitis.",
+      "reason": "UC-specific AGA guideline conclusion; verbatim excerpt.",
+      "strength": "guideline conclusion (GRADE; AGA)",
+      "design": "Clinical practice guideline"
+    },
+    "CLM-126": {
+      "patient": "The STRIDE-II consensus says histological healing in ulcerative colitis is not a formal treatment target but should be assessed as a measure of how deep remission is.",
+      "reason": "IBD-general consensus with an explicit ulcerative-colitis statement; the claim keeps the source's 'not a formal target' wording. If approved its claim-level applicability is recorded as ulcerative_colitis (the source stays IBD-general) so the app can serve it.",
+      "strength": "expert consensus recommendation (systematic review + Delphi, 89 IOIBD members; 13 of 15 recommendations endorsed)",
+      "design": "Consensus statement"
+    },
+    "CLM-701": {
+      "patient": null,
+      "reason": "Human randomized trial in UC; excerpt is a direct, appropriately hedged result. Small open-label trial: strength recorded as low.",
+      "strength": "single small open-label randomized trial (low)",
+      "design": "Randomized open-label trial"
+    },
+    "CLM-702": {
+      "patient": null,
+      "reason": "UC-specific national guideline statement on acute severe UC and colectomy; fills a surgery/urgent-care coverage gap. Abstract-level only.",
+      "strength": "national guideline statement (abstract only)",
+      "design": "Clinical practice guideline"
+    }
+  },
+  "deferred": {
+    "CLM-122": [
+      "incomplete_or_unverifiable",
+      "Methods statement (screened records), not a clinical finding."
+    ],
+    "CLM-123": [
+      "ibd_general_unclear",
+      "Result of an expert survey, not a recommendation; IBD-general."
+    ],
+    "CLM-124": [
+      "ibd_general_unclear",
+      "STRIDE-II long-term targets for IBD; the excerpt names no UC subgroup (only CLM-126 does)."
+    ],
+    "CLM-125": [
+      "ibd_general_unclear",
+      "STRIDE-II short-term targets for IBD; the excerpt names no UC subgroup."
+    ],
+    "CLM-127": [
+      "incomplete_or_unverifiable",
+      "Sentence fragment without its subject; cannot stand alone."
+    ],
+    "CLM-198": [
+      "incomplete_or_unverifiable",
+      "Aim/background sentence of a comparative-effectiveness study, not a finding."
+    ],
+    "CLM-199": [
+      "incomplete_or_unverifiable",
+      "Background sentence of a review of experimental cell therapies."
+    ],
+    "CLM-200": [
+      "ibd_general_unclear",
+      "IVF in IBD (pregnancy); IBD-general, no UC subgroup in the excerpt."
+    ],
+    "CLM-201": [
+      "incomplete_or_unverifiable",
+      "Study-design sentence of a research taxonomy paper; not patient guidance."
+    ],
+    "CLM-202": [
+      "incomplete_or_unverifiable",
+      "Validation-cohort description; not patient guidance."
+    ],
+    "CLM-203": [
+      "animal_preclinical",
+      "Transcriptomic/mechanistic finding, not clinical evidence."
+    ],
+    "CLM-204": [
+      "incomplete_or_unverifiable",
+      "Observational association (RAS inhibitors and complications) that could be misread as treatment advice."
+    ],
+    "CLM-205": [
+      "case_report",
+      "Statement from a single-patient case report."
+    ],
+    "CLM-206": [
+      "case_report",
+      "Single-patient case report."
+    ],
+    "CLM-207": [
+      "case_report",
+      "Statement from a single-patient case report."
+    ],
+    "CLM-208": [
+      "case_report",
+      "Single-patient case report."
+    ],
+    "CLM-209": [
+      "incomplete_or_unverifiable",
+      "Background sentence of a diagnostic-prediction study."
+    ],
+    "CLM-210": [
+      "animal_preclinical",
+      "Preclinical (exosome/PD-L1-Fc) paper; background sentence."
+    ],
+    "CLM-212": [
+      "incomplete_or_unverifiable",
+      "Comparison between age groups; the excerpt does not say which groups, so it cannot stand alone."
+    ],
+    "CLM-213": [
+      "incomplete_or_unverifiable",
+      "Adherence associations in a cross-sectional survey; observational and not patient guidance."
+    ],
+    "CLM-214": [
+      "ibd_general_unclear",
+      "Paediatric surgical volume in IBD; no UC claim for adults."
+    ],
+    "CLM-215": [
+      "case_report",
+      "Single-patient case report."
+    ],
+    "CLM-216": [
+      "case_report",
+      "Single-patient case report (authors only 'raise the possibility')."
+    ],
+    "CLM-217": [
+      "ibd_general_unclear",
+      "Intestinal ultrasound narrative review, IBD-general, no UC subgroup."
+    ],
+    "CLM-219": [
+      "ibd_general_unclear",
+      "Sarcopenia cohort in IBD; method sentence."
+    ],
+    "CLM-220": [
+      "ibd_general_unclear",
+      "Sarcopenia cohort in IBD; IBD-general numbers with no UC subgroup."
+    ],
+    "CLM-221": [
+      "ibd_general_unclear",
+      "Sarcopenia cohort in IBD; observational association, IBD-general."
+    ],
+    "CLM-222": [
+      "ibd_general_unclear",
+      "Sarcopenia cohort in IBD; observational association, IBD-general."
+    ],
+    "CLM-223": [
+      "animal_preclinical",
+      "Medicinal-chemistry/preclinical paper."
+    ],
+    "CLM-225": [
+      "case_report",
+      "Single-patient case report."
+    ],
+    "CLM-226": [
+      "incomplete_or_unverifiable",
+      "Background sentence on pouch surgery (UC and FAP) in a surgical-technique study."
+    ],
+    "CLM-227": [
+      "incomplete_or_unverifiable",
+      "Study aim (CT predictor of surgical difficulty); clinician-level."
+    ],
+    "CLM-228": [
+      "incomplete_or_unverifiable",
+      "Cohort description."
+    ],
+    "CLM-230": [
+      "ibd_general_unclear",
+      "Narrative review of FMT (IBD-general, investigational); could prompt unsupervised self-treatment."
+    ],
+    "CLM-231": [
+      "incomplete_or_unverifiable",
+      "Narrow surgical-oncology statement for 'highly selected cases'; low patient value and easily over-generalised (kept in staging)."
+    ],
+    "CLM-232": [
+      "incomplete_or_unverifiable",
+      "Background sentence of a single-centre retrospective study."
+    ],
+    "CLM-233": [
+      "incomplete_or_unverifiable",
+      "Study aim."
+    ],
+    "CLM-234": [
+      "incomplete_or_unverifiable",
+      "Inclusion criteria."
+    ],
+    "CLM-235": [
+      "incomplete_or_unverifiable",
+      "Primary-endpoint definition, not a result."
+    ],
+    "CLM-236": [
+      "animal_preclinical",
+      "Experimental colitis (animal) plus expression profiling; mechanistic."
+    ],
+    "CLM-238": [
+      "ibd_general_unclear",
+      "Cohort description (IBD in remission, UC and CD together)."
+    ],
+    "CLM-239": [
+      "animal_preclinical",
+      "Background of a review of plant-derived preparations (largely preclinical)."
+    ],
+    "CLM-240": [
+      "ibd_general_unclear",
+      "Background of a wearable-biosensor study (IBD-general)."
+    ],
+    "CLM-241": [
+      "ibd_general_unclear",
+      "Cohort description of an investigational biosensor study."
+    ],
+    "CLM-242": [
+      "ibd_general_unclear",
+      "Investigational device agreement result in 52 patients; not patient guidance."
+    ],
+    "CLM-243": [
+      "incomplete_or_unverifiable",
+      "Study-design sentence of an observational comparison."
+    ],
+    "CLM-244": [
+      "incomplete_or_unverifiable",
+      "Retrospective treatment-sequence comparison (n=219): an association that could be misread as treatment advice; owner may override."
+    ],
+    "CLM-245": [
+      "incomplete_or_unverifiable",
+      "Retrospective association between prior anti-TNF exposure and later vedolizumab effectiveness; could be misread as treatment advice."
+    ],
+    "CLM-246": [
+      "incomplete_or_unverifiable",
+      "Authors' interpretation ('support considering vedolizumab first-line') of observational data; overstates for patient use."
+    ],
+    "CLM-248": [
+      "ibd_general_unclear",
+      "Japan surgery-rate time series around drug approvals; IBD-general."
+    ],
+    "CLM-250": [
+      "ibd_general_unclear",
+      "Faecal calprotectin in hidradenitis suppurativa; background sentence about IBD."
+    ],
+    "CLM-251": [
+      "ibd_general_unclear",
+      "VTE in IBD narrative review; IBD-general with no UC subgroup (a candidate for a future UC-specific VTE source)."
+    ],
+    "CLM-252": [
+      "ibd_general_unclear",
+      "VTE prophylaxis statement for hospitalised IBD patients; IBD-general with no UC subgroup (high-value future gap)."
+    ]
+  },
+  "source_overrides": {
+    "animal_preclinical": [
+      "SRC-115",
+      "SRC-117",
+      "SRC-119",
+      "SRC-120",
+      "SRC-121",
+      "SRC-128",
+      "SRC-143",
+      "SRC-144",
+      "SRC-147",
+      "SRC-154",
+      "SRC-155",
+      "SRC-158",
+      "SRC-165",
+      "SRC-166",
+      "SRC-174",
+      "SRC-181"
+    ],
+    "case_report": [
+      "SRC-114",
+      "SRC-124",
+      "SRC-145"
+    ]
+  }
+}

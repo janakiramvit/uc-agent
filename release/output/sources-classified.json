@@ -1,0 +1,1111 @@
+[
+  {
+    "gid": "SG001",
+    "keeper": "production:SRC-002",
+    "title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2024",
+    "members": [
+      "production:SRC-002",
+      "baseline-register:SRC-002"
+    ]
+  },
+  {
+    "gid": "SG002",
+    "keeper": "production:SRC-004",
+    "title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Disease: an Umbrella Review.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2024",
+    "members": [
+      "production:SRC-004",
+      "baseline-register:SRC-004"
+    ]
+  },
+  {
+    "gid": "SG003",
+    "keeper": "production:SRC-005",
+    "title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systematic Review and Meta-analysis.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2023",
+    "members": [
+      "production:SRC-005",
+      "baseline-register:SRC-005"
+    ]
+  },
+  {
+    "gid": "SG004",
+    "keeper": "production:SRC-006",
+    "title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systematic review and dose-response meta-analysis.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2025",
+    "members": [
+      "production:SRC-006",
+      "baseline-register:SRC-006"
+    ]
+  },
+  {
+    "gid": "SG005",
+    "keeper": "production:SRC-007",
+    "title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nutritional effects of dairy food restriction in inflammatory bowel diseases.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2016",
+    "members": [
+      "production:SRC-007",
+      "baseline-register:SRC-007"
+    ]
+  },
+  {
+    "gid": "SG006",
+    "keeper": "production:SRC-008",
+    "title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammatory Bowel Disease.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2023",
+    "members": [
+      "production:SRC-008",
+      "baseline-register:SRC-008"
+    ]
+  },
+  {
+    "gid": "SG007",
+    "keeper": "production:SRC-010",
+    "title": "Assessment of causal link between psychological factors and symptom exacerbation in inflammatory bowel disease: a systematic review utilising Bradford Hill criteria and meta-analysis of prospective cohort studies.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2020",
+    "members": [
+      "production:SRC-010",
+      "baseline-register:SRC-010"
+    ]
+  },
+  {
+    "gid": "SG008",
+    "keeper": "production:SRC-011",
+    "title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory Bowel Disease: A Systematic Review and Meta-Analysis.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2021",
+    "members": [
+      "production:SRC-011",
+      "baseline-register:SRC-011"
+    ]
+  },
+  {
+    "gid": "SG009",
+    "keeper": "production:SRC-012",
+    "title": "Efficacy and safety of probiotics in the induction and maintenance of inflammatory bowel disease remission: a systematic review and meta-analysis.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2021",
+    "members": [
+      "production:SRC-012",
+      "baseline-register:SRC-012"
+    ]
+  },
+  {
+    "gid": "SG010",
+    "keeper": "production:SRC-013",
+    "title": "Ultra-processed foods and food additives in gut health and disease.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2024",
+    "members": [
+      "production:SRC-013",
+      "baseline-register:SRC-013"
+    ]
+  },
+  {
+    "gid": "SG011",
+    "keeper": "production:SRC-014",
+    "title": "Physical Activity is Associated with a Decreased Risk of Developing Inflammatory Bowel Disease: A Systematic Review and Meta-analysis.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2024",
+    "members": [
+      "production:SRC-014",
+      "baseline-register:SRC-014"
+    ]
+  },
+  {
+    "gid": "SG012",
+    "keeper": "production:SRC-016",
+    "title": "A Randomized Trial Comparing the Specific Carbohydrate Diet to a Mediterranean Diet in Adults With Crohn's Disease.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2021",
+    "members": [
+      "production:SRC-016",
+      "baseline-register:SRC-016"
+    ]
+  },
+  {
+    "gid": "SG013",
+    "keeper": "production:SRC-017",
+    "title": "Crohn's Disease Exclusion Diet Plus Partial Enteral Nutrition Induces Sustained Remission in a Randomized Controlled Trial.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2019",
+    "members": [
+      "production:SRC-017",
+      "baseline-register:SRC-017"
+    ]
+  },
+  {
+    "gid": "SG014",
+    "keeper": "production:SRC-019",
+    "title": "A randomized, 6-wk trial of a low FODMAP diet in patients with inflammatory bowel disease.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2019",
+    "members": [
+      "production:SRC-019",
+      "baseline-register:SRC-019"
+    ]
+  },
+  {
+    "gid": "SG015",
+    "keeper": "production:SRC-020",
+    "title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospective cohort study.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2021",
+    "members": [
+      "production:SRC-020",
+      "baseline-register:SRC-020"
+    ]
+  },
+  {
+    "gid": "SG016",
+    "keeper": "production:SRC-021",
+    "title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory bowel disease",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2025",
+    "members": [
+      "production:SRC-021",
+      "baseline-register:SRC-021"
+    ]
+  },
+  {
+    "gid": "SG017",
+    "keeper": "production:SRC-022",
+    "title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2024",
+    "members": [
+      "production:SRC-022",
+      "baseline-register:SRC-022"
+    ]
+  },
+  {
+    "gid": "SG018",
+    "keeper": "production:SRC-023",
+    "title": "Eating, Diet, & Nutrition for Crohn’s Disease",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2024",
+    "members": [
+      "production:SRC-023",
+      "baseline-register:SRC-023"
+    ]
+  },
+  {
+    "gid": "SG019",
+    "keeper": "production:SRC-025",
+    "title": "Food and IBD",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "production:SRC-025",
+      "baseline-register:SRC-025"
+    ]
+  },
+  {
+    "gid": "SG020",
+    "keeper": "production:SRC-026",
+    "title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2023",
+    "members": [
+      "production:SRC-026",
+      "baseline-register:SRC-026"
+    ]
+  },
+  {
+    "gid": "SG021",
+    "keeper": "baseline-register:SRC-001",
+    "title": "British Society of Gastroenterology guidelines on inflammatory bowel disease in adults: 2025.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2025",
+    "members": [
+      "baseline-register:SRC-001"
+    ]
+  },
+  {
+    "gid": "SG022",
+    "keeper": "baseline-register:SRC-003",
+    "title": "ESPEN guideline: Clinical nutrition in inflammatory bowel disease.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2017",
+    "members": [
+      "baseline-register:SRC-003"
+    ]
+  },
+  {
+    "gid": "SG023",
+    "keeper": "baseline-register:SRC-009",
+    "title": "Systematic review and meta-analysis of sleep quality in inactive inflammatory bowel disease.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2022",
+    "members": [
+      "baseline-register:SRC-009"
+    ]
+  },
+  {
+    "gid": "SG024",
+    "keeper": "baseline-register:SRC-015",
+    "title": "Environmental Risk Factors for Inflammatory Bowel Diseases: An Umbrella Review of Meta-analyses.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2019",
+    "members": [
+      "baseline-register:SRC-015"
+    ]
+  },
+  {
+    "gid": "SG025",
+    "keeper": "baseline-register:SRC-018",
+    "title": "A Diet Low in Red and Processed Meat Does Not Reduce Rate of Crohn's Disease Flares.",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2019",
+    "members": [
+      "baseline-register:SRC-018"
+    ]
+  },
+  {
+    "gid": "SG026",
+    "keeper": "baseline-register:SRC-024",
+    "title": "What Should I Eat with IBD?",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "baseline-register:SRC-024"
+    ]
+  },
+  {
+    "gid": "SG027",
+    "keeper": "staging:SRC-028",
+    "title": "AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2023",
+    "members": [
+      "staging:SRC-028"
+    ]
+  },
+  {
+    "gid": "SG028",
+    "keeper": "staging:SRC-033",
+    "title": "STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat-to-Target strategies in IBD",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2021",
+    "members": [
+      "staging:SRC-033"
+    ]
+  },
+  {
+    "gid": "SG029",
+    "keeper": "staging:SRC-034",
+    "title": "AGA Clinical Practice Guidelines on the Management of Moderate to Severe Ulcerative Colitis",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2020",
+    "members": [
+      "staging:SRC-034"
+    ]
+  },
+  {
+    "gid": "SG030",
+    "keeper": "staging:SRC-105",
+    "title": "Longitudinal Immunophenotyping of Patients With Inflammatory Bowel Disease",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2036",
+    "members": [
+      "staging:SRC-105"
+    ]
+  },
+  {
+    "gid": "SG031",
+    "keeper": "staging:SRC-106",
+    "title": "Comparative effectiveness of infliximab and tofacitinib in advanced therapy-naive and -exposed patients with ulcerative colitis: a multicenter real-world study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-106"
+    ]
+  },
+  {
+    "gid": "SG032",
+    "keeper": "staging:SRC-107",
+    "title": "Evaluation of a Remote Monitoring Application in the Follow-up of Patients With Active Inflammatory Bowel Diseases: The SECURITY Trial",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-107"
+    ]
+  },
+  {
+    "gid": "SG033",
+    "keeper": "staging:SRC-108",
+    "title": "A Phase 3 Extension Study to Evaluate the Long-term Safety and Efficacy of Tulisokibart in Participants With Crohn's Disease or Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2037",
+    "members": [
+      "staging:SRC-108"
+    ]
+  },
+  {
+    "gid": "SG034",
+    "keeper": "staging:SRC-109",
+    "title": "Cellular therapies and immune reprogramming in inflammatory bowel disease: lessons learned and the promise of CAR T-cell therapy",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-109"
+    ]
+  },
+  {
+    "gid": "SG035",
+    "keeper": "staging:SRC-110",
+    "title": "Safety and Efficacy of a STOPping Strategy Versus Classical Maintenance Dose of JAK Inhibitors in Deep Remission Patients With Ulcerative Colitis: a Randomized Controlled Trial",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2031",
+    "members": [
+      "staging:SRC-110"
+    ]
+  },
+  {
+    "gid": "SG036",
+    "keeper": "staging:SRC-111",
+    "title": "Impact of in vitro fertilization on disease activity and pregnancy outcomes in women with inflammatory bowel disease",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-111"
+    ]
+  },
+  {
+    "gid": "SG037",
+    "keeper": "staging:SRC-112",
+    "title": "Laparoscopic first-stage subtotal colectomy for ulcerative and indeterminate colitis: a propensity-matched study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-112"
+    ]
+  },
+  {
+    "gid": "SG038",
+    "keeper": "staging:SRC-113",
+    "title": "An ulcerative colitis taxonomy defined by individual patient-reported response trajectories",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-113"
+    ]
+  },
+  {
+    "gid": "SG039",
+    "keeper": "staging:SRC-114",
+    "title": "Intestinal obstruction due to rectal neoplasia in a patient with ulcerative colitis undergoing surgery with total mesorectal excision: case report and literature review",
+    "category": "case_report",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-114"
+    ]
+  },
+  {
+    "gid": "SG040",
+    "keeper": "staging:SRC-115",
+    "title": "Enteric Neurons and Glial Cells Are Partially Protected in P2X7 Receptor-Deficient Mice With Ulcerative Colitis",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-115"
+    ]
+  },
+  {
+    "gid": "SG041",
+    "keeper": "staging:SRC-116",
+    "title": "Diagnostic prediction of ulcerative colitis using simplified endoscopic features and blood count-derived indices: a multicenter study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-116"
+    ]
+  },
+  {
+    "gid": "SG042",
+    "keeper": "staging:SRC-117",
+    "title": "Metabolic glycoengineered exosomes enable in situ PD-L1-Fc assembly for targeted immunotherapy in ulcerative colitis",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-117"
+    ]
+  },
+  {
+    "gid": "SG043",
+    "keeper": "staging:SRC-119",
+    "title": "Lactobacillus-Based Therapy for Ulcerative Colitis: From Strain Heterogeneity and TCM-Mediated Modulation to Engineered Delivery and Precision Translation",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-119"
+    ]
+  },
+  {
+    "gid": "SG044",
+    "keeper": "staging:SRC-120",
+    "title": "Caffeic acid regulates the gut microbiota-tryptophan metabolic axis to improve intestinal barrier function and relieve ulcerative colitis",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-120"
+    ]
+  },
+  {
+    "gid": "SG045",
+    "keeper": "staging:SRC-121",
+    "title": "Weiling decoction alleviates dampness-exacerbated ulcerative colitis in a spleen-deficient mouse model: associations with the gut microbiota composition and TLR4/NF-κB-related inflammatory responses",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-121"
+    ]
+  },
+  {
+    "gid": "SG046",
+    "keeper": "staging:SRC-122",
+    "title": "Clinical profiles and management strategies in older adults with mild-to-moderate ulcerative colitis: a multicenter, comparative, real-world study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-122"
+    ]
+  },
+  {
+    "gid": "SG047",
+    "keeper": "staging:SRC-123",
+    "title": "Real-world paediatric inflammatory bowel disease surgery: International variation in care and practice",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-123"
+    ]
+  },
+  {
+    "gid": "SG048",
+    "keeper": "staging:SRC-124",
+    "title": "Infliximab for Refractory Diffuse Sclerosing Osteomyelitis of the Mandible Associated With Ulcerative Colitis: A Case Report",
+    "category": "case_report",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-124"
+    ]
+  },
+  {
+    "gid": "SG049",
+    "keeper": "staging:SRC-125",
+    "title": "Intestinal Ultrasound in Inflammatory Bowel Disease: From Point-of-Care Assessment to Standardized Treat-to-Target Monitoring",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-125"
+    ]
+  },
+  {
+    "gid": "SG050",
+    "keeper": "staging:SRC-127",
+    "title": "The hidden burden of sarcopenia in inflammatory bowel disease: a strong predictor of complications",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-127"
+    ]
+  },
+  {
+    "gid": "SG051",
+    "keeper": "staging:SRC-128",
+    "title": "Design and Synthesis of Novel, Non-ATP-Competitive MKK3 Modulators as Suppressors of TNF-α Production for the Treatment of Ulcerative Colitis",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-128"
+    ]
+  },
+  {
+    "gid": "SG052",
+    "keeper": "staging:SRC-129",
+    "title": "Comment on: \"Performance of existing predictive scores of response in patients with moderately active ulcerative colitis treated with oral corticosteroids\"",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-129"
+    ]
+  },
+  {
+    "gid": "SG053",
+    "keeper": "staging:SRC-130",
+    "title": "A Multicenter, Randomized, Double-Blind, Placebo-Controlled Phase I Study to Evaluate the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of Single and Multiple Ascending Doses of VDJ010 for Subcutaneous Injection in Healthy Chinese Subjects and Patients With Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-130"
+    ]
+  },
+  {
+    "gid": "SG054",
+    "keeper": "staging:SRC-131",
+    "title": "A Phase Ib Study of Nivolumab in Patients With Autoimmune Disorders and Advanced Malignancies (AIM-NIVO)",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-131"
+    ]
+  },
+  {
+    "gid": "SG055",
+    "keeper": "staging:SRC-132",
+    "title": "A Phase 2a Randomized, Double-Blind, Placebo-Controlled Study to Evaluate the Efficacy and Safety of MK-8690 in Adult Participants With Moderately to Severely Active Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-132"
+    ]
+  },
+  {
+    "gid": "SG056",
+    "keeper": "staging:SRC-133",
+    "title": "EFFECTIVENESS OF ETRASIMOD ON DISEASE ACTIVITY AND PATIENT-REPORTED OUTCOMES IN ULCERATIVE COLITIS - EFFECT-UC",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2027",
+    "members": [
+      "staging:SRC-133"
+    ]
+  },
+  {
+    "gid": "SG057",
+    "keeper": "staging:SRC-134",
+    "title": "A Phase 2, Multicenter, Randomized, Double-Blind, Placebo-Controlled, Dose-Ranging Study to Evaluate the Efficacy and Safety of IPG11406 Tablets in Adult Patients With Moderately to Severely Active Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2029",
+    "members": [
+      "staging:SRC-134"
+    ]
+  },
+  {
+    "gid": "SG058",
+    "keeper": "staging:SRC-135",
+    "title": "Multicentric Evaluation of a Strategy for Early Infliximab Optimization Among Adult Inflammatory Bowel Disease Patients",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-135"
+    ]
+  },
+  {
+    "gid": "SG059",
+    "keeper": "staging:SRC-136",
+    "title": "Testing of an Educational Tool for Patients With Melanoma and Concomitant Autoimmune Disease Who Are Candidates for Adjuvant Therapy With Immune Checkpoint Inhibitors: Acceptability and Usability With Patients and Providers",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2027",
+    "members": [
+      "staging:SRC-136"
+    ]
+  },
+  {
+    "gid": "SG060",
+    "keeper": "staging:SRC-137",
+    "title": "Phase IIa, Sequential Cohort, Open-label, Multi-center Clinical Trial to Evaluate the Efficacy, Safety, and Tolerability of Intravenous Induction and Subcutaneous Maintenance Treatment With BI 3032950 in Patients With Moderate to Severe Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2029",
+    "members": [
+      "staging:SRC-137"
+    ]
+  },
+  {
+    "gid": "SG061",
+    "keeper": "staging:SRC-138",
+    "title": "A Phase 2, Multicenter, Randomized, Double-Blind, Placebo-Controlled, Dose Ranging Study to Evaluate the Efficacy, Safety, Pharmacokinetics, and Pharmacodynamics of Induction and Maintenance Therapy With PALI-2108 in Participants With Moderately to Severely Active Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-138"
+    ]
+  },
+  {
+    "gid": "SG062",
+    "keeper": "staging:SRC-139",
+    "title": "A Phase 2b, Randomized, Double-Blind Long-Term Extension Study to Evaluate Pharmacokinetics, Efficacy, Safety, and Tolerability of TEV-48574 in Adult Patients With Moderate to Severe Ulcerative Colitis or Crohn's Disease Who Completed the Treatment Phase of the Dose-Ranging Study (RELIEVE UCCD LTE)",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2027",
+    "members": [
+      "staging:SRC-139"
+    ]
+  },
+  {
+    "gid": "SG063",
+    "keeper": "staging:SRC-141",
+    "title": "A randomized controlled trial of alternate-day versus daily iron therapy in ulcerative colitis in remission",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-141"
+    ]
+  },
+  {
+    "gid": "SG064",
+    "keeper": "staging:SRC-142",
+    "title": "Pediatric inflammatory bowel diseases in patients with genetic syndromes: A case-control multicentre SIGENP study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-142"
+    ]
+  },
+  {
+    "gid": "SG065",
+    "keeper": "staging:SRC-143",
+    "title": "Optimized W1/O/W2 Double Emulsions for Lactobacillus paracasei Encapsulation: Stability, Viability, and Anti-Inflammatory Efficacy in a Rat Model of Ulcerative Colitis",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-143"
+    ]
+  },
+  {
+    "gid": "SG066",
+    "keeper": "staging:SRC-144",
+    "title": "Identification of Candidate Targets and Immune Characteristics of Salvianolic Acid E Against Ulcerative Colitis via Integrative Transcriptomic Analysis and Machine Learning",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-144"
+    ]
+  },
+  {
+    "gid": "SG067",
+    "keeper": "staging:SRC-145",
+    "title": "Panhypopituitarism: A Case Report of a Rare Complication of Cerebral Venous Thrombosis Secondary to Ulcerative Colitis",
+    "category": "case_report",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-145"
+    ]
+  },
+  {
+    "gid": "SG068",
+    "keeper": "staging:SRC-146",
+    "title": "Cohorte Nantaise de Maladies Inflammatoires Chroniques Intestinales",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2031",
+    "members": [
+      "staging:SRC-146"
+    ]
+  },
+  {
+    "gid": "SG069",
+    "keeper": "staging:SRC-147",
+    "title": "N-Trans Caffeoyltyramine Alleviates Ulcerative Colitis by Targeting FXR to Promote Epithelial Barrier Protection and M2 Macrophage Polarization",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-147"
+    ]
+  },
+  {
+    "gid": "SG070",
+    "keeper": "staging:SRC-148",
+    "title": "Benefit-risk trade-offs among patients and providers selecting advanced therapy for moderate-to-severe ulcerative colitis",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-148"
+    ]
+  },
+  {
+    "gid": "SG071",
+    "keeper": "staging:SRC-149",
+    "title": "Preoperative computed tomography measurement for predicting difficulty in hand-sewn ileal pouch-anal anastomosis: a refined single-center cohort study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-149"
+    ]
+  },
+  {
+    "gid": "SG072",
+    "keeper": "staging:SRC-151",
+    "title": "Fecal Microbiota Transplantation in the Treatment Strategy of Inflammatory Bowel Disease: Molecular Mechanisms, Clinical Evidence, and the Transition Toward Defined Microbial Therapeutics",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-151"
+    ]
+  },
+  {
+    "gid": "SG073",
+    "keeper": "staging:SRC-152",
+    "title": "[Guidelines ulcerative colitis: surgery : Status November 2025]",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-152"
+    ]
+  },
+  {
+    "gid": "SG074",
+    "keeper": "staging:SRC-153",
+    "title": "Cyclosporine-to-biologic bridging in biologic-exposed acute severe ulcerative colitis: a single-center retrospective cohort study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-153"
+    ]
+  },
+  {
+    "gid": "SG075",
+    "keeper": "staging:SRC-154",
+    "title": "Roflumilast and Melatonin Alleviate Acetic Acid-Induced Ulcerative Colitis via Modulating AMPK/mTOR Signaling, Autophagy-Related Markers, Intestinal Epithelial Barrier, and NLRP3 Inflammasome",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-154"
+    ]
+  },
+  {
+    "gid": "SG076",
+    "keeper": "staging:SRC-155",
+    "title": "Gene and microRNA Expression Profiling in Experimental Colitis and Human Ulcerative Colitis: Effects of <i>STAT6</i> Knockout and <i>Corylus avellana</i> Treatment",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-155"
+    ]
+  },
+  {
+    "gid": "SG077",
+    "keeper": "staging:SRC-157",
+    "title": "Cognitive screening performance in patients with inflammatory bowel disease in remission: a case-control study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-157"
+    ]
+  },
+  {
+    "gid": "SG078",
+    "keeper": "staging:SRC-158",
+    "title": "Bioactive metabolites and botanical preparations from plants used as medicines and foods in ulcerative colitis: a mechanism-oriented narrative review of multi-target regulation",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-158"
+    ]
+  },
+  {
+    "gid": "SG079",
+    "keeper": "staging:SRC-159",
+    "title": "A wearable perspiration biosensor for continuous biomarker monitoring in inflammatory bowel disease: Feasibility, concordance, and exploratory temporal dynamics",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-159"
+    ]
+  },
+  {
+    "gid": "SG080",
+    "keeper": "staging:SRC-160",
+    "title": "Sequence-dependent real-world efficacy of anti-TNF antibodies and vedolizumab in ulcerative colitis: a propensity score-weighted cohort study",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-160"
+    ]
+  },
+  {
+    "gid": "SG081",
+    "keeper": "staging:SRC-161",
+    "title": "Microbiota transplant therapy improves ulcerative colitis symptoms independent of donor engraftment in a pilot randomized placebo-controlled trial",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-161"
+    ]
+  },
+  {
+    "gid": "SG082",
+    "keeper": "staging:SRC-163",
+    "title": "Digital Mind Body Intervention Among Black and Hispanic Patients Living With Inflammatory Bowel Disease",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-163"
+    ]
+  },
+  {
+    "gid": "SG083",
+    "keeper": "staging:SRC-164",
+    "title": "Effects of Physical Activity and Physical Fitness on Inflammation, Clinical Outcomes, and Quality of Life in Pediatric Inflammatory Bowel Disease",
+    "category": "trial_record",
+    "evidenceType": "completed_trial_record",
+    "year": "2026",
+    "members": [
+      "staging:SRC-164"
+    ]
+  },
+  {
+    "gid": "SG084",
+    "keeper": "staging:SRC-165",
+    "title": "Ampelopsis grossedentata restores the homeostasis of Th17/Treg cells to mitigate DSS-induced ulcerative colitis through TLR1-2/NF-κB signaling pathway",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-165"
+    ]
+  },
+  {
+    "gid": "SG085",
+    "keeper": "staging:SRC-166",
+    "title": "Multidimensional Deciphering Underlying Effects of PFOA Exposure in Ulcerative Colitis: From Epidemiological Insights to Toxicological Mechanisms",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-166"
+    ]
+  },
+  {
+    "gid": "SG086",
+    "keeper": "staging:SRC-167",
+    "title": "Surgery rates in Japan around market-entry milestones of advanced therapies for Crohn's disease and ulcerative colitis: an interrupted time-series study using a large-scale Japanese claims database",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-167"
+    ]
+  },
+  {
+    "gid": "SG087",
+    "keeper": "staging:SRC-169",
+    "title": "Randomized Controlled Trial of Online Pain Education Programs for Inflammatory Bowel Disease",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2027",
+    "members": [
+      "staging:SRC-169"
+    ]
+  },
+  {
+    "gid": "SG088",
+    "keeper": "staging:SRC-170",
+    "title": "A MULTI-CENTER, PROSPECTIVE, NON-INTERVENTIONAL STUDY OF REAL-WORLD EFFECTIVENESS OF ETRASIMOD IN PATIENTS WITH ULCERATIVE COLITIS (ENDEAVOUR-UC)",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-170"
+    ]
+  },
+  {
+    "gid": "SG089",
+    "keeper": "staging:SRC-171",
+    "title": "A Phase 3b Extension Study to Evaluate the Long-term Safety of Vedolizumab Subcutaneous in Pediatric Subjects With Ulcerative Colitis or Crohn's Disease",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2030",
+    "members": [
+      "staging:SRC-171"
+    ]
+  },
+  {
+    "gid": "SG090",
+    "keeper": "staging:SRC-172",
+    "title": "Improving Outcomes and Reducing Disparities for Patients With Inflammatory Bowel Disease Through Epidemiology and Enhanced Disease Management (PROMOTE IBD)",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-172"
+    ]
+  },
+  {
+    "gid": "SG091",
+    "keeper": "staging:SRC-173",
+    "title": "A Phase I Clinical Trial to Evaluate the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of Subcutaneous Injection or Intravenous Infusion of SHR-7590 Injection in Healthy Chinese Participants and Participants With Moderate-to-Severe Inflammatory Bowel Disease (Ulcerative Colitis and Crohn's Disease)",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2029",
+    "members": [
+      "staging:SRC-173"
+    ]
+  },
+  {
+    "gid": "SG092",
+    "keeper": "staging:SRC-174",
+    "title": "Integrating Mouse Transcriptomics and Human Multi-Cohort Data Reveals an Inflammatory Gene Signature Mediating Jaceosidin's Therapeutic Effect in Ulcerative Colitis",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-174"
+    ]
+  },
+  {
+    "gid": "SG093",
+    "keeper": "staging:SRC-175",
+    "title": "Faecal calprotectin as a biomarker in patients with hidradenitis suppurativa: A narrative review",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-175"
+    ]
+  },
+  {
+    "gid": "SG094",
+    "keeper": "staging:SRC-176",
+    "title": "A Phase I, Multicenter, Open-Label, Single-Agent Study to Assess the Pharmacokinetics of Cytochrome P450 Substrates After Treatment With Afimkibart in Participants With Moderately to Severely Active Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2030",
+    "members": [
+      "staging:SRC-176"
+    ]
+  },
+  {
+    "gid": "SG095",
+    "keeper": "staging:SRC-177",
+    "title": "Venous thromboembolism in inflammatory bowel disease: a phase-specific framework for risk stratification and anticoagulant management",
+    "category": "published_or_guideline",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-177"
+    ]
+  },
+  {
+    "gid": "SG096",
+    "keeper": "staging:SRC-178",
+    "title": "Visceral Hypersensitivity, Urgency and Persistent Symptoms After Mucosal Healing in Ulcerative Colitis Patients: A Prospective Cohort Study in Switzerland",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2027",
+    "members": [
+      "staging:SRC-178"
+    ]
+  },
+  {
+    "gid": "SG097",
+    "keeper": "staging:SRC-179",
+    "title": "Phase 2 Platform Trial to Assess the Efficacy and Safety of Long-acting Antibodies as Single Agents and in Combinations for Moderately to Severely Active Ulcerative Colitis",
+    "category": "trial_record",
+    "evidenceType": "ongoing_trial",
+    "year": "2028",
+    "members": [
+      "staging:SRC-179"
+    ]
+  },
+  {
+    "gid": "SG098",
+    "keeper": "staging:SRC-180",
+    "title": "Simple Nut Supplementation Induces Positive Gut Metabolic Signals in Patients With Inflammatory Bowel Disease",
+    "category": "trial_record",
+    "evidenceType": "completed_trial_record",
+    "year": "2025",
+    "members": [
+      "staging:SRC-180"
+    ]
+  },
+  {
+    "gid": "SG099",
+    "keeper": "staging:SRC-181",
+    "title": "[Mechanism of electroacupuncture on improving intestinal barrier injury in rats with ulcerative colitis by regulating RhoA/ROCK pathway]",
+    "category": "animal_preclinical",
+    "evidenceType": "published_study",
+    "year": "2026",
+    "members": [
+      "staging:SRC-181"
+    ]
+  }
+]

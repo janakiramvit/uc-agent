@@ -12,6 +12,25 @@ export interface Citation {
   applicabilityLimitations: string;
 }
 
+export interface SourceCounts {
+  total: number;
+  studies: number;
+  guidelines: number;
+  trialRecords: number;
+  patientInformation: number;
+}
+
+export interface EvidenceProvenance {
+  backend: string;
+  dataset: string;
+  packageVersion: string;
+  sourceCount: number;
+  claimCount: number;
+  ucEligibleCount: number;
+  ucEligibleClaimIds: string[];
+  reviewedSources: SourceCounts;
+}
+
 export interface ConflictEntry {
   topic: string;
   claimIds: string[];
@@ -59,6 +78,8 @@ export interface ChatResponse {
   llmModel: string | null;
   trace: TraceEntry[];
   visitedNodes: string[];
+  evidence?: EvidenceProvenance | null;
+  answerSources?: SourceCounts | null;
 }
 
 export interface ChatErrorResponse {

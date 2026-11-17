@@ -1,0 +1,490 @@
+{
+  "sources": [
+    {
+      "group": "SG001",
+      "kept": "production:SRC-002",
+      "merged": [
+        "baseline-register:SRC-002"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammato"
+    },
+    {
+      "group": "SG002",
+      "kept": "production:SRC-004",
+      "merged": [
+        "baseline-register:SRC-004"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Diet, Food, and Nutritional Exposures and Inflammatory Bowel Disease or Progression of Dis"
+    },
+    {
+      "group": "SG003",
+      "kept": "production:SRC-005",
+      "merged": [
+        "baseline-register:SRC-005"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Dietary Interventions for the Treatment of Inflammatory Bowel Diseases: An Updated Systema"
+    },
+    {
+      "group": "SG004",
+      "kept": "production:SRC-006",
+      "merged": [
+        "baseline-register:SRC-006"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Dietary fat is associated with increased inflammatory bowel disease onset risk: a systemat"
+    },
+    {
+      "group": "SG005",
+      "kept": "production:SRC-007",
+      "merged": [
+        "baseline-register:SRC-007"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Systematic review and meta-analysis of lactose digestion, its impact on intolerance and nu"
+    },
+    {
+      "group": "SG006",
+      "kept": "production:SRC-008",
+      "merged": [
+        "baseline-register:SRC-008"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Nutrition, Nutritional Status, Micronutrients Deficiency, and Disease Course of Inflammato"
+    },
+    {
+      "group": "SG007",
+      "kept": "production:SRC-010",
+      "merged": [
+        "baseline-register:SRC-010"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Assessment of causal link between psychological factors and symptom exacerbation in inflam"
+    },
+    {
+      "group": "SG008",
+      "kept": "production:SRC-011",
+      "merged": [
+        "baseline-register:SRC-011"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Association of Dietary Fiber, Fruit, and Vegetable Consumption with Risk of Inflammatory B"
+    },
+    {
+      "group": "SG009",
+      "kept": "production:SRC-012",
+      "merged": [
+        "baseline-register:SRC-012"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Efficacy and safety of probiotics in the induction and maintenance of inflammatory bowel d"
+    },
+    {
+      "group": "SG010",
+      "kept": "production:SRC-013",
+      "merged": [
+        "baseline-register:SRC-013"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Ultra-processed foods and food additives in gut health and disease."
+    },
+    {
+      "group": "SG011",
+      "kept": "production:SRC-014",
+      "merged": [
+        "baseline-register:SRC-014"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Physical Activity is Associated with a Decreased Risk of Developing Inflammatory Bowel Dis"
+    },
+    {
+      "group": "SG012",
+      "kept": "production:SRC-016",
+      "merged": [
+        "baseline-register:SRC-016"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "A Randomized Trial Comparing the Specific Carbohydrate Diet to a Mediterranean Diet in Adu"
+    },
+    {
+      "group": "SG013",
+      "kept": "production:SRC-017",
+      "merged": [
+        "baseline-register:SRC-017"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Crohn's Disease Exclusion Diet Plus Partial Enteral Nutrition Induces Sustained Remission "
+    },
+    {
+      "group": "SG014",
+      "kept": "production:SRC-019",
+      "merged": [
+        "baseline-register:SRC-019"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "A randomized, 6-wk trial of a low FODMAP diet in patients with inflammatory bowel disease."
+    },
+    {
+      "group": "SG015",
+      "kept": "production:SRC-020",
+      "merged": [
+        "baseline-register:SRC-020"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title",
+        "url"
+      ],
+      "title": "Association of ultra-processed food intake with risk of inflammatory bowel disease: prospe"
+    },
+    {
+      "group": "SG016",
+      "kept": "production:SRC-021",
+      "merged": [
+        "baseline-register:SRC-021"
+      ],
+      "matchedOn": [
+        "title",
+        "url"
+      ],
+      "title": "European Crohn’s and Colitis Organisation consensus on dietary management of inflammatory "
+    },
+    {
+      "group": "SG017",
+      "kept": "production:SRC-022",
+      "merged": [
+        "baseline-register:SRC-022"
+      ],
+      "matchedOn": [
+        "title",
+        "url"
+      ],
+      "title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment"
+    },
+    {
+      "group": "SG018",
+      "kept": "production:SRC-023",
+      "merged": [
+        "baseline-register:SRC-023"
+      ],
+      "matchedOn": [
+        "title",
+        "url"
+      ],
+      "title": "Eating, Diet, & Nutrition for Crohn’s Disease"
+    },
+    {
+      "group": "SG019",
+      "kept": "production:SRC-025",
+      "merged": [
+        "baseline-register:SRC-025"
+      ],
+      "matchedOn": [
+        "url"
+      ],
+      "title": "Food and IBD"
+    },
+    {
+      "group": "SG020",
+      "kept": "production:SRC-026",
+      "merged": [
+        "baseline-register:SRC-026"
+      ],
+      "matchedOn": [
+        "pmid",
+        "title"
+      ],
+      "title": "ESPEN guideline on Clinical Nutrition in inflammatory bowel disease."
+    }
+  ],
+  "claims": [
+    {
+      "duplicate": "baseline-register:CLM-005",
+      "keptAs": "production:CLM-005",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-006",
+      "keptAs": "production:CLM-006",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-008",
+      "keptAs": "production:CLM-008",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-013",
+      "keptAs": "production:CLM-013",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-014",
+      "keptAs": "production:CLM-014",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-015",
+      "keptAs": "production:CLM-015",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-017",
+      "keptAs": "production:CLM-017",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-021",
+      "keptAs": "production:CLM-021",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-022",
+      "keptAs": "production:CLM-022",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-023",
+      "keptAs": "production:CLM-023",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-024",
+      "keptAs": "production:CLM-024",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-028",
+      "keptAs": "production:CLM-028",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-029",
+      "keptAs": "production:CLM-029",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-031",
+      "keptAs": "production:CLM-031",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-037",
+      "keptAs": "production:CLM-037",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-038",
+      "keptAs": "production:CLM-038",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-040",
+      "keptAs": "production:CLM-040",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-041",
+      "keptAs": "production:CLM-041",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-042",
+      "keptAs": "production:CLM-042",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-044",
+      "keptAs": "production:CLM-044",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-046",
+      "keptAs": "production:CLM-046",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-049",
+      "keptAs": "production:CLM-049",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-050",
+      "keptAs": "production:CLM-050",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-051",
+      "keptAs": "production:CLM-051",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-053",
+      "keptAs": "production:CLM-053",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-061",
+      "keptAs": "production:CLM-061",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-062",
+      "keptAs": "production:CLM-062",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-066",
+      "keptAs": "production:CLM-066",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-068",
+      "keptAs": "production:CLM-068",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-073",
+      "keptAs": "production:CLM-073",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-074",
+      "keptAs": "production:CLM-074",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-077",
+      "keptAs": "production:CLM-077",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-078",
+      "keptAs": "production:CLM-078",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-079",
+      "keptAs": "production:CLM-079",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-080",
+      "keptAs": "production:CLM-080",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-087",
+      "keptAs": "production:CLM-087",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-088",
+      "keptAs": "production:CLM-088",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-089",
+      "keptAs": "production:CLM-089",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-093",
+      "keptAs": "production:CLM-093",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-094",
+      "keptAs": "production:CLM-094",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-095",
+      "keptAs": "production:CLM-095",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-096",
+      "keptAs": "production:CLM-096",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-097",
+      "keptAs": "production:CLM-097",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-098",
+      "keptAs": "production:CLM-098",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-099",
+      "keptAs": "production:CLM-099",
+      "rule": "same source group + claim text + excerpt"
+    },
+    {
+      "duplicate": "baseline-register:CLM-100",
+      "keptAs": "production:CLM-100",
+      "rule": "same source group + claim text + excerpt"
+    }
+  ]
+}

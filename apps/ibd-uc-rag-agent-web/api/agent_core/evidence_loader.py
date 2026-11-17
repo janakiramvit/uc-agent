@@ -65,17 +65,55 @@ class EvidencePackage:
     # Which loader produced this package. Set by the loader itself, only after a
     # successful read - never inferred from env vars.
     backend: str = "file"
+    # Which dataset the DB loader read ("prototype-v1" or "pilot"); "prototype-v1" for the JSON file.
+    dataset: str = "prototype-v1"
+
+    def citable_sources(self) -> list[dict[str, Any]]:
+        """Sources that support at least one UC-eligible claim - the only sources an answer can ever cite."""
+        ids = {c.get("sourceId") for c in self.uc_eligible_claims}
+        return [s for sid, s in self.sources_by_id.items() if sid in ids]
+
+    def source_counts(self, source_ids: "set[str] | None" = None) -> dict[str, int]:
+        """Reviewed sources by kind. ``source_ids=None`` -> every citable source in the package."""
+        pool = self.citable_sources() if source_ids is None else [
+            self.sources_by_id[i] for i in source_ids if i in self.sources_by_id]
+        out = {"total": len(pool), "studies": 0, "guidelines": 0, "trialRecords": 0, "patientInformation": 0}
+        for s in pool:
+            out[_KIND_KEY[source_kind(s)]] += 1
+        return out
+
+    def sources_for_claims(self, claim_ids: "list[str]") -> set[str]:
+        by_claim = {c["claimId"]: c.get("sourceId") for c in self.all_claims}
+        return {by_claim[c] for c in claim_ids if by_claim.get(c)}
 
     def provenance(self) -> dict[str, Any]:
         """Non-secret fingerprint of the evidence actually in memory."""
         return {
             "backend": self.backend,
+            "dataset": self.dataset,
             "packageVersion": self.version,
             "sourceCount": len(self.sources_by_id),
             "claimCount": len(self.all_claims),
             "ucEligibleCount": len(self.uc_eligible_claims),
             "ucEligibleClaimIds": sorted(c["claimId"] for c in self.uc_eligible_claims),
+            "reviewedSources": self.source_counts(),
         }
+
+
+_KIND_KEY = {"study": "studies", "guideline": "guidelines", "trial_record": "trialRecords",
+             "patient_information": "patientInformation"}
+
+
+def source_kind(source: dict[str, Any]) -> str:
+    """study | guideline | trial_record | patient_information - from the source's recorded type. Never 'papers'."""
+    t = (source.get("sourceType") or "").lower()
+    if "trial registry" in t or "registry record" in t or "trial record" in t:
+        return "trial_record"
+    if "guideline" in t or "consensus" in t:
+        return "guideline"
+    if "patient" in t or "official" in t:
+        return "patient_information"
+    return "study"
 
 
 def load_raw_evidence(path: str | Path = DEFAULT_EVIDENCE_PATH) -> dict[str, Any]:

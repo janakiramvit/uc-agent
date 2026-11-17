@@ -70,6 +70,15 @@ def _pipeline():
     return _graph
 
 
+def _answer_sources(result: dict) -> dict | None:
+    """Unique reviewed sources behind THIS answer (several claims from one source count once), split by kind."""
+    if _package is None:
+        return None
+    claim_ids = [c.get("claimId") for c in (result.get("citations") or []) if c.get("claimId")]
+    ids = _package.sources_for_claims(claim_ids)
+    return _package.source_counts(ids)
+
+
 def _client_key(handler: "handler") -> str:
     forwarded = handler.headers.get("x-forwarded-for", "")
     if forwarded:
@@ -120,13 +129,24 @@ class handler(BaseHTTPRequestHandler):
         except QueryTooLong as exc:
             self._send_json(400, {"error": "query_too_long", "message": str(exc), "maxChars": DEFAULT_MAX_QUERY_CHARS})
         except Exception as exc:  # noqa: BLE001 - top-level handler must never crash without a response
+            # Details go to the server log only (redacted). The browser never sees hostnames, roles, project ids or a trace:
+            # a database error text can embed them.
+            print(f"[chat] internal_error {type(exc).__name__}: {_redact(str(exc))[:300]}", file=sys.stderr)
             self._send_json(
                 500,
-                {"error": "internal_error", "message": str(exc), "trace": traceback.format_exc()},
+                {"error": "internal_error",
+                 "message": "The evidence service is temporarily unavailable. Please try again shortly."},
             )
 
     def do_GET(self):
-        self._send_json(200, {"status": "ok"})
+        # Health + the evidence fingerprint the UI shows (reviewed sources by kind). No secrets, no database details.
+        try:
+            _pipeline()
+            self._send_json(200, {"status": "ok", "evidence": _package.provenance() if _package is not None else None})
+        except Exception as exc:  # noqa: BLE001
+            print(f"[chat] health_error {type(exc).__name__}: {_redact(str(exc))[:300]}", file=sys.stderr)
+            self._send_json(503, {"status": "unavailable",
+                                  "message": "The evidence service is temporarily unavailable."})
 
     @staticmethod
     def _to_response(result: dict) -> dict:
@@ -144,6 +164,7 @@ class handler(BaseHTTPRequestHandler):
             "trace": result.get("trace", []),
             "visitedNodes": result.get("visited_nodes", []),
             "evidence": _package.provenance() if _package is not None else None,
+            "answerSources": _answer_sources(result),
         }
 
     def _send_json(self, status: int, obj: dict):

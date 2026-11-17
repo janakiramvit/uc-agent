@@ -1,0 +1,42 @@
+{
+  "schema": "pilot-release-evidence-cutoff/1",
+  "frozenAtUtc": "2026-11-17T15:07:41Z",
+  "evidenceCutoffDate": "2026-11-17",
+  "stagingBranch": "automation/uc-evidence-staging",
+  "stagingCommit": "9c7cd28",
+  "stagingCommitFull": "9c7cd283081e575cf30620b107c10bd70e0176d6",
+  "providerCutoffs": {
+    "acg": "2026-11-17",
+    "aga": "2026-11-17",
+    "bsg": "2026-11-17",
+    "clinicaltrials": "2026-11-17",
+    "ecco": "2026-11-17",
+    "europepmc": "2026-11-17",
+    "nice": "2026-11-17",
+    "pubmed": "2026-11-17"
+  },
+  "counts": {
+    "stagingSources": 73,
+    "stagingClaims": 61
+  },
+  "files": {
+    "release/frozen/staging-sources.json": "cc264e1a1070b31c8df2719266f135d622dfa09204671e698708a4a14cf3b3fa",
+    "release/frozen/staging-candidate-claims.json": "eeb18c21bc39bb012fe00391daaee7e837a8d3a98f8e9ed9b667a2065429d8c6"
+  },
+  "productionAtFreeze": {
+    "appCommit": "4bf39cc89ae9ecfcffd5f08fc4dfaa174d86bd2a",
+    "liveUrl": "https://ibd-uc-rag-agent-web.vercel.app",
+    "vercelProject": "uc-rag-agent",
+    "evidenceBackend": "supabase (EVIDENCE_BACKEND=supabase, EVIDENCE_SUPABASE_ENABLED=1, EVIDENCE_REQUIRED_BACKEND=supabase)",
+    "canonicalDataset": "prototype-v1 (20 sources, 49 claims, 5 UC-eligible: CLM-014, CLM-081, CLM-093, CLM-094, CLM-095)",
+    "deployments": [
+      "uc-rag-agent-68x841amt (current production)",
+      "uc-rag-agent-hxdyuv6lh (previous)"
+    ],
+    "observedAtFreeze": "DOWN: dev Supabase project paused (tenant not found) - see release notes"
+  },
+  "rollback": {
+    "fastest": "set EVIDENCE_BACKEND=file, remove EVIDENCE_SUPABASE_ENABLED AND EVIDENCE_REQUIRED_BACKEND (the pin otherwise blocks the file backend), redeploy",
+    "datasetSwitch": "set EVIDENCE_DATASET=prototype-v1 (once the pilot dataset switch exists) and redeploy"
+  }
+}

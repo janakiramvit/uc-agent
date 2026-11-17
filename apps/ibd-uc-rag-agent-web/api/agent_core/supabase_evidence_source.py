@@ -30,18 +30,35 @@ def _connect():
     return psycopg.connect(dsn, autocommit=True)
 
 
+# EVIDENCE_DATASET selects the evidence the app reads. "prototype-v1" (default) is the original live package; "pilot" is
+# prototype-v1 plus the owner-reviewed additions. Switching back is a single env change - the rollback for the pilot data.
+_DATASET_VIEWS = {
+    "prototype-v1": ("v_prototype_claim", "v_prototype_source", "v_prototype_excluded_claim_id", "v_prototype_limitation"),
+    "pilot": ("v_pilot_claim", "v_pilot_source", "v_pilot_excluded_claim_id", "v_pilot_limitation"),
+}
+
+
+def active_dataset() -> str:
+    name = (os.environ.get("EVIDENCE_DATASET") or "prototype-v1").strip().lower()
+    if name not in _DATASET_VIEWS:
+        raise ValueError(f"unknown EVIDENCE_DATASET {name!r} (expected one of {sorted(_DATASET_VIEWS)})")
+    return name
+
+
 def load_evidence_package_from_db(conn=None) -> EvidencePackage:
+    dataset = active_dataset()
+    v_claim, v_source, v_excluded, v_limit = _DATASET_VIEWS[dataset]
     own = conn is None
     conn = conn or _connect()
     try:
         claims = [r[0] for r in conn.execute(
-            "SELECT claim_json FROM canonical.v_prototype_claim ORDER BY claim_json->>'claimId'").fetchall()]
+            f"SELECT claim_json FROM canonical.{v_claim} ORDER BY claim_json->>'claimId'").fetchall()]
         sources = [r[0] for r in conn.execute(
-            "SELECT source_json FROM canonical.v_prototype_source ORDER BY source_json->>'sourceId'").fetchall()]
+            f"SELECT source_json FROM canonical.{v_source} ORDER BY source_json->>'sourceId'").fetchall()]
         excluded = [r[0] for r in conn.execute(
-            "SELECT claim_ref FROM canonical.v_prototype_excluded_claim_id ORDER BY claim_ref").fetchall()]
+            f"SELECT claim_ref FROM canonical.{v_excluded} ORDER BY claim_ref").fetchall()]
         limitations = [r[0] for r in conn.execute(
-            "SELECT text FROM canonical.v_prototype_limitation ORDER BY ordinal").fetchall()]
+            f"SELECT text FROM canonical.{v_limit} ORDER BY ordinal").fetchall()]
         meta = conn.execute(
             "SELECT version, package_meta FROM canonical.v_dataset WHERE code='prototype-v1'"
         ).fetchone() or ("prototype-v1", {})
@@ -68,4 +85,5 @@ def load_evidence_package_from_db(conn=None) -> EvidencePackage:
         crohns_only_claims=crohns_only,
         limitations=limitations,
         backend="supabase",   # set only here, after the queries above succeeded
+        dataset=dataset,
     )

@@ -1,7 +1,19 @@
 "use client";
 
-import { useState } from "react";
-import type { ChatErrorResponse, ChatResponse } from "./types";
+import { useEffect, useState } from "react";
+import type { ChatErrorResponse, ChatResponse, EvidenceProvenance, SourceCounts } from "./types";
+
+// Source counts are always split by kind. There is no single "papers" number: a guideline, a study and a trial
+// registry record are not the same thing, and trial records are never used as efficacy evidence.
+function describeSources(c: SourceCounts): string {
+  const parts = [
+    c.guidelines ? `${c.guidelines} guideline${c.guidelines === 1 ? "" : "s"}` : null,
+    c.studies ? `${c.studies} stud${c.studies === 1 ? "y" : "ies"}` : null,
+    `${c.trialRecords} trial record${c.trialRecords === 1 ? "" : "s"}`,
+    c.patientInformation ? `${c.patientInformation} patient-information page${c.patientInformation === 1 ? "" : "s"}` : null,
+  ].filter(Boolean);
+  return parts.join(", ");
+}
 
 const STATUS_STYLES: Record<string, string> = {
   answered: "border-green-300 bg-green-50 text-green-900",
@@ -25,6 +37,14 @@ export default function Home() {
   const [result, setResult] = useState<ChatResponse | null>(null);
   const [error, setError] = useState<ChatErrorResponse | null>(null);
   const [showTrace, setShowTrace] = useState(false);
+  const [evidence, setEvidence] = useState<EvidenceProvenance | null>(null);
+
+  useEffect(() => {
+    fetch("/api/chat")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => setEvidence(d?.evidence ?? null))
+      .catch(() => setEvidence(null));
+  }, []);
 
   async function handleAsk(overrideQuery?: string) {
     const q = overrideQuery ?? query;
@@ -107,6 +127,13 @@ export default function Home() {
         </div>
       </section>
 
+      {evidence?.reviewedSources && (
+        <p data-testid="reviewed-sources" className="text-xs text-neutral-600">
+          Reviewed evidence behind this tool: <strong>{evidence.reviewedSources.total} sources</strong> (
+          {describeSources(evidence.reviewedSources)}). Technical research pilot - owner-reviewed, not clinician-approved.
+        </p>
+      )}
+
       {error && (
         <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-900">
           <strong className="block">{error.error}</strong>
@@ -134,6 +161,12 @@ export default function Home() {
 
           <section>
             <h2 className="mb-2 text-lg font-semibold">Evidence / Citations</h2>
+            {result.answerSources && result.answerSources.total > 0 && (
+              <p data-testid="answer-sources" className="mb-2 text-xs text-neutral-600">
+                This answer draws on {result.answerSources.total} unique reviewed source
+                {result.answerSources.total === 1 ? "" : "s"} ({describeSources(result.answerSources)}).
+              </p>
+            )}
             {result.citations.length === 0 ? (
               <p className="text-sm text-neutral-500">
                 No sufficient evidence was retrieved for this query from the reviewed UC evidence set.

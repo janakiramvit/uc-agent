@@ -44,7 +44,8 @@ def test_get_health_check(server):
     data = json.loads(resp.read())
     conn.close()
     assert resp.status == 200
-    assert data == {"status": "ok"}
+    assert data["status"] == "ok"
+    assert data["evidence"]["backend"] == "file" and data["evidence"]["reviewedSources"]["total"] >= 1
 
 
 def test_post_missing_query_is_400(server):
