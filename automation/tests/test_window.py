@@ -42,3 +42,15 @@ def test_a_long_gap_is_sliced_and_continues_next_run_without_dropping_days():
     # the next run starts from the end of this slice
     q = plan_window(p.window.end.isoformat(), D(2027, 2, 2))
     assert q.window.start <= p.window.end
+
+
+def test_europe_pmc_looks_back_a_week_because_it_indexes_late_but_other_providers_keep_one_day():
+    from uc_evidence_discovery import discover
+    from tests.test_discover import FakeProvider, run_once
+    from uc_evidence_discovery import provider_state
+    ps = provider_state.empty_state()
+    for n in ("europepmc", "pubmed"):
+        provider_state.provider(ps, n)["lastSuccessfulCutoff"] = "2026-11-16"
+    e, p = FakeProvider("europepmc", []), FakeProvider("pubmed", [])
+    run_once([e, p], pstate=ps, today=D(2026, 11, 17))
+    assert e.windows[0].start == D(2026, 11, 10) and p.windows[0].start == D(2026, 11, 15)

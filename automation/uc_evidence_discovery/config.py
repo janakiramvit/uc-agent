@@ -92,6 +92,9 @@ USER_AGENT = (
 # long outage: catch-up is from the last successful cutoff, floored here.
 EARLIEST_DISCOVERY_DATE = "2026-11-10"
 WINDOW_OVERLAP_DAYS = 1            # re-cover the last day to absorb index-lag; duplicates are removed
+# Europe PMC publishes a record under its FIRST_IDATE several days after that date (verified 2026-11-17: days 11-10..11-13
+# had 0 hits when searched on the day and 15/41/16/21 a few days later), so it needs a longer look-back than the others.
+PROVIDER_OVERLAP_DAYS = {"europepmc": 7}
 MAX_CATCHUP_DAYS = 14              # a longer gap is searched in 14-day slices over successive runs
 REPEATED_ZERO_WARN = 2             # consecutive unexpected zero-result runs -> WARNING
 REPEATED_ZERO_ERROR = 3            # ... -> ERROR alert
