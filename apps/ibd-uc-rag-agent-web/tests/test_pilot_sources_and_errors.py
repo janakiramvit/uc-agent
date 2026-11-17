@@ -112,3 +112,43 @@ def test_internal_errors_never_leak_database_details_to_the_browser(monkeypatch,
     blob = str(sent["o"])
     assert sent["s"] == 500 and "15.1.2.3" not in blob and "evidence_app" not in blob and "trace" not in sent["o"]
     assert "evidence_app" in capsys.readouterr().err        # logged server-side only
+
+
+# ------------------------------------------------------------------ pilot: coverage gate and no-coverage answers
+from agent_core.safety_rules import answer_declares_no_coverage, is_known_unsupported_topic
+
+
+@pytest.mark.parametrize("q", ["What do fecal calprotectin results mean in UC?", "Does CRP matter in ulcerative colitis?",
+                               "Should I have a colonoscopy or an endoscopy?"])
+def test_biomarker_and_endoscopy_questions_are_no_longer_short_circuited_as_unsupported(q):
+    assert not is_known_unsupported_topic(q)
+
+
+@pytest.mark.parametrize("q", ["What does ESR tell me?", "Does vedolizumab work?", "What about intestinal ultrasound?", "Does mucosal healing matter?"])
+def test_genuinely_uncovered_topics_stay_unsupported(q):
+    assert is_known_unsupported_topic(q)
+
+
+@pytest.mark.parametrize("answer", [
+    "Based on the provided evidence entries, there is **no information available** about how fatigue should be evaluated.\n\nThe entries discuss biomarkers.",
+    "Based on the verified evidence provided, the entries do not directly describe which symptom changes commonly make people suspect a UC flare.",
+    "I cannot answer this question from the evidence provided.",
+])
+def test_an_answer_that_says_the_evidence_does_not_cover_the_question_is_detected(answer):
+    assert answer_declares_no_coverage(answer)
+
+
+@pytest.mark.parametrize("answer", [
+    "AGA suggests that a biomarker test may help monitoring [1]. Your clinician decides which tests are right for you.\n\nThe guideline does not specify how often to test.",
+    "The AGA guideline concludes that non-invasive tests can inform monitoring [1].",
+])
+def test_a_real_answer_with_a_later_caveat_is_not_treated_as_a_coverage_gap(answer):
+    assert not answer_declares_no_coverage(answer)
+
+
+def test_no_coverage_answer_becomes_unsupported_with_no_citations():
+    import chat
+    out = chat.handler._to_response({"status": "answered", "answer": "There is no information in the evidence about fatigue.",
+                                     "citations": [{"claimId": "CLM-115"}, {"claimId": "CLM-116"}]})
+    assert out["status"] == "unsupported" and out["citations"] == []
+    assert "not currently covered" in out["answer"]

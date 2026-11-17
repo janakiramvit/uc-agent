@@ -50,6 +50,7 @@ from agent_core.rate_limit import (  # noqa: E402
     check_rate_limit,
 )
 from agent_core.retrieval import build_retriever  # noqa: E402
+from agent_core.safety_rules import UNSUPPORTED_TOPIC_MESSAGE, answer_declares_no_coverage  # noqa: E402
 
 REQUEST_TIMEOUT_SECONDS = 45  # overall wall-clock budget for one /api/chat request
 
@@ -150,6 +151,9 @@ class handler(BaseHTTPRequestHandler):
 
     @staticmethod
     def _to_response(result: dict) -> dict:
+        if result.get("status") == "answered" and answer_declares_no_coverage(result.get("answer") or ""):
+            # the model itself said the evidence does not cover the question: say so plainly and cite nothing
+            result = {**result, "status": "unsupported", "answer": UNSUPPORTED_TOPIC_MESSAGE, "citations": []}
         return {
             "status": result.get("status"),
             "answer": result.get("answer"),

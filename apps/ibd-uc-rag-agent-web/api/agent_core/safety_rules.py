@@ -236,13 +236,8 @@ KNOWN_UNSUPPORTED_KEYWORDS = [
     "tofacitinib",
     "upadacitinib",
     "mucosal healing",
-    "colonoscopy",
     "intestinal ultrasound",
     "bowel ultrasound",
-    "crp",
-    "c-reactive protein",
-    "fecal calprotectin",
-    "calprotectin",
 ]
 
 
@@ -256,6 +251,22 @@ _DEFINITION_PATTERNS = [
     r"\bexplain (uc|ulcerative colitis)\b",
     r"\b(uc|ulcerative colitis) (overview|basics|definition)\b",
 ]
+
+
+# Coverage-gap guard for LLM answers. If the model's own opening says the evidence does not address the question, the response is
+# an "unsupported" answer with NO citations: attaching nine claims to "there is no information on this" would be misleading.
+_NO_COVERAGE_PATTERNS = [
+    r"\b(there is|there are|is|are) (\*\*)?no (relevant |direct |specific )?(information|evidence|data)\b",
+    r"\b(do|does|did) not (directly |specifically |explicitly )?(address|describe|contain|specify|cover|discuss|include|mention|provide|define|explain)\b",
+    r"\bcannot (answer|be answered)\b|\bcan't answer\b",
+    r"\bnot (currently )?covered\b|\bnone of (these|the) (entries|claims|evidence)\b",
+]
+
+
+def answer_declares_no_coverage(answer: str) -> bool:
+    """Look only at the opening paragraph: a later 'the guideline does not specify the frequency' caveat is not a coverage gap."""
+    opening = re.split(r"\n\s*\n", (answer or "").strip(), maxsplit=1)[0][:400].lower()
+    return any(re.search(p, opening) for p in _NO_COVERAGE_PATTERNS)
 
 
 def is_known_unsupported_topic(query: str) -> bool:

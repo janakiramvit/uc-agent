@@ -9,8 +9,6 @@ from agent_core.safety_rules import UNSUPPORTED_TOPIC_MESSAGE
 
 UNSUPPORTED_QUERIES = [
     "What does ESR tell me about my UC?",
-    "What does CRP tell me about my UC?",
-    "What does fecal calprotectin tell me about my UC?",
     "What does biologics evidence say about UC?",
     "What do JAK inhibitors do for UC?",
     "Does mucosal healing matter in UC?",
