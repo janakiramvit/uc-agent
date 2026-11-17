@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.1.0",
-  "runId": "uc-exp-38cb47f21255",
-  "generatedAt": "2026-11-17T15:03:28Z",
+  "runId": "uc-exp-959cc2beb321",
+  "generatedAt": "2026-11-17T22:06:02Z",
   "disclaimer": "Automated QA only. Automated QA does NOT constitute clinical approval.",
   "summary": {
     "total": 19,
@@ -13,7 +13,7 @@
       "id": "QA-01",
       "check": "Every candidate claim references a known source",
       "result": "PASS",
-      "detail": "61 claims / 73 sources"
+      "detail": "69 claims / 80 sources"
     },
     {
       "id": "QA-02",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-38cb47f21255",
-  "generatedAt": "2026-11-17T15:03:28Z",
+  "runId": "uc-exp-959cc2beb321",
+  "generatedAt": "2026-11-17T22:06:01Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -1614,6 +1614,160 @@
       "canonicalUrl": "https://doi.org/10.13703/j.0255-2930.20250708-k0003",
       "doi": "10.13703/j.0255-2930.20250708-k0003",
       "pubmedId": "43039838",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-183",
+      "title": "The role of histologic remission as disease clearance: Emerging treat-to-target in pediatric ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70685",
+      "doi": "10.1002/jpn3.70685",
+      "pubmedId": "43042698",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-184",
+      "title": "Addition of Curcumin-QingDai correlates with clinical benefit in pediatric ulcerative colitis and inflammatory bowel disease-unclassified",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70683",
+      "doi": "10.1002/jpn3.70683",
+      "pubmedId": "43042694",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-185",
+      "title": "High rates of flares after anti-tumor necrosis factor withdrawal in pediatric inflammatory bowel disease: A multi-center study",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70680",
+      "doi": "10.1002/jpn3.70680",
+      "pubmedId": "43042586",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-186",
+      "title": "Epithelial inflammatory memory in ulcerative colitis: molecular mechanisms and translational implications",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1989081",
+      "doi": "10.3389/fimmu.2026.1989081",
+      "pubmedId": "43041960",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-187",
+      "title": "Immune-epithelial coordination of barrier repair in inflammatory bowel disease: from cell survival to functional healing",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1994620",
+      "doi": "10.3389/fimmu.2026.1994620",
+      "pubmedId": "43041937",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-188",
+      "title": "The metabolic crossfire hypothesis: glycolytic crosstalk between immune and epithelial cells in ulcerative colitis pathogenesis",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1973121",
+      "doi": "10.3389/fimmu.2026.1973121",
+      "pubmedId": "43041757",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-189",
+      "title": "Dose escalation of IL-23 inhibitors in inflammatory bowel disease: a systematic review of efficacy and safety",
+      "canonicalUrl": "https://doi.org/10.1093/crocol/otag113",
+      "doi": "10.1093/crocol/otag113",
+      "pubmedId": "43042045",
       "statedLicence": "not stated in retrieved metadata",
       "localArchivalPermitted": "no_not_established",
       "redistributionPermitted": "not_established",

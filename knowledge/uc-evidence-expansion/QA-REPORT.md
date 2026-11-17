@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — QA Report
 
-**Run ID:** `uc-exp-38cb47f21255` · **Generated:** 2026-11-17T15:03:28Z
+**Run ID:** `uc-exp-959cc2beb321` · **Generated:** 2026-11-17T22:06:02Z
 
 > Automated QA only. Automated QA does NOT constitute clinical approval.
 
@@ -8,7 +8,7 @@
 
 | # | Check | Result | Detail |
 |---|---|---|---|
-| QA-01 | Every candidate claim references a known source | **PASS** | 61 claims / 73 sources |
+| QA-01 | Every candidate claim references a known source | **PASS** | 69 claims / 80 sources |
 | QA-02 | Every claim has a non-empty exact excerpt and locator | **PASS** | checked |
 | QA-03 | Every claim is marked mechanically extracted / abstract_only | **FAIL** | checked |
 | QA-04 | DOI (when present) is well-formed; every source has an identifier | **PASS** | checked |
