@@ -204,9 +204,10 @@ def test_live_canonical_still_only_prototype_v1_and_empty_of_phase2(live):
     n = dict(live.execute("SELECT d.code, (SELECT count(*) FROM canonical.claim c WHERE c.dataset_id=d.dataset_id) "
                           "FROM canonical.dataset d").fetchall())
     assert n.get("prototype-v1") == 49 and n.get("baseline-register", 0) == 0
-    assert paths.DS_EXPANSION not in n
+    assert paths.DS_EXPANSION not in n               # the Phase-2 dataset itself is never promoted as a dataset
     (cnt,) = live.execute("SELECT count(*) FROM canonical.claim").fetchone()
-    assert cnt == 49
+    # the only other promoted dataset is the owner-reviewed pilot release ('pilot-additions', 10 claims)
+    assert cnt == 49 + n.get("pilot-additions", 0) and n.get("pilot-additions", 0) in (0, 10)
 
 
 def test_live_no_duplicate_prototype_or_baseline_rows(live):

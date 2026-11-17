@@ -228,7 +228,8 @@ def stage(conn, b: dict, *, apply: bool) -> dict:
         _upsert(conn, "claim_raw", batch, STAGING_DATASET, r["claimId"],
                 {"claim_ref": r["claimId"], "source_ref": r["sourceId"], "claim_text": r["claimText"],
                  "supporting_excerpt": r["excerpt"], "precise_locator": r["locator"], "authoritative_url": r["citationUrl"],
-                 "condition_applicability": [t.strip() for t in r["applicability"].split(";") if t.strip()]},
+                 "condition_applicability": [t.strip() for t in r["applicability"].split(";") if t.strip()],
+                 "review_status": "pending_clinical_review"},
                 {**prov, "authored": bool(r.get("authored"))}, raw, status=status,
                 errors=[r["reason"]] if status == "quarantine" else [], flags=[flag], canonical={})
     for r in plan["annotations"]:

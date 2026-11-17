@@ -38,6 +38,11 @@ _DATASET_VIEWS = {
 }
 
 
+# A pilot claim may reference a COPY of a prototype-v1 source (claims reference (dataset, source_ref)). Ordering the pilot copy last
+# makes it the one that wins in the by-id map, so a relabelled source type is what the app uses.
+_PILOT_LAST = ', ("datasetCode" = \'pilot-additions\')'
+
+
 def active_dataset() -> str:
     name = (os.environ.get("EVIDENCE_DATASET") or "prototype-v1").strip().lower()
     if name not in _DATASET_VIEWS:
@@ -54,7 +59,7 @@ def load_evidence_package_from_db(conn=None) -> EvidencePackage:
         claims = [r[0] for r in conn.execute(
             f"SELECT claim_json FROM canonical.{v_claim} ORDER BY claim_json->>'claimId'").fetchall()]
         sources = [r[0] for r in conn.execute(
-            f"SELECT source_json FROM canonical.{v_source} ORDER BY source_json->>'sourceId'").fetchall()]
+            f"SELECT source_json FROM canonical.{v_source} ORDER BY source_json->>'sourceId'{_PILOT_LAST if dataset == 'pilot' else ''}").fetchall()]
         excluded = [r[0] for r in conn.execute(
             f"SELECT claim_ref FROM canonical.{v_excluded} ORDER BY claim_ref").fetchall()]
         limitations = [r[0] for r in conn.execute(
