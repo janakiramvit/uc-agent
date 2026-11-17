@@ -72,7 +72,8 @@ def run(*, http: Http, clock: Deadline, pstate: dict, index: ProcessedIndex, all
         ps = provider_state.provider(pstate, prov.name)
         f = ProviderFunnel(prov.name, prov.label, prov.evidence_type.value)
         funnel.providers[prov.name] = f
-        wp = plan_window(ps.get("lastSuccessfulCutoff"), today)
+        wp = plan_window(ps.get("lastSuccessfulCutoff"), today,
+                         overlap_days=config.PROVIDER_OVERLAP_DAYS.get(prov.name, config.WINDOW_OVERLAP_DAYS))
         windows[prov.name] = wp
         f.window = wp.describe()
         if wp.window.days <= 0:
