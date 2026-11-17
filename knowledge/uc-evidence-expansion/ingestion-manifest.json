@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-f3fa2ae0157e",
-  "generatedAt": "2026-11-16T23:15:35Z",
+  "runId": "uc-exp-38cb47f21255",
+  "generatedAt": "2026-11-17T15:03:28Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -427,6 +427,97 @@
       "pubmedId": "43037158",
       "doi": "10.1080/03007995.2026.2761162",
       "canonicalUrl": "https://doi.org/10.1080/03007995.2026.2761162",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-169",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07671313",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-170",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06398626",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-171",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06405087",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-172",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06424769",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-173",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07758101",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-174",
+      "pubmedId": "43039284",
+      "doi": "10.1016/j.ejphar.2026.179566",
+      "canonicalUrl": "https://doi.org/10.1016/j.ejphar.2026.179566",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-175",
+      "pubmedId": "43038946",
+      "doi": "10.1016/j.annder.2026.103526",
+      "canonicalUrl": "https://doi.org/10.1016/j.annder.2026.103526",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-176",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07665723",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-177",
+      "pubmedId": "43039205",
+      "doi": "10.1016/j.autrev.2026.104245",
+      "canonicalUrl": "https://doi.org/10.1016/j.autrev.2026.104245",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-178",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07941921",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-179",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07012395",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-180",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07941271",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-181",
+      "pubmedId": "43039838",
+      "doi": "10.13703/j.0255-2930.20250708-k0003",
+      "canonicalUrl": "https://doi.org/10.13703/j.0255-2930.20250708-k0003",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],

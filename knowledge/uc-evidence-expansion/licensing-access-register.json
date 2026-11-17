@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-f3fa2ae0157e",
-  "generatedAt": "2026-11-16T23:15:35Z",
+  "runId": "uc-exp-38cb47f21255",
+  "generatedAt": "2026-11-17T15:03:28Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -1333,6 +1333,292 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-16",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-169",
+      "title": "Randomized Controlled Trial of Online Pain Education Programs for Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07671313",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-170",
+      "title": "A MULTI-CENTER, PROSPECTIVE, NON-INTERVENTIONAL STUDY OF REAL-WORLD EFFECTIVENESS OF ETRASIMOD IN PATIENTS WITH ULCERATIVE COLITIS (ENDEAVOUR-UC)",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06398626",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-171",
+      "title": "A Phase 3b Extension Study to Evaluate the Long-term Safety of Vedolizumab Subcutaneous in Pediatric Subjects With Ulcerative Colitis or Crohn's Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06405087",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-172",
+      "title": "Improving Outcomes and Reducing Disparities for Patients With Inflammatory Bowel Disease Through Epidemiology and Enhanced Disease Management (PROMOTE IBD)",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06424769",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-173",
+      "title": "A Phase I Clinical Trial to Evaluate the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of Subcutaneous Injection or Intravenous Infusion of SHR-7590 Injection in Healthy Chinese Participants and Participants With Moderate-to-Severe Inflammatory Bowel Disease (Ulcerative Colitis and Crohn's Disease)",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07758101",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-174",
+      "title": "Integrating Mouse Transcriptomics and Human Multi-Cohort Data Reveals an Inflammatory Gene Signature Mediating Jaceosidin's Therapeutic Effect in Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.1016/j.ejphar.2026.179566",
+      "doi": "10.1016/j.ejphar.2026.179566",
+      "pubmedId": "43039284",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-175",
+      "title": "Faecal calprotectin as a biomarker in patients with hidradenitis suppurativa: A narrative review",
+      "canonicalUrl": "https://doi.org/10.1016/j.annder.2026.103526",
+      "doi": "10.1016/j.annder.2026.103526",
+      "pubmedId": "43038946",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-176",
+      "title": "A Phase I, Multicenter, Open-Label, Single-Agent Study to Assess the Pharmacokinetics of Cytochrome P450 Substrates After Treatment With Afimkibart in Participants With Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07665723",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-177",
+      "title": "Venous thromboembolism in inflammatory bowel disease: a phase-specific framework for risk stratification and anticoagulant management",
+      "canonicalUrl": "https://doi.org/10.1016/j.autrev.2026.104245",
+      "doi": "10.1016/j.autrev.2026.104245",
+      "pubmedId": "43039205",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-178",
+      "title": "Visceral Hypersensitivity, Urgency and Persistent Symptoms After Mucosal Healing in Ulcerative Colitis Patients: A Prospective Cohort Study in Switzerland",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07941921",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-179",
+      "title": "Phase 2 Platform Trial to Assess the Efficacy and Safety of Long-acting Antibodies as Single Agents and in Combinations for Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07012395",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-180",
+      "title": "Simple Nut Supplementation Induces Positive Gut Metabolic Signals in Patients With Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07941271",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-181",
+      "title": "[Mechanism of electroacupuncture on improving intestinal barrier injury in rats with ulcerative colitis by regulating RhoA/ROCK pathway]",
+      "canonicalUrl": "https://doi.org/10.13703/j.0255-2930.20250708-k0003",
+      "doi": "10.13703/j.0255-2930.20250708-k0003",
+      "pubmedId": "43039838",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-17",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
