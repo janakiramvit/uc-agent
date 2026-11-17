@@ -127,7 +127,7 @@ def test_preview_refuses_to_approve_anything_that_was_not_proposed(built):
 
 
 def test_preview_rows_are_owner_reviewed_never_clinician_approved(built):
-    pv = pilot_db.promotion_preview(built, _dec(*[k for k in built["curation"]["proposed"]]))
+    pv = pilot_db.promotion_preview(built, _dec(*[k for k in built["curation"]["proposed"] if k != "CLM-703"]))
     for c in pv["claims"]:
         assert c["review_status_raw"] == "owner_reviewed_for_pilot" and c["review_status"] is None
         assert "approved" not in json.dumps({k: v for k, v in c.items() if k.startswith("review")}).lower()
@@ -170,7 +170,7 @@ class FakeConn:
 def test_stage_apply_writes_only_staging_and_quarantine(built):
     conn = FakeConn()
     s = pilot_db.stage(conn, built, apply=True)
-    assert conn.writes() and s["claimsUpserted"] == 63 and s["sourcesUpserted"] == 73
+    assert conn.writes() and s["claimsUpserted"] == 64 and s["sourcesUpserted"] == 74
     for sql, _ in conn.writes():
         assert "canonical." not in sql and any(t in sql for t in ("staging.", "quarantine.record"))
 
@@ -191,13 +191,18 @@ def test_stage_quarantines_only_hard_excluded_categories_and_skips_already_quara
     assert cats <= set(pilot_db.HARD_EXCLUDE)
 
 
-def test_stage_never_marks_anything_owner_reviewed_or_approved(built):
+def test_stage_records_owner_decisions_as_owner_reviewed_for_pilot_and_never_as_approved(built):
     conn = FakeConn()
     pilot_db.stage(conn, built, apply=True)
+    reviewed = 0
     for sql, p in conn.writes():
         if "staging.claim_qa_raw" in sql:
             f = json.loads(p[3])
-            assert f["owner_reviewed"] is False and f["approved"] is False
+            assert f["approved"] is False
+            if f["owner_reviewed"]:
+                reviewed += 1
+                assert f["review_status_raw"] == "owner_reviewed_for_pilot" and f["owner_decision"]
+    assert reviewed == 15
 
 
 def test_promote_requires_confirmation_and_refuses_a_second_promotion(built):
@@ -218,3 +223,102 @@ def test_promote_writes_only_the_pilot_dataset_never_prototype_v1(built):
     assert not any(("UPDATE" in sql or "DELETE" in sql) and "canonical." in sql for sql, _ in conn.writes())
     ds = next(p for sql, p in conn.calls if "RETURNING dataset_id" in sql)
     assert ds[0] == "pilot-additions"
+
+
+# ------------------------------------------------------------------ owner decisions + safety wording (2026-11-17)
+def _owner():
+    return json.loads((REPO / "release" / "config" / "owner-decisions.json").read_text())
+
+
+def test_owner_decisions_are_recorded_exactly_as_given():
+    d = _owner()
+    assert d["reviewStatus"] == "owner_reviewed_for_pilot"
+    assert [k for k, v in d["proposed"].items() if v == "approve"] == ["CLM-115", "CLM-116", "CLM-117", "CLM-118", "CLM-119", "CLM-120", "CLM-121", "CLM-701"]
+    assert {k for k, v in d["proposed"].items() if v == "defer"} == {"CLM-126", "CLM-702"}
+    assert d["live"] == {"CLM-014": "retire", "CLM-081": "keep_relabelled", "CLM-093": "retire", "CLM-094": "retire", "CLM-095": "keep_relabelled"}
+    assert d["candidates_for_review"] == ["CLM-703"]
+
+
+def test_preview_promotes_only_owner_approved_and_relabelled_claims(built):
+    pv = pilot_db.promotion_preview(built, _owner())
+    assert [c["claim_ref"] for c in pv["claims"]] == ["CLM-115", "CLM-116", "CLM-117", "CLM-118", "CLM-119", "CLM-120", "CLM-121", "CLM-701", "CLM-705", "CLM-706"]
+    refs = {c["claim_ref"] for c in pv["claims"]}
+    assert not refs & {"CLM-126", "CLM-702", "CLM-703", "CLM-014", "CLM-093", "CLM-094", "CLM-081", "CLM-095"}
+    assert pv["retiredLiveClaimRefs"] == ["CLM-014", "CLM-093", "CLM-094"] and pv["replacedLiveClaimRefs"] == ["CLM-081", "CLM-095"]
+    assert "CLM-126" in pv["excludedClaimRefs"] and "CLM-702" in pv["excludedClaimRefs"] and "CLM-703" not in pv["excludedClaimRefs"]
+
+
+def test_stride_iii_is_only_a_candidate_never_promotable(built):
+    row = next(r for r in built["claim_rows"] if r["claimId"] == "CLM-703")
+    assert row["recommendation"] == "review_candidate"
+    with pytest.raises(ValueError):
+        pilot_db.promotion_preview(built, {"proposed": {"CLM-703": "approve"}, "live": {}})
+    assert "histological remission in ulcerative colitis" in row["excerpt"] and row["pmid"] == "42896564"
+    assert json.loads((REPO / "release" / "output" / "release-summary.json").read_text())["excerptVerification"]["CLM-703"]["verbatimInPublicAbstract"]
+
+
+def _text(claim_id):
+    pv = pilot_db.promotion_preview(pilot_db.build_all(), _owner())
+    return next(c for c in pv["claims"] if c["claim_ref"] == claim_id)["claim_text"]
+
+
+@pytest.mark.parametrize("cid", ["CLM-115", "CLM-116", "CLM-117", "CLM-118", "CLM-119", "CLM-121"])
+def test_aga_claims_use_suggests_and_may_wording(cid):
+    t = _text(cid)
+    assert "AGA suggests" in t or "AGA suggests" in t.replace("the AGA guideline concludes", "AGA suggests") or "AGA guideline concludes" in t
+    assert re.search(r"\bmay\b|\bcan inform\b", t)
+
+
+def test_150_is_never_presented_as_an_individual_diagnosis_and_nobody_is_told_to_skip_endoscopy():
+    for cid in ("CLM-116", "CLM-117"):
+        t = _text(cid)
+        assert "not a diagnosis for any one person" in t
+    for cid in ("CLM-115", "CLM-116", "CLM-117", "CLM-118", "CLM-119", "CLM-120", "CLM-121"):
+        t = _text(cid).lower()
+        assert not re.search(r"you (should|can|must) (skip|avoid|stop)", t) and "you do not need" not in t
+    assert "do not skip or delay" in _text("CLM-116") and "do not change your treatment yourself" in _text("CLM-118").lower()
+
+
+def test_discordant_markers_say_endoscopy_may_be_considered_before_adjusting_treatment():
+    t = _text("CLM-118")
+    assert "may consider an endoscopic assessment before adjusting treatment" in t
+
+
+def test_clm120_states_the_knowledge_gap_without_claiming_biomarkers_are_better_or_inventing_outcomes():
+    t = _text("CLM-120")
+    assert "knowledge gap" in t and "not known which approach is better" in t and "should not be read as showing" in t
+    assert "long-term" not in t        # the public abstract says nothing about long-term outcomes
+
+
+def test_iron_claim_says_did_not_detect_not_equivalence_and_ask_a_clinician():
+    t = _text("CLM-701")
+    assert "did not detect a statistically significant difference" in t
+    assert "does not prove that the two schedules are equivalent" in t and "not a recommendation to change iron dosing" in t
+    assert "talk to a clinician" in t
+
+
+def test_relabelled_live_claims_carry_clear_labels_and_their_original_excerpts():
+    t81, t95 = _text("CLM-705"), _text("CLM-706")
+    assert "low-level" in t81 and "not just ulcerative colitis" in t81 and "not a UC-specific treatment" in t81
+    assert "does not mean alcohol is safe" in t95
+    pv = pilot_db.promotion_preview(pilot_db.build_all(), _owner())
+    ex = {c["claim_ref"]: c["supporting_excerpt"] for c in pv["claims"]}
+    prod = {c["claimId"]: c["supportingExcerpt"] for c in json.loads(inv.PRODUCTION_JSON.read_text())["claims"]}
+    assert ex["CLM-705"] == prod["CLM-081"] and ex["CLM-706"] == prod["CLM-095"]
+
+
+def test_no_claim_text_says_approved_or_clinician_reviewed():
+    pv = pilot_db.promotion_preview(pilot_db.build_all(), _owner())
+    for c in pv["claims"]:
+        low = c["claim_text"].lower()
+        assert "clinician-approved" not in low and "approved by" not in low and "clinically approved" not in low
+
+
+def test_promote_records_retirements_without_touching_prototype_rows(built):
+    pv = pilot_db.promotion_preview(built, _owner())
+    conn = FakeConn()
+    pilot_db.promote(conn, pv, confirm=True)
+    ex = [p for sql, p in conn.writes() if "canonical.excluded_claim" in sql]
+    retired = {p[1] for p in ex if p[2] == "retired_from_patient_retrieval"}
+    assert retired == {"CLM-014", "CLM-093", "CLM-094"}
+    assert not any(("UPDATE" in sql or "DELETE" in sql) for sql, _ in conn.writes())

@@ -109,24 +109,74 @@ def claim_row(row: dict, raw_claim: dict | None) -> dict:
             "prototype_eligibility_status_raw": "prototype_eligible_with_limitation"}
 
 
+def _prod_source_row(s: dict, source_type_raw: str) -> dict:
+    """Copy of a live production source into the pilot dataset (claims reference (dataset, source_ref))."""
+    cond = s.get("conditionApplicability") or "ibd_general"
+    return {"source_ref": s["sourceId"], "title": s["sourceTitle"],
+            "source_type": "guideline" if source_type_raw == "guideline" else "patient_information",
+            "source_type_raw": source_type_raw, "status": None, "authors": None, "journal": None,
+            "pub_year": s.get("publicationYear"), "authoritative_url": s.get("sourceUrl"), "canonical_url": s.get("sourceUrl"),
+            "pmid": None, "pmcid": None, "doi": None, "full_text_verification": "as recorded for prototype-v1",
+            "condition_applicability": [t.strip() for t in cond.split(";") if t.strip()], "condition_applicability_raw": cond,
+            "disease_context": None, "disease_context_raw": s.get("diseaseContext"), "main_relevant_finding": None,
+            "evidence_limitations": s.get("evidenceLimitations"), "access_licensing_note": "public page/abstract only",
+            "region_applicability_note": s.get("canadaUsApplicability"), "regional_assessment": s.get("regionalAssessment"),
+            "review_status": None, "review_status_raw": REVIEW_STATUS_RAW}
+
+
+def reissued_claim_row(item: dict, prod_source: dict) -> dict:
+    return {"claim_ref": item["claimId"], "source_ref": item["sourceId"], "split_from_ref": item["replaces"],
+            "source_title": prod_source["sourceTitle"], "topic": None,
+            "condition_applicability": ["ibd_general", "ulcerative_colitis"],
+            "condition_applicability_raw": "ibd_general; ulcerative_colitis", "disease_context": None,
+            "disease_context_raw": "general_or_unspecified", "claim_text": item["claimText"],
+            "original_claim_text": item["supportingExcerpt"], "qa_proposed_claim_text": None,
+            "supporting_excerpt": item["supportingExcerpt"], "exact_authoritative_passage": None,
+            "precise_locator": f"Re-issue of live claim {item['replaces']} (same verbatim excerpt and source locator)",
+            "authoritative_url": prod_source["sourceUrl"], "evidence_status": "ready_for_human_review",
+            "final_qa_eligibility": None, "approved_export_eligibility": None,
+            "verification_status": f"verbatim excerpt carried over from live claim {item['replaces']}", "remediation_note": None,
+            "limitations": item["limitations"], "applicability_limitations": "IBD-wide statement; UC is covered at source level only",
+            "plain_language_explanation": item["claimText"], "outcome_type": "evidence_uncertainty" if item["claimId"] == "CLM-706" else "general_patient_education",
+            "outcome_type_raw": "evidence_uncertainty" if item["claimId"] == "CLM-706" else "general_patient_education",
+            "study_type": item["evidenceLevel"], "evidence_level": "consensus_statement" if item["claimId"] == "CLM-705" else "official_patient_information",
+            "evidence_level_raw": item["evidenceLevel"], "confidence": item["confidence"], "confidence_raw": item["confidence"],
+            "review_status": None, "review_status_raw": REVIEW_STATUS_RAW,
+            "prototype_eligibility_status": "prototype_eligible_with_limitation",
+            "prototype_eligibility_status_raw": "prototype_eligible_with_limitation"}
+
+
 def promotion_preview(b: dict, dec: dict) -> dict:
     rows = {r["claimId"]: r for r in b["claim_rows"] if r["origin"] == "staging" and r["recommendation"] == "proposed_include"}
     ids = approved_claim_ids(dec, set(rows))
     raws = {c["claimId"]: c for c in json.loads((inv.FROZEN / "staging-candidate-claims.json").read_text())["claims"]}
     srcs = {s["sourceId"]: s for s in json.loads((inv.FROZEN / "staging-sources.json").read_text())["sources"]}
-    claims = [claim_row(rows[i], raws.get(i)) for i in ids]
-    sids = sorted({c["source_ref"] for c in claims})
+    prod = {s["sourceId"]: s for s in json.loads(inv.PRODUCTION_JSON.read_text())["sources"]}
+    live = dec.get("live", {})
+    bad = {k: v for k, v in live.items() if v not in ("keep", "keep_relabelled", "retire")}
+    if bad or set(live) - {"CLM-014", "CLM-081", "CLM-093", "CLM-094", "CLM-095"}:
+        raise ValueError(f"invalid live-claim decisions: {live}")
+    reissue = [i for i in b["curation"].get("reissued_live", []) if live.get(i["replaces"]) == "keep_relabelled"]
+    claims = [claim_row(rows[i], raws.get(i)) for i in ids] + [reissued_claim_row(i, prod[i["sourceId"]]) for i in reissue]
+    sids = sorted({c["source_ref"] for c in claims if c["source_ref"] in srcs})
     sources = [source_row(srcs[s], [r for r in rows.values() if r["sourceId"] == s and r["claimId"] in ids]) for s in sids]
+    sources += [_prod_source_row(prod[i["sourceId"]], i["sourceType"]) for i in reissue]
+    retired = sorted(k for k, v in live.items() if v == "retire")
+    replaced = sorted(i["replaces"] for i in reissue)
     deferred_ids = sorted(r["claimId"] for r in b["claim_rows"]
-                          if r["origin"] == "staging" and r["claimId"] not in ids and r["category"] != "duplicate")
+                          if r["origin"] == "staging" and r["claimId"] not in ids and r["category"] != "duplicate"
+                          and r["recommendation"] != "review_candidate")
     meta = {"package_version": "pilot-additions-1.0.0", "created_at": "2026-11-17",
             "intended_use": "Technical research pilot only. Owner-reviewed (owner_reviewed_for_pilot); NOT clinician-approved.",
             "limitations": ["Abstract-level verification only; full texts were not read.",
                             "Owner review for a technical research pilot is not clinical approval.",
                             "Guideline statements may not reflect Canadian/US practice; discuss care decisions with your clinician."]}
     return {"dataset": PILOT_DATASET, "version": PILOT_VERSION, "sources": sources, "claims": claims,
-            "excludedClaimRefs": deferred_ids, "packageMeta": meta,
-            "summary": {"sources": len(sources), "claims": len(claims), "approvedIds": ids, "excludedCount": len(deferred_ids)}}
+            "excludedClaimRefs": deferred_ids, "retiredLiveClaimRefs": retired, "replacedLiveClaimRefs": replaced,
+            "packageMeta": meta,
+            "summary": {"sources": len(sources), "claims": len(claims), "approvedIds": ids,
+                        "reissuedLive": [i["claimId"] for i in reissue], "retiredLive": retired, "replacedLive": replaced,
+                        "excludedCount": len(deferred_ids)}}
 
 
 # ------------------------------------------------------------------ DB (thin)
@@ -151,6 +201,10 @@ def stage(conn, b: dict, *, apply: bool) -> dict:
     raws = {c["claimId"]: c for c in json.loads((inv.FROZEN / "staging-candidate-claims.json").read_text())["claims"]}
     srcs = json.loads((inv.FROZEN / "staging-sources.json").read_text())["sources"]
     authored = {a["claimId"]: a for a in b["curation"]["authored_claims"]}
+    extra_src = [{"sourceId": a["sourceId"], "title": a["title"], "evidenceType": a["evidenceType"], "doi": a["doi"],
+                  "pubmedId": a["pmid"], "canonicalUrl": a["url"], "publicationDate": a["year"], "authoredForRelease": True}
+                 for a in b["curation"].get("authored_sources", [])]
+    srcs = srcs + extra_src
     summary = {"batch": batch, "applied": apply, "sourcesUpserted": len(srcs)}
     claims_in = [r for r in b["claim_rows"] if r["origin"] == "staging"]
     summary["claimsUpserted"] = len(claims_in)
@@ -180,7 +234,10 @@ def stage(conn, b: dict, *, apply: bool) -> dict:
     for r in plan["annotations"]:
         _upsert(conn, "claim_qa_raw", batch, ANNOTATION_DATASET, r["uid"],
                 {"category": r["category"], "recommendation": r["recommendation"], "reason": r["reason"],
-                 "owner_reviewed": False, "approved": False}, prov, {})
+                 "owner_decision": r.get("ownerDecision"),
+                 "owner_reviewed": r.get("ownerDecision") is not None,
+                 "review_status_raw": REVIEW_STATUS_RAW if r.get("ownerDecision") else None,
+                 "approved": False}, prov, {})
     conn.execute("DELETE FROM quarantine.record WHERE batch_id=%s AND source_step=%s", (batch, QUARANTINE_STEP))
     for r in fresh_q:
         conn.execute("INSERT INTO quarantine.record (batch_id, dataset_code, entity_type, natural_key, raw, reasons, source_step) "
@@ -219,7 +276,41 @@ def promote(conn, preview: dict, *, confirm: bool) -> dict:
     for ref in preview["excludedClaimRefs"]:
         conn.execute("INSERT INTO canonical.excluded_claim (dataset_id, claim_ref, result, reason, origin) VALUES (%s,%s,%s,%s,%s)",
                      (did, ref, "deferred_for_pilot", "not approved in the 2026-11-17 owner review", "pilot-release"))
+    # live claims leave patient retrieval through the pilot view only; prototype-v1 rows are never modified or deleted
+    for ref in preview["retiredLiveClaimRefs"]:
+        conn.execute("INSERT INTO canonical.excluded_claim (dataset_id, claim_ref, result, reason, origin) VALUES (%s,%s,%s,%s,%s)",
+                     (did, ref, "retired_from_patient_retrieval", "owner decision 2026-11-17; preserved in prototype-v1", "owner-retired-live"))
+    for ref in preview["replacedLiveClaimRefs"]:
+        conn.execute("INSERT INTO canonical.excluded_claim (dataset_id, claim_ref, result, reason, origin) VALUES (%s,%s,%s,%s,%s)",
+                     (did, ref, "replaced_by_relabelled_claim", "owner kept it with clearer labelling; re-issued under a new ID; original preserved", "owner-relabelled-live"))
     return {"dataset_id": did, **preview["summary"]}
+
+
+def write_preview(b: dict, dec: dict) -> list[Path]:
+    """Exact promotion preview (machine + human readable). Writes files only; touches no database."""
+    pv = promotion_preview(b, dec)
+    out = REPO / "release" / "output"
+    (out / "promotion-preview.json").write_text(json.dumps(pv, indent=2, ensure_ascii=False, default=str) + "\n")
+    cand = [r for r in b["claim_rows"] if r["recommendation"] == "review_candidate"]
+    L = ["# Exact promotion preview - pilot-additions 1.0.0 (dev canonical)", "",
+         "Nothing below has been promoted. Records would be written as `owner_reviewed_for_pilot` (never clinician-approved).", "",
+         f"- **Promote ({len(pv['claims'])} claims, {len(pv['sources'])} sources):** " + ", ".join(c["claim_ref"] for c in pv["claims"]),
+         f"- **Retire live claims from patient retrieval (preserved in prototype-v1):** {', '.join(pv['retiredLiveClaimRefs'])}",
+         f"- **Replace live claims with relabelled re-issues:** {', '.join(f'{a}->{c}' for a, c in zip(pv['replacedLiveClaimRefs'], [i for i in pv['summary']['reissuedLive']]))}",
+         f"- **Excluded (deferred, never promoted):** {len(pv['excludedClaimRefs'])} staged claims, including owner deferrals CLM-126 and CLM-702",
+         "- **Not promoted, returned for review:** " + ", ".join(r["claimId"] for r in cand), ""]
+    for c in pv["claims"]:
+        L += [f"## {c['claim_ref']} ({c['source_ref']})", "", f"**Patient-facing claim:** {c['claim_text']}", "",
+              f"**Exact excerpt:** \"{c['supporting_excerpt']}\"", "",
+              f"**Applicability:** {c['condition_applicability_raw']} | **Evidence:** {c['evidence_level_raw']} | **Confidence:** {c['confidence_raw']} | "
+              f"**Review status:** {c['review_status_raw']}", "", f"**Limitations:** {c['limitations']}", "",
+              f"**Citation:** {c['authoritative_url']}", ""]
+    L += ["## Candidate returned for review (not in this preview)", ""]
+    for r in cand:
+        L += [f"### {r['claimId']} ({r['sourceId']}): {r['sourceTitle']} ({r['sourceYear']})", "", f"**Proposed claim:** {r['patient']}", "",
+              f"**Exact excerpt:** \"{r['excerpt']}\"", "", f"**Limitations:** {r['limitations']}", "", f"**Citation:** {r['citationUrl']}", ""]
+    (out / "PROMOTION-PREVIEW.md").write_text("\n".join(L) + "\n")
+    return [out / "promotion-preview.json", out / "PROMOTION-PREVIEW.md"]
 
 
 def main() -> None:
@@ -229,7 +320,8 @@ def main() -> None:
     a = ap.parse_args()
     b = build_all()
     if a.cmd == "preview":
-        print(json.dumps(promotion_preview(b, decisions()), indent=2, ensure_ascii=False, default=str))
+        for p in write_preview(b, decisions()):
+            print("wrote", p.relative_to(REPO))
         return
     conn = _connect()
     try:

@@ -27,8 +27,15 @@ _ANIMAL = re.compile(r"\b(mice|mouse|murine|rats?|rodent|DSS|dextran|acetic acid
                      r"organoid|zebrafish)\b", re.I)
 
 
+OWNER_DECISIONS = REPO / "release" / "config" / "owner-decisions.json"
+
+
 def load_curation() -> dict:
     return json.loads(CURATION.read_text())
+
+
+def load_owner_decisions() -> dict:
+    return json.loads(OWNER_DECISIONS.read_text()) if OWNER_DECISIONS.exists() else {"proposed": {}, "live": {}}
 
 
 def _norm(s: str) -> str:
@@ -132,9 +139,13 @@ def build() -> dict:
         rows.append({"uid": f"staging:{cid}", "origin": "staging", "claimId": cid, "sourceId": a["sourceId"],
                      "sourceGroup": uid_group.get(f"staging:{a['sourceId']}"), "claimText": a["normalizedClaim"],
                      "excerpt": a["exactSupportingExcerpt"], "locator": a["exactLocator"],
-                     "applicability": a["conditionApplicability"], "recommendation": "proposed_include",
+                     "applicability": a["conditionApplicability"],
+                     "recommendation": "review_candidate" if a.get("candidateOnly") else "proposed_include",
                      "category": "uc_specific_human", "reason": p["reason"], "patient": a["normalizedClaim"],
                      "strength": p["strength"], "design": p["design"], "authored": True})
+    owner = load_owner_decisions()
+    for row in rows:
+        row["ownerDecision"] = owner["proposed"].get(row["claimId"]) if row["origin"] == "staging" else owner["live"].get(row["claimId"]) if row["origin"] == "production" else None
     src_rows = []
     for g in r["groups"]:
         k = g.keeper
@@ -170,14 +181,18 @@ def enrich(b: dict) -> None:
     cur = b["curation"]
     authored = {a["claimId"]: a for a in cur["authored_claims"]}
     staged_raw = {c["claimId"]: c for c in json.loads((inv.FROZEN / "staging-candidate-claims.json").read_text())["claims"]}
+    asrc = {a["sourceId"]: a for a in cur.get("authored_sources", [])}
     for row in b["claim_rows"]:
         m = meta.get(row["sourceGroup"], {})
+        if not m and row["sourceId"] in asrc and row.get("authored"):
+            a_ = asrc[row["sourceId"]]
+            m = {"title": a_["title"], "year": a_["year"], "evidenceType": a_["evidenceType"], "url": a_["url"], "pmid": a_["pmid"]}
         row.update(sourceTitle=m.get("title", ""), sourceYear=m.get("year", ""), evidenceType=m.get("evidenceType", ""),
                    citationUrl=m.get("url", ""), pmid=m.get("pmid", ""))
         raw = staged_raw.get(row["claimId"]) if row["origin"] == "staging" and not row.get("authored") else None
         a = authored.get(row["claimId"])
         src = raw or a or {}
-        row["limitations"] = src.get("limitations", "")
+        row["limitations"] = (src.get("limitations", "") + " " + (cur["proposed"].get(row["claimId"], {}).get("limitations_extra", ""))).strip()
         row["population"] = src.get("studyPopulation", "")
         row["studyDesignDetail"] = src.get("studyDesign", "")
         row["questions"] = list(src.get("mappedPatientQuestionIds", []))
@@ -186,7 +201,8 @@ def enrich(b: dict) -> None:
 
 
 def verify(b: dict) -> dict:
-    items = [(r["claimId"], r["pmid"], r["excerpt"]) for r in b["claim_rows"] if r["recommendation"] == "proposed_include"]
+    items = [(r["claimId"], r["pmid"], r["excerpt"]) for r in b["claim_rows"]
+             if r["recommendation"] in ("proposed_include", "review_candidate")]
     return verify_excerpts(items)
 
 

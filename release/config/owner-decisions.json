@@ -1,0 +1,28 @@
+{
+  "schema": "pilot-owner-decisions/1",
+  "recordedAt": "2026-11-17",
+  "reviewStatus": "owner_reviewed_for_pilot",
+  "note": "Owner decisions for the technical research pilot. NOT clinician approval.",
+  "proposed": {
+    "CLM-115": "approve",
+    "CLM-116": "approve",
+    "CLM-117": "approve",
+    "CLM-118": "approve",
+    "CLM-119": "approve",
+    "CLM-120": "approve",
+    "CLM-121": "approve",
+    "CLM-126": "defer",
+    "CLM-701": "approve",
+    "CLM-702": "defer"
+  },
+  "live": {
+    "CLM-014": "retire",
+    "CLM-081": "keep_relabelled",
+    "CLM-093": "retire",
+    "CLM-094": "retire",
+    "CLM-095": "keep_relabelled"
+  },
+  "candidates_for_review": [
+    "CLM-703"
+  ]
+}

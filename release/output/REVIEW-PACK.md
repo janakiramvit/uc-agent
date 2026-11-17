@@ -5,7 +5,7 @@ Evidence frozen at staging commit `9c7cd28` (all 8 providers' cutoffs 2026-11-17
 ## Summary
 
 - Sources: **119 -> 99** after exact de-duplication (20 merged: all baseline-register copies of production sources).
-- Claims: **171 -> 125** after de-duplication (46 exact duplicates removed) **+ 2 curator-authored claims** (IDs CLM-701, CLM-702, verbatim from public abstracts).
+- Claims: **171 -> 125** after de-duplication (46 exact duplicates removed) **+ 3 curator-authored claims** (IDs CLM-701, CLM-702, verbatim from public abstracts).
 - By origin (before dedup): production 49 claims / 20 sources; baseline register 61 / 26; staging (Phase 2 + daily discovery) 61 / 73.
 - **Proposed inclusions: 10** (decide below). Deferred claims: 117. Source types: animal preclinical 17, case report 3, published or guideline 53, trial record 26.
 
@@ -42,12 +42,12 @@ Excerpts were re-verified verbatim against the public PubMed abstract on 2026-11
 ### 1. CLM-115 - SRC-028 - **proposed_include**
 
 - **Source:** AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis (2023) - clinical guideline - https://doi.org/10.1053/j.gastro.2022.12.007
-- **Patient-friendly claim:** If you have ulcerative colitis and feel well (symptomatic remission), the AGA guideline suggests checking a biomarker test together with your symptoms, rather than relying on symptoms alone.
+- **Patient-friendly claim:** AGA suggests that for people with ulcerative colitis who are in symptomatic remission (feeling well), a biomarker test, such as a stool test, may help monitoring when it is used together with symptoms rather than relying on symptoms alone. Your clinician decides which tests are right for you.
 - **Exact excerpt:** "In patients with UC in symptomatic remission, the panel suggests the use of a biomarker- and symptom-based monitoring strategy over a symptom-based monitoring strategy."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Clinical practice guideline; Adults with established ulcerative colitis
 - **Evidence strength:** conditional guideline recommendation (GRADE; AGA)
-- **Limitations:** Conditional recommendation; the guideline does not specify monitoring frequency in the retrieved abstract. Applies to established UC, not diagnosis.
+- **Limitations:** Conditional recommendation; the guideline does not specify monitoring frequency in the retrieved abstract. Applies to established UC, not diagnosis. Wording edited after owner safety review (2026-11-17); 'suggests'/'may' mirror the conditional GRADE recommendation. Not a basis for changing treatment or skipping endoscopy.
 - **Patient questions:** L2-1.2, L3-1.2.1
 - **Why:** UC-specific AGA practice guideline recommendation; excerpt is verbatim and the claim restates it without adding.
 - **Your decision:** `[ ] approve   [ ] defer`
@@ -55,12 +55,12 @@ Excerpts were re-verified verbatim against the public PubMed abstract on 2026-11
 ### 2. CLM-116 - SRC-028 - **proposed_include**
 
 - **Source:** AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis (2023) - clinical guideline - https://doi.org/10.1053/j.gastro.2022.12.007
-- **Patient-friendly claim:** If you have ulcerative colitis in symptomatic remission, the AGA guideline suggests that a fecal calprotectin below 150 µg/g, a normal fecal lactoferrin and/or a normal CRP can be used to rule out active inflammation, so routine endoscopy can be avoided.
+- **Patient-friendly claim:** For people with ulcerative colitis in symptomatic remission, AGA suggests that a fecal calprotectin below 150 µg/g, a normal fecal lactoferrin and/or a normal CRP may help rule out active inflammation, so that routine endoscopy may not be needed. 150 µg/g is a guideline decision threshold, not a diagnosis for any one person: results vary between tests and between days. Your clinician interprets them with your symptoms and decides whether an endoscopy is needed; do not skip or delay a scope or a clinic visit because of a test result.
 - **Exact excerpt:** "For patients in symptomatic remission, the panel suggests using fecal calprotectin <150 μg/g, normal fecal lactoferrin, and/or normal CRP to rule out active inflammation and avoid routine endoscopic assessment of disease."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Clinical practice guideline; Adults with established ulcerative colitis
 - **Evidence strength:** conditional guideline recommendation (GRADE; AGA)
-- **Limitations:** Conditional recommendation. 150 μg/g is a guideline decision threshold, not a diagnostic cut-off for an individual; calprotectin assays are not interchangeable and vary within-day / within-stool.
+- **Limitations:** Conditional recommendation. 150 μg/g is a guideline decision threshold, not a diagnostic cut-off for an individual; calprotectin assays are not interchangeable and vary within-day / within-stool. Wording edited after owner safety review (2026-11-17); 'suggests'/'may' mirror the conditional GRADE recommendation. Not a basis for changing treatment or skipping endoscopy.
 - **Patient questions:** L3-1.2.1, L3-1.2.3
 - **Why:** UC-specific AGA guideline recommendation; thresholds are decision thresholds, not individual diagnoses (stated in limitations).
 - **Your decision:** `[ ] approve   [ ] defer`
@@ -68,12 +68,12 @@ Excerpts were re-verified verbatim against the public PubMed abstract on 2026-11
 ### 3. CLM-117 - SRC-028 - **proposed_include**
 
 - **Source:** AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis (2023) - clinical guideline - https://doi.org/10.1053/j.gastro.2022.12.007
-- **Patient-friendly claim:** If you have ulcerative colitis with moderate-to-severe symptoms, the AGA guideline suggests that a fecal calprotectin above 150 µg/g, an elevated fecal lactoferrin or an elevated CRP can help guide treatment decisions without routine endoscopy.
+- **Patient-friendly claim:** For people with ulcerative colitis who have moderate-to-severe symptoms, AGA suggests that a fecal calprotectin above 150 µg/g, an elevated fecal lactoferrin or an elevated CRP may help a clinician decide on treatment without routine endoscopy. 150 µg/g is a guideline threshold, not a diagnosis for any one person, and any treatment change is decided by your clinician, not by a test result alone.
 - **Exact excerpt:** "In patients with UC with moderate to severe symptoms, the panel suggests using fecal calprotectin >150 μg/g, elevated fecal lactoferrin, or elevated CRP to inform treatment decisions and avoid routine endoscopic assessment of disease."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Clinical practice guideline; Adults with established ulcerative colitis
 - **Evidence strength:** conditional guideline recommendation (GRADE; AGA)
-- **Limitations:** Conditional recommendation. Concordant elevated biomarker + moderate/severe symptoms; interpretation and any treatment change are clinician-led.
+- **Limitations:** Conditional recommendation. Concordant elevated biomarker + moderate/severe symptoms; interpretation and any treatment change are clinician-led. Wording edited after owner safety review (2026-11-17); 'suggests'/'may' mirror the conditional GRADE recommendation. Not a basis for changing treatment or skipping endoscopy.
 - **Patient questions:** L3-1.2.1, L2-1.1
 - **Why:** UC-specific AGA guideline recommendation; verbatim excerpt.
 - **Your decision:** `[ ] approve   [ ] defer`
@@ -81,12 +81,12 @@ Excerpts were re-verified verbatim against the public PubMed abstract on 2026-11
 ### 4. CLM-118 - SRC-028 - **proposed_include**
 
 - **Source:** AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis (2023) - clinical guideline - https://doi.org/10.1053/j.gastro.2022.12.007
-- **Patient-friendly claim:** When symptoms and biomarker tests disagree (feeling well but raised markers, or moderate-to-severe symptoms with normal markers), the AGA guideline suggests an endoscopic assessment to guide treatment.
+- **Patient-friendly claim:** When symptoms and biomarker tests disagree (for example feeling well but with raised markers, or moderate-to-severe symptoms with normal markers), AGA suggests that a clinician may consider an endoscopic assessment before adjusting treatment. Do not change your treatment yourself.
 - **Exact excerpt:** "However, in patients in symptomatic remission but elevated biomarkers, and in patients with moderate to severe symptoms with normal biomarkers, the panel suggests endoscopic assessment of disease to inform treatment decisions."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Clinical practice guideline; Adults with established ulcerative colitis
 - **Evidence strength:** conditional guideline recommendation (GRADE; AGA)
-- **Limitations:** Conditional recommendation. Explicitly a case where non-invasive biomarkers are insufficient and endoscopy is preferred.
+- **Limitations:** Conditional recommendation. Explicitly a case where non-invasive biomarkers are insufficient and endoscopy is preferred. Wording edited after owner safety review (2026-11-17); 'suggests'/'may' mirror the conditional GRADE recommendation. Not a basis for changing treatment or skipping endoscopy.
 - **Patient questions:** L3-1.2.2
 - **Why:** UC-specific AGA guideline recommendation addressing a common patient question (do symptoms always match inflammation?).
 - **Your decision:** `[ ] approve   [ ] defer`
@@ -94,12 +94,12 @@ Excerpts were re-verified verbatim against the public PubMed abstract on 2026-11
 ### 5. CLM-119 - SRC-028 - **proposed_include**
 
 - **Source:** AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis (2023) - clinical guideline - https://doi.org/10.1053/j.gastro.2022.12.007
-- **Patient-friendly claim:** If you have ulcerative colitis with only mild symptoms, the AGA guideline suggests an endoscopic assessment of disease activity to guide treatment decisions.
+- **Patient-friendly claim:** For people with ulcerative colitis who have only mild symptoms, AGA suggests that an endoscopic assessment of disease activity may be used to help a clinician make treatment decisions.
 - **Exact excerpt:** "In patients with UC with mild symptoms, the panel suggests endoscopic assessment of disease activity to inform treatment decisions."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Clinical practice guideline; Adults with established ulcerative colitis
 - **Evidence strength:** conditional guideline recommendation (GRADE; AGA)
-- **Limitations:** Conditional recommendation; in the mild-symptom setting the guideline does not endorse biomarker-only assessment.
+- **Limitations:** Conditional recommendation; in the mild-symptom setting the guideline does not endorse biomarker-only assessment. Wording edited after owner safety review (2026-11-17); 'suggests'/'may' mirror the conditional GRADE recommendation. Not a basis for changing treatment or skipping endoscopy.
 - **Patient questions:** L3-1.2.2
 - **Why:** UC-specific AGA guideline recommendation; verbatim excerpt.
 - **Your decision:** `[ ] approve   [ ] defer`
@@ -107,25 +107,25 @@ Excerpts were re-verified verbatim against the public PubMed abstract on 2026-11
 ### 6. CLM-120 - SRC-028 - **proposed_include**
 
 - **Source:** AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis (2023) - clinical guideline - https://doi.org/10.1053/j.gastro.2022.12.007
-- **Patient-friendly claim:** The AGA guideline panel noted it is not yet known whether monitoring with biomarkers is better than monitoring with endoscopy; it listed this as a knowledge gap.
+- **Patient-friendly claim:** The AGA guideline panel identified the choice between biomarker-based monitoring and endoscopy-based monitoring as a knowledge gap, so it is not known which approach is better. This means the guideline's biomarker suggestions should not be read as showing that biomarkers are better than endoscopy.
 - **Exact excerpt:** "The panel identified the use of a biomarker-based monitoring strategy over an endoscopy-based monitoring strategy as a knowledge gap."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Clinical practice guideline; Adults with established ulcerative colitis
 - **Evidence strength:** guideline-identified knowledge gap
-- **Limitations:** This is a statement about evidence limitations, not a management recommendation. All recommendations in the guideline are conditional.
+- **Limitations:** This is a statement about evidence limitations, not a management recommendation. All recommendations in the guideline are conditional. Wording edited after owner safety review (2026-11-17); 'suggests'/'may' mirror the conditional GRADE recommendation. Not a basis for changing treatment or skipping endoscopy.
 - **Patient questions:** L2-1.2
-- **Why:** UC-specific guideline statement of uncertainty; included so the agent can say what is NOT known rather than overstate biomarkers.
+- **Why:** UC-specific AGA statement of uncertainty. Owner asked for 'no recommendation for or against ... for improving long-term outcomes'; the public abstract only says 'knowledge gap', so the wording stays within the abstract and the phrase about long-term outcomes needs the full text.
 - **Your decision:** `[ ] approve   [ ] defer`
 
 ### 7. CLM-121 - SRC-028 - **proposed_include**
 
 - **Source:** AGA Clinical Practice Guideline on the Role of Biomarkers for the Management of Ulcerative Colitis (2023) - clinical guideline - https://doi.org/10.1053/j.gastro.2022.12.007
-- **Patient-friendly claim:** The AGA guideline concludes that non-invasive tests, including fecal calprotectin, fecal lactoferrin and blood CRP, can inform monitoring and management of ulcerative colitis.
+- **Patient-friendly claim:** The AGA guideline concludes that non-invasive tests - fecal calprotectin, fecal lactoferrin and blood CRP - can inform monitoring and management of ulcerative colitis. Your clinician decides how to use them for you.
 - **Exact excerpt:** "In patients with UC, noninvasive biomarkers, including fecal calprotectin, fecal lactoferrin, and serum CRP can inform disease monitoring and management."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Clinical practice guideline; Adults with established ulcerative colitis
 - **Evidence strength:** guideline conclusion (GRADE; AGA)
-- **Limitations:** 'Can inform' - supportive, not a mandate to replace clinical or endoscopic assessment. Conditional-recommendation evidence base.
+- **Limitations:** 'Can inform' - supportive, not a mandate to replace clinical or endoscopic assessment. Conditional-recommendation evidence base. Wording edited after owner safety review (2026-11-17); 'suggests'/'may' mirror the conditional GRADE recommendation. Not a basis for changing treatment or skipping endoscopy.
 - **Patient questions:** L2-1.2, L3-1.2.1
 - **Why:** UC-specific AGA guideline conclusion; verbatim excerpt.
 - **Your decision:** `[ ] approve   [ ] defer`
@@ -146,14 +146,14 @@ Excerpts were re-verified verbatim against the public PubMed abstract on 2026-11
 ### 9. CLM-701 - SRC-141 - **proposed_include**
 
 - **Source:** A randomized controlled trial of alternate-day versus daily iron therapy in ulcerative colitis in remission (2026) - published study - https://doi.org/10.1016/j.isci.2026.118014
-- **Patient-friendly claim:** In a small randomized, open-label trial of 56 people with ulcerative colitis in remission who had iron-deficiency anaemia, daily and alternate-day oral iron did not differ significantly in haemoglobin, red-cell indices or iron measures after 8 weeks, nor in side effects or disease flares.
-- **Exact excerpt:** "Our study did not show any significant difference in mean hemoglobin levels, RBC indices, or iron profiles between the daily and alternate-day oral iron groups."  (verbatim in public abstract: **yes**)
+- **Patient-friendly claim:** In a small randomized, open-label study of 56 people with ulcerative colitis in remission who had iron-deficiency anaemia, the researchers did not detect a statistically significant difference in haemoglobin, red-cell indices or iron measures between daily and alternate-day oral iron after 8 weeks, and adverse events and flares were also not significantly different between the groups. This does not prove that the two schedules are equivalent, and it is not a recommendation to change iron dosing: talk to a clinician before changing how you take iron.
+- **Exact excerpt:** "Our study did not show any significant difference in mean hemoglobin levels, RBC indices, or iron profiles between the daily and alternate-day oral iron groups. Adverse events and disease flare were also not statistically significant in the two groups."  (verbatim in public abstract: **yes**)
 - **UC applicability:** uc specific human (ulcerative_colitis)
 - **Study type / population:** Randomized open-label trial; Adults with ulcerative colitis in remission and iron-deficiency anaemia (n = 56)
 - **Evidence strength:** single small open-label randomized trial (low)
 - **Limitations:** 56 participants, open-label, 8 weeks, one oral iron formulation, single country; the authors say larger studies are needed. 'No significant difference' does not prove the two schedules are equivalent.
 - **Patient questions:** L3-2.2.3
-- **Why:** Human randomized trial in UC; excerpt is a direct, appropriately hedged result. Small open-label trial: strength recorded as low.
+- **Why:** Human randomized trial in UC; owner approved at low strength with explicit 'did not detect' and 'not equivalence'/'ask a clinician' wording.
 - **Your decision:** `[ ] approve   [ ] defer`
 
 ### 10. CLM-702 - SRC-152 - **proposed_include**

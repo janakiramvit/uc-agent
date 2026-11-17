@@ -46,7 +46,7 @@
     "sourcesAfterDedup": 99,
     "claimsBeforeDedup": 171,
     "claimsAfterDedup": 125,
-    "curatorAuthoredClaims": 2,
+    "curatorAuthoredClaims": 3,
     "byOrigin": {
       "sources": {
         "production": 20,
@@ -65,7 +65,7 @@
       "ibd_general_with_uc_subgroup": 2,
       "duplicate": 46,
       "conflicting": 3,
-      "uc_specific_human": 9,
+      "uc_specific_human": 10,
       "incomplete_or_unverifiable": 22,
       "animal_preclinical": 5,
       "case_report": 7
@@ -142,7 +142,7 @@
       "pmid": "43022869",
       "verbatimInPublicAbstract": true,
       "abstractAvailable": true,
-      "excerptSha256": "262f339497610678",
+      "excerptSha256": "35bfb08d73b32662",
       "abstractSha256": "9012ec176f0bb7b5"
     },
     "CLM-702": {
@@ -151,6 +151,13 @@
       "abstractAvailable": true,
       "excerptSha256": "bec20bd9b2a141e8",
       "abstractSha256": "2a467130a5e4ab98"
+    },
+    "CLM-703": {
+      "pmid": "42896564",
+      "verbatimInPublicAbstract": true,
+      "abstractAvailable": true,
+      "excerptSha256": "46f1de20c2a18096",
+      "abstractSha256": "0cdd85f149edc4c3"
     }
   },
   "coverage": {

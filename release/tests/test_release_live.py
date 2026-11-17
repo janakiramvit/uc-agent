@@ -34,11 +34,11 @@ def _staged(live):
 def test_staged_counts_match_the_frozen_inventory(live):
     if _staged(live) == 0:
         pytest.skip("release not staged yet")
-    assert _staged(live) == 63
+    assert _staged(live) == 64
     (s,) = live.execute("SELECT count(*) FROM staging.source_raw WHERE dataset_code=%s", (pilot_db.STAGING_DATASET,)).fetchone()
-    assert s == 73
+    assert s == 74
     (a,) = live.execute("SELECT count(*) FROM staging.claim_qa_raw WHERE dataset_code=%s", (pilot_db.ANNOTATION_DATASET,)).fetchone()
-    assert a == 127
+    assert a == 128
 
 
 def test_prototype_and_baseline_staging_rows_were_not_duplicated_or_changed(live):
@@ -49,9 +49,12 @@ def test_prototype_and_baseline_staging_rows_were_not_duplicated_or_changed(live
 
 
 def test_nothing_is_owner_reviewed_approved_or_promoted_at_staging(live):
-    (appr,) = live.execute("SELECT count(*) FROM staging.claim_qa_raw WHERE dataset_code=%s AND ((fields->>'approved')::boolean "
-                           "OR (fields->>'owner_reviewed')::boolean)", (pilot_db.ANNOTATION_DATASET,)).fetchone()
-    assert appr == 0
+    (appr,) = live.execute("SELECT count(*) FROM staging.claim_qa_raw WHERE dataset_code=%s AND (fields->>'approved')::boolean",
+                           (pilot_db.ANNOTATION_DATASET,)).fetchone()
+    assert appr == 0                                    # nothing is ever marked approved
+    (rev,) = live.execute("SELECT count(*) FROM staging.claim_qa_raw WHERE dataset_code=%s AND (fields->>'owner_reviewed')::boolean "
+                          "AND fields->>'review_status_raw'='owner_reviewed_for_pilot'", (pilot_db.ANNOTATION_DATASET,)).fetchone()
+    assert rev in (0, 15)                               # the 15 owner decisions, recorded only as owner_reviewed_for_pilot
     ds = dict(live.execute("SELECT code, status FROM canonical.dataset").fetchall())
     assert ds == {"prototype-v1": "promoted", "baseline-register": "staged"} or "pilot-additions" in ds
     (n,) = live.execute("SELECT count(*) FROM canonical.claim c JOIN canonical.dataset d USING (dataset_id) WHERE d.code='prototype-v1'").fetchone()
