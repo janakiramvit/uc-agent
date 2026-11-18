@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-959cc2beb321",
-  "generatedAt": "2026-11-17T22:06:01Z",
+  "runId": "uc-exp-53f75cde9e3a",
+  "generatedAt": "2026-11-18T21:45:47Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -1773,6 +1773,314 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-17",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-191",
+      "title": "Machine Learning Approaches to Biologic Therapy Response in Inflammatory Bowel Disease: A Review Article",
+      "canonicalUrl": "https://doi.org/10.1177/30502098261502319",
+      "doi": "10.1177/30502098261502319",
+      "pubmedId": "43048562",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-192",
+      "title": "Colon capsule endoscopy and cost-effectiveness across colorectal care: a valuable filter, but a poor universal substitute",
+      "canonicalUrl": "https://doi.org/10.1177/26317745261492874",
+      "doi": "10.1177/26317745261492874",
+      "pubmedId": "43047879",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-193",
+      "title": "Assessing the Incidence of Incisional Hernia Rates in Inflammatory Bowel Disease Patients Undergoing Open or Minimally Invasive Abdominal Surgery With Use of Prophylactic Phasix™ Mesh Reinforcement: A Multicenter, Single-Arm, Two Strata Prospective Study.",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07944404",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-194",
+      "title": "Real-world comparative effectiveness and persistence of ustekinumab versus vedolizumab across cohort mean age in Crohn's disease: A systematic review and meta-analysis with meta-regression",
+      "canonicalUrl": "https://doi.org/10.1177/17562848261491077",
+      "doi": "10.1177/17562848261491077",
+      "pubmedId": "43047869",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-195",
+      "title": "Xylitol Use for Decolonization of C. Difficile in Patients With Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT05852587",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-196",
+      "title": "Effect of Pomegranate Juice on Gut Inflammation, Quality of Life and the Gut Microbiome in Patients With Ulcerative Colitis: A Pilot Study",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07115862",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-197",
+      "title": "A Phase 4 Study Evaluating Moderate to Severely Active Ulcerative Colitis or Crohn's Disease and the Use of Vedolizumab Subcutaneous Within a Community Setting",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06581328",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-198",
+      "title": "Safety and Tolerability of Sodium Butyrate and Kluyveromyces Marxianus Supplementation in Inflammatory Bowel Disease Treatment",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07591012",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-199",
+      "title": "Effect of Procyanidins in the Leaky Gut Repairing Associated With Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06576700",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-200",
+      "title": "A Comprehensive Assessment of the Multifaceted Impact of Inflammatory Bowel Disease on Quality of Life: Insights From the IBD-PODCAST Study",
+      "canonicalUrl": "https://doi.org/10.1002/ueg2.70327",
+      "doi": "10.1002/ueg2.70327",
+      "pubmedId": "43046681",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-201",
+      "title": "Prime-LS: a cryoprotectant-free, lyophilized MSC-secretome conferring protection against acute experimental colitis in vivo",
+      "canonicalUrl": "https://doi.org/10.1016/j.tibtech.2026.10.015",
+      "doi": "10.1016/j.tibtech.2026.10.015",
+      "pubmedId": "43045542",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-202",
+      "title": "Molecular Landscape of Inflammatory Bowel Disease: From Molecular Mechanisms to Emerging Pharmacological Strategies",
+      "canonicalUrl": "https://doi.org/10.1016/j.ejphar.2026.179578",
+      "doi": "10.1016/j.ejphar.2026.179578",
+      "pubmedId": "43044750",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-203",
+      "title": "The Effects of Pelvic Radiation on Ileal-Anal Pouches: A Systematic Review and Meta-Analysis",
+      "canonicalUrl": "https://doi.org/10.1007/s12029-026-01642-4",
+      "doi": "10.1007/s12029-026-01642-4",
+      "pubmedId": "43043534",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-204",
+      "title": "A dual-crosslinked herbal hydrogel for multimodal therapy of ulcerative colitis via IL-34/IL-22 modulation",
+      "canonicalUrl": "https://doi.org/10.1186/s12951-026-04944-8",
+      "doi": "10.1186/s12951-026-04944-8",
+      "pubmedId": "43046119",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-18",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
