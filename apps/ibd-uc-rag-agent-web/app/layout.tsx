@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ulcerative Colitis Evidence Agent",
-  description: "Research prototype — not medical advice. Evidence and outputs require clinician/human review.",
+  title: "Ulcerative Colitis Agent",
+  description: "Research pilot—not medical advice.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

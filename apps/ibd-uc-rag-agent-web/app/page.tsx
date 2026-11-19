@@ -16,19 +16,20 @@ function describeSources(c: SourceCounts): string {
 }
 
 const STATUS_STYLES: Record<string, string> = {
-  answered: "border-green-300 bg-green-50 text-green-900",
-  unsupported: "border-amber-300 bg-amber-50 text-amber-900",
-  refused: "border-red-300 bg-red-50 text-red-900",
+  answered: "border-teal-600/40 bg-white text-[#1b1b5e]",
+  unsupported: "border-amber-400 bg-amber-50 text-amber-950",
+  refused: "border-red-400 bg-red-50 text-red-950",
   llm_unavailable: "border-slate-300 bg-slate-100 text-slate-900",
-  error: "border-red-300 bg-red-50 text-red-900",
+  error: "border-red-400 bg-red-50 text-red-950",
 };
 
+// Current pilot size; replaced by the live count from /api/chat as soon as it loads.
+const FALLBACK_SOURCE_COUNT = 22;
+
 const SUGGESTED_QUESTIONS = [
-  "Is fibre good or bad for my ulcerative colitis?",
-  "How much fibre should I actually be eating with UC?",
-  "Should I eat fruit and vegetables if I have ulcerative colitis?",
-  "Is it safe to drink alcohol with ulcerative colitis?",
-  "What general diet advice is there for someone with IBD?",
+  "What does fecal calprotectin tell me?",
+  "How are biomarkers used to monitor UC?",
+  "When might my clinician consider endoscopy?",
 ];
 
 export default function Home() {
@@ -76,66 +77,70 @@ export default function Home() {
     handleAsk(q);
   }
 
-  return (
-    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 px-4 py-10">
-      <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-        <strong>Informational prototype only</strong> — not a medical device, not a substitute for
-        professional medical advice, diagnosis, or treatment. All evidence in this tool is{" "}
-        <strong>pending human clinical review</strong> and has not been clinically approved.
-        UC-only evidence set (5 claims). Does not diagnose, predict flares, recommend medication
-        changes, or generate individualized diet plans.
-      </div>
+  const sourceCount = evidence?.sourceCount ?? FALLBACK_SOURCE_COUNT;
 
-      <header>
-        <h1 className="text-3xl font-semibold tracking-tight">Ulcerative Colitis Evidence Agent</h1>
+  return (
+    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-10 px-5 pb-8 pt-16 sm:px-8 sm:pt-24 lg:pt-32">
+      <header className="flex flex-col gap-4">
+        <h1 className="text-4xl font-extrabold tracking-tight text-[#1b1b5e] sm:text-6xl">
+          Ulcerative Colitis Agent
+        </h1>
+        <p className="max-w-4xl text-base leading-relaxed text-[#1b1b5e] sm:text-lg">
+          Evidence, not hearsay. Built on {sourceCount} medical sources spanning research papers, clinical
+          guidelines, and patient guidance—including sources from the American Gastroenterological
+          Association and Crohn’s &amp; Colitis UK.
+        </p>
       </header>
 
-      <div className="flex flex-col gap-2 sm:flex-row">
+      <form
+        className="flex flex-col gap-3 sm:flex-row"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleAsk();
+        }}
+      >
+        <label htmlFor="question" className="sr-only">
+          Ask a question about ulcerative colitis
+        </label>
         <input
-          className="flex-1 rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-neutral-500 focus:outline-none"
-          placeholder="e.g. What does the evidence say about fibre in ulcerative colitis?"
+          id="question"
+          type="text"
+          className="min-h-14 flex-1 rounded-xl border-2 border-teal-600 bg-white px-5 text-lg text-[#1b1b5e] placeholder:text-[#4b4f86] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-600/30"
+          placeholder="Ask a question about ulcerative colitis…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") handleAsk();
-          }}
         />
         <button
-          onClick={() => handleAsk()}
+          type="submit"
           disabled={loading || !query.trim()}
-          className="rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+          className="min-h-14 rounded-xl bg-teal-700 px-10 text-xl font-bold text-white hover:bg-teal-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-600/40 disabled:opacity-50"
         >
           {loading ? "Asking…" : "Ask"}
         </button>
-      </div>
+      </form>
 
-      <section aria-label="Suggested questions">
-        <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500">
-          Suggested questions
+      <section aria-labelledby="try-asking">
+        <h2 id="try-asking" className="mb-4 text-2xl font-extrabold text-[#1b1b5e]">
+          Try asking
         </h2>
-        <div className="flex flex-wrap gap-2">
+        <ul className="flex flex-col items-start gap-3">
           {SUGGESTED_QUESTIONS.map((q) => (
-            <button
-              key={q}
-              onClick={() => askSuggested(q)}
-              disabled={loading}
-              className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:border-neutral-500 hover:bg-neutral-50 disabled:opacity-40"
-            >
-              {q}
-            </button>
+            <li key={q} className="max-w-full">
+              <button
+                type="button"
+                onClick={() => askSuggested(q)}
+                disabled={loading}
+                className="max-w-full rounded-full border-2 border-teal-600 px-6 py-3 text-left text-lg text-[#1b1b5e] hover:bg-teal-600/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-600/30 disabled:opacity-50"
+              >
+                {q}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
-      {evidence?.reviewedSources && (
-        <p data-testid="reviewed-sources" className="text-xs text-neutral-600">
-          Reviewed evidence behind this tool: <strong>{evidence.reviewedSources.total} sources</strong> (
-          {describeSources(evidence.reviewedSources)}). Technical research pilot - owner-reviewed, not clinician-approved.
-        </p>
-      )}
-
       {error && (
-        <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-900">
+        <div className="rounded-xl border border-red-400 bg-red-50 px-4 py-3 text-sm text-red-950" role="alert">
           <strong className="block">{error.error}</strong>
           {error.message}
           {typeof error.retryAfterSeconds === "number" && (
@@ -145,10 +150,10 @@ export default function Home() {
       )}
 
       {result && (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4" aria-live="polite">
           <section>
-            <h2 className="mb-2 text-lg font-semibold">Answer</h2>
-            <div className={`whitespace-pre-wrap rounded-lg border px-4 py-3 text-sm ${STATUS_STYLES[result.status] ?? "border-neutral-300 bg-neutral-50"}`}>
+            <h2 className="mb-2 text-xl font-extrabold text-[#1b1b5e]">Answer</h2>
+            <div className={`whitespace-pre-wrap rounded-xl border px-5 py-4 text-base leading-relaxed ${STATUS_STYLES[result.status] ?? "border-neutral-300 bg-neutral-50"}`}>
               {result.answer}
             </div>
             {result.showSymptomCaveat && (
@@ -160,25 +165,25 @@ export default function Home() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-lg font-semibold">Evidence / Citations</h2>
+            <h2 className="mb-2 text-xl font-extrabold text-[#1b1b5e]">Evidence / Citations</h2>
             {result.answerSources && result.answerSources.total > 0 && (
-              <p data-testid="answer-sources" className="mb-2 text-xs text-neutral-600">
+              <p data-testid="answer-sources" className="mb-2 text-xs text-[#3d4170]">
                 This answer draws on {result.answerSources.total} unique reviewed source
                 {result.answerSources.total === 1 ? "" : "s"} ({describeSources(result.answerSources)}).
               </p>
             )}
             {result.citations.length === 0 ? (
-              <p className="text-sm text-neutral-500">
+              <p className="text-sm text-[#3d4170]">
                 No sufficient evidence was retrieved for this query from the reviewed UC evidence set.
               </p>
             ) : (
               <div className="flex flex-col gap-3">
                 {result.citations.map((c) => (
-                  <details key={c.number} className="rounded-lg border border-neutral-200 px-4 py-3 text-sm">
+                  <details key={c.number} className="rounded-xl border border-teal-600/40 bg-white px-4 py-3 text-sm text-[#1b1b5e]">
                     <summary className="cursor-pointer font-medium">
                       [{c.number}] {c.sourceTitle}
                     </summary>
-                    <div className="mt-2 flex flex-col gap-1 text-neutral-700">
+                    <div className="mt-2 flex flex-col gap-1 text-[#1b1b5e]">
                       <div>
                         Claim ID: <code>{c.claimId}</code> · Evidence level: {c.evidenceLevel} · Confidence:{" "}
                         {c.confidence}
@@ -213,7 +218,7 @@ export default function Home() {
 
           {result.conflictReport?.has_conflicts && (
             <section>
-              <h2 className="mb-2 text-lg font-semibold">Conflict detector</h2>
+              <h2 className="mb-2 text-xl font-extrabold text-[#1b1b5e]">Conflict detector</h2>
               <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
                 {result.conflictReport.conflicts.map((c, i) => (
                   <div key={i} className="mb-1">
@@ -226,7 +231,7 @@ export default function Home() {
 
           <section>
             <button
-              className="w-fit text-sm font-medium text-neutral-600 underline"
+              className="w-fit text-sm font-medium text-[#3d4170] underline"
               onClick={() => setShowTrace((v) => !v)}
             >
               {showTrace ? "Hide" : "Show"} developer / agent-trace panel
@@ -268,17 +273,8 @@ export default function Home() {
         </div>
       )}
 
-      <footer className="mt-auto flex flex-col gap-2 border-t border-neutral-200 pt-4 text-xs text-neutral-500">
-        <p className="font-medium text-neutral-700">
-          Research prototype—not medical advice. Evidence and outputs require clinician/human review.
-          Not for clinical use.
-        </p>
-        <p>
-          Hybrid RAG agent — LangGraph planner and tool orchestration, BM25 keyword retrieval fused
-          with vector/embedding retrieval via reciprocal rank fusion, source/applicability validation,
-          conflict and evidence-gap detection, grounded LLM synthesis, citation and locator
-          verification, and a final safety/QA pass.
-        </p>
+      <footer className="mt-auto pt-16">
+        <p className="text-sm text-[#437d73]">Research pilot—not medical advice.</p>
       </footer>
     </main>
   );
