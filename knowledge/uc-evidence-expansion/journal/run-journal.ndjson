@@ -501,3 +501,16 @@
 {"ts": "2026-11-18T21:45:47Z", "runId": "uc-exp-53f75cde9e3a", "event": "research_done", "detail": "providers=8 queries=16 screened=183 accepted=14 claims=10 alerts=7"}
 {"ts": "2026-11-18T21:45:47Z", "runId": "uc-exp-53f75cde9e3a", "event": "checkpoint_saved", "detail": "status=completed; accepted=14; claims=10; screened=183"}
 {"ts": "2026-11-18T21:45:47Z", "runId": "uc-exp-53f75cde9e3a", "event": "artifact_written", "detail": "redacted artifact built under the main checkout"}
+{"ts": "2026-11-19T21:59:49Z", "runId": "uc-exp-5a8ef188ef80", "event": "run_started", "detail": "runner 1.0.0 / uc-daily-evidence-discovery-v1.0.0; state-root=uc-state; dry_run=False no_network=False"}
+{"ts": "2026-11-19T21:59:49Z", "runId": "uc-exp-5a8ef188ef80", "event": "prompt_vs_checkpoint", "detail": "checkpoint is authoritative; prompt resume hints ignored"}
+{"ts": "2026-11-19T21:59:54Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "aga: hits=0 returned=0 canary=11"}
+{"ts": "2026-11-19T21:59:59Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "acg: hits=0 returned=0 canary=7"}
+{"ts": "2026-11-19T22:00:05Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "ecco: hits=0 returned=0 canary=8"}
+{"ts": "2026-11-19T22:00:10Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "nice: hits=0 returned=0 canary=2"}
+{"ts": "2026-11-19T22:00:16Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "bsg: hits=0 returned=0 canary=6"}
+{"ts": "2026-11-19T22:00:35Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "europepmc: hits=156 returned=156 canary=14729"}
+{"ts": "2026-11-19T22:00:42Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "pubmed: hits=34 returned=34 canary=4558"}
+{"ts": "2026-11-19T22:00:46Z", "runId": "uc-exp-5a8ef188ef80", "event": "provider_searched", "detail": "clinicaltrials: hits=20 returned=20 canary=547"}
+{"ts": "2026-11-19T22:00:46Z", "runId": "uc-exp-5a8ef188ef80", "event": "research_done", "detail": "providers=8 queries=16 screened=186 accepted=11 claims=5 alerts=7"}
+{"ts": "2026-11-19T22:00:46Z", "runId": "uc-exp-5a8ef188ef80", "event": "checkpoint_saved", "detail": "status=completed; accepted=11; claims=5; screened=186"}
+{"ts": "2026-11-19T22:00:46Z", "runId": "uc-exp-5a8ef188ef80", "event": "artifact_written", "detail": "redacted artifact built under the main checkout"}

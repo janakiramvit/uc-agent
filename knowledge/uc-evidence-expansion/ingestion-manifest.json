@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-53f75cde9e3a",
-  "generatedAt": "2026-11-18T21:45:47Z",
+  "runId": "uc-exp-5a8ef188ef80",
+  "generatedAt": "2026-11-19T22:00:46Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -665,6 +665,83 @@
       "pubmedId": "43046119",
       "doi": "10.1186/s12951-026-04944-8",
       "canonicalUrl": "https://doi.org/10.1186/s12951-026-04944-8",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-206",
+      "pubmedId": "43051769",
+      "doi": "10.1016/j.foodres.2026.121065",
+      "canonicalUrl": "https://doi.org/10.1016/j.foodres.2026.121065",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-207",
+      "pubmedId": "43051695",
+      "doi": "10.13702/j.1000-0607.20251010",
+      "canonicalUrl": "https://doi.org/10.13702/j.1000-0607.20251010",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-208",
+      "pubmedId": "43050106",
+      "doi": "10.1007/s12325-026-03834-7",
+      "canonicalUrl": "https://doi.org/10.1007/s12325-026-03834-7",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-209",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04767984",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-210",
+      "pubmedId": "43055687",
+      "doi": "10.1093/mrcr/rxag104",
+      "canonicalUrl": "https://doi.org/10.1093/mrcr/rxag104",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-211",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04013152",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-212",
+      "pubmedId": "43054536",
+      "doi": "10.1093/jscr/rjag1055",
+      "canonicalUrl": "https://doi.org/10.1093/jscr/rjag1055",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-213",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07590518",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-214",
+      "pubmedId": "43053617",
+      "doi": "10.1002/jpn3.70664",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70664",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-215",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06975722",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-216",
+      "pubmedId": "43054065",
+      "doi": "10.3389/fmicb.2026.1948431",
+      "canonicalUrl": "https://doi.org/10.3389/fmicb.2026.1948431",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],

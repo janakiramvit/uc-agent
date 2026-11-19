@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-53f75cde9e3a",
-  "generatedAt": "2026-11-18T21:45:47Z",
+  "runId": "uc-exp-5a8ef188ef80",
+  "generatedAt": "2026-11-19T22:00:46Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -2081,6 +2081,248 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-18",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-206",
+      "title": "Acylation of phenolic group in coumarates enhances the efficacy against ulcerative colitis through suppression of pro-inflammatory HDAC3-TL1A/DR3 axis and activation of NRF2-mediated antioxidant pathway",
+      "canonicalUrl": "https://doi.org/10.1016/j.foodres.2026.121065",
+      "doi": "10.1016/j.foodres.2026.121065",
+      "pubmedId": "43051769",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-207",
+      "title": "[Research on the underlying mechanisms of electroacupuncture in improving colonic dysmotility in ulcerative colitis mice based on cyclic nucleotide-gated cation channels]",
+      "canonicalUrl": "https://doi.org/10.13702/j.1000-0607.20251010",
+      "doi": "10.13702/j.1000-0607.20251010",
+      "pubmedId": "43051695",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-208",
+      "title": "Retrospective Analysis of Disease Burden, Treatment Patterns, and Healthcare Resource Utilization in Patients with Ulcerative Colitis in Dubai, UAE",
+      "canonicalUrl": "https://doi.org/10.1007/s12325-026-03834-7",
+      "doi": "10.1007/s12325-026-03834-7",
+      "pubmedId": "43050106",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-209",
+      "title": "A Randomized and Placebo-Controlled Phase II Trial Targeting Dominant-Negative Missense Mutant P53 by Atorvastatin for Reducing the Risk of Longstanding Ulcerative Colitis-Associated Cancer",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04767984",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-210",
+      "title": "Bilateral insufficiency fractures of the femoral condyles after discontinuation of glucocorticoid therapy for ulcerative colitis: A case report",
+      "canonicalUrl": "https://doi.org/10.1093/mrcr/rxag104",
+      "doi": "10.1093/mrcr/rxag104",
+      "pubmedId": "43055687",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-211",
+      "title": "French Prospective Clinical Database of Colorectal Robotic Surgery",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04013152",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-212",
+      "title": "Rectal perforation following CT colonography with extensive extraperitoneal and portal venous gas",
+      "canonicalUrl": "https://doi.org/10.1093/jscr/rjag1055",
+      "doi": "10.1093/jscr/rjag1055",
+      "pubmedId": "43054536",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-213",
+      "title": "AI-Enhanced Virtual Reality Cognitive Behavioral Therapy to Reduce Anxiety and Improve Quality of Life in Patients With Inflammatory Bowel Disease: A Multicenter Pilot and Feasibility Study",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07590518",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-214",
+      "title": "Implementing intestinal ultrasound in pediatric inflammatory bowel disease: Practical framework for program development: Perspectives from the Pediatric Committee of the Intestinal Ultrasound Group of the United States and Canada",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70664",
+      "doi": "10.1002/jpn3.70664",
+      "pubmedId": "43053617",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-215",
+      "title": "A Phase 2b, Multi-national, Multi-center, Randomized, Double-blind, Placebo-controlled, Dose-ranging Study Followed by a Long-term Extension to Evaluate the Efficacy and Safety of Brivekimig in Adult Participants With Moderate to Severe Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06975722",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-216",
+      "title": "Microbiome science in fecal microbiota transplantation for inflammatory bowel disease: a WoSCC-centered, three-database bibliometric and knowledge-mapping analysis, 2000-2025",
+      "canonicalUrl": "https://doi.org/10.3389/fmicb.2026.1948431",
+      "doi": "10.3389/fmicb.2026.1948431",
+      "pubmedId": "43054065",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-19",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
