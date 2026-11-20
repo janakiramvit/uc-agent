@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-5a8ef188ef80",
-  "generatedAt": "2026-11-19T22:00:46Z",
+  "runId": "uc-exp-7b925ac2b136",
+  "generatedAt": "2026-11-20T21:44:29Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -2323,6 +2323,358 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-19",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-218",
+      "title": "EXPRESS: Dry Eye Disease in Inflammatory Bowel Disease: A Cross-Sectional Analysis of Associated Clinical and Systemic Factors",
+      "canonicalUrl": "https://doi.org/10.1177/10815589261512743",
+      "doi": "10.1177/10815589261512743",
+      "pubmedId": "43061929",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-219",
+      "title": "Whole-blood transcriptomics reveal molecular compatibility and complementarity across advanced therapies in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1093/ecco-jcc/jjag194",
+      "doi": "10.1093/ecco-jcc/jjag194",
+      "pubmedId": "43062358",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-220",
+      "title": "A Multinational, Multicenter Extension Study to Investigate the Long-term Safety, Tolerability and Efficacy of Balinatunfib in Adults With Crohn's Disease or Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07222189",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-221",
+      "title": "Time-to-response in acute severe ulcerative colitis: when to continue, optimize, or stop treatment",
+      "canonicalUrl": "https://doi.org/10.1093/ecco-jcc/jjag198",
+      "doi": "10.1093/ecco-jcc/jjag198",
+      "pubmedId": "43062357",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-222",
+      "title": "A Phase 2, Multinational, Multicenter, Randomized, Double-blind, Placebo-controlled, Dose-ranging Study to Evaluate the Efficacy and Safety of SAR441566 in Adults With Moderate-to-severe Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06867094",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-223",
+      "title": "Analysis of Barriers and Facilitators to Adapted Physical Activity for Pediatric Patients With Chronic Inflammatory Bowel Diseases",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07383844",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-224",
+      "title": "A Multicenter, Multinational, Randomized, Double-blind, Placebo-controlled Phase 3, Induction Study to Evaluate the Efficacy and Safety of Duvakitug in Participants With Moderately to Severely Active Ulcerative Colitis.",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07184996",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-225",
+      "title": "Multi-source analysis identifies an NPC2-associated macrophage transcriptional program in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1968740",
+      "doi": "10.3389/fimmu.2026.1968740",
+      "pubmedId": "43060933",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-226",
+      "title": "A Multi-centre, Double-blind Randomised Controlled Trial to Compare Modafinil Versus Placebo Over 12 Weeks in Patients With Severe Fatigue and Inflammatory Bowel Disease (MFI): a Feasibility Study",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07295834",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-227",
+      "title": "A propensity score weighted comparison of intravenous and subcutaneous infliximab as maintenance treatment in patients with inflammatory bowel disease: The CISI study",
+      "canonicalUrl": "https://doi.org/10.1177/17562848261499500",
+      "doi": "10.1177/17562848261499500",
+      "pubmedId": "43061312",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-228",
+      "title": "Long-Term Real-World Switch Rates and Adherence Among Patients With Ulcerative Colitis Treated With Upadacitinib or Tumour Necrosis Factor Inhibitors",
+      "canonicalUrl": "https://doi.org/10.1111/apt.71083",
+      "doi": "10.1111/apt.71083",
+      "pubmedId": "43058032",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-229",
+      "title": "A glucomannan from Dendrobium huoshanense ameliorating ulcerative colitis by regulating gut microbiota",
+      "canonicalUrl": "https://doi.org/10.1016/j.ijbiomac.2026.155381",
+      "doi": "10.1016/j.ijbiomac.2026.155381",
+      "pubmedId": "43057353",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-230",
+      "title": "Cellular determinants of treatment-responsiveness in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1093/ecco-jcc/jjag184",
+      "doi": "10.1093/ecco-jcc/jjag184",
+      "pubmedId": "43056723",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-231",
+      "title": "Upadacitinib-associated modulation of NLRP3 inflammasome signaling: mechanistic evidence and translational implications",
+      "canonicalUrl": "https://doi.org/10.1007/s11033-026-13176-w",
+      "doi": "10.1007/s11033-026-13176-w",
+      "pubmedId": "43056005",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-232",
+      "title": "Hierarchical benefit of multidimensional remission in ulcerative colitis: a systematic review and meta-analysis",
+      "canonicalUrl": "https://doi.org/10.1186/s12876-026-05263-w",
+      "doi": "10.1186/s12876-026-05263-w",
+      "pubmedId": "43058529",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-233",
+      "title": "Etrasimod",
+      "canonicalUrl": "https://europepmc.org/abstract/MED/43050558",
+      "doi": "",
+      "pubmedId": "43050558",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-20",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
