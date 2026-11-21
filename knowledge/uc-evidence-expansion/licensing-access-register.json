@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-7b925ac2b136",
-  "generatedAt": "2026-11-20T21:44:29Z",
+  "runId": "uc-exp-6bbc980e6b6d",
+  "generatedAt": "2026-11-21T20:28:03Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -2675,6 +2675,138 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-20",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-235",
+      "title": "Shared genetic susceptibility to ulcerative colitis and rheumatoid arthritis: an integrative analysis of B cells and candidate genes",
+      "canonicalUrl": "https://doi.org/10.1007/s10067-026-08549-2",
+      "doi": "10.1007/s10067-026-08549-2",
+      "pubmedId": "43064879",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-21",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-236",
+      "title": "SGC-CBP30 alleviates ulcerative colitis by inhibiting CBP-mediated STAT3 acetylation to restore intestinal barrier and suppress Th17 responses",
+      "canonicalUrl": "https://doi.org/10.1016/j.imbio.2026.153270",
+      "doi": "10.1016/j.imbio.2026.153270",
+      "pubmedId": "43063915",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-21",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-237",
+      "title": "The mechanistic insights and therapeutic potential of immunoproteasomes in inflammatory bowel disease",
+      "canonicalUrl": "https://doi.org/10.1016/j.bbadis.2026.168539",
+      "doi": "10.1016/j.bbadis.2026.168539",
+      "pubmedId": "43063687",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-21",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-238",
+      "title": "Chronic ulcerative colitis complicated by granulomatosis with polyangiitis and late-onset rectal cancer: A case report",
+      "canonicalUrl": "https://doi.org/10.1097/md.0000000000051511",
+      "doi": "10.1097/md.0000000000051511",
+      "pubmedId": "43063096",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-21",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-239",
+      "title": "Stem Cells and Derivatives in Inflammatory Bowel Disease: Mechanisms, Sources, and Therapeutic Perspectives",
+      "canonicalUrl": "https://doi.org/10.1007/s12015-026-11274-7",
+      "doi": "10.1007/s12015-026-11274-7",
+      "pubmedId": "43062771",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-21",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-240",
+      "title": "Preoperative corticosteroids and postoperative morbidity after accounting for biologic therapy and operative factors in inflammatory bowel disease surgery",
+      "canonicalUrl": "https://doi.org/10.1007/s13304-026-02970-7",
+      "doi": "10.1007/s13304-026-02970-7",
+      "pubmedId": "43062532",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-21",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
