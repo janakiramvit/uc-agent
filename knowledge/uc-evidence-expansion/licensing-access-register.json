@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-6bbc980e6b6d",
-  "generatedAt": "2026-11-21T20:28:03Z",
+  "runId": "uc-exp-18c85e919ea3",
+  "generatedAt": "2026-11-22T20:38:01Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -2807,6 +2807,204 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-21",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-242",
+      "title": "Simultaneous Initiation of Carotegrast Methyl and Corticosteroids for the Induction of Remission in Moderately Active Ulcerative Colitis: Two Case Reports",
+      "canonicalUrl": "https://doi.org/10.7759/cureus.118325",
+      "doi": "10.7759/cureus.118325",
+      "pubmedId": "43066453",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "permitted_open_licence",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-243",
+      "title": "Traditional Chinese Medicine Ameliorates Ulcerative Colitis Through Multi-target Regulation of the NLRP3 Inflammasome: A Systematic Review",
+      "canonicalUrl": "https://doi.org/10.1016/j.jep.2026.122685",
+      "doi": "10.1016/j.jep.2026.122685",
+      "pubmedId": "43067535",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-244",
+      "title": "Precision drug delivery for ulcerative colitis: engineering the colonic microenvironment for site-specific and responsive therapy",
+      "canonicalUrl": "https://doi.org/10.1016/j.ijpharm.2026.127705",
+      "doi": "10.1016/j.ijpharm.2026.127705",
+      "pubmedId": "43067506",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-245",
+      "title": "Topical tacrolimus achieves clinical remission but only marginally delays onset of advanced therapy in chronic proctitis: a dual center retrospective cohort study",
+      "canonicalUrl": "https://doi.org/10.1080/00365521.2026.2766470",
+      "doi": "10.1080/00365521.2026.2766470",
+      "pubmedId": "43066950",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-246",
+      "title": "Integrating machine learning, molecular docking, and 100-ns molecular dynamics simulations to identify SLC6A4 and DPP4 as putative direct-binding targets of koumine in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1016/j.compbiolchem.2026.109596",
+      "doi": "10.1016/j.compbiolchem.2026.109596",
+      "pubmedId": "43067172",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-247",
+      "title": "Early histological remission and prognosis in inflammatory bowel disease: a nationwide cohort study",
+      "canonicalUrl": "https://doi.org/10.1093/ecco-jcc/jjag195",
+      "doi": "10.1093/ecco-jcc/jjag195",
+      "pubmedId": "43066955",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-248",
+      "title": "Tofacitinib as rescue therapy in acute severe ulcerative colitis: a real-world prospective cohort study",
+      "canonicalUrl": "https://doi.org/10.20524/aog.2026.1098",
+      "doi": "10.20524/aog.2026.1098",
+      "pubmedId": "43065989",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-249",
+      "title": "The association between advanced therapies and major adverse cerebrovascular and cardiovascular events in patients with ulcerative colitis: a systematic review and meta-analysis of randomized controlled trials",
+      "canonicalUrl": "https://doi.org/10.20524/aog.2026.1113",
+      "doi": "10.20524/aog.2026.1113",
+      "pubmedId": "43065743",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-250",
+      "title": "Short-term effectiveness, safety and treatment costs of vedolizumab versus infliximab in biologic-naïve patients with moderate-to-severe ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.62347/XBXS6917",
+      "doi": "10.62347/XBXS6917",
+      "pubmedId": "43068034",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-22",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",

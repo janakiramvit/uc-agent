@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-6bbc980e6b6d",
-  "generatedAt": "2026-11-21T20:28:03Z",
+  "runId": "uc-exp-18c85e919ea3",
+  "generatedAt": "2026-11-22T20:38:01Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -896,6 +896,69 @@
       "pubmedId": "43062532",
       "doi": "10.1007/s13304-026-02970-7",
       "canonicalUrl": "https://doi.org/10.1007/s13304-026-02970-7",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-242",
+      "pubmedId": "43066453",
+      "doi": "10.7759/cureus.118325",
+      "canonicalUrl": "https://doi.org/10.7759/cureus.118325",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-243",
+      "pubmedId": "43067535",
+      "doi": "10.1016/j.jep.2026.122685",
+      "canonicalUrl": "https://doi.org/10.1016/j.jep.2026.122685",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-244",
+      "pubmedId": "43067506",
+      "doi": "10.1016/j.ijpharm.2026.127705",
+      "canonicalUrl": "https://doi.org/10.1016/j.ijpharm.2026.127705",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-245",
+      "pubmedId": "43066950",
+      "doi": "10.1080/00365521.2026.2766470",
+      "canonicalUrl": "https://doi.org/10.1080/00365521.2026.2766470",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-246",
+      "pubmedId": "43067172",
+      "doi": "10.1016/j.compbiolchem.2026.109596",
+      "canonicalUrl": "https://doi.org/10.1016/j.compbiolchem.2026.109596",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-247",
+      "pubmedId": "43066955",
+      "doi": "10.1093/ecco-jcc/jjag195",
+      "canonicalUrl": "https://doi.org/10.1093/ecco-jcc/jjag195",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-248",
+      "pubmedId": "43065989",
+      "doi": "10.20524/aog.2026.1098",
+      "canonicalUrl": "https://doi.org/10.20524/aog.2026.1098",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-249",
+      "pubmedId": "43065743",
+      "doi": "10.20524/aog.2026.1113",
+      "canonicalUrl": "https://doi.org/10.20524/aog.2026.1113",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-250",
+      "pubmedId": "43068034",
+      "doi": "10.62347/XBXS6917",
+      "canonicalUrl": "https://doi.org/10.62347/XBXS6917",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],
