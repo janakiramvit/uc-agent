@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-18c85e919ea3` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/45067410780 · **Date:** 2026-11-22
+**Run ID:** `uc-exp-062a73870ae4` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/45305604854 · **Date:** 2026-11-24
 **Run status:** `partial`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,21 +11,21 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 66.4s |
+| Internal research | 450s soft / 540s finalize | 157.4s |
 | Discovery queries | 40 | 16 |
-| Records screened | 200 | 262 |
-| New sources accepted | 40 | 9 |
-| Candidate excerpts | 100 | 12 |
+| Records screened | 200 | 233 |
+| New sources accepted | 40 | 7 |
+| Candidate excerpts | 100 | 1 |
 | PDFs archived | 0 (policy) | 0 |
 
 ## Dispositions
 
 | Disposition | Count |
 |---|---|
-| accepted | 9 |
-| deferred | 45 |
-| duplicate | 197 |
-| rejected | 11 |
+| accepted | 7 |
+| deferred | 41 |
+| duplicate | 165 |
+| rejected | 20 |
 
 ## QA
 
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-251/CLM-319 onward.",
+  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-259/CLM-321 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-251",
-  "firstNewClaimId": "CLM-319",
+  "firstNewSourceId": "SRC-259",
+  "firstNewClaimId": "CLM-321",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",

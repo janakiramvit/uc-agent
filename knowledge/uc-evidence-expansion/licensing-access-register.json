@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-18c85e919ea3",
-  "generatedAt": "2026-11-22T20:38:01Z",
+  "runId": "uc-exp-062a73870ae4",
+  "generatedAt": "2026-11-24T01:33:56Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -3005,6 +3005,160 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-22",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-252",
+      "title": "A Master Protocol for a Phase 3, Multicenter, Open-label, Long-term Extension Study to Evaluate the Long-term Efficacy and Safety of Mirikizumab in Children and Adolescents With Moderate-to-severe Ulcerative Colitis or Crohn's Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04844606",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-253",
+      "title": "Evaluation of the Effects of 10-strain Probiotic (ProLife 10 FORTE) on Gut Microbiota Composition in Patients Presenting With Ulcerative Colitis During the Remission Phase",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06642883",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-254",
+      "title": "A Multicenter, Multinational, Randomized, Double-blind, Placebo-Controlled, Phase 3 Maintenance Study to Evaluate the Efficacy and Safety of Duvakitug in Participants With Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07185009",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-255",
+      "title": "A Phase III, Multicenter, Double-Blind, Placebo-Controlled Study to Assess the Efficacy and Safety of Induction Therapy With RO7790121 in Patients With Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06588855",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-256",
+      "title": "A Phase 3b, Randomized, Multicenter, Controlled Study of Mirikizumab and Placebo or Mirikizumab Concomitantly Administered With Tirzepatide in Adult Participants With Moderately to Severely Active Ulcerative Colitis and Obesity or Overweight",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06937086",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-257",
+      "title": "A hierarchical pH-responsive and β-glucan-functionalized nanoplatform for targeted oral delivery of 6-gingerol for ulcerative colitis treatment",
+      "canonicalUrl": "https://doi.org/10.1016/j.ijbiomac.2026.155398",
+      "doi": "10.1016/j.ijbiomac.2026.155398",
+      "pubmedId": "43068785",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-258",
+      "title": "Plant-derived extracellular vesicle-like nanoparticles in ulcerative colitis: Current progress, mechanisms, and translational challenges",
+      "canonicalUrl": "https://doi.org/10.1016/j.phymed.2026.158936",
+      "doi": "10.1016/j.phymed.2026.158936",
+      "pubmedId": "43068584",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",

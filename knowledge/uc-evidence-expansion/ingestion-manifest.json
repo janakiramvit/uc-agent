@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-18c85e919ea3",
-  "generatedAt": "2026-11-22T20:38:01Z",
+  "runId": "uc-exp-062a73870ae4",
+  "generatedAt": "2026-11-24T01:33:56Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -959,6 +959,55 @@
       "pubmedId": "43068034",
       "doi": "10.62347/XBXS6917",
       "canonicalUrl": "https://doi.org/10.62347/XBXS6917",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-252",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04844606",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-253",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06642883",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-254",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07185009",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-255",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06588855",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-256",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06937086",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-257",
+      "pubmedId": "43068785",
+      "doi": "10.1016/j.ijbiomac.2026.155398",
+      "canonicalUrl": "https://doi.org/10.1016/j.ijbiomac.2026.155398",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-258",
+      "pubmedId": "43068584",
+      "doi": "10.1016/j.phymed.2026.158936",
+      "canonicalUrl": "https://doi.org/10.1016/j.phymed.2026.158936",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],
