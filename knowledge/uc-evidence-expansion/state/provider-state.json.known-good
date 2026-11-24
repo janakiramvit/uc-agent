@@ -1,7 +1,7 @@
 {
   "discoveryStartDate": "2026-11-10",
   "lastRunDate": "2026-11-24",
-  "lastRunId": "uc-exp-062a73870ae4",
+  "lastRunId": "uc-exp-4e38f9464db9",
   "providers": {
     "acg": {
       "consecutiveFailures": 0,
@@ -98,7 +98,6 @@
       "lastSuccessfulCutoff": "2026-11-24",
       "lastSuccessfulRunAt": "2026-11-24T01:33:56Z",
       "recentHitCounts": [
-        4,
         14,
         11,
         11,
@@ -111,7 +110,8 @@
         17,
         9,
         5,
-        5
+        5,
+        13
       ],
       "rejectedKeys": []
     },
@@ -151,7 +151,6 @@
       "lastSuccessfulRunAt": "2026-11-24T01:33:56Z",
       "lastZeroDate": "2026-11-11",
       "recentHitCounts": [
-        0,
         83,
         76,
         52,
@@ -164,7 +163,8 @@
         234,
         272,
         246,
-        229
+        229,
+        184
       ],
       "rejectedKeys": [
         "doi:10.1111/1440-1681.70164",
@@ -360,7 +360,12 @@
         "doi:10.1080/0886022x.2026.2751280",
         "doi:10.7759/cureus.119963",
         "doi:10.1038/s41420-026-03325-2",
-        "doi:10.1016/j.celrep.2026.118344"
+        "doi:10.1016/j.celrep.2026.118344",
+        "doi:10.14309/ajg.0000000000004273",
+        "doi:10.1021/acsami.6c18735",
+        "doi:10.1111/1751-2980.70079",
+        "doi:10.1016/j.phrs.2026.109771",
+        "doi:10.1172/jci.insight.201980"
       ]
     },
     "nice": {
@@ -401,7 +406,6 @@
       "lastSuccessfulCutoff": "2026-11-24",
       "lastSuccessfulRunAt": "2026-11-24T01:33:56Z",
       "recentHitCounts": [
-        25,
         30,
         24,
         30,
@@ -414,7 +418,8 @@
         41,
         34,
         31,
-        17
+        17,
+        20
       ],
       "rejectedKeys": [
         "doi:10.1093/ibd/izag230",
@@ -454,7 +459,11 @@
         "doi:10.3389/fnut.2026.1938995",
         "doi:10.1136/bcr-2026-275175",
         "doi:10.1016/j.celrep.2026.118344",
-        "doi:10.1172/jci.insight.201980"
+        "doi:10.1172/jci.insight.201980",
+        "doi:10.4014/jmb.2601.10001",
+        "doi:10.1159/nim/adxag018",
+        "doi:10.1080/00365521.2026.2766467",
+        "doi:10.1002/iid3.70615"
       ]
     }
   },
@@ -766,6 +775,24 @@
       },
       "runId": "uc-exp-062a73870ae4",
       "window": "2026-11-15 .. 2026-11-24"
+    },
+    {
+      "alerts": 7,
+      "date": "2026-11-24",
+      "errors": 0,
+      "missedDates": [],
+      "providerStatus": {
+        "acg": "no_new_records",
+        "aga": "no_new_records",
+        "bsg": "no_new_records",
+        "clinicaltrials": "ok",
+        "ecco": "no_new_records",
+        "europepmc": "ok",
+        "nice": "no_new_records",
+        "pubmed": "ok"
+      },
+      "runId": "uc-exp-4e38f9464db9",
+      "window": "2026-11-17 .. 2026-11-24"
     }
   ],
   "schemaVersion": "uc-provider-state-1.0.0"

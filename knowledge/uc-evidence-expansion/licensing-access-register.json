@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-062a73870ae4",
-  "generatedAt": "2026-11-24T01:33:56Z",
+  "runId": "uc-exp-4e38f9464db9",
+  "generatedAt": "2026-11-24T23:26:51Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -3154,6 +3154,336 @@
       "canonicalUrl": "https://doi.org/10.1016/j.phymed.2026.158936",
       "doi": "10.1016/j.phymed.2026.158936",
       "pubmedId": "43068584",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-260",
+      "title": "Targeting convergent pathogenic pathways: precision nutrition and lifestyle strategies in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.3389/fmicb.2026.2016659",
+      "doi": "10.3389/fmicb.2026.2016659",
+      "pubmedId": "43075488",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-261",
+      "title": "Nitidine chloride alleviates DSS-induced ulcerative colitis in mice by modulating inflammation-intestinal barrier crosstalk and gut microbiota-metabolite interactions",
+      "canonicalUrl": "https://doi.org/10.3389/fmicb.2026.1957997",
+      "doi": "10.3389/fmicb.2026.1957997",
+      "pubmedId": "43074842",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-262",
+      "title": "Prevalence, etiology, and trajectory of anemia in pediatric inflammatory bowel disease: a systematic review and meta-analysis",
+      "canonicalUrl": "https://doi.org/10.1007/s00431-026-07640-9",
+      "doi": "10.1007/s00431-026-07640-9",
+      "pubmedId": "43076945",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-263",
+      "title": "Upadacitinib durability and clinical relapse following step-down from induction to maintenance dosing in pediatric inflammatory bowel disease",
+      "canonicalUrl": "https://doi.org/10.1002/jpn3.70704",
+      "doi": "10.1002/jpn3.70704",
+      "pubmedId": "43076799",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-264",
+      "title": "A Randomized, Multicenter, Double-Blind, Placebo-Controlled Development Program to Evaluate the Efficacy and Safety of LY4268989 (MORF-057) for the Treatment of Adults With Moderately to Severely Active Ulcerative Colitis (EMERALD-3)",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07415044",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-265",
+      "title": "Implementing a Multimodal RCT Intervention to Improve the Transition of Patients With Crohn's Disease From Pediatric to Adult Care",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT05221281",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-266",
+      "title": "IMPRECTO: prevalence, impact, and under-recognition of urgency and fecal incontinence in pediatric ulcerative colitis: a GETAID pédiatrique study",
+      "canonicalUrl": "https://doi.org/10.1093/ecco-jcc/jjag199",
+      "doi": "10.1093/ecco-jcc/jjag199",
+      "pubmedId": "43077527",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-267",
+      "title": "A Phase 2 Long-Term Extension (LTE) Study to Evaluate The Safety and Efficacy of Efavaleukin Alfa in Subjects With Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT05672199",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-268",
+      "title": "A Study to Evaluate the Long-term Safety and Efficacy of Long-acting Antibodies as Single Agents and in Combinations in Participants With Inflammatory Bowel Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07652294",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-269",
+      "title": "Delta Neutrophil Index as a Novel Marker of Disease Activity in Pediatric Inflammatory Bowel Disease",
+      "canonicalUrl": "https://doi.org/10.1111/ped.70601",
+      "doi": "10.1111/ped.70601",
+      "pubmedId": "43075781",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-270",
+      "title": "A Phase 1b Study Evaluating ABBV-319 in Subjects With Advanced Therapy Experienced, Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07956949",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-271",
+      "title": "A Master Protocol for Phase 2, Randomized, Controlled Studies of Multiple Interventions for the Treatment of Adults With Moderately to Severely Active Ulcerative Colitis or Crohn's Disease",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07483073",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-272",
+      "title": "Randomized Trial of Non-Invasive Vagal Nerve Stimulation in UC-IBS and Mild Ulcerative Colitis: NIH Aim 3",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07956013",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-273",
+      "title": "A santonin derivative, QX-6, alleviates ulcerative colitis by suppressing macrophage oxidative stress and inflammatory responses via modulation of ferroptosis-related signaling",
+      "canonicalUrl": "https://doi.org/10.1016/s1875-5364(26)61236-8",
+      "doi": "10.1016/s1875-5364(26)61236-8",
+      "pubmedId": "43072978",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-274",
+      "title": "Fluconazole-Resistant Candida albicans Isolates Blunt Infliximab Responsiveness in Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.1111/apm.70298",
+      "doi": "10.1111/apm.70298",
+      "pubmedId": "43073200",
       "statedLicence": "not stated in retrieved metadata",
       "localArchivalPermitted": "no_not_established",
       "redistributionPermitted": "not_established",
