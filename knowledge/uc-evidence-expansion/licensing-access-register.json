@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-4e38f9464db9",
-  "generatedAt": "2026-11-24T23:26:51Z",
+  "runId": "uc-exp-0b1a2e55a3d1",
+  "generatedAt": "2026-11-25T23:00:11Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -3489,6 +3489,336 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-24",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-276",
+      "title": "Tofacitinib-based advanced combination therapy in refractory inflammatory bowel disease: A real-world cohort study",
+      "canonicalUrl": "https://doi.org/10.1007/s12664-026-02076-3",
+      "doi": "10.1007/s12664-026-02076-3",
+      "pubmedId": "43084227",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-277",
+      "title": "Two-Year Efficacy and Safety of Mirikizumab in Chinese Patients with Moderately to Severely Active Ulcerative Colitis: A Subpopulation Analysis of LUCENT-3 Open-Label Extension Study",
+      "canonicalUrl": "https://doi.org/10.1007/s40259-026-00812-x",
+      "doi": "10.1007/s40259-026-00812-x",
+      "pubmedId": "43084209",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-278",
+      "title": "Pre-Treatment Immune Signatures and Cytokine Patterns Associated with Vedolizumab Response in Inflammatory Bowel Disease: A Pilot Study",
+      "canonicalUrl": "https://doi.org/10.3390/cells15222061",
+      "doi": "10.3390/cells15222061",
+      "pubmedId": "43082721",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-279",
+      "title": "Identification of hub genes involved in the pathogenesis of ulcerative colitis: a multi-omics study integrating machine learning, Mendelian randomization, and mediation analysis",
+      "canonicalUrl": "https://doi.org/10.3389/fgene.2026.1814203",
+      "doi": "10.3389/fgene.2026.1814203",
+      "pubmedId": "43081193",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "permitted_open_licence",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-280",
+      "title": "Intestinal Diseases in Men and Women: Etiology, Diagnosis, and Therapeutic Approaches",
+      "canonicalUrl": "https://doi.org/10.3390/diseases14110392",
+      "doi": "10.3390/diseases14110392",
+      "pubmedId": "43082574",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-281",
+      "title": "A Phase 2, Multi-center, Randomized, Double-blind, Placebo-controlled Parallel-group Study to Evaluate the Efficacy and Safety of Dupilumab Therapy in Patients With Moderately to Severely Active Ulcerative Colitis With an Eosinophilic Phenotype",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT05731128",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-282",
+      "title": "Microbiome-targeted Diet Therapy in Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07520461",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-283",
+      "title": "Assessment of Gut Microbiota Dysbiosis in Inflammatory Bowel Disease by Real-Time Polymerase Chain Reaction: Correlation With Disease Severity",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07959666",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-284",
+      "title": "Characterization of Alternative Holobiont States in Ulcerative Colitis to Pave the Way for Innovative Treatment Strategies (CHARTS)",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07958899",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-285",
+      "title": "Impact of a Human Origin Heat Inactivated Probiotics-Lactobacillus Paracasei D3.5 (LpD3.5) as Dietary Supplement on Gut Mucin and Intestinal Permeability in Adults With IBD",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07017959",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-286",
+      "title": "Implementation of a Family-Based Mediterranean-Style Dietary Intervention in First-Degree Relatives of Children With IBD: A Prospective Multicenter Interventional Cohort Study",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07958977",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-287",
+      "title": "Carrot Juice as Treatment for Chronic Pouchitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07958756",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-288",
+      "title": "SLC15A3 regulates ulcerative colitis progression by orchestrating intestinal macrophage infiltration and activation",
+      "canonicalUrl": "https://doi.org/10.1038/s41401-026-01966-8",
+      "doi": "10.1038/s41401-026-01966-8",
+      "pubmedId": "43078925",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-289",
+      "title": "Fucoidan-functionalized Prussian blue nanozymes loaded with baicalin for ulcerative colitis therapy via intracellular-extracellular ROS regulation",
+      "canonicalUrl": "https://doi.org/10.1016/j.bioadv.2026.215319",
+      "doi": "10.1016/j.bioadv.2026.215319",
+      "pubmedId": "43078025",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-290",
+      "title": "Missed Diagnosis of Mantle Cell Lymphoma in a Patient Initially Diagnosed With Ulcerative Colitis: A Case Report",
+      "canonicalUrl": "https://doi.org/10.1177/23247096261509964",
+      "doi": "10.1177/23247096261509964",
+      "pubmedId": "43078063",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-25",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",

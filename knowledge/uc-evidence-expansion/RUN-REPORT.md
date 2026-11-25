@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-4e38f9464db9` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/45509696601 · **Date:** 2026-11-24
+**Run ID:** `uc-exp-0b1a2e55a3d1` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/45717646768 · **Date:** 2026-11-25
 **Run status:** `partial`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,9 +11,9 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 131.2s |
+| Internal research | 450s soft / 540s finalize | 90.1s |
 | Discovery queries | 40 | 16 |
-| Records screened | 200 | 202 |
+| Records screened | 200 | 255 |
 | New sources accepted | 40 | 15 |
 | Candidate excerpts | 100 | 5 |
 | PDFs archived | 0 (policy) | 0 |
@@ -23,9 +23,9 @@
 | Disposition | Count |
 |---|---|
 | accepted | 15 |
-| deferred | 26 |
-| duplicate | 137 |
-| rejected | 24 |
+| deferred | 33 |
+| duplicate | 158 |
+| rejected | 49 |
 
 ## QA
 
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-275/CLM-327 onward.",
+  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-291/CLM-333 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-275",
-  "firstNewClaimId": "CLM-327",
+  "firstNewSourceId": "SRC-291",
+  "firstNewClaimId": "CLM-333",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",
