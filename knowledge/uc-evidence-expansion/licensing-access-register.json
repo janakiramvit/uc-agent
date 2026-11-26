@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-0b1a2e55a3d1",
-  "generatedAt": "2026-11-25T23:00:11Z",
+  "runId": "uc-exp-a44b68b5d7a7",
+  "generatedAt": "2026-11-26T22:54:12Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -3819,6 +3819,644 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-25",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-292",
+      "title": "Atractylodes macrocephala in Ulcerative Colitis: Bioactive Constituents, Microbiota, and Translational Gaps",
+      "canonicalUrl": "https://doi.org/10.3390/ph19111794",
+      "doi": "10.3390/ph19111794",
+      "pubmedId": "43093378",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-293",
+      "title": "Pectin as a Multifunctional Therapeutic Platform for Ulcerative Colitis: Integrating Colonic Targeting, Microbiota Remodeling, and Antioxidant Synergy",
+      "canonicalUrl": "https://doi.org/10.3390/ph19111737",
+      "doi": "10.3390/ph19111737",
+      "pubmedId": "43093322",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-294",
+      "title": "Environmentally Friendly LC-MS/MS Method for the Determination of Etrasimod in Human Plasma via Advanced Phospholipid Matrix Removal",
+      "canonicalUrl": "https://doi.org/10.3390/ph19111747",
+      "doi": "10.3390/ph19111747",
+      "pubmedId": "43093332",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-295",
+      "title": "Increased Relative Abundance of Lactobacilli Species in the Gut Microbiota of Patients with Crohn's Disease and Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.3390/ijms272210157",
+      "doi": "10.3390/ijms272210157",
+      "pubmedId": "43091783",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-296",
+      "title": "Prevalence of Fatigue in Swedish Patients with Inflammatory Bowel Disease, and Factors Contributing to Fatigue-A Mixed-Methods Study",
+      "canonicalUrl": "https://doi.org/10.3390/jcm15229090",
+      "doi": "10.3390/jcm15229090",
+      "pubmedId": "43091122",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-297",
+      "title": "HLA-DQA1*05 and HLA-DQA1*05/HLA-DQB1*02 Co-Carriage in Relation to Anti-TNF Antibody Concentrations and Response in Iraqi Patients with Inflammatory Bowel Disease",
+      "canonicalUrl": "https://doi.org/10.3390/ijms272210406",
+      "doi": "10.3390/ijms272210406",
+      "pubmedId": "43092029",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-298",
+      "title": "Biochemical and Serological Changes, Including Thyroid Function and Helicobacter pylori, in Inflammatory Bowel Disease Patients Treated with Upadacitinib: A Retrospective Observational Study",
+      "canonicalUrl": "https://doi.org/10.3390/life16111880",
+      "doi": "10.3390/life16111880",
+      "pubmedId": "43090701",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-299",
+      "title": "Microbiota-Driven Gut-Liver Axis Dysregulation in Primary Sclerosing Cholangitis-Ulcerative Colitis Comorbidity: A Narrative Review",
+      "canonicalUrl": "https://doi.org/10.3390/microorganisms14112594",
+      "doi": "10.3390/microorganisms14112594",
+      "pubmedId": "43092458",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-300",
+      "title": "Natural Fungal Fermentation Broth of Scleroderma bovista Ameliorates Ulcerative Colitis by Suppressing the NF-κB Pathway and Gut Microbial Dysbiosis",
+      "canonicalUrl": "https://doi.org/10.3390/microorganisms14112673",
+      "doi": "10.3390/microorganisms14112673",
+      "pubmedId": "43092536",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-301",
+      "title": "Leucine-Rich Alpha-2 Glycoprotein as a Useful Biomarker for Monitoring Endoscopic and Histological Activity in Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.3390/jcm15229121",
+      "doi": "10.3390/jcm15229121",
+      "pubmedId": "43091154",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-302",
+      "title": "Advanced Combination Therapy in IBD",
+      "canonicalUrl": "https://doi.org/10.3390/biom16111615",
+      "doi": "10.3390/biom16111615",
+      "pubmedId": "43090004",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-303",
+      "title": "Pithecellobium clypearia ameliorates ulcerative colitis through regulation of purine metabolism and gut microbiota",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1913004",
+      "doi": "10.3389/fimmu.2026.1913004",
+      "pubmedId": "43094757",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "permitted_open_licence",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-304",
+      "title": "Identification and characterization of ion channel-related signatures in ulcerative colitis: an integrated multi-omics and machine learning analysis",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1988635",
+      "doi": "10.3389/fimmu.2026.1988635",
+      "pubmedId": "43094521",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "permitted_open_licence",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-305",
+      "title": "Safety profile and potential favorable reporting signals of liraglutide in patients with ulcerative colitis: A FAERS pharmacovigilance and network pharmacology study",
+      "canonicalUrl": "https://doi.org/10.36721/PJPS/2026.40.16851.1",
+      "doi": "10.36721/PJPS/2026.40.16851.1",
+      "pubmedId": "43095744",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-306",
+      "title": "Updates in dysplasia surveillance in inflammatory bowel disease",
+      "canonicalUrl": "https://doi.org/10.1080/17474124.2026.2763528",
+      "doi": "10.1080/17474124.2026.2763528",
+      "pubmedId": "43097450",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-307",
+      "title": "From p40 to p19 Inhibition in Pediatric Inflammatory Bowel Disease: Translating Adult Comparative Evidence into Pediatric Practice",
+      "canonicalUrl": "https://doi.org/10.1007/s40272-026-00785-y",
+      "doi": "10.1007/s40272-026-00785-y",
+      "pubmedId": "43097263",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-308",
+      "title": "Saikosaponin D Suppresses NLRP3 Inflammasome Activation to Alleviate Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.1142/S0192415X26500953",
+      "doi": "10.1142/S0192415X26500953",
+      "pubmedId": "43095798",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-309",
+      "title": "Maintenance of Efficacy Outcomes at Week 52 Among Etrasimod Induction Responders: An Analysis From the Phase 3 ELEVATE UC 52 Trial",
+      "canonicalUrl": "https://doi.org/10.1159/ddi/acnag011",
+      "doi": "10.1159/ddi/acnag011",
+      "pubmedId": "43096337",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-310",
+      "title": "Upadacitinib for Acute Severe Ulcerative Colitis: Real-World Tertiary Care Outcomes",
+      "canonicalUrl": "https://doi.org/10.1159/dig/acmag024",
+      "doi": "10.1159/dig/acmag024",
+      "pubmedId": "43096333",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-311",
+      "title": "Prebiotic Blends and Remission in Inflammatory Bowel Disease: A Brazilian Year-Long Nonrandomized Pilot Trial",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112664",
+      "doi": "10.3390/biomedicines14112664",
+      "pubmedId": "43087919",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-312",
+      "title": "LGALS1-Associated Candidate Myeloid Signature and In Silico Regulatory Analysis in Ulcerative Colitis: A Bioinformatics Study",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112643",
+      "doi": "10.3390/biomedicines14112643",
+      "pubmedId": "43087898",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-313",
+      "title": "Integrated Single-Cell and Bulk Transcriptomics Reveal Myeloid-Cell Heterogeneity in Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112524",
+      "doi": "10.3390/biomedicines14112524",
+      "pubmedId": "43087780",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-314",
+      "title": "Clinical characteristics, genetics, and long-term outcomes in children with very early-onset inflammatory bowel disease: a Turkish cohort",
+      "canonicalUrl": "https://doi.org/10.1007/s00431-026-07598-8",
+      "doi": "10.1007/s00431-026-07598-8",
+      "pubmedId": "43086352",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-315",
+      "title": "High-Fat Diet Aggravates Dampness-Heat Ulcerative Colitis via Palmitic Acid-Mediated Trained Immunity and the Regulatory Effect of Shaoyao Decoction",
+      "canonicalUrl": "https://doi.org/10.1016/j.jep.2026.122684",
+      "doi": "10.1016/j.jep.2026.122684",
+      "pubmedId": "43085601",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-316",
+      "title": "Integrated profiling of the extracellular redox metabolome is characterized by compensated oxidative stress in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1016/j.freeradbiomed.2026.11.044",
+      "doi": "10.1016/j.freeradbiomed.2026.11.044",
+      "pubmedId": "43085508",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-317",
+      "title": "Palmatine alleviates ulcerative colitis by targeting genes associated with the neutrophil phase",
+      "canonicalUrl": "https://doi.org/10.1016/j.ejphar.2026.179568",
+      "doi": "10.1016/j.ejphar.2026.179568",
+      "pubmedId": "43085447",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-318",
+      "title": "Interleukin Networks in Ulcerative Colitis: Pathogenic Mechanisms, Context-Dependent Functions, and Therapeutic Opportunities",
+      "canonicalUrl": "https://doi.org/10.3390/cimb48111126",
+      "doi": "10.3390/cimb48111126",
+      "pubmedId": "43088427",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-319",
+      "title": "Mucosal Gene Expression Signatures Associated with Response to Tofacitinib and Upadacitinib in Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112456",
+      "doi": "10.3390/biomedicines14112456",
+      "pubmedId": "43087712",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-320",
+      "title": "Microbial butyrate and tryptophan enzyme profiles and host immunometabolic programmes in ulcerative colitis: A secondary multi-omics analysis of public metagenomic and mucosal transcriptomic data",
+      "canonicalUrl": "https://doi.org/10.1016/j.enzmictec.2026.110974",
+      "doi": "10.1016/j.enzmictec.2026.110974",
+      "pubmedId": "43084878",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-26",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",

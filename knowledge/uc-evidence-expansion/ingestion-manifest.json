@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-0b1a2e55a3d1",
-  "generatedAt": "2026-11-25T23:00:11Z",
+  "runId": "uc-exp-a44b68b5d7a7",
+  "generatedAt": "2026-11-26T22:54:12Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -1218,6 +1218,209 @@
       "pubmedId": "43078063",
       "doi": "10.1177/23247096261509964",
       "canonicalUrl": "https://doi.org/10.1177/23247096261509964",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-292",
+      "pubmedId": "43093378",
+      "doi": "10.3390/ph19111794",
+      "canonicalUrl": "https://doi.org/10.3390/ph19111794",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-293",
+      "pubmedId": "43093322",
+      "doi": "10.3390/ph19111737",
+      "canonicalUrl": "https://doi.org/10.3390/ph19111737",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-294",
+      "pubmedId": "43093332",
+      "doi": "10.3390/ph19111747",
+      "canonicalUrl": "https://doi.org/10.3390/ph19111747",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-295",
+      "pubmedId": "43091783",
+      "doi": "10.3390/ijms272210157",
+      "canonicalUrl": "https://doi.org/10.3390/ijms272210157",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-296",
+      "pubmedId": "43091122",
+      "doi": "10.3390/jcm15229090",
+      "canonicalUrl": "https://doi.org/10.3390/jcm15229090",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-297",
+      "pubmedId": "43092029",
+      "doi": "10.3390/ijms272210406",
+      "canonicalUrl": "https://doi.org/10.3390/ijms272210406",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-298",
+      "pubmedId": "43090701",
+      "doi": "10.3390/life16111880",
+      "canonicalUrl": "https://doi.org/10.3390/life16111880",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-299",
+      "pubmedId": "43092458",
+      "doi": "10.3390/microorganisms14112594",
+      "canonicalUrl": "https://doi.org/10.3390/microorganisms14112594",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-300",
+      "pubmedId": "43092536",
+      "doi": "10.3390/microorganisms14112673",
+      "canonicalUrl": "https://doi.org/10.3390/microorganisms14112673",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-301",
+      "pubmedId": "43091154",
+      "doi": "10.3390/jcm15229121",
+      "canonicalUrl": "https://doi.org/10.3390/jcm15229121",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-302",
+      "pubmedId": "43090004",
+      "doi": "10.3390/biom16111615",
+      "canonicalUrl": "https://doi.org/10.3390/biom16111615",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-303",
+      "pubmedId": "43094757",
+      "doi": "10.3389/fimmu.2026.1913004",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1913004",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-304",
+      "pubmedId": "43094521",
+      "doi": "10.3389/fimmu.2026.1988635",
+      "canonicalUrl": "https://doi.org/10.3389/fimmu.2026.1988635",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-305",
+      "pubmedId": "43095744",
+      "doi": "10.36721/PJPS/2026.40.16851.1",
+      "canonicalUrl": "https://doi.org/10.36721/PJPS/2026.40.16851.1",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-306",
+      "pubmedId": "43097450",
+      "doi": "10.1080/17474124.2026.2763528",
+      "canonicalUrl": "https://doi.org/10.1080/17474124.2026.2763528",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-307",
+      "pubmedId": "43097263",
+      "doi": "10.1007/s40272-026-00785-y",
+      "canonicalUrl": "https://doi.org/10.1007/s40272-026-00785-y",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-308",
+      "pubmedId": "43095798",
+      "doi": "10.1142/S0192415X26500953",
+      "canonicalUrl": "https://doi.org/10.1142/S0192415X26500953",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-309",
+      "pubmedId": "43096337",
+      "doi": "10.1159/ddi/acnag011",
+      "canonicalUrl": "https://doi.org/10.1159/ddi/acnag011",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-310",
+      "pubmedId": "43096333",
+      "doi": "10.1159/dig/acmag024",
+      "canonicalUrl": "https://doi.org/10.1159/dig/acmag024",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-311",
+      "pubmedId": "43087919",
+      "doi": "10.3390/biomedicines14112664",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112664",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-312",
+      "pubmedId": "43087898",
+      "doi": "10.3390/biomedicines14112643",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112643",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-313",
+      "pubmedId": "43087780",
+      "doi": "10.3390/biomedicines14112524",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112524",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-314",
+      "pubmedId": "43086352",
+      "doi": "10.1007/s00431-026-07598-8",
+      "canonicalUrl": "https://doi.org/10.1007/s00431-026-07598-8",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-315",
+      "pubmedId": "43085601",
+      "doi": "10.1016/j.jep.2026.122684",
+      "canonicalUrl": "https://doi.org/10.1016/j.jep.2026.122684",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-316",
+      "pubmedId": "43085508",
+      "doi": "10.1016/j.freeradbiomed.2026.11.044",
+      "canonicalUrl": "https://doi.org/10.1016/j.freeradbiomed.2026.11.044",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-317",
+      "pubmedId": "43085447",
+      "doi": "10.1016/j.ejphar.2026.179568",
+      "canonicalUrl": "https://doi.org/10.1016/j.ejphar.2026.179568",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-318",
+      "pubmedId": "43088427",
+      "doi": "10.3390/cimb48111126",
+      "canonicalUrl": "https://doi.org/10.3390/cimb48111126",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-319",
+      "pubmedId": "43087712",
+      "doi": "10.3390/biomedicines14112456",
+      "canonicalUrl": "https://doi.org/10.3390/biomedicines14112456",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-320",
+      "pubmedId": "43084878",
+      "doi": "10.1016/j.enzmictec.2026.110974",
+      "canonicalUrl": "https://doi.org/10.1016/j.enzmictec.2026.110974",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],
