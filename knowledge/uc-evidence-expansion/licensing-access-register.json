@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-a44b68b5d7a7",
-  "generatedAt": "2026-11-26T22:54:12Z",
+  "runId": "uc-exp-bf2271e21c38",
+  "generatedAt": "2026-11-27T22:34:43Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -4457,6 +4457,336 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-26",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-322",
+      "title": "High sensitivity of anti-integrin αvβ6 immunoglobulin G serology in differentiating ulcerative colitis from acute diarrhoeal disease",
+      "canonicalUrl": "https://doi.org/10.1097/MEG.0000000000003260",
+      "doi": "10.1097/MEG.0000000000003260",
+      "pubmedId": "43102469",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-323",
+      "title": "Predictors of Response to Anti-Tumour Necrosis Factor Treatment in Inflammatory Bowel Disease: A Nationwide Danish Cohort Study",
+      "canonicalUrl": "https://doi.org/10.1111/apt.71110",
+      "doi": "10.1111/apt.71110",
+      "pubmedId": "43102083",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-324",
+      "title": "Exploratory Analysis of N6-Methyladenosine Regulator Expression and Predicted Traditional Chinese Medicine-Target Associations in Ulcerative Colitis",
+      "canonicalUrl": "https://doi.org/10.3791/73684",
+      "doi": "10.3791/73684",
+      "pubmedId": "43102297",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-325",
+      "title": "Does Epstein-Barr virus contribute to the causation of inflammatory bowel disease?",
+      "canonicalUrl": "https://doi.org/10.1097/MEG.0000000000003297",
+      "doi": "10.1097/MEG.0000000000003297",
+      "pubmedId": "43102464",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-326",
+      "title": "A Phase IIb, Multicenter, Double-blind, Placebo-controlled Induction Study With an Active Treatment Extension to Assess the Efficacy, Safety, and Pharmacokinetics of RO7837195 in Patients With Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06979336",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-327",
+      "title": "Effects of a Fermented Food-Supplemented on Patients With Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04401605",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-328",
+      "title": "Provide Pre-approval Single Patient Expanded Access (Compassionate Use) of Etrasimod for Patients.",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06025227",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-329",
+      "title": "An Open-Label, Proof of Concept Study of Vorinostat for the Treatment of Moderate-to-Severe Crohn's Disease, Ulcerative Colitis, and Chronic Granulomatous Disease Colitis Patients and Maintenance Therapy With Ustekinumab",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT03167437",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-330",
+      "title": "A Phase IIa, Multicenter, Randomized, Double-blind, Placebo-controlled, Clinical Study to Evaluate the Safety, Tolerability, Pharmacokinetics and Clinical Efficacy of ISM5411 in Adult Patients With Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07265570",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-331",
+      "title": "The Influence of a Fasting Mimicking Diet on Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT03615690",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-332",
+      "title": "An Open-Label, Single-Arm Study to Evaluate the Efficacy, Pharmacokinetics, and Safety of Etrasimod in Adolescent Participants With Moderately to Severely Active Ulcerative Colitis",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT05287126",
+      "doi": "",
+      "pubmedId": "",
+      "statedLicence": "ClinicalTrials.gov public registry record",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-333",
+      "title": "An anti-inflammatory diet is associated with enrichment of beneficial bacteria and increased microbial richness/evenness in adults with and without Inflammatory Bowel Disease: results from a cross-sectional Dietary Inflammatory Index study",
+      "canonicalUrl": "https://doi.org/10.1016/j.jand.2026.156943",
+      "doi": "10.1016/j.jand.2026.156943",
+      "pubmedId": "43098421",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-334",
+      "title": "Liver Biochemical and Clinical Outcomes After IL-23 Pathway Therapy in IBD Patients With Mild Baseline Liver Test Abnormalities: A Propensity-Matched Cohort Study",
+      "canonicalUrl": "https://doi.org/10.1016/j.clinre.2026.102977",
+      "doi": "10.1016/j.clinre.2026.102977",
+      "pubmedId": "43098293",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-335",
+      "title": "P300 as an epigenetic regulatory node linking berberine to attenuated H3K27ac/STAT3 inflammatory transcription in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1016/j.taap.2026.118127",
+      "doi": "10.1016/j.taap.2026.118127",
+      "pubmedId": "43098275",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-336",
+      "title": "Quantitative image feature integrated digital pathology model based on deep learning and machine learning for binary histological severity stratification of ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1186/s12876-026-05192-8",
+      "doi": "10.1186/s12876-026-05192-8",
+      "pubmedId": "43099398",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-27",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-a44b68b5d7a7",
-  "generatedAt": "2026-11-26T22:54:12Z",
+  "runId": "uc-exp-bf2271e21c38",
+  "generatedAt": "2026-11-27T22:34:43Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -1421,6 +1421,111 @@
       "pubmedId": "43084878",
       "doi": "10.1016/j.enzmictec.2026.110974",
       "canonicalUrl": "https://doi.org/10.1016/j.enzmictec.2026.110974",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-322",
+      "pubmedId": "43102469",
+      "doi": "10.1097/MEG.0000000000003260",
+      "canonicalUrl": "https://doi.org/10.1097/MEG.0000000000003260",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-323",
+      "pubmedId": "43102083",
+      "doi": "10.1111/apt.71110",
+      "canonicalUrl": "https://doi.org/10.1111/apt.71110",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-324",
+      "pubmedId": "43102297",
+      "doi": "10.3791/73684",
+      "canonicalUrl": "https://doi.org/10.3791/73684",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-325",
+      "pubmedId": "43102464",
+      "doi": "10.1097/MEG.0000000000003297",
+      "canonicalUrl": "https://doi.org/10.1097/MEG.0000000000003297",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-326",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06979336",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-327",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT04401605",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-328",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT06025227",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-329",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT03167437",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-330",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT07265570",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-331",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT03615690",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-332",
+      "pubmedId": "",
+      "doi": "",
+      "canonicalUrl": "https://clinicaltrials.gov/study/NCT05287126",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-333",
+      "pubmedId": "43098421",
+      "doi": "10.1016/j.jand.2026.156943",
+      "canonicalUrl": "https://doi.org/10.1016/j.jand.2026.156943",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-334",
+      "pubmedId": "43098293",
+      "doi": "10.1016/j.clinre.2026.102977",
+      "canonicalUrl": "https://doi.org/10.1016/j.clinre.2026.102977",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-335",
+      "pubmedId": "43098275",
+      "doi": "10.1016/j.taap.2026.118127",
+      "canonicalUrl": "https://doi.org/10.1016/j.taap.2026.118127",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-336",
+      "pubmedId": "43099398",
+      "doi": "10.1186/s12876-026-05192-8",
+      "canonicalUrl": "https://doi.org/10.1186/s12876-026-05192-8",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],

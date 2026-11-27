@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — QA Report
 
-**Run ID:** `uc-exp-a44b68b5d7a7` · **Generated:** 2026-11-26T22:54:12Z
+**Run ID:** `uc-exp-bf2271e21c38` · **Generated:** 2026-11-27T22:34:43Z
 
 > Automated QA only. Automated QA does NOT constitute clinical approval.
 
@@ -8,7 +8,7 @@
 
 | # | Check | Result | Detail |
 |---|---|---|---|
-| QA-01 | Every candidate claim references a known source | **PASS** | 159 claims / 202 sources |
+| QA-01 | Every candidate claim references a known source | **PASS** | 165 claims / 217 sources |
 | QA-02 | Every claim has a non-empty exact excerpt and locator | **PASS** | checked |
 | QA-03 | Every claim is marked mechanically extracted / abstract_only | **FAIL** | checked |
 | QA-04 | DOI (when present) is well-formed; every source has an identifier | **PASS** | checked |
@@ -23,7 +23,7 @@
 | QA-13 | No secret / token / connection-string pattern in outputs | **PASS** | regex scan |
 | QA-14 | targetIndex is NONE (no promotion) | **PASS** | checked |
 | QA-15 | No Reddit URL / handle in any output | **PASS** | regex scan |
-| QA-16 | No candidate claim is attached to a trial registry source (trials are never treatment-effect claims) | **PASS** | 60 trial source(s) |
+| QA-16 | No candidate claim is attached to a trial registry source (trials are never treatment-effect claims) | **PASS** | 67 trial source(s) |
 | QA-17 | Every source's evidenceType (when present) is one of the four separate evidence types | **PASS** | checked |
 | QA-18 | No PDF link or downloaded-file field is stored on any source | **PASS** | checked |
 | QA-19 | Every extracted claim is flagged as requiring full-text verification | **PASS** | checked |

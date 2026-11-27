@@ -1,6 +1,6 @@
 # UC Evidence-Discovery — Daily Run Report
 
-**Run ID:** `uc-exp-a44b68b5d7a7` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/45907450574 · **Date:** 2026-11-26
+**Run ID:** `uc-exp-bf2271e21c38` · **Run:** https://github.com/janakiramvit/uc-agent/actions/runs/46077188451 · **Date:** 2026-11-27
 **Run status:** `partial`
 
 > Automated discovery + staging only. Nothing here is clinically approved. All new records are
@@ -11,21 +11,21 @@
 
 | Limit | Ceiling | This run |
 |---|---|---|
-| Internal research | 450s soft / 540s finalize | 119.9s |
+| Internal research | 450s soft / 540s finalize | 163.5s |
 | Discovery queries | 40 | 16 |
-| Records screened | 200 | 374 |
-| New sources accepted | 40 | 29 |
-| Candidate excerpts | 100 | 27 |
+| Records screened | 200 | 410 |
+| New sources accepted | 40 | 15 |
+| Candidate excerpts | 100 | 6 |
 | PDFs archived | 0 (policy) | 0 |
 
 ## Dispositions
 
 | Disposition | Count |
 |---|---|
-| accepted | 29 |
-| deferred | 42 |
-| duplicate | 174 |
-| rejected | 129 |
+| accepted | 15 |
+| deferred | 68 |
+| duplicate | 214 |
+| rejected | 113 |
 
 ## QA
 
@@ -36,12 +36,12 @@
 
 ```json
 {
-  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-321/CLM-361 onward.",
+  "description": "Next run: search every configured provider (Europe PMC, PubMed, ClinicalTrials.gov, AGA, ACG, ECCO, NICE, BSG) for evidence published or updated since that provider's last successful cutoff (state/provider-state.json). Skip every identifier in processedSourceIdentifiers. Allocate new ids from SRC-337/CLM-368 onward.",
   "topicId": "T-UCX-03",
   "searchId": null,
   "cursor": 0,
-  "firstNewSourceId": "SRC-321",
-  "firstNewClaimId": "CLM-361",
+  "firstNewSourceId": "SRC-337",
+  "firstNewClaimId": "CLM-368",
   "doNot": [
     "approve any source or claim",
     "download a PDF whose redistribution licence is not established",
