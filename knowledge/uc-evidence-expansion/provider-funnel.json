@@ -1,21 +1,9 @@
 {
   "alerts": [
     {
-      "code": "ACCESS_LIMITED",
-      "level": "WARNING",
-      "message": "gastro.org: robots.txt disallows automated access to /guidelines/; covered via other channel only",
-      "provider": "aga"
-    },
-    {
       "code": "NO_NEW_RECORDS",
       "level": "INFO",
-      "message": "provider healthy (wide-window canary returned 11); no new matching records in 2026-11-25 .. 2026-11-27",
-      "provider": "aga"
-    },
-    {
-      "code": "NO_NEW_RECORDS",
-      "level": "INFO",
-      "message": "provider healthy (wide-window canary returned 7); no new matching records in 2026-11-25 .. 2026-11-27",
+      "message": "provider healthy (wide-window canary returned 7); no new matching records in 2026-11-26 .. 2026-11-28",
       "provider": "acg"
     },
     {
@@ -27,23 +15,35 @@
     {
       "code": "NO_NEW_RECORDS",
       "level": "INFO",
-      "message": "provider healthy (wide-window canary returned 8); no new matching records in 2026-11-25 .. 2026-11-27",
+      "message": "provider healthy (wide-window canary returned 8); no new matching records in 2026-11-26 .. 2026-11-28",
       "provider": "ecco"
     },
     {
       "code": "NO_NEW_RECORDS",
       "level": "INFO",
-      "message": "provider healthy (wide-window canary returned 2); no new matching records in 2026-11-25 .. 2026-11-27",
+      "message": "provider healthy (wide-window canary returned 2); no new matching records in 2026-11-26 .. 2026-11-28",
       "provider": "nice"
     },
     {
       "code": "NO_NEW_RECORDS",
       "level": "INFO",
-      "message": "provider healthy (wide-window canary returned 6); no new matching records in 2026-11-25 .. 2026-11-27",
+      "message": "provider healthy (wide-window canary returned 6); no new matching records in 2026-11-26 .. 2026-11-28",
       "provider": "bsg"
+    },
+    {
+      "code": "ACCESS_LIMITED",
+      "level": "WARNING",
+      "message": "gastro.org: robots.txt disallows automated access to /guidelines/; covered via other channel only",
+      "provider": "aga"
+    },
+    {
+      "code": "NO_NEW_RECORDS",
+      "level": "INFO",
+      "message": "provider healthy (wide-window canary returned 11); no new matching records in 2026-11-26 .. 2026-11-28",
+      "provider": "aga"
     }
   ],
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "missedDates": [],
   "providers": {
     "acg": {
@@ -66,10 +66,10 @@
       "notes": [],
       "provider": "acg",
       "queries": [
-        "site:gi.org (robots-permitting listing; window 2026-11-25..2026-11-27) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenterol\"[ta])",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenterol\"[ta])  [edat 2026/11/25..2026/11/25]",
+        "site:gi.org (robots-permitting listing; window 2026-11-26..2026-11-28) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenterol\"[ta])",
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenterol\"[ta])  [edat 2026/11/26..2026/11/26]",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenterol\"[ta])  [edat 2026/11/27..2026/11/27]"
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenterol\"[ta])  [edat 2026/11/27..2026/11/27]",
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Am J Gastroenterol\"[ta])  [edat 2026/11/28..2026/11/28]"
       ],
       "records_screened": 0,
       "rejected": 0,
@@ -78,8 +78,8 @@
       "searches_attempted": 4,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-25 .. 2026-11-27",
-      "zero_reason": "provider healthy (wide-window canary returned 7); no new matching records in 2026-11-25 .. 2026-11-27"
+      "window": "2026-11-26 .. 2026-11-28",
+      "zero_reason": "provider healthy (wide-window canary returned 7); no new matching records in 2026-11-26 .. 2026-11-28"
     },
     "aga": {
       "accepted": 0,
@@ -104,9 +104,9 @@
       "provider": "aga",
       "queries": [
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American Gastroenterological Association\"[tiab]))",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American Gastroenterological Association\"[tiab]))  [edat 2026/11/25..2026/11/25]",
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American Gastroenterological Association\"[tiab]))  [edat 2026/11/26..2026/11/26]",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American Gastroenterological Association\"[tiab]))  [edat 2026/11/27..2026/11/27]"
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American Gastroenterological Association\"[tiab]))  [edat 2026/11/27..2026/11/27]",
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND (\"Gastroenterology\"[ta] OR \"Clin Gastroenterol Hepatol\"[ta]) AND (AGA[tiab] OR \"American Gastroenterological Association\"[tiab]))  [edat 2026/11/28..2026/11/28]"
       ],
       "records_screened": 0,
       "rejected": 0,
@@ -115,8 +115,8 @@
       "searches_attempted": 3,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-25 .. 2026-11-27",
-      "zero_reason": "provider healthy (wide-window canary returned 11); no new matching records in 2026-11-25 .. 2026-11-27"
+      "window": "2026-11-26 .. 2026-11-28",
+      "zero_reason": "provider healthy (wide-window canary returned 11); no new matching records in 2026-11-26 .. 2026-11-28"
     },
     "bsg": {
       "accepted": 0,
@@ -138,10 +138,10 @@
       "notes": [],
       "provider": "bsg",
       "queries": [
-        "site:www.bsg.org.uk (robots-permitting listing; window 2026-11-25..2026-11-27) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta] AND (\"British Society of Gastroenterology\"[tiab] OR BSG[tiab]))",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta] AND (\"British Society of Gastroenterology\"[tiab] OR BSG[tiab]))  [edat 2026/11/25..2026/11/25]",
+        "site:www.bsg.org.uk (robots-permitting listing; window 2026-11-26..2026-11-28) | (\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta] AND (\"British Society of Gastroenterology\"[tiab] OR BSG[tiab]))",
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta] AND (\"British Society of Gastroenterology\"[tiab] OR BSG[tiab]))  [edat 2026/11/26..2026/11/26]",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta] AND (\"British Society of Gastroenterology\"[tiab] OR BSG[tiab]))  [edat 2026/11/27..2026/11/27]"
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta] AND (\"British Society of Gastroenterology\"[tiab] OR BSG[tiab]))  [edat 2026/11/27..2026/11/27]",
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"Gut\"[ta] AND (\"British Society of Gastroenterology\"[tiab] OR BSG[tiab]))  [edat 2026/11/28..2026/11/28]"
       ],
       "records_screened": 0,
       "rejected": 0,
@@ -150,43 +150,43 @@
       "searches_attempted": 4,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-25 .. 2026-11-27",
-      "zero_reason": "provider healthy (wide-window canary returned 6); no new matching records in 2026-11-25 .. 2026-11-27"
+      "window": "2026-11-26 .. 2026-11-28",
+      "zero_reason": "provider healthy (wide-window canary returned 6); no new matching records in 2026-11-26 .. 2026-11-28"
     },
     "clinicaltrials": {
-      "accepted": 7,
+      "accepted": 0,
       "access_limits": [],
       "advanced_cutoff": true,
-      "canary_hits": 546,
+      "canary_hits": 543,
       "claims_extracted": 0,
       "deferred": 0,
       "deferred_reasons": {},
       "duplicate_reasons": {
-        "duplicate_trial_id": 8
+        "duplicate_trial_id": 7
       },
-      "duplicates": 8,
+      "duplicates": 7,
       "duplicates_cross": 0,
-      "duplicates_prior": 8,
+      "duplicates_prior": 7,
       "error": null,
       "evidence_type": "ongoing_trial",
-      "hit_count": 15,
+      "hit_count": 7,
       "label": "ClinicalTrials.gov",
       "not_screened_limit": 0,
       "notes": [],
       "provider": "clinicaltrials",
       "queries": [
-        "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-25,2026-11-25]",
         "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-26,2026-11-26]",
-        "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-27,2026-11-27]"
+        "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-27,2026-11-27]",
+        "cond=ulcerative colitis; AREA[LastUpdatePostDate]RANGE[2026-11-28,2026-11-28]"
       ],
-      "records_screened": 15,
+      "records_screened": 7,
       "rejected": 0,
       "rejected_reasons": {},
-      "results_returned": 15,
+      "results_returned": 7,
       "searches_attempted": 3,
       "searches_failed": 0,
       "status": "ok",
-      "window": "2026-11-25 .. 2026-11-27",
+      "window": "2026-11-26 .. 2026-11-28",
       "zero_reason": null
     },
     "ecco": {
@@ -212,9 +212,9 @@
       "provider": "ecco",
       "queries": [
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])  [edat 2026/11/25..2026/11/25]",
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])  [edat 2026/11/26..2026/11/26]",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])  [edat 2026/11/27..2026/11/27]"
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])  [edat 2026/11/27..2026/11/27]",
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms]) AND ((guideline[pt] OR \"practice guideline\"[pt] OR guideline[ti] OR consensus[ti] OR \"clinical practice update\"[ti] OR recommendations[ti]) AND \"J Crohns Colitis\"[ta])  [edat 2026/11/28..2026/11/28]"
       ],
       "records_screened": 0,
       "rejected": 0,
@@ -223,39 +223,37 @@
       "searches_attempted": 3,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-25 .. 2026-11-27",
-      "zero_reason": "provider healthy (wide-window canary returned 8); no new matching records in 2026-11-25 .. 2026-11-27"
+      "window": "2026-11-26 .. 2026-11-28",
+      "zero_reason": "provider healthy (wide-window canary returned 8); no new matching records in 2026-11-26 .. 2026-11-28"
     },
     "europepmc": {
-      "accepted": 4,
+      "accepted": 2,
       "access_limits": [],
       "advanced_cutoff": true,
-      "canary_hits": 14897,
-      "claims_extracted": 1,
-      "deferred": 68,
+      "canary_hits": 14837,
+      "claims_extracted": 4,
+      "deferred": 60,
       "deferred_reasons": {
-        "missing_required_metadata": 67,
+        "missing_required_metadata": 59,
         "no_usable_abstract": 1
       },
       "duplicate_reasons": {
-        "cross_provider_duplicate": 6,
-        "duplicate_doi": 93,
+        "cross_provider_duplicate": 8,
+        "duplicate_doi": 86,
         "duplicate_pmid": 1,
-        "duplicate_previously_rejected": 111
+        "duplicate_previously_rejected": 171
       },
-      "duplicates": 211,
-      "duplicates_cross": 6,
-      "duplicates_prior": 205,
+      "duplicates": 266,
+      "duplicates_cross": 8,
+      "duplicates_prior": 258,
       "error": null,
       "evidence_type": "published_study",
-      "hit_count": 392,
+      "hit_count": 367,
       "label": "Europe PMC",
       "not_screened_limit": 0,
       "notes": [],
       "provider": "europepmc",
       "queries": [
-        "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-18 TO 2026-11-18]) NOT SRC:PPR",
-        "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-19 TO 2026-11-19]) NOT SRC:PPR",
         "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-20 TO 2026-11-20]) NOT SRC:PPR",
         "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-21 TO 2026-11-21]) NOT SRC:PPR",
         "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-22 TO 2026-11-22]) NOT SRC:PPR",
@@ -263,19 +261,20 @@
         "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-24 TO 2026-11-24]) NOT SRC:PPR",
         "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-25 TO 2026-11-25]) NOT SRC:PPR",
         "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-26 TO 2026-11-26]) NOT SRC:PPR",
-        "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-27 TO 2026-11-27]) NOT SRC:PPR"
+        "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-27 TO 2026-11-27]) NOT SRC:PPR",
+        "(\"ulcerative colitis\" OR \"colitis, ulcerative\") AND (FIRST_IDATE:[2026-11-28 TO 2026-11-28]) NOT SRC:PPR"
       ],
-      "records_screened": 386,
-      "rejected": 109,
+      "records_screened": 359,
+      "rejected": 39,
       "rejected_reasons": {
-        "not_relevant": 108,
+        "not_relevant": 38,
         "out_of_scope": 1
       },
-      "results_returned": 392,
-      "searches_attempted": 25,
+      "results_returned": 367,
+      "searches_attempted": 24,
       "searches_failed": 0,
       "status": "ok",
-      "window": "2026-11-18 .. 2026-11-27; catching up 1 missed day(s)",
+      "window": "2026-11-20 .. 2026-11-28",
       "zero_reason": null
     },
     "nice": {
@@ -298,7 +297,7 @@
       "notes": [],
       "provider": "nice",
       "queries": [
-        "site:www.nice.org.uk (robots-permitting listing; window 2026-11-25..2026-11-27)"
+        "site:www.nice.org.uk (robots-permitting listing; window 2026-11-26..2026-11-28)"
       ],
       "records_screened": 0,
       "rejected": 0,
@@ -307,59 +306,60 @@
       "searches_attempted": 2,
       "searches_failed": 0,
       "status": "no_new_records",
-      "window": "2026-11-25 .. 2026-11-27",
-      "zero_reason": "provider healthy (wide-window canary returned 2); no new matching records in 2026-11-25 .. 2026-11-27"
+      "window": "2026-11-26 .. 2026-11-28",
+      "zero_reason": "provider healthy (wide-window canary returned 2); no new matching records in 2026-11-26 .. 2026-11-28"
     },
     "pubmed": {
-      "accepted": 4,
+      "accepted": 2,
       "access_limits": [],
       "advanced_cutoff": true,
-      "canary_hits": 4575,
+      "canary_hits": 4574,
       "claims_extracted": 5,
       "deferred": 0,
       "deferred_reasons": {},
       "duplicate_reasons": {
-        "cross_provider_duplicate": 62,
-        "duplicate_doi": 1
+        "cross_provider_duplicate": 52,
+        "duplicate_doi": 1,
+        "duplicate_previously_rejected": 1
       },
-      "duplicates": 63,
-      "duplicates_cross": 62,
-      "duplicates_prior": 1,
+      "duplicates": 54,
+      "duplicates_cross": 52,
+      "duplicates_prior": 2,
       "error": null,
       "evidence_type": "published_study",
-      "hit_count": 71,
+      "hit_count": 57,
       "label": "PubMed/MEDLINE",
       "not_screened_limit": 0,
       "notes": [],
       "provider": "pubmed",
       "queries": [
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/25..2026/11/25]",
         "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/26..2026/11/26]",
-        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/27..2026/11/27]"
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/27..2026/11/27]",
+        "(\"ulcerative colitis\"[tiab] OR \"colitis, ulcerative\"[MeSH Terms])  [edat 2026/11/28..2026/11/28]"
       ],
-      "records_screened": 9,
-      "rejected": 4,
+      "records_screened": 5,
+      "rejected": 1,
       "rejected_reasons": {
-        "not_relevant": 4
+        "not_relevant": 1
       },
-      "results_returned": 71,
+      "results_returned": 57,
       "searches_attempted": 8,
       "searches_failed": 0,
       "status": "ok",
-      "window": "2026-11-25 .. 2026-11-27",
+      "window": "2026-11-26 .. 2026-11-28",
       "zero_reason": null
     }
   },
-  "runId": "uc-exp-bf2271e21c38",
+  "runId": "uc-exp-f7b2e7cb04d4",
   "schema": "uc-provider-funnel/1",
   "totals": {
-    "accepted": 15,
-    "claims_extracted": 6,
-    "deferred": 68,
-    "duplicates": 282,
-    "records_screened": 410,
-    "rejected": 113,
-    "results_returned": 478,
-    "searches_attempted": 52
+    "accepted": 4,
+    "claims_extracted": 9,
+    "deferred": 60,
+    "duplicates": 327,
+    "records_screened": 371,
+    "rejected": 40,
+    "results_returned": 431,
+    "searches_attempted": 51
   }
 }

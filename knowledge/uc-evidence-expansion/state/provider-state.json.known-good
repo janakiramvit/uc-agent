@@ -1,7 +1,7 @@
 {
   "discoveryStartDate": "2026-11-10",
-  "lastRunDate": "2026-11-27",
-  "lastRunId": "uc-exp-bf2271e21c38",
+  "lastRunDate": "2026-11-28",
+  "lastRunId": "uc-exp-f7b2e7cb04d4",
   "providers": {
     "acg": {
       "consecutiveFailures": 0,
@@ -12,8 +12,8 @@
         "https://www.doi.org/10.14309/ajg.0000000000003463"
       ],
       "lastStatus": "no_new_records",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "recentHitCounts": [
         0,
         0,
@@ -38,8 +38,8 @@
       "consecutiveUnexpectedZero": 0,
       "knownListingUrls": [],
       "lastStatus": "no_new_records",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "recentHitCounts": [
         0,
         0,
@@ -69,8 +69,8 @@
         "https://www.bsg.org.uk/clinical-resource/consensus-guideline-genomic-diagnosis-ibd"
       ],
       "lastStatus": "no_new_records",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "recentHitCounts": [
         0,
         0,
@@ -95,10 +95,9 @@
       "consecutiveUnexpectedZero": 0,
       "knownListingUrls": [],
       "lastStatus": "ok",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "recentHitCounts": [
-        1,
         2,
         11,
         11,
@@ -111,7 +110,8 @@
         13,
         21,
         16,
-        15
+        15,
+        7
       ],
       "rejectedKeys": []
     },
@@ -121,8 +121,8 @@
       "consecutiveUnexpectedZero": 0,
       "knownListingUrls": [],
       "lastStatus": "no_new_records",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "recentHitCounts": [
         0,
         0,
@@ -147,11 +147,10 @@
       "consecutiveUnexpectedZero": 0,
       "knownListingUrls": [],
       "lastStatus": "ok",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "lastZeroDate": "2026-11-11",
       "recentHitCounts": [
-        51,
         31,
         134,
         134,
@@ -164,7 +163,8 @@
         184,
         231,
         368,
-        392
+        392,
+        367
       ],
       "rejectedKeys": [
         "doi:10.1111/1440-1681.70164",
@@ -493,7 +493,18 @@
         "doi:10.3390/antiox15111372",
         "doi:10.1186/s13568-026-02112-7",
         "doi:10.1186/s12951-026-04920-2",
-        "doi:10.3389/fmicb.2026.1931907"
+        "doi:10.3389/fmicb.2026.1931907",
+        "doi:10.1038/s41368-026-00476-x",
+        "doi:10.1016/j.ijbiomac.2026.155461",
+        "doi:10.1097/meg.0000000000003324",
+        "doi:10.1002/ptr.70550",
+        "doi:10.1080/17474124.2026.2771999",
+        "doi:10.7759/cureus.120286",
+        "doi:10.3389/fimmu.2026.2018456",
+        "doi:10.3389/fmicb.2026.1911184",
+        "doi:10.3389/fcimb.2026.1949387",
+        "doi:10.3389/fimmu.2026.1980389",
+        "doi:10.62347/ebpo8590"
       ]
     },
     "nice": {
@@ -505,8 +516,8 @@
         "https://www.nice.org.uk/guidance/qs81"
       ],
       "lastStatus": "no_new_records",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "recentHitCounts": [
         0,
         0,
@@ -531,10 +542,9 @@
       "consecutiveUnexpectedZero": 0,
       "knownListingUrls": [],
       "lastStatus": "ok",
-      "lastSuccessfulCutoff": "2026-11-27",
-      "lastSuccessfulRunAt": "2026-11-27T22:34:43Z",
+      "lastSuccessfulCutoff": "2026-11-28",
+      "lastSuccessfulRunAt": "2026-11-28T21:39:07Z",
       "recentHitCounts": [
-        30,
         24,
         22,
         23,
@@ -547,7 +557,8 @@
         20,
         34,
         70,
-        71
+        71,
+        57
       ],
       "rejectedKeys": [
         "doi:10.1093/ibd/izag230",
@@ -607,7 +618,8 @@
         "doi:10.64898/2026.11.20.767624",
         "doi:10.1002/ptr.70550",
         "doi:10.1080/17474124.2026.2771999",
-        "doi:10.1097/meg.0000000000003324"
+        "doi:10.1097/meg.0000000000003324",
+        "doi:10.1080/00365521.2026.2766468"
       ]
     }
   },
@@ -991,6 +1003,24 @@
       },
       "runId": "uc-exp-bf2271e21c38",
       "window": "2026-11-25 .. 2026-11-27"
+    },
+    {
+      "alerts": 7,
+      "date": "2026-11-28",
+      "errors": 0,
+      "missedDates": [],
+      "providerStatus": {
+        "acg": "no_new_records",
+        "aga": "no_new_records",
+        "bsg": "no_new_records",
+        "clinicaltrials": "ok",
+        "ecco": "no_new_records",
+        "europepmc": "ok",
+        "nice": "no_new_records",
+        "pubmed": "ok"
+      },
+      "runId": "uc-exp-f7b2e7cb04d4",
+      "window": "2026-11-26 .. 2026-11-28"
     }
   ],
   "schemaVersion": "uc-provider-state-1.0.0"

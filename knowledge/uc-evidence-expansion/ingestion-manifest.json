@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-bf2271e21c38",
-  "generatedAt": "2026-11-27T22:34:43Z",
+  "runId": "uc-exp-f7b2e7cb04d4",
+  "generatedAt": "2026-11-28T21:39:07Z",
   "targetIndex": "NONE - staged package only. Nothing ingested into any production index.",
   "productionPromotion": "blocked_by_design",
   "sourceFiles": [],
@@ -1526,6 +1526,34 @@
       "pubmedId": "43099398",
       "doi": "10.1186/s12876-026-05192-8",
       "canonicalUrl": "https://doi.org/10.1186/s12876-026-05192-8",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-338",
+      "pubmedId": "43105000",
+      "doi": "10.3389/fmed.2026.1941666",
+      "canonicalUrl": "https://doi.org/10.3389/fmed.2026.1941666",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-339",
+      "pubmedId": "43105398",
+      "doi": "10.3389/fphar.2026.1978896",
+      "canonicalUrl": "https://doi.org/10.3389/fphar.2026.1978896",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-340",
+      "pubmedId": "43103357",
+      "doi": "10.1016/j.yexmp.2026.105110",
+      "canonicalUrl": "https://doi.org/10.1016/j.yexmp.2026.105110",
+      "reason": "licence for local archival/redistribution not established; retained as link_only."
+    },
+    {
+      "sourceId": "SRC-341",
+      "pubmedId": "43102811",
+      "doi": "10.1007/s40266-026-01346-1",
+      "canonicalUrl": "https://doi.org/10.1007/s40266-026-01346-1",
       "reason": "licence for local archival/redistribution not established; retained as link_only."
     }
   ],

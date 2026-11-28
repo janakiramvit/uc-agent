@@ -1,7 +1,7 @@
 {
   "schemaVersion": "uc-evidence-expansion-1.0.0",
-  "runId": "uc-exp-bf2271e21c38",
-  "generatedAt": "2026-11-27T22:34:43Z",
+  "runId": "uc-exp-f7b2e7cb04d4",
+  "generatedAt": "2026-11-28T21:39:07Z",
   "policyNotes": [
     "No paywalls, authentication, robots restrictions or rate limits were bypassed.",
     "A publicly reachable PDF was NOT assumed to be licensed for redistribution.",
@@ -4787,6 +4787,94 @@
       "redistributionPermitted": "not_established",
       "archivalStatus": "link_only",
       "acquisitionDate": "2026-11-27",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-338",
+      "title": "Obesity is associated with greater treatment requirements in ulcerative colitis: a propensity score-matched real-world study",
+      "canonicalUrl": "https://doi.org/10.3389/fmed.2026.1941666",
+      "doi": "10.3389/fmed.2026.1941666",
+      "pubmedId": "43105000",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "permitted_open_licence",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-28",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-339",
+      "title": "Molecular mechanisms of plant-derived saponins against ulcerative colitis: a narrative review",
+      "canonicalUrl": "https://doi.org/10.3389/fphar.2026.1978896",
+      "doi": "10.3389/fphar.2026.1978896",
+      "pubmedId": "43105398",
+      "statedLicence": "cc by",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "permitted_open_licence",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-28",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-340",
+      "title": "Cross cohort evaluation of eight candidate genes associated with ferroptosis and mucosal inflammation in ulcerative colitis",
+      "canonicalUrl": "https://doi.org/10.1016/j.yexmp.2026.105110",
+      "doi": "10.1016/j.yexmp.2026.105110",
+      "pubmedId": "43103357",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-28",
+      "retainedArtifacts": [
+        "citation metadata",
+        "DOI/PMID/NCT",
+        "public link",
+        "public abstract text"
+      ],
+      "notStored": [
+        "full text",
+        "publisher PDF"
+      ]
+    },
+    {
+      "sourceId": "SRC-341",
+      "title": "Efficacy and Safety of Janus Kinase Inhibitors in Older versus Younger Patients with Ulcerative Colitis: A Systematic Review and Meta-analysis",
+      "canonicalUrl": "https://doi.org/10.1007/s40266-026-01346-1",
+      "doi": "10.1007/s40266-026-01346-1",
+      "pubmedId": "43102811",
+      "statedLicence": "not stated in retrieved metadata",
+      "localArchivalPermitted": "no_not_established",
+      "redistributionPermitted": "not_established",
+      "archivalStatus": "link_only",
+      "acquisitionDate": "2026-11-28",
       "retainedArtifacts": [
         "citation metadata",
         "DOI/PMID/NCT",
